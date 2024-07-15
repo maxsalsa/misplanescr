@@ -1,0 +1,181 @@
+{
+  "nivel": "Undécimo",
+  "subareas": [
+    {
+      "nombre": "Diseño de Software",
+      "unidades": [
+        {
+          "unidad": "Procesos de software",
+          "horas": 56,
+          "resultados": [
+            {
+              "resultado": "Explicar la organización de los procesos de software según las actividades que requiere el sistema.",
+              "saberes": [
+                "Organización de procesos de software",
+                "Actividades del sistema"
+              ],
+              "indicadores": [
+                "Explica la organización de los procesos de software.",
+                "Describe las actividades que requiere el sistema.",
+                "Aplica conocimientos de organización de procesos en proyectos prácticos."
+              ],
+              "estrategias": [
+                "El docente explica la organización de los procesos de software mediante ejemplos prácticos.",
+                "El docente guía a los estudiantes en la identificación de las actividades del sistema.",
+                "El estudiante investiga sobre la organización de procesos de software y elabora un informe.",
+                "El estudiante participa en la organización de procesos en proyectos prácticos.",
+                "El estudiante desarrolla proyectos aplicando conocimientos de organización de procesos."
+              ],
+              "evidencias": [
+                "Conocimiento: Elabora un informe sobre la organización de procesos de software.",
+                "Desempeño: Aplica conocimientos de organización de procesos en proyectos prácticos.",
+                "Producto: Presenta proyectos aplicando la organización de procesos de software.",
+                "Desempeño: Participa en la organización de procesos en proyectos prácticos."
+              ],
+              "tiempo": "20 horas"
+            }
+          ]
+        },
+        {
+          "unidad": "Modelado de requerimientos",
+          "horas": 56,
+          "resultados": [
+            {
+              "resultado": "Identificar las razones por las que se requiere el uso de los tipos de modelado y sus perspectivas.",
+              "saberes": [
+                "Tipos de modelado",
+                "Perspectivas de modelado"
+              ],
+              "indicadores": [
+                "Identifica las razones para el uso de tipos de modelado.",
+                "Describe las perspectivas de modelado.",
+                "Aplica conocimientos de modelado en proyectos prácticos."
+              ],
+              "estrategias": [
+                "El docente explica los tipos de modelado y sus perspectivas mediante ejemplos prácticos.",
+                "El docente guía a los estudiantes en la aplicación de conocimientos de modelado en proyectos prácticos.",
+                "El estudiante investiga sobre tipos de modelado y elabora un informe.",
+                "El estudiante participa en proyectos prácticos aplicando conocimientos de modelado.",
+                "El estudiante desarrolla proyectos que requieran la aplicación de conocimientos de modelado."
+              ],
+              "evidencias": [
+                "Conocimiento: Elabora un informe sobre tipos de modelado y sus perspectivas.",
+                "Desempeño: Aplica conocimientos de modelado en proyectos prácticos.",
+                "Producto: Presenta proyectos aplicando conocimientos de modelado.",
+                "Desempeño: Participa en proyectos prácticos aplicando conocimientos de modelado."
+              ],
+              "tiempo": "20 horas"
+            }
+          ]
+        },
+        {
+          "unidad": "Diseño arquitectónico",
+          "horas": 56,
+          "resultados": [
+            {
+              "resultado": "Reconocer los patrones y vistas que deben considerarse para la toma de decisiones durante la realización de diseño arquitectónico de software.",
+              "saberes": [
+                "Patrones de diseño arquitectónico",
+                "Vistas de diseño"
+              ],
+              "indicadores": [
+                "Reconoce los patrones de diseño arquitectónico.",
+                "Describe las vistas de diseño.",
+                "Aplica conocimientos de diseño arquitectónico en proyectos prácticos."
+              ],
+              "estrategias": [
+                "El docente explica los patrones y vistas de diseño arquitectónico mediante ejemplos prácticos.",
+                "El docente guía a los estudiantes en la aplicación de conocimientos de diseño arquitectónico en proyectos prácticos.",
+                "El estudiante investiga sobre patrones y vistas de diseño arquitectónico y elabora un informe.",
+                "El estudiante participa en proyectos prácticos aplicando conocimientos de diseño arquitectónico.",
+                "El estudiante desarrolla proyectos que requieran la aplicación de conocimientos de diseño arquitectónico."
+              ],
+              "evidencias": [
+                "Conocimiento: Elabora un informe sobre patrones y vistas de diseño arquitectónico.",
+                "Desempeño: Aplica conocimientos de diseño arquitectónico en proyectos prácticos.",
+                "Producto: Presenta proyectos aplicando conocimientos de diseño arquitectónico.",
+                "Desempeño: Participa en proyectos prácticos aplicando conocimientos de diseño arquitectónico."
+              ],
+              "tiempo": "20 horas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Soporte TI",
+      "unidades": [
+        {
+          "unidad": "Mantenimiento y reparación de equipos",
+          "horas": 72,
+          "resultados": [
+            {
+              "resultado": "Identificar los componentes de una computadora y sus funciones.",
+              "saberes": [
+                "Componentes de una computadora",
+                "Funciones de los componentes",
+                "Mantenimiento y reparación"
+              ],
+              "indicadores": [
+                "Identifica los componentes de una computadora.",
+                "Describe las funciones de los componentes.",
+                "Realiza mantenimiento y reparación de equipos."
+              ],
+              "estrategias": [
+                "El docente explica los componentes de una computadora y sus funciones mediante demostraciones prácticas.",
+                "El docente guía a los estudiantes en el mantenimiento y reparación de equipos.",
+                "El estudiante investiga sobre los componentes de una computadora y elabora un informe.",
+                "El estudiante participa en prácticas de mantenimiento y reparación de equipos.",
+                "El estudiante desarrolla proyectos aplicando conocimientos de mantenimiento y reparación."
+              ],
+              "evidencias": [
+                "Conocimiento: Elabora un informe sobre los componentes de una computadora.",
+                "Desempeño: Realiza mantenimiento y reparación de equipos.",
+                "Producto: Presenta proyectos aplicando conocimientos de mantenimiento y reparación.",
+                "Desempeño: Participa en prácticas de mantenimiento y reparación de equipos."
+              ],
+              "tiempo": "20 horas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Emprendimiento e Innovación",
+      "unidades": [
+        {
+          "unidad": "Fundamentos del emprendimiento",
+          "horas": 72,
+          "resultados": [
+            {
+              "resultado": "Identificar las características del emprendimiento y la innovación.",
+              "saberes": [
+                "Características del emprendimiento",
+                "Innovación"
+              ],
+              "indicadores": [
+                "Identifica las características del emprendimiento.",
+                "Describe los aspectos clave de la innovación.",
+                "Aplica conocimientos de emprendimiento e innovación en proyectos prácticos."
+              ],
+              "estrategias": [
+                "El docente explica las características del emprendimiento y la innovación mediante ejemplos prácticos.",
+                "El docente guía a los estudiantes en la aplicación de conocimientos de emprendimiento e innovación en proyectos prácticos.",
+                "El estudiante investiga sobre el emprendimiento y la innovación y elabora un informe.",
+                "El estudiante participa en proyectos prácticos aplicando conocimientos de emprendimiento e innovación.",
+                "El estudiante desarrolla proyectos que requieran la aplicación de conocimientos de emprendimiento e innovación."
+              ],
+              "evidencias": [
+                "Conocimiento: Elabora un informe sobre las características del emprendimiento y la innovación.",
+                "Desempeño: Aplica conocimientos de emprendimiento e innovación en proyectos prácticos.",
+                "Producto: Presenta proyectos aplicando conocimientos de emprendimiento e innovación.",
+                "Desempeño: Participa en proyectos prácticos aplicando conocimientos de emprendimiento e innovación."
+              ],
+              "tiempo": "20 horas"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,547 @@
+{
+  "decimo": {
+    "tecnologias_informacion": {
+      "herramientas_produccion_documentos": {
+        "nombre": "Herramientas para la Producción de Documentos",
+        "horas": 68,
+        "resultados_aprendizaje": [
+          "1. Aplicar las funciones básicas de procesador de textos en la elaboración de documentos.",
+          "2. Utilizar las herramientas que presenta la hoja electrónica para la elaboración de documentos.",
+          "3. Generar presentaciones con los elementos básicos del editor, para la presentación de documentos de forma dinámica.",
+          "4. Describir los elementos que integran el entorno web.",
+          "5. Aplicar las herramientas colaborativas para la elaboración de documentos en la nube.",
+          "6. Implementar procesos de autoaprendizaje que propicien el uso de herramientas ofimáticas mediante software de código abierto y licenciado.",
+          "7. Utilizar las tecnologías como recurso, profundizando y dinamizando el aprendizaje, en respuesta a situaciones de la vida cotidiana."
+        ],
+        "saberes_esenciales": [
+          "Funciones básicas de procesador de textos.",
+          "Herramientas de la hoja electrónica.",
+          "Elementos básicos del editor de presentaciones.",
+          "Elementos del entorno web.",
+          "Herramientas colaborativas para la elaboración de documentos en la nube.",
+          "Procesos de autoaprendizaje.",
+          "Uso de tecnologías como recurso educativo."
+        ],
+        "estrategias": [
+          {
+            "docente": "El docente explica las funciones básicas del procesador de textos mediante la ejecución de ejercicios prácticos desarrollados en clase.",
+            "estudiante": "La persona estudiante aplica las funciones básicas del procesador de textos mediante la elaboración de un documento formal en clase."
+          },
+          {
+            "docente": "El docente demuestra el uso de herramientas de la hoja electrónica mediante ejercicios interactivos en clase.",
+            "estudiante": "La persona estudiante utiliza las herramientas de la hoja electrónica completando ejercicios prácticos en clase."
+          },
+          {
+            "docente": "El docente genera presentaciones dinámicas utilizando el editor de presentaciones y explica los elementos básicos.",
+            "estudiante": "La persona estudiante genera presentaciones dinámicas aplicando los elementos básicos del editor de presentaciones."
+          },
+          {
+            "docente": "El docente describe los elementos que integran el entorno web mediante una clase interactiva con ejemplos reales.",
+            "estudiante": "La persona estudiante describe los elementos que integran el entorno web mediante la creación de un esquema digital."
+          },
+          {
+            "docente": "El docente aplica herramientas colaborativas para la elaboración de documentos en la nube mediante un taller práctico.",
+            "estudiante": "La persona estudiante aplica las herramientas colaborativas para la elaboración de documentos en la nube mediante la creación de un documento colaborativo."
+          },
+          {
+            "docente": "El docente implementa procesos de autoaprendizaje mediante la asignación de tareas autodirigidas con recursos en línea.",
+            "estudiante": "La persona estudiante implementa procesos de autoaprendizaje completando tareas autodirigidas utilizando recursos en línea."
+          },
+          {
+            "docente": "El docente utiliza tecnologías como recurso educativo mediante la integración de aplicaciones interactivas en la enseñanza.",
+            "estudiante": "La persona estudiante utiliza tecnologías como recurso educativo mediante la participación en actividades interactivas en línea."
+          }
+        ],
+        "indicadores": [
+          "Aplica correctamente las funciones básicas del procesador de textos elaborando un documento formal en clase.",
+          "Utiliza eficazmente las herramientas de la hoja electrónica completando ejercicios prácticos en clase.",
+          "Genera presentaciones dinámicas aplicando los elementos básicos del editor de presentaciones y presentándolas al grupo.",
+          "Describe adecuadamente los elementos que integran el entorno web mediante la creación de un esquema digital.",
+          "Aplica herramientas colaborativas para la elaboración de documentos en la nube mediante la creación de un documento colaborativo.",
+          "Implementa procesos de autoaprendizaje completando tareas autodirigidas utilizando recursos en línea.",
+          "Utiliza tecnologías como recurso educativo participando en actividades interactivas en línea."
+        ],
+        "evidencias": [
+          "Elabora un documento formal aplicando las funciones básicas del procesador de textos.",
+          "Completa ejercicios prácticos en clase utilizando las herramientas de la hoja electrónica.",
+          "Genera y presenta una presentación dinámica aplicando los elementos básicos del editor de presentaciones.",
+          "Crea un esquema digital describiendo los elementos que integran el entorno web.",
+          "Crea un documento colaborativo utilizando herramientas colaborativas en la nube.",
+          "Completa tareas autodirigidas utilizando recursos en línea para implementar procesos de autoaprendizaje.",
+          "Participa en actividades interactivas en línea utilizando tecnologías como recurso educativo."
+        ],
+        "tiempo_estimado": 68
+      },
+      "herramientas_gestion_analisis_informacion": {
+        "nombre": "Herramientas para la Gestión y Análisis de la Información",
+        "horas": 40,
+        "resultados_aprendizaje": [
+          "1. Examinar las características de los datos, usos, tipos y su relación con bases de datos.",
+          "2. Elaborar bases de datos mediante la ejecución de operaciones de manipulación de la información.",
+          "3. Aplicar herramientas de automatización para la presentación, visualización y análisis de bases de datos necesarios, en la toma de decisiones propias de su área de formación.",
+          "4. Aplicar principios éticos y legales en el acceso, uso y análisis de la información obtenida a partir de grandes volúmenes de datos.",
+          "5. Desarrollar capacidades para el acceso a la información de forma eficiente haciendo un uso preciso, responsable, creativo y crítico de la misma."
+        ],
+        "saberes_esenciales": [
+          "Características de los datos.",
+          "Elaboración de bases de datos.",
+          "Herramientas de automatización para bases de datos.",
+          "Principios éticos y legales en el manejo de la información.",
+          "Acceso y uso responsable de la información."
+        ],
+        "estrategias": [
+          {
+            "docente": "El docente explica las características de los datos y su relación con bases de datos mediante una clase interactiva.",
+            "estudiante": "La persona estudiante examina las características de los datos mediante la creación de una base de datos simple."
+          },
+          {
+            "docente": "El docente demuestra cómo elaborar bases de datos mediante ejercicios prácticos.",
+            "estudiante": "La persona estudiante elabora bases de datos aplicando lo aprendido en clase."
+          },
+          {
+            "docente": "El docente aplica herramientas de automatización para el análisis de bases de datos mediante ejemplos prácticos.",
+            "estudiante": "La persona estudiante aplica herramientas de automatización completando ejercicios prácticos."
+          },
+          {
+            "docente": "El docente explica los principios éticos y legales en el manejo de la información mediante casos de estudio.",
+            "estudiante": "La persona estudiante aplica principios éticos y legales en el manejo de la información mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente fomenta el acceso y uso responsable de la información mediante la realización de actividades prácticas.",
+            "estudiante": "La persona estudiante desarrolla capacidades para el acceso a la información completando tareas prácticas en clase."
+          }
+        ],
+        "indicadores": [
+          "Examina adecuadamente las características de los datos mediante la creación de una base de datos simple.",
+          "Elabora bases de datos aplicando lo aprendido en clase.",
+          "Aplica herramientas de automatización para el análisis de bases de datos completando ejercicios prácticos.",
+          "Aplica principios éticos y legales en el manejo de la información mediante la elaboración de un informe.",
+          "Desarrolla capacidades para el acceso a la información completando tareas prácticas en clase."
+        ],
+        "evidencias": [
+          "Crea una base de datos simple examinando las características de los datos.",
+          "Elabora bases de datos aplicando lo aprendido en clase.",
+          "Completa ejercicios prácticos aplicando herramientas de automatización para el análisis de bases de datos.",
+          "Elabora un informe aplicando principios éticos y legales en el manejo de la información.",
+          "Completa tareas prácticas en clase desarrollando capacidades para el acceso a la información."
+        ],
+        "tiempo_estimado": 40
+      },
+      "internet_seguridad_datos": {
+        "nombre": "Internet de Todo y Seguridad de los Datos",
+        "horas": 52,
+        "resultados_aprendizaje": [
+          "1. Evaluar la importancia del internet en cada aspecto cotidiano de la vida y cómo se interconectan los objetos.",
+          "2. Formular propuestas de transmisión de internet de todo, unificando objetos, personas, datos y procesos.",
+          "3. Explicar la importancia de la protección de la información que se maneja en el ciber mundo y los tipos de ataques que pueden presentarse.",
+          "4. Evaluar alternativas para la protección de los dispositivos informáticos, la red y la organización.",
+          "5. Distinguir las características del ámbito de la ciberseguridad, sus principios y las medidas de seguridad cibernética.",
+          "6. Ilustrar los procedimientos para la protección e integridad de los datos mediante el uso de tecnologías."
+        ],
+        "saberes_esenciales": [
+          "Importancia del internet en la vida cotidiana.",
+          "Propuestas de transmisión de internet de todo.",
+          "Protección de la información en el ciber mundo.",
+          "Alternativas para la protección de dispositivos informáticos.",
+          "Características del ámbito de la ciberseguridad.",
+          "Procedimientos para la protección e integridad de los datos."
+        ],
+        "estrategias": [
+          {
+            "docente": "El docente explica la importancia del internet en la vida cotidiana mediante una clase interactiva.",
+            "estudiante": "La persona estudiante evalúa la importancia del internet mediante la realización de un informe."
+          },
+          {
+            "docente": "El docente formula propuestas de transmisión de internet de todo mediante ejemplos prácticos.",
+            "estudiante": "La persona estudiante formula propuestas de transmisión de internet de todo mediante la creación de un proyecto."
+          },
+          {
+            "docente": "El docente explica la importancia de la protección de la información en el ciber mundo mediante casos de estudio.",
+            "estudiante": "La persona estudiante explica la importancia de la protección de la información mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente evalúa alternativas para la protección de dispositivos informáticos mediante la realización de talleres prácticos.",
+            "estudiante": "La persona estudiante evalúa alternativas para la protección de dispositivos informáticos mediante la elaboración de un proyecto."
+          },
+          {
+            "docente": "El docente distingue las características del ámbito de la ciberseguridad mediante una clase teórica.",
+            "estudiante": "La persona estudiante distingue las características del ámbito de la ciberseguridad mediante la realización de un esquema."
+          },
+          {
+            "docente": "El docente ilustra los procedimientos para la protección de los datos mediante ejercicios prácticos.",
+            "estudiante": "La persona estudiante ilustra los procedimientos para la protección de los datos mediante la creación de un informe."
+          }
+        ],
+        "indicadores": [
+          "Evalúa adecuadamente la importancia del internet en la vida cotidiana mediante la realización de un informe.",
+          "Formula propuestas de transmisión de internet de todo mediante la creación de un proyecto.",
+          "Explica la importancia de la protección de la información en el ciber mundo mediante la elaboración de un informe.",
+          "Evalúa alternativas para la protección de dispositivos informáticos mediante la elaboración de un proyecto.",
+          "Distingue las características del ámbito de la ciberseguridad mediante la realización de un esquema.",
+          "Ilustra los procedimientos para la protección de los datos mediante la creación de un informe."
+        ],
+        "evidencias": [
+          "Realiza un informe evaluando la importancia del internet en la vida cotidiana.",
+          "Crea un proyecto formulando propuestas de transmisión de internet de todo.",
+          "Elabora un informe explicando la importancia de la protección de la información en el ciber mundo.",
+          "Elabora un proyecto evaluando alternativas para la protección de dispositivos informáticos.",
+          "Realiza un esquema distinguiendo las características del ámbito de la ciberseguridad.",
+          "Crea un informe ilustrando los procedimientos para la protección de los datos."
+        ],
+        "tiempo_estimado": 52
+      }
+    },
+    "soporte_ti": {
+      "fundamentos_tecnologias_informacion": {
+        "nombre": "Fundamentos de Tecnologías de Información",
+        "horas": 96,
+        "resultados_aprendizaje": [
+          "1. Emplear bajo criterios técnicos los componentes apropiados para la construcción, reparación o actualización de computadoras personales.",
+          "2. Instalar los componentes para la actualización de computadoras realizando la configuración según necesidades del usuario.",
+          "3. Determinar el mecanismo o procedimiento mediante el cual las computadoras se comunican en la red.",
+          "4. Explicar mecanismos para la solución de problemas en equipos portátiles y otros dispositivos.",
+          "5. Instalar sistemas operativos licenciados y de código abierto.",
+          "6. Implementar mecanismos de seguridad en equipos, datos y red considerando características y funciones del profesional en TI."
+        ],
+        "saberes_esenciales": [
+          "Componentes de computadoras personales.",
+          "Actualización y configuración de componentes.",
+          "Comunicación en red de computadoras.",
+          "Solución de problemas en equipos portátiles y dispositivos.",
+          "Instalación de sistemas operativos.",
+          "Mecanismos de seguridad en TI."
+        ],
+        "estrategias": [
+          {
+            "docente": "El docente explica los componentes de una computadora personal mediante la ejecución de prácticas de ensamblaje en clase.",
+            "estudiante": "La persona estudiante ensambla componentes de una computadora personal siguiendo los criterios técnicos explicados en clase."
+          },
+          {
+            "docente": "El docente demuestra cómo actualizar y configurar componentes de una computadora mediante ejemplos concretos.",
+            "estudiante": "La persona estudiante actualiza y configura componentes de una computadora personal aplicando lo aprendido en clase."
+          },
+          {
+            "docente": "El docente explica los mecanismos de comunicación en red de computadoras mediante una presentación interactiva.",
+            "estudiante": "La persona estudiante determina los mecanismos de comunicación en red de computadoras mediante la creación de un diagrama de red."
+          },
+          {
+            "docente": "El docente describe la solución de problemas en equipos portátiles mediante la elaboración de casos prácticos.",
+            "estudiante": "La persona estudiante soluciona problemas en equipos portátiles aplicando los mecanismos explicados en clase."
+          },
+          {
+            "docente": "El docente demuestra la instalación de sistemas operativos mediante una clase práctica en el laboratorio.",
+            "estudiante": "La persona estudiante instala sistemas operativos licenciados y de código abierto siguiendo las instrucciones del docente."
+          },
+          {
+            "docente": "El docente explica los mecanismos de seguridad en TI mediante la ejecución de ejercicios prácticos.",
+            "estudiante": "La persona estudiante implementa mecanismos de seguridad en equipos y datos aplicando lo aprendido en clase."
+          }
+        ],
+        "indicadores": [
+          "Emplea correctamente los componentes apropiados para la construcción, reparación o actualización de computadoras personales mediante la ejecución de prácticas de ensamblaje.",
+          "Instala componentes para la actualización de computadoras realizando la configuración según necesidades del usuario.",
+          "Determina el mecanismo o procedimiento mediante el cual las computadoras se comunican en la red mediante la creación de un diagrama de red.",
+          "Explica mecanismos para la solución de problemas en equipos portátiles y otros dispositivos mediante la elaboración de casos prácticos.",
+          "Instala sistemas operativos licenciados y de código abierto siguiendo las instrucciones del docente.",
+          "Implementa mecanismos de seguridad en equipos, datos y red considerando características y funciones del profesional en TI mediante la ejecución de ejercicios prácticos."
+        ],
+        "evidencias": [
+          "Ensambla componentes de una computadora personal siguiendo los criterios técnicos explicados en clase.",
+          "Actualiza y configura componentes de una computadora personal aplicando lo aprendido en clase.",
+          "Crea un diagrama de red determinando los mecanismos de comunicación en red de computadoras.",
+          "Soluciona problemas en equipos portátiles aplicando los mecanismos explicados en clase.",
+          "Instala sistemas operativos licenciados y de código abierto siguiendo las instrucciones del docente.",
+          "Implementa mecanismos de seguridad en equipos, datos y red aplicando lo aprendido en clase."
+        ],
+        "tiempo_estimado": 96
+      },
+      "seguridad_industrial": {
+        "nombre": "Seguridad Industrial",
+        "horas": 36,
+        "resultados_aprendizaje": [
+          "1. Mencionar el impacto de las regulaciones nacionales aplicadas en el campo de la Seguridad Industrial.",
+          "2. Explicar los procesos mediante los cuales se realiza el aseguramiento de infraestructuras físicas.",
+          "3. Aplicar las estrategias de prevención contra riesgos considerando la normativa, protocolos, insumos, equipos y herramientas que se utilizan en las actividades instrumentales.",
+          "4. Utilizar formas creativas e innovadoras para la resolución de problemas cotidianos.",
+          "5. Aplicar medidas preventivas que mitiguen la contaminación de los recursos marinos y sus océanos, promoviendo el desarrollo sostenible en ecosistemas terrestres."
+        ],
+        "saberes_esenciales": [
+          "Regulaciones nacionales en Seguridad Industrial.",
+          "Aseguramiento de infraestructuras físicas.",
+          "Estrategias de prevención contra riesgos.",
+          "Resolución creativa de problemas cotidianos.",
+          "Medidas preventivas contra la contaminación de recursos marinos y terrestres."
+        ],
+        "estrategias": [
+          {
+            "docente": "El docente menciona el impacto de las regulaciones nacionales en Seguridad Industrial mediante una clase interactiva.",
+            "estudiante": "La persona estudiante menciona el impacto de las regulaciones nacionales en Seguridad Industrial mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente explica los procesos de aseguramiento de infraestructuras físicas mediante casos de estudio.",
+            "estudiante": "La persona estudiante explica los procesos de aseguramiento de infraestructuras físicas mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente aplica estrategias de prevención contra riesgos mediante talleres prácticos.",
+            "estudiante": "La persona estudiante aplica estrategias de prevención contra riesgos mediante la realización de un proyecto."
+          },
+          {
+            "docente": "El docente fomenta la resolución creativa de problemas cotidianos mediante dinámicas de grupo.",
+            "estudiante": "La persona estudiante utiliza formas creativas para resolver problemas cotidianos mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente explica las medidas preventivas contra la contaminación mediante una clase teórica.",
+            "estudiante": "La persona estudiante aplica medidas preventivas contra la contaminación mediante la realización de un proyecto."
+          }
+        ],
+        "indicadores": [
+          "Menciona adecuadamente el impacto de las regulaciones nacionales en Seguridad Industrial mediante la elaboración de un informe.",
+          "Explica los procesos de aseguramiento de infraestructuras físicas mediante la elaboración de un informe.",
+          "Aplica estrategias de prevención contra riesgos mediante la realización de un proyecto.",
+          "Utiliza formas creativas para resolver problemas cotidianos mediante la elaboración de un informe.",
+          "Aplica medidas preventivas contra la contaminación mediante la realización de un proyecto."
+        ],
+        "evidencias": [
+          "Elabora un informe mencionando el impacto de las regulaciones nacionales en Seguridad Industrial.",
+          "Elabora un informe explicando los procesos de aseguramiento de infraestructuras físicas.",
+          "Realiza un proyecto aplicando estrategias de prevención contra riesgos.",
+          "Elabora un informe utilizando formas creativas para resolver problemas cotidianos.",
+          "Realiza un proyecto aplicando medidas preventivas contra la contaminación."
+        ],
+        "tiempo_estimado": 36
+      }
+    },
+    "programacion_web": {
+      "lenguaje_marcado_hojas_estilo": {
+        "nombre": "Lenguaje de Marcado y Hojas de Estilo",
+        "horas": 112,
+        "resultados_aprendizaje": [
+          "1. Identificar principios lógicos de programación algorítmica, métodos de conocimiento y estructuras requeridas en la programación.",
+          "2. Explicar los elementos que conforman el lenguaje de marcado de documentos web considerando evolución de la web.",
+          "3. Elaborar presentaciones de documentos estructurados escritos con lenguaje para marcado aplicando hojas de estilo.",
+          "4. Utilizar formas de comunicación asertiva en las relaciones humanas afines al contexto.",
+          "5. Demostrar modelos de vida sostenibles, fiables que contribuyan al saneamiento a través del agua y del sol."
+        ],
+        "saberes_esenciales": [
+          "Principios lógicos de programación algorítmica.",
+          "Elementos del lenguaje de marcado de documentos web.",
+          "Presentaciones de documentos con hojas de estilo.",
+          "Comunicación asertiva en relaciones humanas.",
+          "Modelos de vida sostenibles."
+        ],
+        "estrategias": [
+          {
+            "docente": "El docente explica los principios lógicos de programación algorítmica mediante la ejecución de ejercicios prácticos desarrollados en clase.",
+            "estudiante": "La persona estudiante identifica principios lógicos de programación algorítmica mediante la realización de ejercicios prácticos en clase."
+          },
+          {
+            "docente": "El docente explica los elementos del lenguaje de marcado de documentos web mediante una presentación interactiva.",
+            "estudiante": "La persona estudiante explica los elementos del lenguaje de marcado de documentos web mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente elabora presentaciones de documentos estructurados escritos con lenguaje para marcado aplicando hojas de estilo mediante ejemplos prácticos.",
+            "estudiante": "La persona estudiante elabora presentaciones de documentos estructurados escritos con lenguaje para marcado aplicando hojas de estilo mediante ejercicios prácticos."
+          },
+          {
+            "docente": "El docente utiliza formas de comunicación asertiva en las relaciones humanas mediante dinámicas de grupo.",
+            "estudiante": "La persona estudiante utiliza formas de comunicación asertiva en las relaciones humanas mediante la elaboración de un proyecto."
+          },
+          {
+            "docente": "El docente demuestra modelos de vida sostenibles mediante la realización de proyectos en clase.",
+            "estudiante": "La persona estudiante demuestra modelos de vida sostenibles mediante la elaboración de un informe."
+          }
+        ],
+        "indicadores": [
+          "Identifica correctamente principios lógicos de programación algorítmica mediante la realización de ejercicios prácticos en clase.",
+          "Explica adecuadamente los elementos del lenguaje de marcado de documentos web mediante la elaboración de un informe.",
+          "Elabora presentaciones de documentos estructurados escritos con lenguaje para marcado aplicando hojas de estilo mediante ejercicios prácticos.",
+          "Utiliza formas de comunicación asertiva en las relaciones humanas mediante la elaboración de un proyecto.",
+          "Demuestra modelos de vida sostenibles mediante la elaboración de un informe."
+        ],
+        "evidencias": [
+          "Realiza ejercicios prácticos identificando principios lógicos de programación algorítmica.",
+          "Elabora un informe explicando los elementos del lenguaje de marcado de documentos web.",
+          "Completa ejercicios prácticos elaborando presentaciones de documentos estructurados escritos con lenguaje para marcado aplicando hojas de estilo.",
+          "Elabora un proyecto utilizando formas de comunicación asertiva en las relaciones humanas.",
+          "Elabora un informe demostrando modelos de vida sostenibles."
+        ],
+        "tiempo_estimado": 112
+      },
+      "programacion_interpretada": {
+        "nombre": "Programación Interpretada",
+        "horas": 104,
+        "resultados_aprendizaje": [
+          "1. Identificar los componentes que integran el entorno de programación interpretada.",
+          "2. Distinguir las sintaxis de programas para la resolución de problemas aplicando funciones y sus principios.",
+          "3. Desarrollar programas utilizando componentes de entornos interpretados con el uso de estructuras de control, funciones, arreglos y objetos.",
+          "4. Aplicar elementos que intervienen en procesos de negociación entre seres humanos.",
+          "5. Examinar las características de las infraestructuras resilientes."
+        ],
+        "saberes_esenciales": [
+          "Componentes del entorno de programación interpretada.",
+          "Sintaxis de programas para la resolución de problemas.",
+          "Desarrollo de programas utilizando entornos interpretados.",
+          "Elementos que intervienen en procesos de negociación.",
+          "Características de las infraestructuras resilientes."
+        ],
+        "estrategias": [
+          {
+            "docente": "El docente explica los componentes del entorno de programación interpretada mediante una clase interactiva.",
+            "estudiante": "La persona estudiante identifica los componentes del entorno de programación interpretada mediante la realización de un informe."
+          },
+          {
+            "docente": "El docente distingue las sintaxis de programas aplicando funciones y sus principios mediante ejercicios prácticos.",
+            "estudiante": "La persona estudiante distingue las sintaxis de programas aplicando funciones y sus principios mediante la realización de ejercicios prácticos."
+          },
+          {
+            "docente": "El docente desarrolla programas utilizando componentes de entornos interpretados mediante ejemplos prácticos.",
+            "estudiante": "La persona estudiante desarrolla programas utilizando componentes de entornos interpretados mediante la creación de proyectos."
+          },
+          {
+            "docente": "El docente aplica elementos que intervienen en procesos de negociación mediante dinámicas de grupo.",
+            "estudiante": "La persona estudiante aplica elementos que intervienen en procesos de negociación mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente examina las características de las infraestructuras resilientes mediante una clase teórica.",
+            "estudiante": "La persona estudiante examina las características de las infraestructuras resilientes mediante la creación de un proyecto."
+          }
+        ],
+        "indicadores": [
+          "Identifica correctamente los componentes del entorno de programación interpretada mediante la realización de un informe.",
+          "Distingue adecuadamente las sintaxis de programas aplicando funciones y sus principios mediante la realización de ejercicios prácticos.",
+          "Desarrolla programas utilizando componentes de entornos interpretados mediante la creación de proyectos.",
+          "Aplica elementos que intervienen en procesos de negociación mediante la elaboración de un informe.",
+          "Examina las características de las infraestructuras resilientes mediante la creación de un proyecto."
+        ],
+        "evidencias": [
+          "Elabora un informe identificando los componentes del entorno de programación interpretada.",
+          "Realiza ejercicios prácticos distinguiendo las sintaxis de programas aplicando funciones y sus principios.",
+          "Crea proyectos desarrollando programas utilizando componentes de entornos interpretados.",
+          "Elabora un informe aplicando elementos que intervienen en procesos de negociación.",
+          "Crea un proyecto examinando las características de las infraestructuras resilientes."
+        ],
+        "tiempo_estimado": 104
+      }
+    },
+    "soporte_ti": {
+      "fundamentos_tecnologias_informacion": {
+        "nombre": "Fundamentos de Tecnologías de Información",
+        "horas": 96,
+        "resultados_aprendizaje": [
+          "1. Emplear bajo criterios técnicos los componentes apropiados para la construcción, reparación o actualización de computadoras personales.",
+          "2. Instalar los componentes para la actualización de computadoras realizando la configuración según necesidades del usuario.",
+          "3. Determinar el mecanismo o procedimiento mediante el cual las computadoras se comunican en la red.",
+          "4. Explicar mecanismos para la solución de problemas en equipos portátiles y otros dispositivos.",
+          "5. Instalar sistemas operativos licenciados y de código abierto.",
+          "6. Implementar mecanismos de seguridad en equipos, datos y red considerando características y funciones del profesional en TI."
+        ],
+        "saberes_esenciales": [
+          "Componentes de computadoras personales.",
+          "Actualización y configuración de componentes.",
+          "Comunicación en red de computadoras.",
+          "Solución de problemas en equipos portátiles y dispositivos.",
+          "Instalación de sistemas operativos.",
+          "Mecanismos de seguridad en TI."
+        ],
+        "estrategias": [
+          {
+            "docente": "El docente explica los componentes de una computadora personal mediante la ejecución de prácticas de ensamblaje en clase.",
+            "estudiante": "La persona estudiante ensambla componentes de una computadora personal siguiendo los criterios técnicos explicados en clase."
+          },
+          {
+            "docente": "El docente demuestra cómo actualizar y configurar componentes de una computadora mediante ejemplos concretos.",
+            "estudiante": "La persona estudiante actualiza y configura componentes de una computadora personal aplicando lo aprendido en clase."
+          },
+          {
+            "docente": "El docente explica los mecanismos de comunicación en red de computadoras mediante una presentación interactiva.",
+            "estudiante": "La persona estudiante determina los mecanismos de comunicación en red de computadoras mediante la creación de un diagrama de red."
+          },
+          {
+            "docente": "El docente describe la solución de problemas en equipos portátiles mediante la elaboración de casos prácticos.",
+            "estudiante": "La persona estudiante soluciona problemas en equipos portátiles aplicando los mecanismos explicados en clase."
+          },
+          {
+            "docente": "El docente demuestra la instalación de sistemas operativos mediante una clase práctica en el laboratorio.",
+            "estudiante": "La persona estudiante instala sistemas operativos licenciados y de código abierto siguiendo las instrucciones del docente."
+          },
+          {
+            "docente": "El docente explica los mecanismos de seguridad en TI mediante la ejecución de ejercicios prácticos.",
+            "estudiante": "La persona estudiante implementa mecanismos de seguridad en equipos y datos aplicando lo aprendido en clase."
+          }
+        ],
+        "indicadores": [
+          "Emplea correctamente los componentes apropiados para la construcción, reparación o actualización de computadoras personales mediante la ejecución de prácticas de ensamblaje.",
+          "Instala componentes para la actualización de computadoras realizando la configuración según necesidades del usuario.",
+          "Determina el mecanismo o procedimiento mediante el cual las computadoras se comunican en la red mediante la creación de un diagrama de red.",
+          "Explica mecanismos para la solución de problemas en equipos portátiles y otros dispositivos mediante la elaboración de casos prácticos.",
+          "Instala sistemas operativos licenciados y de código abierto siguiendo las instrucciones del docente.",
+          "Implementa mecanismos de seguridad en equipos, datos y red considerando características y funciones del profesional en TI mediante la ejecución de ejercicios prácticos."
+        ],
+        "evidencias": [
+          "Ensambla componentes de una computadora personal siguiendo los criterios técnicos explicados en clase.",
+          "Actualiza y configura componentes de una computadora personal aplicando lo aprendido en clase.",
+          "Crea un diagrama de red determinando los mecanismos de comunicación en red de computadoras.",
+          "Soluciona problemas en equipos portátiles aplicando los mecanismos explicados en clase.",
+          "Instala sistemas operativos licenciados y de código abierto siguiendo las instrucciones del docente.",
+          "Implementa mecanismos de seguridad en equipos, datos y red aplicando lo aprendido en clase."
+        ],
+        "tiempo_estimado": 96
+      },
+      "seguridad_industrial": {
+        "nombre": "Seguridad Industrial",
+        "horas": 36,
+        "resultados_aprendizaje": [
+          "1. Mencionar el impacto de las regulaciones nacionales aplicadas en el campo de la Seguridad Industrial.",
+          "2. Explicar los procesos mediante los cuales se realiza el aseguramiento de infraestructuras físicas.",
+          "3. Aplicar las estrategias de prevención contra riesgos considerando la normativa, protocolos, insumos, equipos y herramientas que se utilizan en las actividades instrumentales.",
+          "4. Utilizar formas creativas e innovadoras para la resolución de problemas cotidianos.",
+          "5. Aplicar medidas preventivas que mitiguen la contaminación de los recursos marinos y sus océanos, promoviendo el desarrollo sostenible en ecosistemas terrestres."
+        ],
+        "saberes_esenciales": [
+          "Regulaciones nacionales en Seguridad Industrial.",
+          "Aseguramiento de infraestructuras físicas.",
+          "Estrategias de prevención contra riesgos.",
+          "Resolución creativa de problemas cotidianos.",
+          "Medidas preventivas contra la contaminación de recursos marinos y terrestres."
+        ],
+        "estrategias": [
+          {
+            "docente": "El docente menciona el impacto de las regulaciones nacionales en Seguridad Industrial mediante una clase interactiva.",
+            "estudiante": "La persona estudiante menciona el impacto de las regulaciones nacionales en Seguridad Industrial mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente explica los procesos de aseguramiento de infraestructuras físicas mediante casos de estudio.",
+            "estudiante": "La persona estudiante explica los procesos de aseguramiento de infraestructuras físicas mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente aplica estrategias de prevención contra riesgos mediante talleres prácticos.",
+            "estudiante": "La persona estudiante aplica estrategias de prevención contra riesgos mediante la realización de un proyecto."
+          },
+          {
+            "docente": "El docente fomenta la resolución creativa de problemas cotidianos mediante dinámicas de grupo.",
+            "estudiante": "La persona estudiante utiliza formas creativas para resolver problemas cotidianos mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente explica las medidas preventivas contra la contaminación mediante una clase teórica.",
+            "estudiante": "La persona estudiante aplica medidas preventivas contra la contaminación mediante la realización de un proyecto."
+          }
+        ],
+        "indicadores": [
+          "Menciona adecuadamente el impacto de las regulaciones nacionales en Seguridad Industrial mediante la elaboración de un informe.",
+          "Explica los procesos de aseguramiento de infraestructuras físicas mediante la elaboración de un informe.",
+          "Aplica estrategias de prevención contra riesgos mediante la realización de un proyecto.",
+          "Utiliza formas creativas para resolver problemas cotidianos mediante la elaboración de un informe.",
+          "Aplica medidas preventivas contra la contaminación mediante la realización de un proyecto."
+        ],
+        "evidencias": [
+          "Elabora un informe mencionando el impacto de las regulaciones nacionales en Seguridad Industrial.",
+          "Elabora un informe explicando los procesos de aseguramiento de infraestructuras físicas.",
+          "Realiza un proyecto aplicando estrategias de prevención contra riesgos.",
+          "Elabora un informe utilizando formas creativas para resolver problemas cotidianos.",
+          "Realiza un proyecto aplicando medidas preventivas contra la contaminación."
+        ],
+        "tiempo_estimado": 36
+      }
+    }
+  }
+}

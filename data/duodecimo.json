@@ -1,0 +1,117 @@
+{
+    "nivel": "Duodécimo",
+    "subareas": [
+      {
+        "nombre": "Programación Avanzada",
+        "unidades": [
+          {
+            "unidad": "Desarrollo de aplicaciones",
+            "horas": 80,
+            "resultados": [
+              {
+                "resultado": "Desarrollar aplicaciones web utilizando tecnologías avanzadas.",
+                "saberes": [
+                  "Tecnologías avanzadas",
+                  "Desarrollo de aplicaciones web"
+                ],
+                "indicadores": [
+                  "Desarrolla aplicaciones web utilizando tecnologías avanzadas.",
+                  "Aplica conocimientos de tecnologías avanzadas en el desarrollo de aplicaciones web.",
+                  "Crea proyectos prácticos de aplicaciones web."
+                ],
+                "estrategias": [
+                  "El docente explica las tecnologías avanzadas utilizadas en el desarrollo de aplicaciones web mediante ejemplos prácticos.",
+                  "El docente guía a los estudiantes en el desarrollo de aplicaciones web utilizando tecnologías avanzadas.",
+                  "El estudiante investiga sobre tecnologías avanzadas y elabora un informe.",
+                  "El estudiante participa en el desarrollo de aplicaciones web utilizando tecnologías avanzadas.",
+                  "El estudiante desarrolla proyectos prácticos de aplicaciones web."
+                ],
+                "evidencias": [
+                  "Conocimiento: Elabora un informe sobre tecnologías avanzadas utilizadas en el desarrollo de aplicaciones web.",
+                  "Desempeño: Desarrolla aplicaciones web utilizando tecnologías avanzadas.",
+                  "Producto: Crea proyectos prácticos de aplicaciones web.",
+                  "Desempeño: Participa en el desarrollo de aplicaciones web utilizando tecnologías avanzadas."
+                ],
+                "tiempo": "20 horas"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nombre": "Seguridad Informática",
+        "unidades": [
+          {
+            "unidad": "Ciberseguridad",
+            "horas": 60,
+            "resultados": [
+              {
+                "resultado": "Implementar medidas de seguridad para proteger la información.",
+                "saberes": [
+                  "Medidas de seguridad",
+                  "Protección de información"
+                ],
+                "indicadores": [
+                  "Implementa medidas de seguridad para proteger la información.",
+                  "Aplica conocimientos de seguridad informática en proyectos prácticos.",
+                  "Crea proyectos prácticos de seguridad informática."
+                ],
+                "estrategias": [
+                  "El docente explica las medidas de seguridad utilizadas para proteger la información mediante ejemplos prácticos.",
+                  "El docente guía a los estudiantes en la implementación de medidas de seguridad para proteger la información.",
+                  "El estudiante investiga sobre medidas de seguridad y elabora un informe.",
+                  "El estudiante participa en la implementación de medidas de seguridad para proteger la información.",
+                  "El estudiante desarrolla proyectos prácticos de seguridad informática."
+                ],
+                "evidencias": [
+                  "Conocimiento: Elabora un informe sobre medidas de seguridad utilizadas para proteger la información.",
+                  "Desempeño: Implementa medidas de seguridad para proteger la información.",
+                  "Producto: Crea proyectos prácticos de seguridad informática.",
+                  "Desempeño: Participa en la implementación de medidas de seguridad para proteger la información."
+                ],
+                "tiempo": "20 horas"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nombre": "Emprendimiento e Innovación",
+        "unidades": [
+          {
+            "unidad": "Gestión de proyectos",
+            "horas": 60,
+            "resultados": [
+              {
+                "resultado": "Aplicar técnicas de gestión de proyectos para el desarrollo de ideas innovadoras.",
+                "saberes": [
+                  "Técnicas de gestión de proyectos",
+                  "Desarrollo de ideas innovadoras"
+                ],
+                "indicadores": [
+                  "Aplica técnicas de gestión de proyectos para el desarrollo de ideas innovadoras.",
+                  "Desarrolla proyectos innovadores aplicando técnicas de gestión.",
+                  "Crea proyectos prácticos de gestión e innovación."
+                ],
+                "estrategias": [
+                  "El docente explica las técnicas de gestión de proyectos utilizadas para el desarrollo de ideas innovadoras mediante ejemplos prácticos.",
+                  "El docente guía a los estudiantes en la aplicación de técnicas de gestión de proyectos para el desarrollo de ideas innovadoras.",
+                  "El estudiante investiga sobre técnicas de gestión de proyectos y elabora un informe.",
+                  "El estudiante participa en el desarrollo de proyectos innovadores aplicando técnicas de gestión.",
+                  "El estudiante desarrolla proyectos prácticos de gestión e innovación."
+                ],
+                "evidencias": [
+                  "Conocimiento: Elabora un informe sobre técnicas de gestión de proyectos utilizadas para el desarrollo de ideas innovadoras.",
+                  "Desempeño: Aplica técnicas de gestión de proyectos para el desarrollo de ideas innovadoras.",
+                  "Producto: Crea proyectos prácticos de gestión e innovación.",
+                  "Desempeño: Participa en el desarrollo de proyectos innovadores aplicando técnicas de gestión."
+                ],
+                "tiempo": "20 horas"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

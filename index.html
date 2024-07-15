@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan de Práctica Pedagógica DESARROLLO WEB</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 20px;
+    }
+    .table th, .table td {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <h1>Plan de Práctica Pedagógica DESARROLLO WEB</h1>
+  <ul class="nav nav-tabs" id="levelTabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="decimo-tab" data-toggle="tab" href="#decimo" role="tab" aria-controls="decimo" aria-selected="true">Décimo</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="undecimo-tab" data-toggle="tab" href="#undecimo" role="tab" aria-controls="undecimo" aria-selected="false">Undécimo</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="duodecimo-tab" data-toggle="tab" href="#duodecimo" role="tab" aria-controls="duodecimo" aria-selected="false">Duodécimo</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="levelTabsContent">
+    <div class="tab-pane fade show active" id="decimo" role="tabpanel" aria-labelledby="decimo-tab">
+      <div class="accordion" id="decimoAccordion"></div>
+    </div>
+    <div class="tab-pane fade" id="undecimo" role="tabpanel" aria-labelledby="undecimo-tab">
+      <div class="accordion" id="undecimoAccordion"></div>
+    </div>
+    <div class="tab-pane fade" id="duodecimo" role="tabpanel" aria-labelledby="duodecimo-tab">
+      <div class="accordion" id="duodecimoAccordion"></div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      const loadContent = (filename, elementId) => {
+        $.getJSON(`data/${filename}.json`, function(data) {
+          let content = '';
+          data.subareas.forEach((subarea, subareaIndex) => {
+            content += `
+              <div class="card">
+                <div class="card-header" id="heading${elementId}${subareaIndex}">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link accordion-button" type="button" data-toggle="collapse" data-target="#collapse${elementId}${subareaIndex}" aria-expanded="true" aria-controls="collapse${elementId}${subareaIndex}">
+                      ${subarea.nombre}
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse${elementId}${subareaIndex}" class="collapse" aria-labelledby="heading${elementId}${subareaIndex}" data-parent="#${elementId}">
+                  <div class="card-body">
+            `;
+            subarea.unidades.forEach((unidad, unidadIndex) => {
+              content += `
+                <h3>${unidad.unidad}</h3>
+                <p><strong>Horas: </strong>${unidad.horas}</p>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Resultado de Aprendizaje</th>
+                      <th>Saberes</th>
+                      <th>Indicadores de Logro</th>
+                      <th>Estrategias de Mediación</th>
+                      <th>Evidencias</th>
+                      <th>Tiempo Estimado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+              `;
+              unidad.resultados.forEach((resultado, resultadoIndex) => {
+                content += `
+                  <tr>
+                    <td>${resultado.resultado}</td>
+                    <td>${resultado.saberes.join(', ')}</td>
+                    <td>${resultado.indicadores.map(indicador => indicador.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')).join('<br>')}</td>
+                    <td>${resultado.estrategias.map(estrategia => estrategia.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')).join('<br>')}</td>
+                    <td>${resultado.evidencias.map(evidencia => evidencia.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')).join('<br>')}</td>
+                    <td>${resultado.tiempo}</td>
+                  </tr>
+                `;
+              });
+              content += `
+                  </tbody>
+                </table>
+              `;
+            });
+            content += `
+                  </div>
+                </div>
+              </div>
+            `;
+          });
+          $(`#${elementId}`).html(content);
+        });
+      };
+
+      loadContent('DECIMO', 'decimoAccordion');
+      loadContent('UNDECIMO', 'undecimoAccordion');
+      loadContent('DUODECIMO', 'duodecimoAccordion');
+    });
+  </script>
+</body>
+</html>
