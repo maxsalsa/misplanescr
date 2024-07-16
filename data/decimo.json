@@ -1,0 +1,75 @@
+{
+  "decimo": {
+    "soporte_ti": {
+      "fundamentos_ti": {
+        "nombre": "Fundamentos de Tecnologías de Información",
+        "horas": 96,
+        "resultados_aprendizaje": [
+          "1. Emplear bajo criterios técnicos los componentes apropiados para la construcción, reparación o actualización de computadoras personales.",
+          "2. Instalar los componentes para la actualización de computadoras realizando la configuración según necesidades del usuario.",
+          "3. Determinar el mecanismo o procedimiento mediante el cual las computadoras se comunican en la red.",
+          "4. Explicar mecanismos para la solución de problemas en equipos portátiles y otros dispositivos.",
+          "5. Instalar sistemas operativos licenciados y de código abierto.",
+          "6. Implementar mecanismos de seguridad en equipos, datos y red considerando características y funciones del profesional en TI."
+        ],
+        "saberes_esenciales": [
+          "Componentes de computadoras personales.",
+          "Actualización y configuración de computadoras.",
+          "Mecanismos de comunicación en red.",
+          "Solución de problemas en equipos portátiles.",
+          "Instalación de sistemas operativos.",
+          "Mecanismos de seguridad en equipos y redes."
+        ],
+        "estrategias": [
+          {
+            "docente": "El docente **explica** los componentes apropiados para la construcción de computadoras mediante la ejecución de **ejercicios prácticos** en clase.",
+            "estudiante": "La persona estudiante **emplea** los componentes apropiados para la construcción de computadoras mediante la **realización de ejercicios prácticos** en clase."
+          },
+          {
+            "docente": "El docente **instala** componentes para la actualización de computadoras mediante **talleres prácticos**.",
+            "estudiante": "La persona estudiante **instala** componentes para la actualización de computadoras mediante la **configuración según necesidades del usuario**."
+          },
+          {
+            "docente": "El docente **determina** los mecanismos de comunicación en la red mediante **presentaciones interactivas**.",
+            "estudiante": "La persona estudiante **determina** los mecanismos de comunicación en la red mediante la **elaboración de un informe**."
+          },
+          {
+            "docente": "El docente **explica** los mecanismos para la solución de problemas en equipos portátiles mediante **casos de estudio**.",
+            "estudiante": "La persona estudiante **explica** los mecanismos para la solución de problemas en equipos portátiles mediante la **elaboración de un proyecto**."
+          },
+          {
+            "docente": "El docente **instala** sistemas operativos mediante **demostraciones prácticas**.",
+            "estudiante": "La persona estudiante **instala** sistemas operativos mediante la **ejecución de talleres prácticos**."
+          },
+          {
+            "docente": "El docente **implementa** mecanismos de seguridad en equipos y redes mediante **simulaciones**.",
+            "estudiante": "La persona estudiante **implementa** mecanismos de seguridad en equipos y redes mediante la **realización de ejercicios prácticos**."
+          }
+        ],
+        "indicadores": [
+          "Emplea los componentes apropiados para la construcción de computadoras mediante la realización de ejercicios prácticos en clase.",
+          "Instala componentes para la actualización de computadoras mediante la configuración según necesidades del usuario.",
+          "Determina los mecanismos de comunicación en la red mediante la elaboración de un informe.",
+          "Explica los mecanismos para la solución de problemas en equipos portátiles mediante la elaboración de un proyecto.",
+          "Instala sistemas operativos mediante la ejecución de talleres prácticos.",
+          "Implementa mecanismos de seguridad en equipos y redes mediante la realización de ejercicios prácticos."
+        ],
+        "evidencias": [
+          "Realiza ejercicios prácticos empleando componentes apropiados para la construcción de computadoras.",
+          "Configura componentes para la actualización de computadoras según necesidades del usuario.",
+          "Elabora un informe determinando los mecanismos de comunicación en la red.",
+          "Elabora un proyecto explicando los mecanismos para la solución de problemas en equipos portátiles.",
+          "Realiza talleres prácticos instalando sistemas operativos.",
+          "Realiza ejercicios prácticos implementando mecanismos de seguridad en equipos y redes."
+        ],
+        "tiempo_estimado": 96
+      },
+      "seguridad_industrial": {
+        "nombre": "Seguridad Industrial",
+        "horas": 36,
+        "resultados_aprendizaje": [
+          "1. Mencionar el impacto de las regulaciones nacionales aplicadas en el campo de la Seguridad Industrial.",
+          "2. Explicar los procesos mediante los cuales se realiza el aseguramiento de infraestructuras física.",
+          "3. Aplicar las estrategias de prevención contra riesgos considerando la normativa, protocolos, insumos, equipos y herramientas que se utilizan en las actividades instrumentales.",
+          "4. Utilizar formas creativas e innovadoras para la resolución de problemas cotidianos.",
+          "5. Aplicar medidas preventivas que mitiguen

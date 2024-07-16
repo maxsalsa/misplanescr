@@ -1,181 +1,294 @@
 {
-  "nivel": "Undécimo",
-  "subareas": [
-    {
-      "nombre": "Diseño de Software",
-      "unidades": [
-        {
-          "unidad": "Procesos de software",
-          "horas": 56,
-          "resultados": [
-            {
-              "resultado": "Explicar la organización de los procesos de software según las actividades que requiere el sistema.",
-              "saberes": [
-                "Organización de procesos de software",
-                "Actividades del sistema"
-              ],
-              "indicadores": [
-                "Explica la organización de los procesos de software.",
-                "Describe las actividades que requiere el sistema.",
-                "Aplica conocimientos de organización de procesos en proyectos prácticos."
-              ],
-              "estrategias": [
-                "El docente explica la organización de los procesos de software mediante ejemplos prácticos.",
-                "El docente guía a los estudiantes en la identificación de las actividades del sistema.",
-                "El estudiante investiga sobre la organización de procesos de software y elabora un informe.",
-                "El estudiante participa en la organización de procesos en proyectos prácticos.",
-                "El estudiante desarrolla proyectos aplicando conocimientos de organización de procesos."
-              ],
-              "evidencias": [
-                "Conocimiento: Elabora un informe sobre la organización de procesos de software.",
-                "Desempeño: Aplica conocimientos de organización de procesos en proyectos prácticos.",
-                "Producto: Presenta proyectos aplicando la organización de procesos de software.",
-                "Desempeño: Participa en la organización de procesos en proyectos prácticos."
-              ],
-              "tiempo": "20 horas"
-            }
-          ]
-        },
-        {
-          "unidad": "Modelado de requerimientos",
-          "horas": 56,
-          "resultados": [
-            {
-              "resultado": "Identificar las razones por las que se requiere el uso de los tipos de modelado y sus perspectivas.",
-              "saberes": [
-                "Tipos de modelado",
-                "Perspectivas de modelado"
-              ],
-              "indicadores": [
-                "Identifica las razones para el uso de tipos de modelado.",
-                "Describe las perspectivas de modelado.",
-                "Aplica conocimientos de modelado en proyectos prácticos."
-              ],
-              "estrategias": [
-                "El docente explica los tipos de modelado y sus perspectivas mediante ejemplos prácticos.",
-                "El docente guía a los estudiantes en la aplicación de conocimientos de modelado en proyectos prácticos.",
-                "El estudiante investiga sobre tipos de modelado y elabora un informe.",
-                "El estudiante participa en proyectos prácticos aplicando conocimientos de modelado.",
-                "El estudiante desarrolla proyectos que requieran la aplicación de conocimientos de modelado."
-              ],
-              "evidencias": [
-                "Conocimiento: Elabora un informe sobre tipos de modelado y sus perspectivas.",
-                "Desempeño: Aplica conocimientos de modelado en proyectos prácticos.",
-                "Producto: Presenta proyectos aplicando conocimientos de modelado.",
-                "Desempeño: Participa en proyectos prácticos aplicando conocimientos de modelado."
-              ],
-              "tiempo": "20 horas"
-            }
-          ]
-        },
-        {
-          "unidad": "Diseño arquitectónico",
-          "horas": 56,
-          "resultados": [
-            {
-              "resultado": "Reconocer los patrones y vistas que deben considerarse para la toma de decisiones durante la realización de diseño arquitectónico de software.",
-              "saberes": [
-                "Patrones de diseño arquitectónico",
-                "Vistas de diseño"
-              ],
-              "indicadores": [
-                "Reconoce los patrones de diseño arquitectónico.",
-                "Describe las vistas de diseño.",
-                "Aplica conocimientos de diseño arquitectónico en proyectos prácticos."
-              ],
-              "estrategias": [
-                "El docente explica los patrones y vistas de diseño arquitectónico mediante ejemplos prácticos.",
-                "El docente guía a los estudiantes en la aplicación de conocimientos de diseño arquitectónico en proyectos prácticos.",
-                "El estudiante investiga sobre patrones y vistas de diseño arquitectónico y elabora un informe.",
-                "El estudiante participa en proyectos prácticos aplicando conocimientos de diseño arquitectónico.",
-                "El estudiante desarrolla proyectos que requieran la aplicación de conocimientos de diseño arquitectónico."
-              ],
-              "evidencias": [
-                "Conocimiento: Elabora un informe sobre patrones y vistas de diseño arquitectónico.",
-                "Desempeño: Aplica conocimientos de diseño arquitectónico en proyectos prácticos.",
-                "Producto: Presenta proyectos aplicando conocimientos de diseño arquitectónico.",
-                "Desempeño: Participa en proyectos prácticos aplicando conocimientos de diseño arquitectónico."
-              ],
-              "tiempo": "20 horas"
-            }
+  "undecimo": {
+    "soporte_ti": {
+      "fundamentos_ciberseguridad": {
+        "nombre": "Fundamentos de Ciberseguridad",
+        "horas": 52,
+        "resultados_aprendizaje": [
+          "1. Describir los mecanismos de control de acceso a la información, planes de defensa y contingencia ante posibles ataques cibernéticos.",
+          "2. Explicar la forma de autentificar la identidad de usuarios, proteger el sigilo de comunicaciones personales, transacciones comerciales y bancarias protegiendo la integridad de la información que circula en la red por medio de técnicas criptográficas.",
+          "3. Evaluar los métodos y técnicas necesarios para la administración segura de la información en sistemas operativos licenciados y de código abierto.",
+          "4. Aplicar herramientas para la configuración de dispositivos y sistemas operativos que permiten el manejo seguro de la información que se maneja en las redes.",
+          "5. Analizar las estrategias de virtualización necesarias para el análisis de vulnerabilidades y controles de acceso a los sistemas y redes.",
+          "6. Utilizar información que profundice su aprendizaje, aprovechando las oportunidades de aprendizaje disponibles.",
+          "7. Distinguir los elementos complementarios que amplían la idea central de un mensaje que abordan temas de diversos ámbitos y de creciente complejidad en materia de seguridad informática."
+        ],
+        "saberes_esenciales": [
+          "Mecanismos de control de acceso a la información, planes de defensa y contingencia ante ataques cibernéticos.",
+          "Autenticación de usuarios, protección del sigilo de comunicaciones personales, transacciones comerciales y bancarias mediante técnicas criptográficas.",
+          "Métodos y técnicas para la administración segura de la información en sistemas operativos licenciados y de código abierto.",
+          "Herramientas para la configuración de dispositivos y sistemas operativos para el manejo seguro de la información en redes.",
+          "Estrategias de virtualización para el análisis de vulnerabilidades y controles de acceso a sistemas y redes.",
+          "Uso de información para profundizar el aprendizaje y aprovechar oportunidades de aprendizaje.",
+          "Elementos complementarios que amplían la idea central de mensajes en temas de seguridad informática."
+        ],
+        "estrategias": [
+          {
+            "docente": "El docente describe los mecanismos de control de acceso a la información mediante una presentación interactiva.",
+            "estudiante": "La persona estudiante describe los mecanismos de control de acceso a la información mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente explica la autenticación de usuarios y protección del sigilo de comunicaciones mediante ejemplos prácticos.",
+            "estudiante": "La persona estudiante explica la autenticación de usuarios y protección del sigilo de comunicaciones mediante la elaboración de un proyecto."
+          },
+          {
+            "docente": "El docente evalúa métodos y técnicas para la administración segura de la información mediante casos de estudio.",
+            "estudiante": "La persona estudiante evalúa métodos y técnicas para la administración segura de la información mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente aplica herramientas para la configuración de dispositivos mediante talleres prácticos.",
+            "estudiante": "La persona estudiante aplica herramientas para la configuración de dispositivos mediante la elaboración de un proyecto."
+          },
+          {
+            "docente": "El docente analiza estrategias de virtualización mediante la exposición de temas y debates en clase.",
+            "estudiante": "La persona estudiante analiza estrategias de virtualización mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente utiliza información para profundizar el aprendizaje mediante la realización de talleres prácticos.",
+            "estudiante": "La persona estudiante utiliza información para profundizar el aprendizaje mediante la elaboración de un proyecto."
+          },
+          {
+            "docente": "El docente distingue elementos complementarios de seguridad informática mediante ejemplos prácticos.",
+            "estudiante": "La persona estudiante distingue elementos complementarios de seguridad informática mediante la elaboración de un informe."
+          }
+        ],
+        "indicadores": [
+          "Describe los mecanismos de control de acceso a la información mediante la elaboración de un informe.",
+          "Explica la autenticación de usuarios y protección del sigilo de comunicaciones mediante la elaboración de un proyecto.",
+          "Evalúa métodos y técnicas para la administración segura de la información mediante la elaboración de un informe.",
+          "Aplica herramientas para la configuración de dispositivos mediante la elaboración de un proyecto.",
+          "Analiza estrategias de virtualización mediante la elaboración de un informe.",
+          "Utiliza información para profundizar el aprendizaje mediante la elaboración de un proyecto.",
+          "Distingue elementos complementarios de seguridad informática mediante la elaboración de un informe."
+        ],
+        "evidencias": {
+          "conocimiento": [
+            "Elabora un informe describiendo los mecanismos de control de acceso a la información.",
+            "Elabora un proyecto explicando la autenticación de usuarios y protección del sigilo de comunicaciones.",
+            "Elabora un informe evaluando métodos y técnicas para la administración segura de la información.",
+            "Elabora un proyecto aplicando herramientas para la configuración de dispositivos.",
+            "Elabora un informe analizando estrategias de virtualización.",
+            "Elabora un proyecto utilizando información para profundizar el aprendizaje.",
+            "Elabora un informe distinguiendo elementos complementarios de seguridad informática."
+          ],
+          "producto": [
+            "Construye un sistema de control de acceso a la información.",
+            "Implementa un proyecto de autenticación de usuarios y protección del sigilo de comunicaciones.",
+            "Realiza un estudio de métodos y técnicas para la administración segura de la información.",
+            "Configura dispositivos y sistemas operativos aplicando medidas de seguridad.",
+            "Desarrolla estrategias de virtualización y control de acceso a sistemas y redes.",
+            "Crea un proyecto que utiliza información para profundizar el aprendizaje.",
+            "Desarrolla un sistema de seguridad informática aplicando elementos complementarios."
+          ],
+          "desempeño": [
+            "Demuestra habilidades prácticas en la configuración de sistemas de control de acceso a la información.",
+            "Desarrolla competencias en la autenticación de usuarios y protección del sigilo de comunicaciones.",
+            "Participa en la evaluación y mejora de métodos y técnicas para la administración segura de la información.",
+            "Aplica habilidades de configuración de dispositivos y sistemas operativos.",
+            "Desarrolla competencias en la virtualización y control de acceso a sistemas y redes.",
+            "Participa en proyectos que utilizan información para profundizar el aprendizaje.",
+            "Aplica competencias en la seguridad informática desarrollando sistemas seguros."
           ]
         }
-      ]
+      }
     },
-    {
-      "nombre": "Soporte TI",
-      "unidades": [
-        {
-          "unidad": "Mantenimiento y reparación de equipos",
-          "horas": 72,
-          "resultados": [
-            {
-              "resultado": "Identificar los componentes de una computadora y sus funciones.",
-              "saberes": [
-                "Componentes de una computadora",
-                "Funciones de los componentes",
-                "Mantenimiento y reparación"
-              ],
-              "indicadores": [
-                "Identifica los componentes de una computadora.",
-                "Describe las funciones de los componentes.",
-                "Realiza mantenimiento y reparación de equipos."
-              ],
-              "estrategias": [
-                "El docente explica los componentes de una computadora y sus funciones mediante demostraciones prácticas.",
-                "El docente guía a los estudiantes en el mantenimiento y reparación de equipos.",
-                "El estudiante investiga sobre los componentes de una computadora y elabora un informe.",
-                "El estudiante participa en prácticas de mantenimiento y reparación de equipos.",
-                "El estudiante desarrolla proyectos aplicando conocimientos de mantenimiento y reparación."
-              ],
-              "evidencias": [
-                "Conocimiento: Elabora un informe sobre los componentes de una computadora.",
-                "Desempeño: Realiza mantenimiento y reparación de equipos.",
-                "Producto: Presenta proyectos aplicando conocimientos de mantenimiento y reparación.",
-                "Desempeño: Participa en prácticas de mantenimiento y reparación de equipos."
-              ],
-              "tiempo": "20 horas"
-            }
+    "programacion_web": {
+      "programacion_interpretada_multiparadigma": {
+        "nombre": "Programación Interpretada Multiparadigma",
+        "horas": 112,
+        "resultados_aprendizaje": [
+          "1. Identificar los elementos del entorno de desarrollo con programación interpretada multiparadigma.",
+          "2. Describir las sintaxis para la elaboración de programas aplicando las herramientas de control de flujo, estructuras de datos y módulos.",
+          "3. Programar aplicaciones web utilizando los elementos del entorno de desarrollo utilizando programación interpretada multiparadigma.",
+          "4. Analizar la conciencia de los razonamientos críticos acordes al contexto de la vida cotidiana.",
+          "5. Aplicar las técnicas de proactividad como medios alternativos en la solución de problemas."
+        ],
+        "saberes_esenciales": [
+          "Elementos del entorno de desarrollo con programación interpretada multiparadigma.",
+          "Sintaxis para la elaboración de programas aplicando herramientas de control de flujo, estructuras de datos y módulos.",
+          "Programación de aplicaciones web utilizando programación interpretada multiparadigma.",
+          "Conciencia de los razonamientos críticos acordes al contexto de la vida cotidiana.",
+          "Técnicas de proactividad como medios alternativos en la solución de problemas."
+        ],
+        "estrategias": [
+          {
+            "docente": "El docente identifica los elementos del entorno de desarrollo mediante una presentación interactiva.",
+            "estudiante": "La persona estudiante identifica los elementos del entorno de desarrollo mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente describe las sintaxis para la elaboración de programas mediante ejemplos prácticos.",
+            "estudiante": "La persona estudiante describe las sintaxis para la elaboración de programas mediante la creación de ejercicios prácticos."
+          },
+          {
+            "docente": "El docente programa aplicaciones web utilizando programación interpretada mediante talleres prácticos.",
+            "estudiante": "La persona estudiante programa aplicaciones web utilizando programación interpretada mediante la elaboración de un proyecto."
+          },
+          {
+            "docente": "El docente analiza la conciencia de los razonamientos críticos mediante debates en clase.",
+            "estudiante": "La persona estudiante analiza la conciencia de los razonamientos críticos mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente aplica técnicas de proactividad mediante dinámicas de grupo y talleres prácticos.",
+            "estudiante": "La persona estudiante aplica técnicas de proactividad mediante la elaboración de un proyecto."
+          }
+        ],
+        "indicadores": [
+          "Identifica los elementos del entorno de desarrollo mediante la elaboración de un informe.",
+          "Describe las sintaxis para la elaboración de programas mediante la creación de ejercicios prácticos.",
+          "Programa aplicaciones web utilizando programación interpretada mediante la elaboración de un proyecto.",
+          "Analiza la conciencia de los razonamientos críticos mediante la elaboración de un informe.",
+          "Aplica técnicas de proactividad mediante la elaboración de un proyecto."
+        ],
+        "evidencias": {
+          "conocimiento": [
+            "Elabora un informe identificando los elementos del entorno de desarrollo.",
+            "Crea ejercicios prácticos describiendo las sintaxis para la elaboración de programas.",
+            "Elabora un proyecto programando aplicaciones web utilizando programación interpretada.",
+            "Elabora un informe analizando la conciencia de los razonamientos críticos.",
+            "Elabora un proyecto aplicando técnicas de proactividad."
+          ],
+          "producto": [
+            "Crea un proyecto de desarrollo de aplicaciones web utilizando programación interpretada.",
+            "Desarrolla ejercicios prácticos de programación interpretada.",
+            "Desarrolla proyectos aplicando técnicas de proactividad."
+          ],
+          "desempeño": [
+            "Demuestra habilidades prácticas en el desarrollo de aplicaciones web utilizando programación interpretada.",
+            "Aplica técnicas de proactividad en la solución de problemas cotidianos.",
+            "Participa en el desarrollo y configuración de entornos de programación interpretada."
           ]
         }
-      ]
-    },
-    {
-      "nombre": "Emprendimiento e Innovación",
-      "unidades": [
-        {
-          "unidad": "Fundamentos del emprendimiento",
-          "horas": 72,
-          "resultados": [
-            {
-              "resultado": "Identificar las características del emprendimiento y la innovación.",
-              "saberes": [
-                "Características del emprendimiento",
-                "Innovación"
-              ],
-              "indicadores": [
-                "Identifica las características del emprendimiento.",
-                "Describe los aspectos clave de la innovación.",
-                "Aplica conocimientos de emprendimiento e innovación en proyectos prácticos."
-              ],
-              "estrategias": [
-                "El docente explica las características del emprendimiento y la innovación mediante ejemplos prácticos.",
-                "El docente guía a los estudiantes en la aplicación de conocimientos de emprendimiento e innovación en proyectos prácticos.",
-                "El estudiante investiga sobre el emprendimiento y la innovación y elabora un informe.",
-                "El estudiante participa en proyectos prácticos aplicando conocimientos de emprendimiento e innovación.",
-                "El estudiante desarrolla proyectos que requieran la aplicación de conocimientos de emprendimiento e innovación."
-              ],
-              "evidencias": [
-                "Conocimiento: Elabora un informe sobre las características del emprendimiento y la innovación.",
-                "Desempeño: Aplica conocimientos de emprendimiento e innovación en proyectos prácticos.",
-                "Producto: Presenta proyectos aplicando conocimientos de emprendimiento e innovación.",
-                "Desempeño: Participa en proyectos prácticos aplicando conocimientos de emprendimiento e innovación."
-              ],
-              "tiempo": "20 horas"
-            }
+      },
+      "programacion_orientada_objetos": {
+        "nombre": "Programación Orientada a Objetos",
+        "horas": 104,
+        "resultados_aprendizaje": [
+          "1. Identificar los componentes que conforman el entorno de desarrollo orientado a objetos.",
+          "2. Explicar las sintaxis de desarrollo para elaboración de programas utilizando POO.",
+          "3. Programar aplicaciones web utilizando los elementos de la programación orientada a objetos.",
+          "4. Implementar los aspectos generales y las dinámicas requeridas en la formación de trabajo en equipo.",
+          "5. Desarrollar capacidades humanas que promuevan los valores de equidad (justicia e igualdad)."
+        ],
+        "saberes_esenciales": [
+          "Componentes del entorno de desarrollo orientado a objetos.",
+          "Sintaxis de desarrollo para la elaboración de programas utilizando POO.",
+          "Programación de aplicaciones web utilizando programación orientada a objetos.",
+          "Aspectos generales y dinámicas requeridas en la formación de trabajo en equipo.",
+          "Capacidades humanas que promuevan los valores de equidad (justicia e igualdad)."
+        ],
+        "estrategias": [
+          {
+            "docente": "El docente identifica los componentes del entorno de desarrollo mediante ejemplos prácticos.",
+            "estudiante": "La persona estudiante identifica los componentes del entorno de desarrollo mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente explica las sintaxis de desarrollo mediante una presentación interactiva.",
+            "estudiante": "La persona estudiante explica las sintaxis de desarrollo mediante la creación de ejercicios prácticos."
+          },
+          {
+            "docente": "El docente programa aplicaciones web utilizando POO mediante talleres prácticos.",
+            "estudiante": "La persona estudiante programa aplicaciones web utilizando POO mediante la elaboración de un proyecto."
+          },
+          {
+            "docente": "El docente implementa dinámicas de trabajo en equipo mediante simulaciones y ejercicios prácticos.",
+            "estudiante": "La persona estudiante implementa dinámicas de trabajo en equipo mediante la elaboración de un proyecto."
+          },
+          {
+            "docente": "El docente desarrolla capacidades humanas que promuevan la equidad mediante debates y actividades en clase.",
+            "estudiante": "La persona estudiante desarrolla capacidades humanas que promuevan la equidad mediante la elaboración de un informe."
+          }
+        ],
+        "indicadores": [
+          "Identifica los componentes del entorno de desarrollo mediante la elaboración de un informe.",
+          "Explica las sintaxis de desarrollo mediante la creación de ejercicios prácticos.",
+          "Programa aplicaciones web utilizando POO mediante la elaboración de un proyecto.",
+          "Implementa dinámicas de trabajo en equipo mediante la elaboración de un proyecto.",
+          "Desarrolla capacidades humanas que promuevan la equidad mediante la elaboración de un informe."
+        ],
+        "evidencias": {
+          "conocimiento": [
+            "Elabora un informe identificando los componentes del entorno de desarrollo.",
+            "Crea ejercicios prácticos explicando las sintaxis de desarrollo.",
+            "Elabora un proyecto programando aplicaciones web utilizando POO.",
+            "Elabora un informe desarrollando capacidades humanas que promuevan la equidad."
+          ],
+          "producto": [
+            "Desarrolla proyectos de programación web utilizando POO.",
+            "Participa en ejercicios de trabajo en equipo aplicando programación orientada a objetos.",
+            "Realiza simulaciones de trabajo en equipo."
+          ],
+          "desempeño": [
+            "Demuestra habilidades prácticas en el desarrollo de aplicaciones web utilizando POO.",
+            "Participa en dinámicas de trabajo en equipo aplicando programación orientada a objetos.",
+            "Desarrolla habilidades para trabajar en equipo y promover la equidad."
           ]
         }
-      ]
+      },
+      "programacion_hibrida": {
+        "nombre": "Programación Híbrida",
+        "horas": 104,
+        "resultados_aprendizaje": [
+          "1. Identificar las sintaxis de programación híbrida utilizando estructuras de selección y repetición.",
+          "2. Describir los procesos de desarrollo para el uso de funciones y arreglos utilizando programación híbrida.",
+          "3. Programar aplicaciones web utilizando lenguajes de programación híbrida.",
+          "4. Utilizar medios alternativos en los procesos cotidianos para la solución de problemas.",
+          "5. Aplicar la escala de valores y creencias para la toma de decisiones que permitan la sana convivencia."
+        ],
+        "saberes_esenciales": [
+          "Sintaxis de programación híbrida utilizando estructuras de selección y repetición.",
+          "Procesos de desarrollo para el uso de funciones y arreglos en programación híbrida.",
+          "Programación de aplicaciones web utilizando lenguajes de programación híbrida.",
+          "Medios alternativos para la solución de problemas cotidianos.",
+          "Escala de valores y creencias para la toma de decisiones y sana convivencia."
+        ],
+        "estrategias": [
+          {
+            "docente": "El docente identifica las sintaxis de programación híbrida mediante ejemplos prácticos.",
+            "estudiante": "La persona estudiante identifica las sintaxis de programación híbrida mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente describe los procesos de desarrollo mediante una presentación interactiva.",
+            "estudiante": "La persona estudiante describe los procesos de desarrollo mediante la creación de ejercicios prácticos."
+          },
+          {
+            "docente": "El docente programa aplicaciones web utilizando programación híbrida mediante talleres prácticos.",
+            "estudiante": "La persona estudiante programa aplicaciones web utilizando programación híbrida mediante la elaboración de un proyecto."
+          },
+          {
+            "docente": "El docente utiliza medios alternativos para la solución de problemas mediante dinámicas de grupo.",
+            "estudiante": "La persona estudiante utiliza medios alternativos para la solución de problemas mediante la elaboración de un proyecto."
+          },
+          {
+            "docente": "El docente aplica la escala de valores y creencias mediante debates y actividades en clase.",
+            "estudiante": "La persona estudiante aplica la escala de valores y creencias mediante la elaboración de un informe."
+          }
+        ],
+        "indicadores": [
+          "Identifica las sintaxis de programación híbrida mediante la elaboración de un informe.",
+          "Describe los procesos de desarrollo mediante la creación de ejercicios prácticos.",
+          "Programa aplicaciones web utilizando programación híbrida mediante la elaboración de un proyecto.",
+          "Utiliza medios alternativos para la solución de problemas mediante la elaboración de un proyecto.",
+          "Aplica la escala de valores y creencias mediante la elaboración de un informe."
+        ],
+        "evidencias": {
+          "conocimiento": [
+            "Elabora un informe identificando las sintaxis de programación híbrida.",
+            "Crea ejercicios prácticos describiendo los procesos de desarrollo.",
+            "Elabora un proyecto programando aplicaciones web utilizando programación híbrida.",
+            "Elabora un informe aplicando la escala de valores y creencias."
+          ],
+          "producto": [
+            "Desarrolla proyectos de programación híbrida aplicando estructuras de selección y repetición.",
+            "Participa en ejercicios de desarrollo utilizando funciones y arreglos.",
+            "Realiza proyectos aplicando medios alternativos para la solución de problemas."
+          ],
+          "desempeño": [
+            "Demuestra habilidades prácticas en el desarrollo de aplicaciones web utilizando programación híbrida.",
+            "Aplica medios alternativos en la solución de problemas cotidianos.",
+            "Participa en debates y actividades aplicando la escala de valores y creencias."
+          ]
+        }
+      }
     }
-  ]
+  }
 }

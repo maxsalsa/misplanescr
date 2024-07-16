@@ -1,117 +1,216 @@
 {
-    "nivel": "Duodécimo",
-    "subareas": [
-      {
-        "nombre": "Programación Avanzada",
-        "unidades": [
+  "duodecimo": {
+    "emprendimiento_innovacion": {
+      "proyectos_innovacion": {
+        "nombre": "Proyectos de Innovación",
+        "horas": 104,
+        "resultados_aprendizaje": [
+          "1. Desarrollar proyectos de innovación que generen valor agregado en el entorno local y global.",
+          "2. Aplicar metodologías ágiles en la gestión de proyectos de innovación.",
+          "3. Evaluar la viabilidad técnica, económica y financiera de proyectos de innovación.",
+          "4. Implementar estrategias de marketing digital para la promoción de proyectos innovadores.",
+          "5. Integrar tecnologías emergentes en el desarrollo de proyectos de innovación."
+        ],
+        "saberes_esenciales": [
+          "Desarrollo de proyectos de innovación.",
+          "Metodologías ágiles en la gestión de proyectos.",
+          "Evaluación de viabilidad técnica, económica y financiera de proyectos.",
+          "Estrategias de marketing digital.",
+          "Integración de tecnologías emergentes en proyectos."
+        ],
+        "estrategias": [
           {
-            "unidad": "Desarrollo de aplicaciones",
-            "horas": 80,
-            "resultados": [
-              {
-                "resultado": "Desarrollar aplicaciones web utilizando tecnologías avanzadas.",
-                "saberes": [
-                  "Tecnologías avanzadas",
-                  "Desarrollo de aplicaciones web"
-                ],
-                "indicadores": [
-                  "Desarrolla aplicaciones web utilizando tecnologías avanzadas.",
-                  "Aplica conocimientos de tecnologías avanzadas en el desarrollo de aplicaciones web.",
-                  "Crea proyectos prácticos de aplicaciones web."
-                ],
-                "estrategias": [
-                  "El docente explica las tecnologías avanzadas utilizadas en el desarrollo de aplicaciones web mediante ejemplos prácticos.",
-                  "El docente guía a los estudiantes en el desarrollo de aplicaciones web utilizando tecnologías avanzadas.",
-                  "El estudiante investiga sobre tecnologías avanzadas y elabora un informe.",
-                  "El estudiante participa en el desarrollo de aplicaciones web utilizando tecnologías avanzadas.",
-                  "El estudiante desarrolla proyectos prácticos de aplicaciones web."
-                ],
-                "evidencias": [
-                  "Conocimiento: Elabora un informe sobre tecnologías avanzadas utilizadas en el desarrollo de aplicaciones web.",
-                  "Desempeño: Desarrolla aplicaciones web utilizando tecnologías avanzadas.",
-                  "Producto: Crea proyectos prácticos de aplicaciones web.",
-                  "Desempeño: Participa en el desarrollo de aplicaciones web utilizando tecnologías avanzadas."
-                ],
-                "tiempo": "20 horas"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "nombre": "Seguridad Informática",
-        "unidades": [
+            "docente": "El docente desarrolla proyectos de innovación mediante talleres prácticos y trabajo colaborativo.",
+            "estudiante": "La persona estudiante desarrolla proyectos de innovación mediante la elaboración de un proyecto práctico."
+          },
           {
-            "unidad": "Ciberseguridad",
-            "horas": 60,
-            "resultados": [
-              {
-                "resultado": "Implementar medidas de seguridad para proteger la información.",
-                "saberes": [
-                  "Medidas de seguridad",
-                  "Protección de información"
-                ],
-                "indicadores": [
-                  "Implementa medidas de seguridad para proteger la información.",
-                  "Aplica conocimientos de seguridad informática en proyectos prácticos.",
-                  "Crea proyectos prácticos de seguridad informática."
-                ],
-                "estrategias": [
-                  "El docente explica las medidas de seguridad utilizadas para proteger la información mediante ejemplos prácticos.",
-                  "El docente guía a los estudiantes en la implementación de medidas de seguridad para proteger la información.",
-                  "El estudiante investiga sobre medidas de seguridad y elabora un informe.",
-                  "El estudiante participa en la implementación de medidas de seguridad para proteger la información.",
-                  "El estudiante desarrolla proyectos prácticos de seguridad informática."
-                ],
-                "evidencias": [
-                  "Conocimiento: Elabora un informe sobre medidas de seguridad utilizadas para proteger la información.",
-                  "Desempeño: Implementa medidas de seguridad para proteger la información.",
-                  "Producto: Crea proyectos prácticos de seguridad informática.",
-                  "Desempeño: Participa en la implementación de medidas de seguridad para proteger la información."
-                ],
-                "tiempo": "20 horas"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "nombre": "Emprendimiento e Innovación",
-        "unidades": [
+            "docente": "El docente aplica metodologías ágiles en la gestión de proyectos mediante la realización de simulaciones.",
+            "estudiante": "La persona estudiante aplica metodologías ágiles en la gestión de proyectos mediante la implementación de un proyecto."
+          },
           {
-            "unidad": "Gestión de proyectos",
-            "horas": 60,
-            "resultados": [
-              {
-                "resultado": "Aplicar técnicas de gestión de proyectos para el desarrollo de ideas innovadoras.",
-                "saberes": [
-                  "Técnicas de gestión de proyectos",
-                  "Desarrollo de ideas innovadoras"
-                ],
-                "indicadores": [
-                  "Aplica técnicas de gestión de proyectos para el desarrollo de ideas innovadoras.",
-                  "Desarrolla proyectos innovadores aplicando técnicas de gestión.",
-                  "Crea proyectos prácticos de gestión e innovación."
-                ],
-                "estrategias": [
-                  "El docente explica las técnicas de gestión de proyectos utilizadas para el desarrollo de ideas innovadoras mediante ejemplos prácticos.",
-                  "El docente guía a los estudiantes en la aplicación de técnicas de gestión de proyectos para el desarrollo de ideas innovadoras.",
-                  "El estudiante investiga sobre técnicas de gestión de proyectos y elabora un informe.",
-                  "El estudiante participa en el desarrollo de proyectos innovadores aplicando técnicas de gestión.",
-                  "El estudiante desarrolla proyectos prácticos de gestión e innovación."
-                ],
-                "evidencias": [
-                  "Conocimiento: Elabora un informe sobre técnicas de gestión de proyectos utilizadas para el desarrollo de ideas innovadoras.",
-                  "Desempeño: Aplica técnicas de gestión de proyectos para el desarrollo de ideas innovadoras.",
-                  "Producto: Crea proyectos prácticos de gestión e innovación.",
-                  "Desempeño: Participa en el desarrollo de proyectos innovadores aplicando técnicas de gestión."
-                ],
-                "tiempo": "20 horas"
-              }
-            ]
+            "docente": "El docente evalúa la viabilidad de proyectos mediante estudios de caso.",
+            "estudiante": "La persona estudiante evalúa la viabilidad de proyectos mediante la elaboración de un informe."
+          },
+          {
+            "docente": "El docente implementa estrategias de marketing digital mediante talleres prácticos.",
+            "estudiante": "La persona estudiante implementa estrategias de marketing digital mediante la creación de campañas."
+          },
+          {
+            "docente": "El docente integra tecnologías emergentes en proyectos mediante demostraciones prácticas.",
+            "estudiante": "La persona estudiante integra tecnologías emergentes en proyectos mediante la elaboración de un proyecto práctico."
           }
-        ]
+        ],
+        "indicadores": [
+          "Desarrolla proyectos de innovación mediante la elaboración de un proyecto práctico.",
+          "Aplica metodologías ágiles en la gestión de proyectos mediante la implementación de un proyecto.",
+          "Evalúa la viabilidad de proyectos mediante la elaboración de un informe.",
+          "Implementa estrategias de marketing digital mediante la creación de campañas.",
+          "Integra tecnologías emergentes en proyectos mediante la elaboración de un proyecto práctico."
+        ],
+        "evidencias": {
+          "conocimiento": [
+            "Elabora un informe sobre el desarrollo de proyectos de innovación.",
+            "Realiza estudios de caso aplicando metodologías ágiles en la gestión de proyectos.",
+            "Presenta un análisis de viabilidad técnica, económica y financiera de proyectos.",
+            "Elabora un informe sobre estrategias de marketing digital.",
+            "Realiza un estudio sobre la integración de tecnologías emergentes en proyectos."
+          ],
+          "producto": [
+            "Desarrolla un proyecto de innovación aplicando metodologías ágiles.",
+            "Implementa una campaña de marketing digital para un proyecto innovador.",
+            "Elabora un proyecto práctico integrando tecnologías emergentes."
+          ],
+          "desempeño": [
+            "Demuestra habilidades en el desarrollo y gestión de proyectos de innovación.",
+            "Aplica metodologías ágiles en la gestión de proyectos.",
+            "Evalúa la viabilidad de proyectos de manera efectiva.",
+            "Implementa estrategias de marketing digital con éxito.",
+            "Integra tecnologías emergentes en proyectos innovadores."
+          ]
+        }
       }
-    ]
+    },
+    "programacion_web": {
+      "programacion_servidor": {
+        "nombre": "Programación del lado del servidor",
+        "horas": 96,
+        "resultados_aprendizaje": [
+          "1. Desarrollar aplicaciones web dinámicas utilizando lenguajes de programación del lado del servidor.",
+          "2. Integrar bases de datos en aplicaciones web del lado del servidor.",
+          "3. Implementar técnicas de autenticación y autorización en aplicaciones web del lado del servidor.",
+          "4. Aplicar buenas prácticas de seguridad en el desarrollo de aplicaciones del lado del servidor.",
+          "5. Desarrollar APIs RESTful para la comunicación entre aplicaciones web."
+        ],
+        "saberes_esenciales": [
+          "Lenguajes de programación del lado del servidor.",
+          "Integración de bases de datos en aplicaciones web.",
+          "Técnicas de autenticación y autorización.",
+          "Buenas prácticas de seguridad en desarrollo web.",
+          "Desarrollo de APIs RESTful."
+        ],
+        "estrategias": [
+          {
+            "docente": "El docente desarrolla aplicaciones web dinámicas mediante talleres prácticos.",
+            "estudiante": "La persona estudiante desarrolla aplicaciones web dinámicas mediante la elaboración de un proyecto práctico."
+          },
+          {
+            "docente": "El docente integra bases de datos en aplicaciones web mediante la realización de ejemplos prácticos.",
+            "estudiante": "La persona estudiante integra bases de datos en aplicaciones web mediante la implementación de un proyecto."
+          },
+          {
+            "docente": "El docente implementa técnicas de autenticación y autorización mediante simulaciones.",
+            "estudiante": "La persona estudiante implementa técnicas de autenticación y autorización mediante la elaboración de un proyecto."
+          },
+          {
+            "docente": "El docente aplica buenas prácticas de seguridad mediante demostraciones prácticas.",
+            "estudiante": "La persona estudiante aplica buenas prácticas de seguridad mediante la implementación de un proyecto."
+          },
+          {
+            "docente": "El docente desarrolla APIs RESTful mediante talleres prácticos.",
+            "estudiante": "La persona estudiante desarrolla APIs RESTful mediante la elaboración de un proyecto práctico."
+          }
+        ],
+        "indicadores": [
+          "Desarrolla aplicaciones web dinámicas mediante la elaboración de un proyecto práctico.",
+          "Integra bases de datos en aplicaciones web mediante la implementación de un proyecto.",
+          "Implementa técnicas de autenticación y autorización mediante la elaboración de un proyecto.",
+          "Aplica buenas prácticas de seguridad mediante la implementación de un proyecto.",
+          "Desarrolla APIs RESTful mediante la elaboración de un proyecto práctico."
+        ],
+        "evidencias": {
+          "conocimiento": [
+            "Elabora un informe sobre el desarrollo de aplicaciones web dinámicas.",
+            "Realiza ejemplos prácticos integrando bases de datos en aplicaciones web.",
+            "Presenta un proyecto aplicando técnicas de autenticación y autorización.",
+            "Elabora un informe sobre buenas prácticas de seguridad en desarrollo web.",
+            "Desarrolla un proyecto de APIs RESTful."
+          ],
+          "producto": [
+            "Desarrolla un proyecto de aplicaciones web dinámicas.",
+            "Implementa bases de datos en proyectos web.",
+            "Desarrolla un proyecto aplicando técnicas de autenticación y autorización.",
+            "Implementa buenas prácticas de seguridad en proyectos web.",
+            "Desarrolla un proyecto de APIs RESTful."
+          ],
+          "desempeño": [
+            "Demuestra habilidades en el desarrollo de aplicaciones web dinámicas.",
+            "Integra bases de datos en aplicaciones web de manera efectiva.",
+            "Aplica técnicas de autenticación y autorización en proyectos web.",
+            "Implementa buenas prácticas de seguridad en el desarrollo web.",
+            "Desarrolla APIs RESTful con éxito."
+          ]
+        }
+      },
+      "programacion_frontend": {
+        "nombre": "Programación Frontend",
+        "horas": 96,
+        "resultados_aprendizaje": [
+          "1. Diseñar interfaces de usuario intuitivas y atractivas utilizando HTML, CSS y JavaScript.",
+          "2. Implementar frameworks y librerías frontend para el desarrollo de aplicaciones web.",
+          "3. Aplicar técnicas de responsive design para la adaptación de interfaces a diferentes dispositivos.",
+          "4. Integrar servicios web y APIs en aplicaciones frontend.",
+          "5. Optimizar el rendimiento y la accesibilidad de aplicaciones web frontend."
+        ],
+        "saberes_esenciales": [
+          "Diseño de interfaces de usuario con HTML, CSS y JavaScript.",
+          "Frameworks y librerías frontend.",
+          "Responsive design.",
+          "Integración de servicios web y APIs en aplicaciones frontend.",
+          "Optimización del rendimiento y accesibilidad en aplicaciones web frontend."
+        ],
+        "estrategias": [
+          {
+            "docente": "El docente diseña interfaces de usuario mediante talleres prácticos.",
+            "estudiante": "La persona estudiante diseña interfaces de usuario mediante la elaboración de un proyecto práctico."
+          },
+          {
+            "docente": "El docente implementa frameworks y librerías frontend mediante demostraciones prácticas.",
+            "estudiante": "La persona estudiante implementa frameworks y librerías frontend mediante la creación de un proyecto."
+          },
+          {
+            "docente": "El docente aplica técnicas de responsive design mediante ejemplos prácticos.",
+            "estudiante": "La persona estudiante aplica técnicas de responsive design mediante la elaboración de un proyecto."
+          },
+          {
+            "docente": "El docente integra servicios web y APIs en aplicaciones frontend mediante talleres.",
+            "estudiante": "La persona estudiante integra servicios web y APIs en aplicaciones frontend mediante la creación de un proyecto."
+          },
+          {
+            "docente": "El docente optimiza el rendimiento y accesibilidad de aplicaciones web mediante la realización de estudios de caso.",
+            "estudiante": "La persona estudiante optimiza el rendimiento y accesibilidad de aplicaciones web mediante la implementación de un proyecto."
+          }
+        ],
+        "indicadores": [
+          "Diseña interfaces de usuario mediante la elaboración de un proyecto práctico.",
+          "Implementa frameworks y librerías frontend mediante la creación de un proyecto.",
+          "Aplica técnicas de responsive design mediante la elaboración de un proyecto.",
+          "Integra servicios web y APIs en aplicaciones frontend mediante la creación de un proyecto.",
+          "Optimiza el rendimiento y accesibilidad de aplicaciones web mediante la implementación de un proyecto."
+        ],
+        "evidencias": {
+          "conocimiento": [
+            "Elabora un informe sobre diseño de interfaces de usuario.",
+            "Realiza ejemplos prácticos utilizando frameworks y librerías frontend.",
+            "Presenta un proyecto aplicando técnicas de responsive design.",
+            "Elabora un informe sobre la integración de servicios web y APIs.",
+            "Desarrolla un proyecto optimizando el rendimiento y accesibilidad de aplicaciones web."
+          ],
+          "producto": [
+            "Diseña un proyecto de interfaces de usuario.",
+            "Implementa frameworks y librerías en proyectos frontend.",
+            "Desarrolla un proyecto aplicando técnicas de responsive design.",
+            "Integra servicios web y APIs en proyectos frontend.",
+            "Optimiza el rendimiento y accesibilidad de aplicaciones web en proyectos."
+          ],
+          "desempeño": [
+            "Demuestra habilidades en el diseño de interfaces de usuario.",
+            "Implementa frameworks y librerías frontend de manera efectiva.",
+            "Aplica técnicas de responsive design en proyectos frontend.",
+            "Integra servicios web y APIs en proyectos frontend.",
+            "Optimiza el rendimiento y accesibilidad de aplicaciones web con éxito."
+          ]
+        }
+      }
+    }
   }
-  
+}
