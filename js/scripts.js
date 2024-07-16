@@ -25,7 +25,6 @@ function showLogin() {
     document.getElementById('login-container').style.display = 'block';
     document.getElementById('main-content').style.display = 'none';
     document.getElementById('session-link').innerText = 'Iniciar Sesión';
-    window.onbeforeunload = null;
 }
 
 function showMainContent() {
@@ -34,9 +33,6 @@ function showMainContent() {
     document.getElementById('usernameDisplay').innerText = sessionStorage.getItem('username');
     document.getElementById('session-link').innerText = 'Cerrar Sesión';
     startSessionTimeout();
-    window.onbeforeunload = function() {
-        return '¿Desea cerrar la sesión?';
-    }
 }
 
 let timeout;
@@ -59,13 +55,6 @@ function logout() {
 
 document.addEventListener('mousemove', startSessionTimeout);
 document.addEventListener('keypress', startSessionTimeout);
-
-function refreshPage() {
-    if (confirm('¿Desea cerrar la sesión y refrescar la página?')) {
-        logout();
-        location.reload();
-    }
-}
 
 function showSubareas(level) {
     const subareaMap = {
