@@ -59,7 +59,7 @@ function simulatePDFDownload(unitName) {
 function validateLogin() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
-    if (username === 'Recibida$' && password === 'Bendicione$') {
+    if (username === 'Bendicione$' && password === 'Recibida$') {
         window.location.href = 'inicio.html';
     } else {
         alert('Usuario o contraseña incorrectos');
