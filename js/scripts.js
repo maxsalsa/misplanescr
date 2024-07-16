@@ -1,3 +1,57 @@
+document.addEventListener('DOMContentLoaded', function() {
+    if (sessionStorage.getItem('authenticated') === 'true') {
+        document.getElementById('login-container').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+        document.getElementById('usernameDisplay').innerText = sessionStorage.getItem('username');
+        startSessionTimeout();
+        window.onbeforeunload = function() {
+            return '¿Desea cerrar la sesión?';
+        }
+    } else {
+        window.onbeforeunload = null;
+    }
+});
+
+const loginForm = document.getElementById('loginForm');
+loginForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === 'Bendicione$' && password === 'Recibida$') {
+        sessionStorage.setItem('authenticated', 'true');
+        sessionStorage.setItem('username', username);
+        document.getElementById('login-container').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+        document.getElementById('usernameDisplay').innerText = username;
+        startSessionTimeout();
+        window.onbeforeunload = function() {
+            return '¿Desea cerrar la sesión?';
+        }
+    } else {
+        document.getElementById('loginError').style.display = 'block';
+    }
+});
+
+let timeout;
+function startSessionTimeout() {
+    clearTimeout(timeout);
+    timeout = setTimeout(logout, 600000); // 10 minutes
+}
+
+function logout() {
+    if (confirm(`¿${sessionStorage.getItem('username')} desea cerrar la sesión?`)) {
+        sessionStorage.removeItem('authenticated');
+        sessionStorage.removeItem('username');
+        document.getElementById('login-container').style.display = 'block';
+        document.getElementById('main-content').style.display = 'none';
+        window.onbeforeunload = null;
+    }
+}
+
+document.addEventListener('mousemove', startSessionTimeout);
+document.addEventListener('keypress', startSessionTimeout);
+
 function showSubareas(level) {
     const subareaMap = {
         "decimo": [
@@ -55,33 +109,6 @@ function showSubareas(level) {
             }
         ]
     };
-    
-    document.addEventListener('DOMContentLoaded', function() {
-        const loginForm = document.getElementById('loginForm');
-        loginForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            if (username === 'Bendicione$' && password === 'Recibida$') {
-                sessionStorage.setItem('authenticated', 'true');
-                window.location.href = 'inicio.html';
-            } else {
-                document.getElementById('loginError').style.display = 'block';
-            }
-        });
-    });
-
-    function checkAuthentication() {
-        if (sessionStorage.getItem('authenticated') !== 'true') {
-            window.location.href = 'index.html';
-        }
-    }
-
-    function logout() {
-        sessionStorage.removeItem('authenticated');
-        window.location.href = 'index.html';
-    }
 
     const subareas = subareaMap[level];
     const subareaDiv = document.getElementById('subareas');
@@ -147,4 +174,9 @@ function displayUnitData(unitData) {
             </tbody>
         </table>
     `;
+}
+
+function downloadPDF() {
+    alert('Descargando PDF...');
+    // Aquí se implementaría la descarga real del material
 }
