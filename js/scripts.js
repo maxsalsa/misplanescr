@@ -1,14 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     if (sessionStorage.getItem('authenticated') === 'true') {
-        document.getElementById('login-container').style.display = 'none';
-        document.getElementById('main-content').style.display = 'block';
-        document.getElementById('usernameDisplay').innerText = sessionStorage.getItem('username');
-        startSessionTimeout();
-        window.onbeforeunload = function() {
-            return '¿Desea cerrar la sesión?';
-        }
+        showMainContent();
     } else {
-        window.onbeforeunload = null;
+        showLogin();
     }
 });
 
@@ -21,17 +15,29 @@ loginForm.addEventListener('submit', function(event) {
     if (username === 'Bendicione$' && password === 'Recibida$') {
         sessionStorage.setItem('authenticated', 'true');
         sessionStorage.setItem('username', username);
-        document.getElementById('login-container').style.display = 'none';
-        document.getElementById('main-content').style.display = 'block';
-        document.getElementById('usernameDisplay').innerText = username;
-        startSessionTimeout();
-        window.onbeforeunload = function() {
-            return '¿Desea cerrar la sesión?';
-        }
+        showMainContent();
     } else {
         document.getElementById('loginError').style.display = 'block';
     }
 });
+
+function showLogin() {
+    document.getElementById('login-container').style.display = 'block';
+    document.getElementById('main-content').style.display = 'none';
+    document.getElementById('session-link').innerText = 'Iniciar Sesión';
+    window.onbeforeunload = null;
+}
+
+function showMainContent() {
+    document.getElementById('login-container').style.display = 'none';
+    document.getElementById('main-content').style.display = 'block';
+    document.getElementById('usernameDisplay').innerText = sessionStorage.getItem('username');
+    document.getElementById('session-link').innerText = 'Cerrar Sesión';
+    startSessionTimeout();
+    window.onbeforeunload = function() {
+        return '¿Desea cerrar la sesión?';
+    }
+}
 
 let timeout;
 function startSessionTimeout() {
@@ -39,12 +45,18 @@ function startSessionTimeout() {
     timeout = setTimeout(logout, 600000); // 10 minutes
 }
 
+function toggleSession() {
+    if (sessionStorage.getItem('authenticated') === 'true') {
+        logout();
+    } else {
+        showLogin();
+    }
+}
+
 function logout() {
     sessionStorage.removeItem('authenticated');
     sessionStorage.removeItem('username');
-    document.getElementById('login-container').style.display = 'block';
-    document.getElementById('main-content').style.display = 'none';
-    window.onbeforeunload = null;
+    showLogin();
 }
 
 document.addEventListener('mousemove', startSessionTimeout);
@@ -178,10 +190,17 @@ function displayUnitData(unitData) {
     `;
 }
 
-function downloadPDF() {
+function promptDownloadPDF() {
+    const fileName = prompt("Ingrese el nombre del archivo PDF:", "unidad");
+    if (fileName) {
+        downloadPDF(fileName);
+    }
+}
+
+function downloadPDF(fileName) {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
     const resultsDiv = document.getElementById('results').innerHTML;
     doc.fromHTML(resultsDiv, 10, 10);
-    doc.save('unidad.pdf');
+    doc.save(fileName + '.pdf');
 }
