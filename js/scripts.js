@@ -200,7 +200,27 @@ function promptDownloadPDF() {
 function downloadPDF(fileName) {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
-    const resultsDiv = document.getElementById('results').innerHTML;
-    doc.fromHTML(resultsDiv, 10, 10);
+
+    // Obtener la tabla de resultados
+    const resultsTable = document.querySelector('#results table');
+
+    if (!resultsTable) {
+        alert('No hay datos disponibles para descargar.');
+        return;
+    }
+
+    // Convertir la tabla en un formato adecuado para jsPDF autoTable
+    const tableHeaders = Array.from(resultsTable.querySelectorAll('thead th')).map(th => th.innerText);
+    const tableRows = Array.from(resultsTable.querySelectorAll('tbody tr')).map(tr => {
+        return Array.from(tr.querySelectorAll('td')).map(td => td.innerText);
+    });
+
+    // Agregar la tabla al documento PDF
+    doc.autoTable({
+        head: [tableHeaders],
+        body: tableRows
+    });
+
+    // Descargar el archivo PDF
     doc.save(fileName + '.pdf');
 }
