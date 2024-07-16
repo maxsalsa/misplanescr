@@ -1,0 +1,25 @@
+body {
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.mdl-layout__header {
+    background-color: #800000; /* Color vino */
+}
+
+.mdl-button--raised.mdl-button--colored {
+    background-color: #800000;
+    color: white;
+}
+
+.mdl-button--raised:hover {
+    background-color: #560000; /* Tono más oscuro de vino para hover */
+}
+
+/* Ajustes para que el diseño sea responsivo y atractivo */
+@media (max-width: 840px) {
+    .mdl-layout__drawer-button {
+        color: white;
+    }
+}
