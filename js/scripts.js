@@ -117,11 +117,21 @@ function showSubareas(level) {
     const subareas = subareaMap[level];
     const subareaDiv = document.getElementById('subareas');
     subareaDiv.innerHTML = subareas.map(subarea => `
-        <h5>${subarea.nombre}</h5>
-        <div class="d-flex flex-wrap">
-            ${subarea.unidades.map(unidad => `
-                <button class="btn btn-secondary m-2" onclick="loadUnitData('${level}', '${unidad}')">${unidad}</button>
-            `).join('')}
+        <div class="card my-2 w-100">
+            <div class="card-header" id="heading${subarea.nombre.replace(/\s+/g, '')}">
+                <h5 class="mb-0">
+                    <button class="btn btn-link w-100" data-toggle="collapse" data-target="#collapse${subarea.nombre.replace(/\s+/g, '')}" aria-expanded="true" aria-controls="collapse${subarea.nombre.replace(/\s+/g, '')}" title="${subarea.nombre}">
+                        ${subarea.nombre}
+                    </button>
+                </h5>
+            </div>
+            <div id="collapse${subarea.nombre.replace(/\s+/g, '')}" class="collapse" aria-labelledby="heading${subarea.nombre.replace(/\s+/g, '')}" data-parent="#subareas">
+                <div class="card-body">
+                    ${subarea.unidades.map(unidad => `
+                        <button class="btn btn-secondary w-100 m-2" onclick="loadUnitData('${level}', '${unidad}')" title="${unidad}">${unidad}</button>
+                    `).join('')}
+                </div>
+            </div>
         </div>
     `).join('');
 }
