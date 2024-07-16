@@ -60,10 +60,6 @@ function logout() {
 document.addEventListener('mousemove', startSessionTimeout);
 document.addEventListener('keypress', startSessionTimeout);
 
-window.addEventListener('popstate', function() {
-    confirmLogout();
-});
-
 function refreshPage() {
     if (confirm('¿Desea cerrar la sesión y refrescar la página?')) {
         logout();
