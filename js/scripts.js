@@ -127,8 +127,8 @@ function showSubareas(level) {
             </div>
             <div id="collapse${subarea.nombre.replace(/\s+/g, '')}" class="collapse" aria-labelledby="heading${subarea.nombre.replace(/\s+/g, '')}" data-parent="#subareas">
                 <div class="card-body">
-                    ${subarea.unidades.map(unidad => `
-                        <button class="btn btn-secondary w-100 m-2" onclick="loadUnitData('${level}', '${unidad}')" title="${unidad}">${unidad}</button>
+                    ${subarea.unidades.map((unidad, index) => `
+                        <button class="btn btn-secondary w-100 m-2 ${index % 2 === 0 ? 'even-unit' : 'odd-unit'}" onclick="loadUnitData('${level}', '${unidad}')" title="${unidad}">${unidad}</button>
                     `).join('')}
                 </div>
             </div>

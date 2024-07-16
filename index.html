@@ -59,10 +59,10 @@
     <div id="main-content" class="container-fluid full-height" style="display: none; padding-top: 70px;">
         <div class="container my-4">
             <h4 class="text-center">Seleccione el nivel educativo:</h4>
-            <div class="d-flex justify-content-around flex-wrap">
-                <button class="btn btn-primary w-100 my-2" onclick="showSubareas('decimo')" title="Décimo Nivel">Décimo</button>
-                <button class="btn btn-primary w-100 my-2" onclick="showSubareas('undecimo')" title="Undécimo Nivel">Undécimo</button>
-                <button class="btn btn-primary w-100 my-2" onclick="showSubareas('duodecimo')" title="Duodécimo Nivel">Duodécimo</button>
+            <div class="d-flex justify-content-around flex-wrap" id="level-buttons">
+                <button class="btn btn-outline-primary mx-2 level-btn" onclick="showSubareas('decimo')" title="Décimo Nivel">Décimo</button>
+                <button class="btn btn-outline-primary mx-2 level-btn" onclick="showSubareas('undecimo')" title="Undécimo Nivel">Undécimo</button>
+                <button class="btn btn-outline-primary mx-2 level-btn" onclick="showSubareas('duodecimo')" title="Duodécimo Nivel">Duodécimo</button>
             </div>
             <div id="subareas" class="mt-3"></div>
             <div id="results" class="mt-5"></div>

@@ -69,6 +69,39 @@ h5 {
     background-color: #f0f0f0;
 }
 
+.btn-secondary:nth-child(even) {
+    background-color: #5a6268;
+    border-color: #545b62;
+    color: white;
+}
+
+.btn-secondary:nth-child(odd) {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #4e555b;
+    border-color: #3d434a;
+}
+
+.card-header button:hover {
+    background-color: #0056b3 !important;
+    color: white !important;
+}
+
+.btn-link:hover {
+    color: white !important;
+    text-decoration: none;
+}
+
+.btn-outline-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+    color: white;
+}
+
 @media (max-width: 767.98px) {
     .card-header button {
         font-size: 1rem;
@@ -85,5 +118,10 @@ h5 {
 
     .btn-link.w-100 {
         width: 100%;
+    }
+
+    .level-btn {
+        width: 100%;
+        margin: 5px 0;
     }
 }
