@@ -23,23 +23,35 @@ body {
 }
 
 .subarea-button {
-    background-color: #1976d2; /* Color azul para subáreas */
+    background-color: #4682B4; /* Color azul acero */
     color: white;
     margin-bottom: 5px;
     width: 100%;
     font-size: 14px; /* Reducir tamaño de fuente */
+    border: none;
+    border-radius: 5px;
+}
+
+.subarea-button:hover {
+    background-color: #5A9BD4; /* Color azul más claro al pasar el mouse */
 }
 
 .unit-button {
-    background-color: #757575; /* Color gris oscuro para unidades */
+    background-color: #708090; /* Color gris pizarra */
     color: white;
     margin-bottom: 5px;
     width: 100%;
     font-size: 14px; /* Reducir tamaño de fuente */
+    border: none;
+    border-radius: 5px;
+}
+
+.unit-button:hover {
+    background-color: #B0C4DE; /* Color gris claro al pasar el mouse */
 }
 
 .result-list {
-    background-color: #e0e0e0; /* Color gris claro para la lista de resultados */
+    background-color: #E0E0E0; /* Color gris claro para la lista de resultados */
     padding: 10px;
     border-radius: 5px;
     margin-top: 10px;
@@ -56,7 +68,7 @@ body {
 }
 
 .result-list th {
-    background-color: #1976d2;
+    background-color: #4682B4; /* Color azul acero */
     color: white;
     text-align: left;
 }
@@ -65,6 +77,12 @@ body {
     background-color: #d32f2f; /* Color rojo para el botón de descarga */
     color: white;
     margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.download-button:hover {
+    background-color: #f44336; /* Color rojo más claro al pasar el mouse */
 }
 
 .container {

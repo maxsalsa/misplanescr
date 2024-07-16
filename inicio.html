@@ -3,145 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Plataforma Educativa - Desarrollo Web</title>
 </head>
 <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header mdl-color--primary">
-            <div class="mdl-layout__header-row">
-                <span class="mdl-layout-title">Educación Técnica en Informática - Desarrollo Web</span>
-                <div class="mdl-layout-spacer"></div>
-                <button class="mdl-button mdl-js-button mdl-button--icon" id="menu-toggle">
-                    <i class="material-icons">menu</i>
-                </button>
-            </div>
-        </header>
-        <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">Menú</span>
-            <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="#" onclick="alert('En Construcción')">Inicio</a>
-                <a class="mdl-navigation__link" href="#" onclick="alert('En Construcción')">Actividades</a>
-                <a class="mdl-navigation__link" href="#" onclick="alert('En Construcción')">Laboratorios</a>
-                <a class="mdl-navigation__link" href="#" onclick="alert('En Construcción')">Prácticas de Clase</a>
-            </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Educación Técnica en Informática</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="alert('En Construcción')">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="alert('En Construcción')">Actividades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="alert('En Construcción')">Laboratorios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="alert('En Construcción')">Prácticas de Clase</a>
+                </li>
+            </ul>
         </div>
-        <main class="mdl-layout__content">
-            <div class="page-content">
-                <h4>Seleccione el nivel educativo:</h4>
-                <div class="mdl-grid">
-                    <!-- Décimo Nivel -->
-                    <div class="mdl-cell mdl-cell--12-col">
-                        <button class="mdl-button mdl-js-button mdl-button--raised" onclick="toggleSection('decimo')">Décimo</button>
-                        <div id="decimo" class="subarea-list" style="display:none;">
-                            <h5>Subáreas y Unidades:</h5>
-                            <!-- Soporte TI -->
-                            <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('decimo-soporte')">Soporte TI</button>
-                            <div id="decimo-soporte" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Fundamentos de Tecnologías de la Información')">Fundamentos de Tecnologías de la Información (96 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Seguridad Industrial')">Seguridad Industrial (36 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Electricidad y Electrónica')">Electricidad y Electrónica (52 horas)</button>
-                            </div>
-                            <!-- Tecnologías de Información -->
-                            <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('decimo-tecnologias')">Tecnologías de Información</button>
-                            <div id="decimo-tecnologias" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Herramientas para la Producción de Documentos')">Herramientas para la Producción de Documentos (68 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Herramientas para la Gestión y Análisis de la Información')">Herramientas para la Gestión y Análisis de la Información (40 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Internet de Todo y Seguridad de los Datos')">Internet de Todo y Seguridad de los Datos (52 horas)</button>
-                            </div>
-                            <!-- Programación para Web -->
-                            <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('decimo-programacion')">Programación para Web</button>
-                            <div id="decimo-programacion" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Lenguaje de marcado y hojas de estilo')">Lenguaje de marcado y hojas de estilo (112 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Programación interpretada')">Programación interpretada (104 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Técnicas para desarrollo de sitios web')">Técnicas para desarrollo de sitios web (104 horas)</button>
-                            </div>
-                            <!-- Diseño de Software -->
-                            <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('decimo-diseno')">Diseño de Software</button>
-                            <div id="decimo-diseno" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Procesos de software')">Procesos de software (56 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Modelado de requerimientos')">Modelado de requerimientos (52 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Diseño arquitectónico')">Diseño arquitectónico (52 horas)</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Undécimo Nivel -->
-                    <div class="mdl-cell mdl-cell--12-col">
-                        <button class="mdl-button mdl-js-button mdl-button--raised" onclick="toggleSection('undecimo')">Undécimo</button>
-                        <div id="undecimo" class="subarea-list" style="display:none;">
-                            <h5>Subáreas y Unidades:</h5>
-                            <!-- Programación para Web -->
-                            <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('undecimo-programacion')">Programación para Web</button>
-                            <div id="undecimo-programacion" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Programación interpretada multiparadigma')">Programación interpretada multiparadigma (112 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Programación orientada a objetos')">Programación orientada a objetos (104 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Programación híbrida')">Programación híbrida (104 horas)</button>
-                            </div>
-                            <!-- Emprendimiento e Innovación -->
-                            <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('undecimo-emprendimiento')">Emprendimiento e Innovación</button>
-                            <div id="undecimo-emprendimiento" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Oportunidades de Negocios')">Oportunidades de Negocios (40 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Modelo de Negocios')">Modelo de Negocios (32 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Creación de la Empresa')">Creación de la Empresa (68 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Plan de Vida')">Plan de Vida (20 horas)</button>
-                            </div>
-                            <!-- Diseño de Software -->
-                            <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('undecimo-diseno')">Diseño de Software</button>
-                            <div id="undecimo-diseno" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Diseño de la interfaz de usuario')">Diseño de la interfaz de usuario (56 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Diseño web')">Diseño web (52 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Administración de la calidad')">Administración de la calidad (52 horas)</button>
-                            </div>
-                            <!-- Soporte TI -->
-                            <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('undecimo-soporte')">Soporte TI</button>
-                            <div id="undecimo-soporte" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Introducción a la redes')">Introducción a la redes (72 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Sistemas Operativos')">Sistemas Operativos (36 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Fundamentos de Ciberseguridad')">Fundamentos de Ciberseguridad (52 horas)</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Duodécimo Nivel -->
-                    <div class="mdl-cell mdl-cell--12-col">
-                        <button class="mdl-button mdl-js-button mdl-button--raised" onclick="toggleSection('duodecimo')">Duodécimo</button>
-                        <div id="duodecimo" class="subarea-list" style="display:none;">
-                            <h5>Subáreas y Unidades:</h5>
-                            <!-- Diseño de Software -->
-                            <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('duodecimo-diseno')">Diseño de Software</button>
-                            <div id="duodecimo-diseno" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Administración de proyectos de software')">Administración de proyectos de software (52 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Herramientas para diseño web')">Herramientas para diseño web (48 horas)</button>
-                            </div>
-                            <!-- Tecnologías de Información -->
-                            <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('duodecimo-tecnologias')">Tecnologías de Información</button>
-                            <div id="duodecimo-tecnologias" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Eficiencia energética')">Eficiencia energética (48 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Tecnologías digitales')">Tecnologías digitales (52 horas)</button>
-                            </div>
-                            <!-- Programación para Web -->
-                            <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('duodecimo-programacion')">Programación para Web</button>
-                            <div id="duodecimo-programacion" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Programación .net')">Programación .net (104 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Bases de datos masivas')">Bases de datos masivas (96 horas)</button>
-                            </div>
-                            <!-- Soporte TI -->
-                            <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('duodecimo-soporte')">Soporte TI</button>
-                            <div id="duodecimo-soporte" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Mantenimiento de portátiles')">Mantenimiento de portátiles (64 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Configuración de dispositivos móviles')">Configuración de dispositivos móviles (36 horas)</button>
-                            </div>
-                        </div>
-                    </div>
-
+    </nav>
+    <div class="container mt-5">
+        <h4>Seleccione el nivel educativo:</h4>
+        <div class="accordion" id="accordionExample">
+            <!-- Décimo Nivel -->
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Décimo
+                        </button>
+                    </h5>
                 </div>
-                <div id="results" class="result-list"></div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h5>Subáreas y Unidades:</h5>
+                        <!-- Soporte TI -->
+                        <button class="btn subarea-button" onclick="toggleSection('decimo-soporte')">Soporte TI</button>
+                        <div id="decimo-soporte" style="display:none;">
+                            <button class="btn unit-button" onclick="showResults('Fundamentos de Tecnologías de la Información')">Fundamentos de Tecnologías de la Información (96 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Seguridad Industrial')">Seguridad Industrial (36 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Electricidad y Electrónica')">Electricidad y Electrónica (52 horas)</button>
+                        </div>
+                        <!-- Tecnologías de Información -->
+                        <button class="btn subarea-button" onclick="toggleSection('decimo-tecnologias')">Tecnologías de Información</button>
+                        <div id="decimo-tecnologias" style="display:none;">
+                            <button class="btn unit-button" onclick="showResults('Herramientas para la Producción de Documentos')">Herramientas para la Producción de Documentos (68 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Herramientas para la Gestión y Análisis de la Información')">Herramientas para la Gestión y Análisis de la Información (40 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Internet de Todo y Seguridad de los Datos')">Internet de Todo y Seguridad de los Datos (52 horas)</button>
+                        </div>
+                        <!-- Programación para Web -->
+                        <button class="btn subarea-button" onclick="toggleSection('decimo-programacion')">Programación para Web</button>
+                        <div id="decimo-programacion" style="display:none;">
+                            <button class="btn unit-button" onclick="showResults('Lenguaje de marcado y hojas de estilo')">Lenguaje de marcado y hojas de estilo (112 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Programación interpretada')">Programación interpretada (104 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Técnicas para desarrollo de sitios web')">Técnicas para desarrollo de sitios web (104 horas)</button>
+                        </div>
+                        <!-- Diseño de Software -->
+                        <button class="btn subarea-button" onclick="toggleSection('decimo-diseno')">Diseño de Software</button>
+                        <div id="decimo-diseno" style="display:none;">
+                            <button class="btn unit-button" onclick="showResults('Procesos de software')">Procesos de software (56 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Modelado de requerimientos')">Modelado de requerimientos (52 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Diseño arquitectónico')">Diseño arquitectónico (52 horas)</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </main>
+            <!-- Undécimo Nivel -->
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Undécimo
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h5>Subáreas y Unidades:</h5>
+                        <!-- Programación para Web -->
+                        <button class="btn subarea-button" onclick="toggleSection('undecimo-programacion')">Programación para Web</button>
+                        <div id="undecimo-programacion" style="display:none;">
+                            <button class="btn unit-button" onclick="showResults('Programación interpretada multiparadigma')">Programación interpretada multiparadigma (112 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Programación orientada a objetos')">Programación orientada a objetos (104 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Programación híbrida')">Programación híbrida (104 horas)</button>
+                        </div>
+                        <!-- Emprendimiento e Innovación -->
+                        <button class="btn subarea-button" onclick="toggleSection('undecimo-emprendimiento')">Emprendimiento e Innovación</button>
+                        <div id="undecimo-emprendimiento" style="display:none;">
+                            <button class="btn unit-button" onclick="showResults('Oportunidades de Negocios')">Oportunidades de Negocios (40 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Modelo de Negocios')">Modelo de Negocios (32 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Creación de la Empresa')">Creación de la Empresa (68 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Plan de Vida')">Plan de Vida (20 horas)</button>
+                        </div>
+                        <!-- Diseño de Software -->
+                        <button class="btn subarea-button" onclick="toggleSection('undecimo-diseno')">Diseño de Software</button>
+                        <div id="undecimo-diseno" style="display:none;">
+                            <button class="btn unit-button" onclick="showResults('Diseño de la interfaz de usuario')">Diseño de la interfaz de usuario (56 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Diseño web')">Diseño web (52 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Administración de la calidad')">Administración de la calidad (52 horas)</button>
+                        </div>
+                        <!-- Soporte TI -->
+                        <button class="btn subarea-button" onclick="toggleSection('undecimo-soporte')">Soporte TI</button>
+                        <div id="undecimo-soporte" style="display:none;">
+                            <button class="btn unit-button" onclick="showResults('Introducción a la redes')">Introducción a la redes (72 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Sistemas Operativos')">Sistemas Operativos (36 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Fundamentos de Ciberseguridad')">Fundamentos de Ciberseguridad (52 horas)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Duodécimo Nivel -->
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Duodécimo
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h5>Subáreas y Unidades:</h5>
+                        <!-- Diseño de Software -->
+                        <button class="btn subarea-button" onclick="toggleSection('duodecimo-diseno')">Diseño de Software</button>
+                        <div id="duodecimo-diseno" style="display:none;">
+                            <button class="btn unit-button" onclick="showResults('Administración de proyectos de software')">Administración de proyectos de software (52 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Herramientas para diseño web')">Herramientas para diseño web (48 horas)</button>
+                        </div>
+                        <!-- Tecnologías de Información -->
+                        <button class="btn subarea-button" onclick="toggleSection('duodecimo-tecnologias')">Tecnologías de Información</button>
+                        <div id="duodecimo-tecnologias" style="display:none;">
+                            <button class="btn unit-button" onclick="showResults('Eficiencia energética')">Eficiencia energética (48 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Tecnologías digitales')">Tecnologías digitales (52 horas)</button>
+                        </div>
+                        <!-- Programación para Web -->
+                        <button class="btn subarea-button" onclick="toggleSection('duodecimo-programacion')">Programación para Web</button>
+                        <div id="duodecimo-programacion" style="display:none;">
+                            <button class="btn unit-button" onclick="showResults('Programación .net')">Programación .net (104 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Bases de datos masivas')">Bases de datos masivas (96 horas)</button>
+                        </div>
+                        <!-- Soporte TI -->
+                        <button class="btn subarea-button" onclick="toggleSection('duodecimo-soporte')">Soporte TI</button>
+                        <div id="duodecimo-soporte" style="display:none;">
+                            <button class="btn unit-button" onclick="showResults('Mantenimiento de portátiles')">Mantenimiento de portátiles (64 horas)</button>
+                            <button class="btn unit-button" onclick="showResults('Configuración de dispositivos móviles')">Configuración de dispositivos móviles (36 horas)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="results" class="result-list mt-5"></div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/scripts.js" defer></script>
 </body>
 </html>
