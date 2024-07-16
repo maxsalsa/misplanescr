@@ -33,7 +33,7 @@ function showResults(unit) {
                 </table>
             `;
             break;
-        // Añadir más casos para otras unidades
+        // Añadir más casos para otras unidades según la malla curricular
         default:
             resultText = '<p>No hay resultados de aprendizaje disponibles.</p>';
     }
@@ -51,9 +51,9 @@ function simulatePDFDownload(unitName) {
 function validateLogin() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
-    if (username === 'Bendicione$' && password === 'Recibida$') {
+    if (username === 'Recibida$' && password === 'Bendicione$') {
         window.location.href = 'inicio.html';
     } else {
-        alert('Usuario o contraseña incorrectos ACCESO DENEGADO');
+        alert('Usuario o contraseña incorrectos');
     }
 }

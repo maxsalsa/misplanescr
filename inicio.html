@@ -9,10 +9,14 @@
     <title>Plataforma Educativa - Desarrollo Web</title>
 </head>
 <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
-        <header class="mdl-layout mdl-color--primary">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-color--primary">
             <div class="mdl-layout__header-row">
                 <span class="mdl-layout-title">Educación Técnica en Informática - Desarrollo Web</span>
+                <div class="mdl-layout-spacer"></div>
+                <button class="mdl-button mdl-js-button mdl-button--icon" id="menu-toggle">
+                    <i class="material-icons">menu</i>
+                </button>
             </div>
         </header>
         <div class="mdl-layout__drawer">
@@ -36,28 +40,30 @@
                             <!-- Soporte TI -->
                             <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('decimo-soporte')">Soporte TI</button>
                             <div id="decimo-soporte" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Fundamentos de Tecnologías de la Información')">Fundamentos de Tecnologías de la Información (96 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Seguridad Industrial')">Seguridad Industrial (36 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Electricidad y Electrónica')">Electricidad y Electrónica (52 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Fundamentos de Tecnologías de la Información')">Fundamentos de Tecnologías de la Información (96 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Seguridad Industrial')">Seguridad Industrial (36 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Electricidad y Electrónica')">Electricidad y Electrónica (52 horas)</button>
                             </div>
                             <!-- Tecnologías de Información -->
                             <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('decimo-tecnologias')">Tecnologías de Información</button>
                             <div id="decimo-tecnologias" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Herramientas para la Producción de Documentos')">Herramientas para la Producción de Documentos (68 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Herramientas para la Gestión y Análisis de la Información')">Herramientas para la Gestión y Análisis de la Información (40 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Internet de Todo y Seguridad de los Datos')">Internet de Todo y Seguridad de los Datos (52 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Herramientas para la Producción de Documentos')">Herramientas para la Producción de Documentos (68 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Herramientas para la Gestión y Análisis de la Información')">Herramientas para la Gestión y Análisis de la Información (40 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Internet de Todo y Seguridad de los Datos')">Internet de Todo y Seguridad de los Datos (52 horas)</button>
                             </div>
                             <!-- Programación para Web -->
                             <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('decimo-programacion')">Programación para Web</button>
                             <div id="decimo-programacion" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Algoritmos y Lógica de Programación')">Algoritmos y Lógica de Programación (104 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Programación en HTML y CSS')">Programación en HTML y CSS (96 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Desarrollo de Aplicaciones Web')">Desarrollo de Aplicaciones Web (112 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Lenguaje de marcado y hojas de estilo')">Lenguaje de marcado y hojas de estilo (112 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Programación interpretada')">Programación interpretada (104 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Técnicas para desarrollo de sitios web')">Técnicas para desarrollo de sitios web (104 horas)</button>
                             </div>
                             <!-- Diseño de Software -->
                             <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('decimo-diseno')">Diseño de Software</button>
                             <div id="decimo-diseno" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Introducción al Diseño de Software')">Introducción al Diseño de Software (52 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Procesos de software')">Procesos de software (56 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Modelado de requerimientos')">Modelado de requerimientos (52 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Diseño arquitectónico')">Diseño arquitectónico (52 horas)</button>
                             </div>
                         </div>
                     </div>
@@ -70,30 +76,31 @@
                             <!-- Programación para Web -->
                             <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('undecimo-programacion')">Programación para Web</button>
                             <div id="undecimo-programacion" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Lenguaje de Marcado y Hojas de Estilo')">Lenguaje de Marcado y Hojas de Estilo (112 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Programación Interpretada')">Programación Interpretada (104 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Técnicas para Desarrollo de Sitios Web')">Técnicas para Desarrollo de Sitios Web (104 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Programación interpretada multiparadigma')">Programación interpretada multiparadigma (112 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Programación orientada a objetos')">Programación orientada a objetos (104 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Programación híbrida')">Programación híbrida (104 horas)</button>
                             </div>
                             <!-- Emprendimiento e Innovación -->
                             <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('undecimo-emprendimiento')">Emprendimiento e Innovación</button>
                             <div id="undecimo-emprendimiento" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Oportunidades de Negocios')">Oportunidades de Negocios (40 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Modelo de Negocios')">Modelo de Negocios (32 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Creación de la Empresa')">Creación de la Empresa (68 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Plan de Vida')">Plan de Vida (20 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Oportunidades de Negocios')">Oportunidades de Negocios (40 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Modelo de Negocios')">Modelo de Negocios (32 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Creación de la Empresa')">Creación de la Empresa (68 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Plan de Vida')">Plan de Vida (20 horas)</button>
                             </div>
                             <!-- Diseño de Software -->
                             <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('undecimo-diseno')">Diseño de Software</button>
                             <div id="undecimo-diseno" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Arquitectura de Software')">Arquitectura de Software (52 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Modelado y Análisis de Software')">Modelado y Análisis de Software (52 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Diseño de la interfaz de usuario')">Diseño de la interfaz de usuario (56 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Diseño web')">Diseño web (52 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Administración de la calidad')">Administración de la calidad (52 horas)</button>
                             </div>
                             <!-- Soporte TI -->
                             <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('undecimo-soporte')">Soporte TI</button>
                             <div id="undecimo-soporte" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Fundamentos de Tecnologías de la Información')">Fundamentos de Tecnologías de la Información (96 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Seguridad Industrial')">Seguridad Industrial (36 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Electricidad y Electrónica')">Electricidad y Electrónica (52 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Introducción a la redes')">Introducción a la redes (72 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Sistemas Operativos')">Sistemas Operativos (36 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Fundamentos de Ciberseguridad')">Fundamentos de Ciberseguridad (52 horas)</button>
                             </div>
                         </div>
                     </div>
@@ -106,33 +113,32 @@
                             <!-- Diseño de Software -->
                             <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('duodecimo-diseno')">Diseño de Software</button>
                             <div id="duodecimo-diseno" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Procesos de Software')">Procesos de Software (56 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Modelado de Requerimientos')">Modelado de Requerimientos (52 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Diseño Arquitectónico')">Diseño Arquitectónico (52 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Administración de proyectos de software')">Administración de proyectos de software (52 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Herramientas para diseño web')">Herramientas para diseño web (48 horas)</button>
                             </div>
                             <!-- Tecnologías de Información -->
                             <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('duodecimo-tecnologias')">Tecnologías de Información</button>
                             <div id="duodecimo-tecnologias" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Eficiencia Energética')">Eficiencia Energética (48 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Tecnologías Digitales')">Tecnologías Digitales (52 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Eficiencia energética')">Eficiencia energética (48 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Tecnologías digitales')">Tecnologías digitales (52 horas)</button>
                             </div>
                             <!-- Programación para Web -->
                             <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('duodecimo-programacion')">Programación para Web</button>
                             <div id="duodecimo-programacion" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('.NET')">.NET (104 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Bases de Datos Masivas')">Bases de Datos Masivas (96 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Programación .net')">Programación .net (104 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Bases de datos masivas')">Bases de datos masivas (96 horas)</button>
                             </div>
                             <!-- Soporte TI -->
                             <button class="mdl-button mdl-js-button subarea-button" onclick="toggleSection('duodecimo-soporte')">Soporte TI</button>
                             <div id="duodecimo-soporte" style="display:none;">
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Fundamentos de Tecnologías de la Información')">Fundamentos de Tecnologías de la Información (96 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Seguridad Industrial')">Seguridad Industrial (36 horas)</button>
-                                <button class="mdl-button mdl-js-button unit-button" onclick="confirmDownload('Electricidad y Electrónica')">Electricidad y Electrónica (52 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Mantenimiento de portátiles')">Mantenimiento de portátiles (64 horas)</button>
+                                <button class="mdl-button mdl-js-button unit-button" onclick="showResults('Configuración de dispositivos móviles')">Configuración de dispositivos móviles (36 horas)</button>
                             </div>
                         </div>
                     </div>
 
                 </div>
+                <div id="results" class="result-list"></div>
             </div>
         </main>
     </div>

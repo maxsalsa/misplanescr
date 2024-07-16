@@ -1,9 +1,27 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+}
+
+.mdl-layout__header-row .mdl-layout-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.mdl-navigation .mdl-navigation__link {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
 .subarea-list {
     background-color: #f0f0f0; /* Color gris claro para las subáreas */
     padding: 10px;
     border-radius: 5px;
     margin-top: 10px;
 }
+
 .subarea-button {
     background-color: #1976d2; /* Color azul para subáreas */
     color: white;
@@ -11,6 +29,7 @@
     width: 100%;
     font-size: 14px; /* Reducir tamaño de fuente */
 }
+
 .unit-button {
     background-color: #757575; /* Color gris oscuro para unidades */
     color: white;
@@ -18,13 +37,66 @@
     width: 100%;
     font-size: 14px; /* Reducir tamaño de fuente */
 }
-.mdl-button--raised {
-    font-size: 14px; /* Reducir tamaño de fuente para los botones de niveles */
-    margin-bottom: 10px;
+
+.result-list {
+    background-color: #e0e0e0; /* Color gris claro para la lista de resultados */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
 }
-.mdl-layout__header-row .mdl-layout-title {
-    font-size: 16px; /* Reducir tamaño de fuente para el título */
+
+.result-list table {
+    width: 100%;
+    border-collapse: collapse;
 }
-.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
-    font-size: 14px; /* Reducir tamaño de fuente para el menú */
+
+.result-list th, .result-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.result-list th {
+    background-color: #1976d2;
+    color: white;
+    text-align: left;
+}
+
+.download-button {
+    background-color: #d32f2f; /* Color rojo para el botón de descarga */
+    color: white;
+    margin-top: 10px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.card-header {
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .mdl-layout__header-row .mdl-layout-title {
+        font-size: 18px;
+    }
+
+    .mdl-navigation .mdl-navigation__link {
+        font-size: 14px;
+    }
+
+    .subarea-button, .unit-button {
+        font-size: 12px;
+    }
+
+    .card-header {
+        font-size: 18px;
+    }
+
+    .card-body {
+        font-size: 14px;
+    }
+
+    .result-list th, .result-list td {
+        font-size: 12px;
+    }
 }
