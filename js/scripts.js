@@ -40,17 +40,19 @@ function startSessionTimeout() {
 }
 
 function logout() {
-    if (confirm(`¿${sessionStorage.getItem('username')} desea cerrar la sesión?`)) {
-        sessionStorage.removeItem('authenticated');
-        sessionStorage.removeItem('username');
-        document.getElementById('login-container').style.display = 'block';
-        document.getElementById('main-content').style.display = 'none';
-        window.onbeforeunload = null;
-    }
+    sessionStorage.removeItem('authenticated');
+    sessionStorage.removeItem('username');
+    document.getElementById('login-container').style.display = 'block';
+    document.getElementById('main-content').style.display = 'none';
+    window.onbeforeunload = null;
 }
 
 document.addEventListener('mousemove', startSessionTimeout);
 document.addEventListener('keypress', startSessionTimeout);
+
+window.addEventListener('popstate', function() {
+    logout();
+});
 
 function showSubareas(level) {
     const subareaMap = {
@@ -177,6 +179,9 @@ function displayUnitData(unitData) {
 }
 
 function downloadPDF() {
-    alert('Descargando PDF...');
-    // Aquí se implementaría la descarga real del material
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    const resultsDiv = document.getElementById('results').innerHTML;
+    doc.fromHTML(resultsDiv, 10, 10);
+    doc.save('unidad.pdf');
 }
