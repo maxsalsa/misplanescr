@@ -55,6 +55,33 @@ function showSubareas(level) {
             }
         ]
     };
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'Bendicione$' && password === 'Recibida$') {
+                sessionStorage.setItem('authenticated', 'true');
+                window.location.href = 'inicio.html';
+            } else {
+                document.getElementById('loginError').style.display = 'block';
+            }
+        });
+    });
+
+    function checkAuthentication() {
+        if (sessionStorage.getItem('authenticated') !== 'true') {
+            window.location.href = 'index.html';
+        }
+    }
+
+    function logout() {
+        sessionStorage.removeItem('authenticated');
+        window.location.href = 'index.html';
+    }
 
     const subareas = subareaMap[level];
     const subareaDiv = document.getElementById('subareas');

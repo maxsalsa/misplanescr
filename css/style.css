@@ -1,120 +1,32 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f8f8;
+    font-size: 0.875rem;
 }
 
-.mdl-layout__header-row .mdl-layout-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
+h5 {
+    font-size: 1.25rem;
 }
 
-.mdl-navigation .mdl-navigation__link {
-    font-size: 16px;
-    font-weight: bold;
-    color: #ffffff;
+.btn-link {
+    font-size: 1.125rem;
 }
 
-.subarea-list {
-    background-color: #f0f0f0; /* Color gris claro para las subáreas */
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
+.subarea-button, .unit-button {
+    font-size: 0.875rem;
 }
 
-.subarea-button {
-    background-color: #4682B4; /* Color azul acero */
-    color: white;
-    margin-bottom: 5px;
-    width: 100%;
-    font-size: 14px; /* Reducir tamaño de fuente */
-    border: none;
-    border-radius: 5px;
+.table-sm {
+    font-size: 0.75rem;
 }
 
-.subarea-button:hover {
-    background-color: #5A9BD4; /* Color azul más claro al pasar el mouse */
-}
-
-.unit-button {
-    background-color: #708090; /* Color gris pizarra */
-    color: white;
-    margin-bottom: 5px;
-    width: 100%;
-    font-size: 14px; /* Reducir tamaño de fuente */
-    border: none;
-    border-radius: 5px;
-}
-
-.unit-button:hover {
-    background-color: #B0C4DE; /* Color gris claro al pasar el mouse */
-}
-
-.result-list {
-    background-color: #E0E0E0; /* Color gris claro para la lista de resultados */
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.result-list table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.result-list th, .result-list td {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-.result-list th {
-    background-color: #4682B4; /* Color azul acero */
-    color: white;
-    text-align: left;
-}
-
-.download-button {
-    background-color: #d32f2f; /* Color rojo para el botón de descarga */
-    color: white;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-.download-button:hover {
-    background-color: #f44336; /* Color rojo más claro al pasar el mouse */
-}
-
-.container {
-    margin-top: 50px;
-}
-
-.card-header {
-    font-size: 20px;
+.table th, .table td {
+    padding: 0.5rem;
 }
 
 @media (max-width: 768px) {
-    .mdl-layout__header-row .mdl-layout-title {
-        font-size: 18px;
+    .container {
+        padding: 0;
     }
-
-    .mdl-navigation .mdl-navigation__link {
-        font-size: 14px;
-    }
-
-    .subarea-button, .unit-button {
-        font-size: 12px;
-    }
-
-    .card-header {
-        font-size: 18px;
-    }
-
-    .card-body {
-        font-size: 14px;
-    }
-
-    .result-list th, .result-list td {
-        font-size: 12px;
+    .table {
+        font-size: 0.6rem;
     }
 }
