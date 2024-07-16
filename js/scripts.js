@@ -45,11 +45,9 @@ function startSessionTimeout() {
     timeout = setTimeout(logout, 600000); // 10 minutes
 }
 
-function toggleSession() {
-    if (sessionStorage.getItem('authenticated') === 'true') {
+function confirmLogout() {
+    if (confirm('¿Realmente desea cerrar la sesión?')) {
         logout();
-    } else {
-        showLogin();
     }
 }
 
@@ -63,8 +61,15 @@ document.addEventListener('mousemove', startSessionTimeout);
 document.addEventListener('keypress', startSessionTimeout);
 
 window.addEventListener('popstate', function() {
-    logout();
+    confirmLogout();
 });
+
+function refreshPage() {
+    if (confirm('¿Desea cerrar la sesión y refrescar la página?')) {
+        logout();
+        location.reload();
+    }
+}
 
 function showSubareas(level) {
     const subareaMap = {
@@ -188,16 +193,16 @@ function displayUnitData(unitData) {
             </tbody>
         </table>
     `;
+    document.getElementById('downloadPdf').focus();
 }
 
 function promptDownloadPDF() {
-    const fileName = prompt("Ingrese el nombre del archivo PDF:", "unidad");
-    if (fileName) {
-        downloadPDF(fileName);
-    }
+    const unitName = document.querySelector('#results h5').innerText.split('(')[0].trim();
+    const fileName = `unidad_${unitName}`;
+    downloadPDF(fileName, unitName);
 }
 
-function downloadPDF(fileName) {
+function downloadPDF(fileName, unitName) {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
@@ -215,10 +220,16 @@ function downloadPDF(fileName) {
         return Array.from(tr.querySelectorAll('td')).map(td => td.innerText);
     });
 
+    // Centrar el contenido en la tabla
+    const centeredTableHeaders = tableHeaders.map(header => ({ content: header, styles: { halign: 'center' }}));
+    const centeredTableRows = tableRows.map(row => row.map(cell => ({ content: cell, styles: { halign: 'center' }})));
+
     // Agregar la tabla al documento PDF
+    doc.text(`Plan de Práctica Pedagógicas Desarrollo Web - ${new Date().getFullYear()}`, 10, 10);
     doc.autoTable({
-        head: [tableHeaders],
-        body: tableRows
+        head: [centeredTableHeaders],
+        body: centeredTableRows,
+        startY: 20
     });
 
     // Descargar el archivo PDF
