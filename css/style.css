@@ -1,25 +1,30 @@
-body {
-    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+.subarea-list {
+    background-color: #f0f0f0; /* Color gris claro para las subáreas */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
 }
-
-.mdl-layout__header {
-    background-color: #800000; /* Color vino */
-}
-
-.mdl-button--raised.mdl-button--colored {
-    background-color: #800000;
+.subarea-button {
+    background-color: #1976d2; /* Color azul para subáreas */
     color: white;
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 14px; /* Reducir tamaño de fuente */
 }
-
-.mdl-button--raised:hover {
-    background-color: #560000; /* Tono más oscuro de vino para hover */
+.unit-button {
+    background-color: #757575; /* Color gris oscuro para unidades */
+    color: white;
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 14px; /* Reducir tamaño de fuente */
 }
-
-/* Ajustes para que el diseño sea responsivo y atractivo */
-@media (max-width: 840px) {
-    .mdl-layout__drawer-button {
-        color: white;
-    }
+.mdl-button--raised {
+    font-size: 14px; /* Reducir tamaño de fuente para los botones de niveles */
+    margin-bottom: 10px;
+}
+.mdl-layout__header-row .mdl-layout-title {
+    font-size: 16px; /* Reducir tamaño de fuente para el título */
+}
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+    font-size: 14px; /* Reducir tamaño de fuente para el menú */
 }
