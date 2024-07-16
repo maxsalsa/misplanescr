@@ -1,0 +1,22 @@
+function validateLogin(event) {
+    event.preventDefault();
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    if (username === 'Bendicione$' && password === 'Recibida$') {
+        localStorage.setItem('authenticated', 'true');
+        window.location.href = 'inicio.html';
+    } else {
+        alert('Usuario o contraseña incorrectos');
+    }
+}
+
+function checkAuthentication() {
+    if (localStorage.getItem('authenticated') !== 'true') {
+        window.location.href = 'index.html';
+    }
+}
+
+function logout() {
+    localStorage.removeItem('authenticated');
+    window.location.href = 'index.html';
+}

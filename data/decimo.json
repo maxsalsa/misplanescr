@@ -1,75 +1,335 @@
 {
-  "decimo": {
-    "soporte_ti": {
-      "fundamentos_ti": {
-        "nombre": "Fundamentos de Tecnologías de Información",
-        "horas": 96,
-        "resultados_aprendizaje": [
-          "1. Emplear bajo criterios técnicos los componentes apropiados para la construcción, reparación o actualización de computadoras personales.",
-          "2. Instalar los componentes para la actualización de computadoras realizando la configuración según necesidades del usuario.",
-          "3. Determinar el mecanismo o procedimiento mediante el cual las computadoras se comunican en la red.",
-          "4. Explicar mecanismos para la solución de problemas en equipos portátiles y otros dispositivos.",
-          "5. Instalar sistemas operativos licenciados y de código abierto.",
-          "6. Implementar mecanismos de seguridad en equipos, datos y red considerando características y funciones del profesional en TI."
-        ],
-        "saberes_esenciales": [
-          "Componentes de computadoras personales.",
-          "Actualización y configuración de computadoras.",
-          "Mecanismos de comunicación en red.",
-          "Solución de problemas en equipos portátiles.",
-          "Instalación de sistemas operativos.",
-          "Mecanismos de seguridad en equipos y redes."
-        ],
-        "estrategias": [
-          {
-            "docente": "El docente **explica** los componentes apropiados para la construcción de computadoras mediante la ejecución de **ejercicios prácticos** en clase.",
-            "estudiante": "La persona estudiante **emplea** los componentes apropiados para la construcción de computadoras mediante la **realización de ejercicios prácticos** en clase."
-          },
-          {
-            "docente": "El docente **instala** componentes para la actualización de computadoras mediante **talleres prácticos**.",
-            "estudiante": "La persona estudiante **instala** componentes para la actualización de computadoras mediante la **configuración según necesidades del usuario**."
-          },
-          {
-            "docente": "El docente **determina** los mecanismos de comunicación en la red mediante **presentaciones interactivas**.",
-            "estudiante": "La persona estudiante **determina** los mecanismos de comunicación en la red mediante la **elaboración de un informe**."
-          },
-          {
-            "docente": "El docente **explica** los mecanismos para la solución de problemas en equipos portátiles mediante **casos de estudio**.",
-            "estudiante": "La persona estudiante **explica** los mecanismos para la solución de problemas en equipos portátiles mediante la **elaboración de un proyecto**."
-          },
-          {
-            "docente": "El docente **instala** sistemas operativos mediante **demostraciones prácticas**.",
-            "estudiante": "La persona estudiante **instala** sistemas operativos mediante la **ejecución de talleres prácticos**."
-          },
-          {
-            "docente": "El docente **implementa** mecanismos de seguridad en equipos y redes mediante **simulaciones**.",
-            "estudiante": "La persona estudiante **implementa** mecanismos de seguridad en equipos y redes mediante la **realización de ejercicios prácticos**."
-          }
-        ],
-        "indicadores": [
-          "Emplea los componentes apropiados para la construcción de computadoras mediante la realización de ejercicios prácticos en clase.",
-          "Instala componentes para la actualización de computadoras mediante la configuración según necesidades del usuario.",
-          "Determina los mecanismos de comunicación en la red mediante la elaboración de un informe.",
-          "Explica los mecanismos para la solución de problemas en equipos portátiles mediante la elaboración de un proyecto.",
-          "Instala sistemas operativos mediante la ejecución de talleres prácticos.",
-          "Implementa mecanismos de seguridad en equipos y redes mediante la realización de ejercicios prácticos."
-        ],
-        "evidencias": [
-          "Realiza ejercicios prácticos empleando componentes apropiados para la construcción de computadoras.",
-          "Configura componentes para la actualización de computadoras según necesidades del usuario.",
-          "Elabora un informe determinando los mecanismos de comunicación en la red.",
-          "Elabora un proyecto explicando los mecanismos para la solución de problemas en equipos portátiles.",
-          "Realiza talleres prácticos instalando sistemas operativos.",
-          "Realiza ejercicios prácticos implementando mecanismos de seguridad en equipos y redes."
-        ],
-        "tiempo_estimado": 96
-      },
-      "seguridad_industrial": {
-        "nombre": "Seguridad Industrial",
-        "horas": 36,
-        "resultados_aprendizaje": [
-          "1. Mencionar el impacto de las regulaciones nacionales aplicadas en el campo de la Seguridad Industrial.",
-          "2. Explicar los procesos mediante los cuales se realiza el aseguramiento de infraestructuras física.",
-          "3. Aplicar las estrategias de prevención contra riesgos considerando la normativa, protocolos, insumos, equipos y herramientas que se utilizan en las actividades instrumentales.",
-          "4. Utilizar formas creativas e innovadoras para la resolución de problemas cotidianos.",
-          "5. Aplicar medidas preventivas que mitiguen
+  "nivel": "Décimo",
+  "subareas": [
+    {
+      "nombre": "Soporte TI",
+      "unidades": [
+        {
+          "nombre": "Fundamentos de Tecnologías de la Información",
+          "horas": 96,
+          "resultados_aprendizaje": [
+            {
+              "numero": 1,
+              "descripcion": "Emplear componentes técnicos adecuados para la construcción, reparación o actualización de computadoras.",
+              "saberes_esenciales": "Componentes de hardware y software, ensamblaje y configuración de equipos.",
+              "indicadores": [
+                "Identifica los componentes de una computadora y describe su función específica.",
+                "Realiza el ensamblaje y la configuración de computadoras según los requerimientos del usuario."
+              ],
+              "estrategias": [
+                "El docente detalla los componentes de una computadora mediante una presentación guiada con vídeos explicativos.",
+                "La persona estudiante elabora un diagrama identificando cada componente y su función específica.",
+                "El docente supervisa el ensamblaje y configuración de computadoras mediante prácticas en el laboratorio, asegurando que cada estudiante participe activamente.",
+                "El docente organiza debates y ejercicios sobre problemas comunes en el ensamblaje y cómo solucionarlos.",
+                "La persona estudiante documenta el proceso de ensamblaje y configuración en un informe técnico, presentando los resultados en clase mediante una infografía digital."
+              ],
+              "evidencias": [
+                {
+                  "producto": "Informe técnico sobre la configuración de una computadora.",
+                  "conocimiento": "Comprensión de los componentes y su función en una computadora.",
+                  "desempeño": "Capacidad para ensamblar y configurar una computadora correctamente."
+                },
+                {
+                  "producto": "Examen práctico de ensamblaje y actualización de equipos.",
+                  "conocimiento": "Habilidades prácticas en la instalación y actualización de componentes.",
+                  "desempeño": "Ejecución eficiente de tareas de ensamblaje y configuración en un entorno de laboratorio."
+                }
+              ],
+              "tiempo_estimado": "24 horas"
+            },
+            {
+              "numero": 2,
+              "descripcion": "Instalar y configurar componentes para actualizar computadoras según necesidades del usuario.",
+              "saberes_esenciales": "Componentes actualizables, procedimientos de instalación y configuración.",
+              "indicadores": [
+                "Selecciona componentes adecuados para actualizar computadoras basándose en las necesidades específicas del usuario.",
+                "Configura correctamente los componentes instalados para asegurar un funcionamiento óptimo."
+              ],
+              "estrategias": [
+                "El docente realiza una demostración de la instalación y configuración de componentes mediante vídeos explicativos.",
+                "La persona estudiante instala y configura componentes en equipos de práctica bajo la supervisión del docente.",
+                "El docente explica los criterios para seleccionar componentes adecuados mediante la resolución de ejercicios prácticos.",
+                "Se elaboran guías de instalación y configuración para uso de los estudiantes.",
+                "La persona estudiante presenta un proyecto de actualización de una computadora aplicando los conocimientos adquiridos, y entrega un informe detallado de la actividad."
+              ],
+              "evidencias": [
+                {
+                  "producto": "Informe de actualización de computadora.",
+                  "conocimiento": "Capacidad para seleccionar y configurar componentes de actualización.",
+                  "desempeño": "Realización efectiva de una actualización de computadora en un entorno práctico."
+                },
+                {
+                  "producto": "Examen práctico de instalación y configuración de componentes.",
+                  "conocimiento": "Conocimiento práctico de los procedimientos de instalación y configuración.",
+                  "desempeño": "Habilidad para ejecutar tareas de actualización en un entorno de laboratorio."
+                }
+              ],
+              "tiempo_estimado": "20 horas"
+            },
+            {
+              "numero": 3,
+              "descripcion": "Determinar procedimientos de comunicación de computadoras en redes.",
+              "saberes_esenciales": "Protocolos de comunicación, tipos de redes, configuración de redes.",
+              "indicadores": [
+                "Describe los protocolos de comunicación de redes y su aplicación.",
+                "Configura redes según los procedimientos establecidos."
+              ],
+              "estrategias": [
+                "El docente explica los diferentes tipos de redes y protocolos de comunicación mediante una presentación interactiva.",
+                "La persona estudiante realiza un mapa conceptual sobre los tipos de redes y sus características.",
+                "El docente supervisa la configuración de una red en el laboratorio, asegurando que cada estudiante participe activamente.",
+                "El docente organiza debates sobre los desafíos y soluciones en la configuración de redes.",
+                "La persona estudiante documenta el proceso de configuración de la red en un informe técnico, presentando los resultados en clase mediante una presentación digital."
+              ],
+              "evidencias": [
+                {
+                  "producto": "Informe técnico sobre la configuración de una red.",
+                  "conocimiento": "Comprensión de los protocolos de comunicación y tipos de redes.",
+                  "desempeño": "Capacidad para configurar una red correctamente."
+                },
+                {
+                  "producto": "Examen práctico de configuración de redes.",
+                  "conocimiento": "Habilidades prácticas en la configuración de redes.",
+                  "desempeño": "Ejecución eficiente de tareas de configuración de redes en un entorno de laboratorio."
+                }
+              ],
+              "tiempo_estimado": "20 horas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Tecnologías de Información",
+      "unidades": [
+        {
+          "nombre": "Herramientas para la Producción de Documentos",
+          "horas": 68,
+          "resultados_aprendizaje": [
+            {
+              "numero": 1,
+              "descripcion": "Aplicar las funciones básicas de procesador de textos en la elaboración de documentos.",
+              "saberes_esenciales": "Funciones de procesadores de texto, herramientas de formato y edición.",
+              "indicadores": [
+                "Elabora documentos utilizando las funciones básicas de un procesador de textos.",
+                "Aplica herramientas de formato y edición para mejorar la presentación de documentos."
+              ],
+              "estrategias": [
+                "El docente explica las funciones básicas de un procesador de textos mediante una presentación con ejemplos prácticos.",
+                "La persona estudiante elabora documentos simples aplicando las funciones explicadas.",
+                "El docente supervisa la creación de documentos por parte de los estudiantes, proporcionando retroalimentación inmediata.",
+                "El docente organiza actividades de revisión de documentos en grupo para fomentar la colaboración.",
+                "La persona estudiante presenta un documento elaborado aplicando todas las funciones aprendidas, y lo discute en clase."
+              ],
+              "evidencias": [
+                {
+                  "producto": "Documentos elaborados utilizando un procesador de textos.",
+                  "conocimiento": "Comprensión de las funciones básicas de un procesador de textos.",
+                  "desempeño": "Habilidad para crear y editar documentos correctamente."
+                },
+                {
+                  "producto": "Examen práctico de elaboración de documentos.",
+                  "conocimiento": "Habilidades prácticas en el uso de procesadores de textos.",
+                  "desempeño": "Capacidad para aplicar funciones de formato y edición en documentos."
+                }
+              ],
+              "tiempo_estimado": "17 horas"
+            },
+            {
+              "numero": 2,
+              "descripcion": "Utilizar las herramientas que presenta la hoja electrónica para la elaboración de documentos.",
+              "saberes_esenciales": "Funciones de hojas electrónicas, herramientas de cálculo y gráficos.",
+              "indicadores": [
+                "Elabora documentos utilizando las funciones básicas de una hoja electrónica.",
+                "Aplica herramientas de cálculo y gráficos para analizar y presentar datos."
+              ],
+              "estrategias": [
+                "El docente detalla las funciones básicas de una hoja electrónica mediante una presentación con ejemplos.",
+                "La persona estudiante elabora hojas electrónicas simples aplicando las funciones explicadas.",
+                "El docente supervisa la creación de hojas electrónicas por parte de los estudiantes, proporcionando retroalimentación.",
+                "El docente organiza ejercicios de análisis de datos utilizando hojas electrónicas.",
+                "La persona estudiante presenta un informe elaborado con hojas electrónicas, incluyendo gráficos y cálculos, y lo discute en clase."
+              ],
+              "evidencias": [
+                {
+                  "producto": "Hojas electrónicas elaboradas utilizando herramientas de cálculo y gráficos.",
+                  "conocimiento": "Comprensión de las funciones básicas de una hoja electrónica.",
+                  "desempeño": "Habilidad para crear y analizar datos en hojas electrónicas."
+                },
+                {
+                  "producto": "Examen práctico de elaboración de hojas electrónicas.",
+                  "conocimiento": "Habilidades prácticas en el uso de hojas electrónicas.",
+                  "desempeño": "Capacidad para aplicar herramientas de cálculo y gráficos en documentos."
+                }
+              ],
+              "tiempo_estimado": "20 horas"
+            },
+            {
+              "numero": 3,
+              "descripcion": "Generar presentaciones con los elementos básicos del editor, para la presentación de documentos de forma dinámica.",
+              "saberes_esenciales": "Funciones de editores de presentaciones, herramientas de diseño y animación.",
+              "indicadores": [
+                "Crea presentaciones dinámicas utilizando las funciones básicas de un editor.",
+                "Aplica herramientas de diseño y animación para mejorar la presentación de documentos."
+              ],
+              "estrategias": [
+                "El docente explica las funciones básicas de un editor de presentaciones mediante una demostración práctica.",
+                "La persona estudiante elabora presentaciones aplicando las funciones explicadas.",
+                "El docente supervisa la creación de presentaciones por parte de los estudiantes, proporcionando retroalimentación inmediata.",
+                "El docente organiza sesiones de presentación donde los estudiantes muestran sus trabajos.",
+                "La persona estudiante presenta una presentación elaborada, aplicando todas las funciones aprendidas, y lo discute en clase."
+              ],
+              "evidencias": [
+                {
+                  "producto": "Presentaciones elaboradas utilizando un editor de presentaciones.",
+                  "conocimiento": "Comprensión de las funciones básicas de un editor de presentaciones.",
+                  "desempeño": "Habilidad para crear presentaciones dinámicas y visualmente atractivas."
+                },
+                {
+                  "producto": "Examen práctico de elaboración de presentaciones.",
+                  "conocimiento": "Habilidades prácticas en el uso de editores de presentaciones.",
+                  "desempeño": "Capacidad para aplicar herramientas de diseño y animación en presentaciones."
+                }
+              ],
+              "tiempo_estimado": "20 horas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Programación para Web",
+      "unidades": [
+        {
+          "nombre": "Lenguaje de marcado y hojas de estilo",
+          "horas": 112,
+          "resultados_aprendizaje": [
+            {
+              "numero": 1,
+              "descripcion": "Crear estructuras web utilizando HTML y CSS.",
+              "saberes_esenciales": "Etiquetas HTML, propiedades CSS, estructura de documentos web.",
+              "indicadores": [
+                "Elabora páginas web utilizando etiquetas HTML correctamente.",
+                "Aplica propiedades CSS para dar estilo a las páginas web."
+              ],
+              "estrategias": [
+                "El docente explica las etiquetas HTML básicas y propiedades CSS mediante una demostración práctica.",
+                "La persona estudiante elabora páginas web simples aplicando las etiquetas y propiedades explicadas.",
+                "El docente supervisa la creación de páginas web por parte de los estudiantes, proporcionando retroalimentación inmediata.",
+                "El docente organiza sesiones de revisión de páginas web en grupo para fomentar la colaboración.",
+                "La persona estudiante presenta una página web elaborada aplicando todas las etiquetas y propiedades aprendidas, y lo discute en clase."
+              ],
+              "evidencias": [
+                {
+                  "producto": "Páginas web elaboradas utilizando HTML y CSS.",
+                  "conocimiento": "Comprensión de las etiquetas HTML y propiedades CSS.",
+                  "desempeño": "Habilidad para crear estructuras web correctamente."
+                },
+                {
+                  "producto": "Examen práctico de elaboración de páginas web.",
+                  "conocimiento": "Habilidades prácticas en el uso de HTML y CSS.",
+                  "desempeño": "Capacidad para aplicar etiquetas y propiedades en documentos web."
+                }
+              ],
+              "tiempo_estimado": "28 horas"
+            },
+            {
+              "numero": 2,
+              "descripcion": "Aplicar estilos avanzados a páginas web utilizando CSS.",
+              "saberes_esenciales": "Selectores avanzados, pseudo-clases, transiciones y animaciones en CSS.",
+              "indicadores": [
+                "Elabora páginas web con estilos avanzados utilizando selectores y pseudo-clases.",
+                "Aplica transiciones y animaciones CSS para mejorar la interactividad de las páginas web."
+              ],
+              "estrategias": [
+                "El docente detalla el uso de selectores avanzados y pseudo-clases en CSS mediante ejemplos prácticos.",
+                "La persona estudiante aplica selectores y pseudo-clases en sus proyectos web.",
+                "El docente supervisa la implementación de estilos avanzados por parte de los estudiantes, proporcionando retroalimentación.",
+                "El docente organiza ejercicios prácticos de transiciones y animaciones CSS.",
+                "La persona estudiante presenta un proyecto web con estilos avanzados y animaciones, y lo discute en clase."
+              ],
+              "evidencias": [
+                {
+                  "producto": "Páginas web con estilos avanzados utilizando CSS.",
+                  "conocimiento": "Comprensión de selectores avanzados, pseudo-clases, transiciones y animaciones.",
+                  "desempeño": "Habilidad para aplicar estilos avanzados en documentos web."
+                },
+                {
+                  "producto": "Examen práctico de aplicación de estilos avanzados en CSS.",
+                  "conocimiento": "Habilidades prácticas en el uso de selectores y animaciones.",
+                  "desempeño": "Capacidad para mejorar la interactividad de páginas web mediante CSS."
+                }
+              ],
+              "tiempo_estimado": "28 horas"
+            }
+          ]
+        },
+        {
+          "nombre": "Programación interpretada",
+          "horas": 104,
+          "resultados_aprendizaje": [
+            {
+              "numero": 1,
+              "descripcion": "Desarrollar scripts en JavaScript para aplicaciones web.",
+              "saberes_esenciales": "Sintaxis de JavaScript, funciones, eventos y manipulación del DOM.",
+              "indicadores": [
+                "Escribe scripts en JavaScript para añadir interactividad a las páginas web.",
+                "Manipula el DOM utilizando JavaScript para actualizar contenido dinámicamente."
+              ],
+              "estrategias": [
+                "El docente explica la sintaxis básica de JavaScript y su uso en la manipulación del DOM mediante ejemplos prácticos.",
+                "La persona estudiante escribe scripts simples para añadir interactividad a las páginas web.",
+                "El docente supervisa la implementación de scripts en proyectos web por parte de los estudiantes, proporcionando retroalimentación.",
+                "El docente organiza sesiones de codificación en grupo para fomentar la colaboración y el aprendizaje compartido.",
+                "La persona estudiante presenta un proyecto web interactivo utilizando JavaScript, y lo discute en clase."
+              ],
+              "evidencias": [
+                {
+                  "producto": "Proyectos web interactivos utilizando JavaScript.",
+                  "conocimiento": "Comprensión de la sintaxis de JavaScript y la manipulación del DOM.",
+                  "desempeño": "Habilidad para desarrollar scripts que añadan interactividad a las páginas web."
+                },
+                {
+                  "producto": "Examen práctico de desarrollo de scripts en JavaScript.",
+                  "conocimiento": "Habilidades prácticas en la escritura de scripts y manipulación del DOM.",
+                  "desempeño": "Capacidad para implementar interactividad en proyectos web utilizando JavaScript."
+                }
+              ],
+              "tiempo_estimado": "26 horas"
+            },
+            {
+              "numero": 2,
+              "descripcion": "Implementar funcionalidades avanzadas en aplicaciones web utilizando JavaScript.",
+              "saberes_esenciales": "Funciones avanzadas de JavaScript, manejo de eventos, interacción con APIs.",
+              "indicadores": [
+                "Desarrolla funciones avanzadas en JavaScript para mejorar la funcionalidad de las aplicaciones web.",
+                "Maneja eventos y responde a interacciones del usuario de manera dinámica.",
+                "Interacciona con APIs para obtener y mostrar datos en tiempo real en aplicaciones web."
+              ],
+              "estrategias": [
+                "El docente detalla el uso de funciones avanzadas y manejo de eventos en JavaScript mediante una demostración práctica.",
+                "La persona estudiante implementa funciones avanzadas en sus proyectos web.",
+                "El docente supervisa la implementación de funcionalidades avanzadas por parte de los estudiantes, proporcionando retroalimentación.",
+                "El docente organiza ejercicios prácticos de interacción con APIs.",
+                "La persona estudiante presenta un proyecto web con funcionalidades avanzadas y datos en tiempo real, y lo discute en clase."
+              ],
+              "evidencias": [
+                {
+                  "producto": "Proyectos web con funcionalidades avanzadas utilizando JavaScript.",
+                  "conocimiento": "Comprensión de funciones avanzadas, manejo de eventos e interacción con APIs.",
+                  "desempeño": "Habilidad para implementar funcionalidades avanzadas en aplicaciones web."
+                },
+                {
+                  "producto": "Examen práctico de implementación de funcionalidades avanzadas en JavaScript.",
+                  "conocimiento": "Habilidades prácticas en el uso de funciones avanzadas y manejo de eventos.",
+                  "desempeño": "Capacidad para desarrollar aplicaciones web dinámicas e interactivas."
+                }
+              ],
+              "tiempo_estimado": "26 horas"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

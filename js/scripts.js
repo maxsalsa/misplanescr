@@ -1,67 +1,123 @@
-function toggleSection(section) {
-    var content = document.getElementById(section);
-    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+function showSubareas(level) {
+    const subareaMap = {
+        "decimo": [
+            {
+                "nombre": "Soporte TI",
+                "unidades": ["Fundamentos de Tecnologías de la Información", "Seguridad Industrial", "Electricidad y Electrónica"]
+            },
+            {
+                "nombre": "Tecnologías de Información",
+                "unidades": ["Herramientas para la Producción de Documentos", "Herramientas para la Gestión y Análisis de la Información", "Internet de Todo y Seguridad de los Datos"]
+            },
+            {
+                "nombre": "Programación para Web",
+                "unidades": ["Lenguaje de marcado y hojas de estilo", "Programación interpretada", "Técnicas para desarrollo de sitios web"]
+            },
+            {
+                "nombre": "Diseño de Software",
+                "unidades": ["Procesos de software", "Modelado de requerimientos", "Diseño arquitectónico"]
+            }
+        ],
+        "undecimo": [
+            {
+                "nombre": "Programación para Web",
+                "unidades": ["Programación interpretada multiparadigma", "Programación orientada a objetos", "Programación híbrida"]
+            },
+            {
+                "nombre": "Emprendimiento e Innovación",
+                "unidades": ["Oportunidades de Negocios", "Modelo de Negocios", "Creación de la Empresa", "Plan de Vida"]
+            },
+            {
+                "nombre": "Diseño de Software",
+                "unidades": ["Diseño de la interfaz de usuario", "Diseño web", "Administración de la calidad"]
+            },
+            {
+                "nombre": "Soporte TI",
+                "unidades": ["Introducción a la redes", "Sistemas Operativos", "Fundamentos de Ciberseguridad"]
+            }
+        ],
+        "duodecimo": [
+            {
+                "nombre": "Diseño de Software",
+                "unidades": ["Administración de proyectos de software", "Herramientas para diseño web"]
+            },
+            {
+                "nombre": "Tecnologías de Información",
+                "unidades": ["Eficiencia energética", "Tecnologías digitales"]
+            },
+            {
+                "nombre": "Programación para Web",
+                "unidades": ["Programación .net", "Bases de datos masivas"]
+            },
+            {
+                "nombre": "Soporte TI",
+                "unidades": ["Mantenimiento de portátiles", "Configuración de dispositivos móviles"]
+            }
+        ]
+    };
+
+    const subareas = subareaMap[level];
+    const subareaDiv = document.getElementById('subareas');
+    subareaDiv.innerHTML = subareas.map(subarea => `
+        <h5>${subarea.nombre}</h5>
+        <div class="d-flex flex-wrap">
+            ${subarea.unidades.map(unidad => `
+                <button class="btn btn-secondary m-2" onclick="loadUnitData('${level}', '${unidad}')">${unidad}</button>
+            `).join('')}
+        </div>
+    `).join('');
 }
 
-function showResults(unit) {
-    var results = document.getElementById('results');
-    var resultText = '';
+function loadUnitData(level, unitName) {
+    const unitMap = {
+        "decimo": "data/decimo.json",
+        "undecimo": "data/undecimo.json",
+        "duodecimo": "data/duodecimo.json"
+    };
 
-    switch (unit) {
-        case 'Fundamentos de Tecnologías de la Información':
-            resultText = `
-                <table class="table table-striped">
-                    <thead>
-                        <tr><th>Resultados de Aprendizaje</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Emplear componentes técnicos adecuados para la construcción, reparación o actualización de computadoras.</td></tr>
-                        <tr><td>Instalar y configurar componentes para actualizar computadoras según necesidades del usuario.</td></tr>
-                        <tr><td>Determinar procedimientos de comunicación de computadoras en redes.</td></tr>
-                        <tr><td>Explicar soluciones para problemas en equipos portátiles y otros dispositivos.</td></tr>
-                        <tr><td>Instalar sistemas operativos licenciados y de código abierto.</td></tr>
-                        <tr><td>Implementar mecanismos de seguridad para equipos, datos y redes.</td></tr>
-                    </tbody>
-                </table>
-            `;
-            break;
-        case 'Seguridad Industrial':
-            resultText = `
-                <table class="table table-striped">
-                    <thead>
-                        <tr><th>Resultados de Aprendizaje</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Mencionar el impacto de las regulaciones nacionales aplicadas en el campo de la Seguridad Industrial.</td></tr>
-                        <tr><td>Explicar los procesos mediante los cuales se realiza el aseguramiento de infraestructuras física.</td></tr>
-                        <tr><td>Aplicar las estrategias de prevención contra riesgos considerando la normativa, protocolos, insumos, equipos y herramientas que se utilizan en las actividades instrumentales.</td></tr>
-                        <tr><td>Utilizar formas creativas e innovadoras para la resolución de problemas cotidianos.</td></tr>
-                        <tr><td>Aplicar medidas preventivas que mitiguen la contaminación de los recursos marinos y sus océanos, promoviendo el desarrollo sostenible en ecosistemas terrestres.</td></tr>
-                    </tbody>
-                </table>
-            `;
-            break;
-        // Añadir más casos para otras unidades según la malla curricular
-        default:
-            resultText = '<p>No hay resultados de aprendizaje disponibles.</p>';
-    }
+    fetch(unitMap[level])
+        .then(response => response.json())
+        .then(data => {
+            const unitData = data.subareas.flatMap(subarea => subarea.unidades)
+                                          .find(unit => unit.nombre === unitName);
 
-    results.innerHTML = resultText + `<button class="btn btn-danger mt-3" onclick="simulatePDFDownload('${unit}')">Descargar en PDF</button>`;
+            if (unitData) {
+                displayUnitData(unitData);
+            }
+        });
 }
 
-function simulatePDFDownload(unitName) {
-    var downloadLink = document.createElement('a');
-    downloadLink.href = 'data:application/pdf;base64,'; // Aquí se debería incluir el contenido base64 del PDF generado
-    downloadLink.download = unitName + '.pdf';
-    downloadLink.click();
-}
-
-function validateLogin() {
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
-    if (username === 'Bendicione$' && password === 'Recibida$') {
-        window.location.href = 'inicio.html';
-    } else {
-        alert('Usuario o contraseña incorrectos');
-    }
+function displayUnitData(unitData) {
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = `
+        <h5>${unitData.nombre} (${unitData.horas} horas)</h5>
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th>Resultado de Aprendizaje</th>
+                    <th>Saberes Esenciales</th>
+                    <th>Indicadores de Logro</th>
+                    <th>Estrategias de Mediación Pedagógica</th>
+                    <th>Evidencias</th>
+                    <th>Tiempo Estimado</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${unitData.resultados_aprendizaje.map(result => `
+                    <tr>
+                        <td>${result.numero}. ${result.descripcion}</td>
+                        <td>${result.saberes_esenciales}</td>
+                        <td>${result.indicadores.join("<br>")}</td>
+                        <td>${result.estrategias.join("<br>")}</td>
+                        <td>${result.evidencias.map(evidencia => `
+                            <strong>Producto:</strong> ${evidencia.producto}<br>
+                            <strong>Conocimiento:</strong> ${evidencia.conocimiento}<br>
+                            <strong>Desempeño:</strong> ${evidencia.desempeño}
+                        `).join("<br><br>")}</td>
+                        <td>${result.tiempo_estimado}</td>
+                    </tr>
+                `).join('')}
+            </tbody>
+        </table>
+    `;
 }
