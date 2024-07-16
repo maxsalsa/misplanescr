@@ -225,7 +225,7 @@ function downloadPDF(fileName, unitName) {
     doc.autoTable({
         head: [centeredTableHeaders],
         body: centeredTableRows,
-        startY: 20
+        startY: 30
     });
 
     // Descargar el archivo PDF
