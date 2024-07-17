@@ -203,3 +203,18 @@ function downloadPDF(fileName, unitName) {
     // Descargar el archivo PDF
     doc.save(fileName + '.pdf');
 }
+
+function toggleDonationOptions() {
+    const donationOptions = document.getElementById('donationOptions');
+    if (donationOptions.style.display === 'none' || donationOptions.style.display === '') {
+        donationOptions.style.display = 'block';
+    } else {
+        donationOptions.style.display = 'none';
+    }
+}
+
+function confirmPaypal() {
+    if (confirm('¿Desea donar a través de PayPal?')) {
+        window.location.href = 'https://paypal.me/misplanescr?country.x=CR&locale.x=es_XC';
+    }
+}
