@@ -37,7 +37,7 @@ function startSessionTimeout() {
 }
 
 function confirmLogout() {
-    if (confirm('¿Realmente desea cerrar la sesión?')) {
+    if (confirm('MisPlanesCr: ¿Realmente desea cerrar la sesión?')) {
         logout();
     }
 }
@@ -214,7 +214,13 @@ function toggleDonationOptions() {
 }
 
 function confirmPaypal() {
-    if (confirm('¿Desea donar a través de PayPal?')) {
+    if (confirm('MisPlanesCr: ¿Desea donar a través de PayPal?')) {
         window.location.href = 'https://paypal.me/misplanescr?country.x=CR&locale.x=es_XC';
     }
+}
+
+function sendWhatsAppMessage() {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const url = isMobile ? 'https://wa.me/50664503722' : 'https://web.whatsapp.com/send?phone=50664503722';
+    window.open(url, '_blank');
 }
