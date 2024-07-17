@@ -10,15 +10,10 @@ const loginForm = document.getElementById('loginForm');
 loginForm.addEventListener('submit', function(event) {
     event.preventDefault();
     const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
 
-    if (username === 'Bendicione$' && password === 'Recibida$') {
-        sessionStorage.setItem('authenticated', 'true');
-        sessionStorage.setItem('username', username);
-        showMainContent();
-    } else {
-        document.getElementById('loginError').style.display = 'block';
-    }
+    sessionStorage.setItem('authenticated', 'true');
+    sessionStorage.setItem('username', username);
+    showMainContent();
 });
 
 function showLogin() {
@@ -66,50 +61,26 @@ function showSubareas(level) {
             {
                 "nombre": "Tecnologías de Información",
                 "unidades": ["Herramientas para la Producción de Documentos", "Herramientas para la Gestión y Análisis de la Información", "Internet de Todo y Seguridad de los Datos"]
-            },
-            {
-                "nombre": "Programación para Web",
-                "unidades": ["Lenguaje de marcado y hojas de estilo", "Programación interpretada", "Técnicas para desarrollo de sitios web"]
-            },
-            {
-                "nombre": "Diseño de Software",
-                "unidades": ["Procesos de software", "Modelado de requerimientos", "Diseño arquitectónico"]
             }
         ],
         "undecimo": [
             {
                 "nombre": "Programación para Web",
-                "unidades": ["Programación interpretada multiparadigma", "Programación orientada a objetos", "Programación híbrida"]
+                "unidades": ["Lenguaje de Marcado y Hojas de Estilo", "Programación Interpretada", "Técnicas para Desarrollo de Sitios Web"]
             },
             {
                 "nombre": "Emprendimiento e Innovación",
                 "unidades": ["Oportunidades de Negocios", "Modelo de Negocios", "Creación de la Empresa", "Plan de Vida"]
-            },
-            {
-                "nombre": "Diseño de Software",
-                "unidades": ["Diseño de la interfaz de usuario", "Diseño web", "Administración de la calidad"]
-            },
-            {
-                "nombre": "Soporte TI",
-                "unidades": ["Introducción a la redes", "Sistemas Operativos", "Fundamentos de Ciberseguridad"]
             }
         ],
         "duodecimo": [
             {
                 "nombre": "Diseño de Software",
-                "unidades": ["Administración de proyectos de software", "Herramientas para diseño web"]
+                "unidades": ["Procesos de Software", "Modelado de Requerimientos", "Diseño Arquitectónico"]
             },
             {
                 "nombre": "Tecnologías de Información",
-                "unidades": ["Eficiencia energética", "Tecnologías digitales"]
-            },
-            {
-                "nombre": "Programación para Web",
-                "unidades": ["Programación .net", "Bases de datos masivas"]
-            },
-            {
-                "nombre": "Soporte TI",
-                "unidades": ["Mantenimiento de portátiles", "Configuración de dispositivos móviles"]
+                "unidades": ["Eficiencia Energética", "Tecnologías Digitales"]
             }
         ]
     };
@@ -162,6 +133,7 @@ function displayUnitData(unitData) {
         <table class="table table-striped table-sm">
             <thead>
                 <tr>
+                    <th>#</th>
                     <th>Resultado de Aprendizaje</th>
                     <th>Saberes Esenciales</th>
                     <th>Indicadores de Logro</th>
@@ -171,9 +143,10 @@ function displayUnitData(unitData) {
                 </tr>
             </thead>
             <tbody>
-                ${unitData.resultados_aprendizaje.map(result => `
+                ${unitData.resultados_aprendizaje.map((result, index) => `
                     <tr>
-                        <td>${result.numero}. ${result.descripcion}</td>
+                        <td>${index + 1}</td>
+                        <td>${result.descripcion}</td>
                         <td>${result.saberes_esenciales}</td>
                         <td>${result.indicadores.join("<br>")}</td>
                         <td>${result.estrategias.join("<br>")}</td>
@@ -215,15 +188,15 @@ function downloadPDF(fileName, unitName) {
         return Array.from(tr.querySelectorAll('td')).map(td => td.innerText);
     });
 
-    // Centrar el contenido en la tabla
-    const centeredTableHeaders = tableHeaders.map(header => ({ content: header, styles: { halign: 'center' }}));
-    const centeredTableRows = tableRows.map(row => row.map(cell => ({ content: cell, styles: { halign: 'center' }})));
+    // Justificar el contenido en la tabla
+    const justifiedTableHeaders = tableHeaders.map(header => ({ content: header, styles: { halign: 'justify' }}));
+    const justifiedTableRows = tableRows.map(row => row.map(cell => ({ content: cell, styles: { halign: 'justify' }})));
 
     // Agregar la tabla al documento PDF
     doc.text(`Plan de Práctica Pedagógicas Desarrollo Web - ${new Date().getFullYear()}`, 10, 10);
     doc.autoTable({
-        head: [centeredTableHeaders],
-        body: centeredTableRows,
+        head: [justifiedTableHeaders],
+        body: justifiedTableRows,
         startY: 30
     });
 

@@ -10,23 +10,23 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-        <a class="navbar-brand" href="#" onclick="return false;" title="Página Principal">Educación Técnica en Informática</a>
+        <a class="navbar-brand" href="#" title="Página Principal">Educación Técnica en Informática</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="return false;" title="Inicio">Inicio</a>
+                    <a class="nav-link" href="#" title="Inicio" onclick="return false;">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="return false;" title="Actividades">Actividades</a>
+                    <a class="nav-link" href="#" title="Actividades" onclick="return false;">Actividades</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="return false;" title="Laboratorios">Laboratorios</a>
+                    <a class="nav-link" href="#" title="Laboratorios" onclick="return false;">Laboratorios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="return false;" title="Prácticas de Clase">Prácticas de Clase</a>
+                    <a class="nav-link" href="#" title="Prácticas de Clase" onclick="return false;">Prácticas de Clase</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="session-link" href="#" onclick="confirmLogout()" title="Cerrar Sesión">Cerrar Sesión</a>
@@ -41,19 +41,45 @@
     </nav>
 
     <div id="login-container" class="login-container">
-        <h2 class="text-center mt-5">Iniciar Sesión</h2>
-        <form id="loginForm">
-            <div class="form-group">
-                <label for="username">Usuario</label>
-                <input type="text" class="form-control" id="username" required>
+        <div class="row">
+            <div class="col-md-12 col-lg-4">
+                <div class="post-it">
+                    <h4>Apoyo al Proyecto</h4>
+                    <p>
+                        Este proyecto busca <strong>apoyo financiero</strong> para facilitar el trabajo docente en la educación técnica y académica de Costa Rica. No es una obligación aportar, pero su <strong>apoyo puede hacer una gran diferencia</strong>.
+                    </p>
+                    <p>
+                        El financiamiento se puede realizar a través del <strong>Sinpe Móvil</strong> al número <strong>64503722</strong> a nombre de <strong>Max Sal</strong>. Este número es solo para Sinpe y no se contestará ninguna llamada. Se aceptan <strong>comentarios y críticas constructivas</strong>.
+                    </p>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="password">Contraseña</label>
-                <input type="password" class="form-control" id="password" required>
+            <div class="col-md-12 col-lg-4">
+                <h2 class="text-center mt-5">Iniciar Sesión</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Usuario</label>
+                        <input type="text" class="form-control" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+                </form>
+                <div id="loginError" class="text-danger mt-2" style="display: none;">Usuario o contraseña incorrectos</div>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
-        </form>
-        <div id="loginError" class="text-danger mt-2" style="display: none;">Usuario o contraseña incorrectos</div>
+            <div class="col-md-12 col-lg-4">
+                <div class="post-it">
+                    <h4>Sobre el Proyecto</h4>
+                    <p>
+                        La plataforma permite a los usuarios <strong>generar planeamientos</strong> de unidades de estudio para cualquier asignatura del programa del MEP en Costa Rica. Actualmente, presentamos un <strong style="color: blue;">PROTOTIPO</strong> con un ejemplo de informática.
+                    </p>
+                    <p>
+                        <strong style="color: blue;">ESTE EJEMPLO NO ESTÁ COMPLETAMENTE BIEN REDACTADO</strong> y sirve solo como una muestra del <strong style="color: blue;">POTENCIAL DE LA HERRAMIENTA</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="main-content" class="container-fluid full-height" style="display: none; padding-top: 70px;">
