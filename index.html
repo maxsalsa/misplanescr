@@ -41,45 +41,19 @@
     </nav>
 
     <div id="login-container" class="login-container">
-        <div class="row">
-            <div class="col-md-12 col-lg-4">
-                <div class="post-it">
-                    <h4>Apoyo al Proyecto</h4>
-                    <p>
-                        Este proyecto busca <strong>apoyo financiero tipo CrowdFunding (Privado)</strong> para facilitar el trabajo docente en la educación técnica y académica de Costa Rica. No es una obligación aportar, pero su <strong>apoyo puede hacer una gran diferencia</strong>.
-                    </p>
-                    <p>
-                        El financiamiento se puede realizar a través del <strong>Sinpe Móvil o Paypal</strong> al número <strong>+506 6450 3722 Max S.</strong>. Bendiciones en el botón de chat amarillo flotante de la esquina. Este número es solo para Sinpe y no se contestará ninguna llamada. usuario = Bendicione$, contraseña = Recibida$. Bienvenidos los <strong>comentarios y bendiciones por WhatsApp</strong>.
-                    </p>
-                </div>
+        <h2 class="text-center mt-5">Iniciar Sesión</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Usuario</label>
+                <input type="text" class="form-control" id="username" required>
             </div>
-            <div class="col-md-12 col-lg-4">
-                <h2 class="text-center mt-5">Iniciar Sesión</h2>
-                <form id="loginForm">
-                    <div class="form-group">
-                        <label for="username">Usuario</label>
-                        <input type="text" class="form-control" id="username" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Contraseña</label>
-                        <input type="password" class="form-control" id="password" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
-                </form>
-                <div id="loginError" class="text-danger mt-2" style="display: none;">Usuario o contraseña incorrectos</div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" class="form-control" id="password" required>
             </div>
-            <div class="col-md-12 col-lg-4">
-                <div class="post-it">
-                    <h4>Sobre el Proyecto</h4>
-                    <p>
-                        La plataforma permite a los usuarios <strong>generar planeamientos</strong> de unidades de estudio para cualquier asignatura o figura afín de la malla curricular en Costa Rica. Actualmente, presentamos un <strong style="color: blue;">PROTOTIPO</strong> con un ejemplo de informática.
-                    </p>
-                    <p>
-                        <strong style="color: blue;">Guarde el comprobante de su bendición y reibirá un usuario de POR VIDA sin costo alguno gracias a su apoyo. Cuando esté finalizado el proyecto podrá utilizarlo en su área específica. ESTE EJEMPLO NO ESTÁ COMPLETAMENTE BIEN REDACTADO</strong> y sirve solo como una MUESTRA del POTENCIAL<strong style="color: blue;"> de la Inteligencia Artificial y de la HERRAMIENTA</strong>.
-                    </p>
-                </div>
-            </div>
-        </div>
+            <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+        </form>
+        <div id="loginError" class="text-danger mt-2" style="display: none;">Usuario o contraseña incorrectos</div>
     </div>
 
     <div id="main-content" class="container-fluid full-height" style="display: none; padding-top: 70px;">
