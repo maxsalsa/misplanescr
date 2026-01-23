@@ -1,0 +1,29 @@
+
+model GlobalResourceIntelligence {
+  id              String   @id @default(uuid()) @db.Uuid
+  sourceUrl       String   @map("source_url")
+  sourceDomain    String   @map("source_domain") // "mundoprimaria.com"
+  
+  // Pedagogical DNA
+  title           String
+  description     String?
+  resourceType    String   // "Ficha", "Juego", "Infografía"
+  targetLevel     String   // "Primaria - Grado 1" (Normalized)
+  
+  // JSONB Structures
+  pedagogicalData Json     @map("pedagogical_data") // { "objectives": [], "materials": [] }
+  adaptationData  Json?    @map("adaptation_data")  // { "mep_correlation": "Unit 1", "dua_tags": ["TEA"] }
+  
+  // Metadata
+  fingerprint     String   @unique // Hash of content to prevent dupes
+  qualityScore    Float    @default(0.0) @map("quality_score")
+  isActive        Boolean  @default(true) @map("is_active")
+  
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  @@map("global_resource_intelligence")
+  @@index([sourceDomain])
+  @@index([targetLevel])
+  @@index([pedagogicalData(ops: JsonbOps)], type: Gin)
+}

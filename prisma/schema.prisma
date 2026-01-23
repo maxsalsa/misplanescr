@@ -1,0 +1,803 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// =============================================================================
+// 1. SYSTEM & SAAS CORE
+// =============================================================================
+
+model Institution {
+  id                String   @id @default(uuid()) @db.Uuid
+  name              String
+  code              String   @unique
+  modality          String   
+  regionalDirection String?  @map("regional_direction")
+  circuit           String?
+  province          String?  
+  logoUrl           String?  @map("logo_url")
+  address           String?
+  
+  educationalLevel  String   @default("SECUNDARIA_ACADEMICA") @map("educational_level")
+  schedule          String   @default("DIURNO")
+  
+  masterToken       String?  @unique @map("master_token")
+  licenseSlots      Int      @default(0) @map("license_slots")
+  licenseUsed       Int      @default(0) @map("license_used")
+  subscriptionPlan  String   @default("free")
+  billingStatus     String   @default("PENDING") @map("billing_status")
+  licenseExpiresAt  DateTime? @map("license_expires_at")
+  lastQuoteDate     DateTime? @map("last_quote_date")
+  
+  users             User[]
+  groups            Group[]
+  curriculum        CurriculumMap[]
+  quotes            Quote[]
+  importLogs        ImportLog[]
+
+  @@map("institutions")
+}
+
+model Quote {
+  id            String   @id @default(uuid()) @db.Uuid
+  institutionId String   @map("institution_id") @db.Uuid
+  institution   Institution @relation(fields: [institutionId], references: [id])
+  
+  quoteNumber   String   @unique
+  totalSeats    Int
+  pricePerSeat  Float
+  totalAmount   Float
+  currency      String   @default("USD")
+  status        String   @default("DRAFT")
+  validUntil    DateTime @map("valid_until")
+  
+  createdAt     DateTime @default(now()) @map("created_at")
+  @@map("quotes")
+}
+
+model Group {
+  id            String   @id @default(uuid()) @db.Uuid
+  name          String
+  section       String
+  subGroup      String?
+  specialty     String?
+  level         String
+  year          Int      @default(2026)
+  
+  institutionId String   @map("institution_id") @db.Uuid
+  institution   Institution @relation(fields: [institutionId], references: [id])
+  
+  students      User[]      @relation("StudentGroups") 
+  attendance    Attendance[]
+  gradebooks    GradeBook[]
+  resources     PedagogicalResource[]
+
+  @@index([institutionId])
+  @@index([specialty])
+  @@map("groups")
+}
+
+enum UserRole {
+  SUPER_ADMIN
+  ADMIN_DELEGADO
+  DIRECTOR
+  DOCENTE
+  ESTUDIANTE
+  FAMILIA
+}
+
+model User {
+  id            String    @id @default(uuid()) @db.Uuid
+  email         String    @unique
+  // name          String // Removed for MEP Format
+  nombre1       String   @map("nombre1")
+  nombre2       String?  @map("nombre2")
+  apellido1     String   @map("apellido1")
+  apellido2     String   @map("apellido2")
+  passwordHash  String?
+  role          UserRole  @default(DOCENTE)
+  honorific     String?   @default("Prof.")
+  subscriptionStatus String @default("INACTIVE") @map("subscription_status")
+  specialtySlots String[] @map("specialty_slots")
+  forcePasswordChange Boolean @default(true) @map("force_password_change")
+  hasSeenWelcome      Boolean @default(false) @map("has_seen_welcome")
+  
+  professionalId String?  @map("professional_id")
+  specialty     String?
+  region        String?
+  phone         String?
+  
+  institutionId String?   @map("institution_id") @db.Uuid
+  institution   Institution? @relation(fields: [institutionId], references: [id])
+  
+  gamification  GamificationProfile?
+  neuroProfile  NeuroProfile?
+  
+  // Teacher Relations
+  resourcesCreated PedagogicalResource[]
+  gradebooksOwned  GradeBook[]
+  conductIssued    ConductReport[] @relation("TeacherConduct")
+  guideLogsCreated GuideLog[]      @relation("TeacherGuide")
+  
+  // Student Relations
+  groups           Group[]   @relation("StudentGroups")
+  grades           GradeEntry[]
+  attendance       Attendance[]
+  achievements     StudentAchievement[]
+  
+  // System Relations
+  importLogs       ImportLog[]
+  familyCommunications FamilyCommunication[]
+  securityLogs     SecurityLog[]
+  predictiveDrafts PredictiveDraft[]
+  history          HistorialPlanes[]
+  
+  // Conduct & Guide (Student side)
+  conductReports   ConductReport[]
+  guideLogs        GuideLog[]
+  paymentReports   PaymentReport[]
+  
+  // Auth & Security
+  authenticators   Authenticator[]
+  twoFactorConfirm TwoFactorConfirmation?
+
+  createdAt     DateTime  @default(now()) @map("created_at")
+  
+  @@map("users")
+}
+
+model SecurityLog {
+  id            String   @id @default(uuid()) @db.Uuid
+  userId        String?  @map("user_id") @db.Uuid
+  event         String
+  ipAddress     String?  @map("ip_address")
+  metadata      Json?
+  severity      String   @default("INFO")
+  createdAt     DateTime @default(now()) @map("created_at")
+  
+  user          User?    @relation(fields: [userId], references: [id])
+  @@map("security_logs")
+}
+
+model Authenticator {
+  id                   String  @id @default(uuid())
+  credentialID         String  @unique
+  userId               String  @map("user_id") @db.Uuid
+  providerAccountId    String
+  credentialPublicKey  String
+  counter              Int
+  credentialDeviceType String
+  credentialBackedUp   Boolean
+  transports           String?
+ 
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@map("authenticators")
+}
+
+model TwoFactorToken {
+  id      String   @id @default(uuid())
+  email   String
+  token   String
+  expires DateTime
+  @@unique([email, token])
+  @@map("two_factor_tokens")
+}
+
+model TwoFactorConfirmation {
+  id     String @id @default(uuid())
+  userId String @unique @map("user_id") @db.Uuid
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@map("two_factor_confirmations")
+}
+
+// =============================================================================
+// 2. PEDAGOGICAL KNOWLEDGE (RAG & PLANNING)
+// =============================================================================
+
+model CurriculumMap {
+  id            String   @id @default(uuid()) @db.Uuid
+  institutionId String   @map("institution_id") @db.Uuid
+  subject       String
+  level         String
+  year          Int
+  
+  units         Unit[]
+  
+  institution   Institution @relation(fields: [institutionId], references: [id])
+  @@map("curriculum_maps")
+}
+
+model Unit {
+  id            String   @id @default(uuid()) @db.Uuid
+  curriculumId  String   @map("curriculum_id") @db.Uuid
+  title         String
+  duration      String
+  
+  outcomes      LearningOutcome[]
+  
+  curriculum    CurriculumMap @relation(fields: [curriculumId], references: [id])
+  @@map("units")
+}
+
+model LearningOutcome {
+  id            String   @id @default(uuid()) @db.Uuid
+  unitId        String   @map("unit_id") @db.Uuid
+  description   String
+  indicators    String[]
+  
+  unit          Unit     @relation(fields: [unitId], references: [id])
+  projects      PedagogicalResource[]
+  
+  @@map("learning_outcomes")
+}
+
+// =============================================================================
+// 3. CONTENT ENGINE
+// =============================================================================
+
+enum ResourceType {
+  PLAN_ANUAL
+  PLAN_UNIDAD
+  PLAN_DIARIO
+  ACTIVIDAD_MEDIACION
+  TRABAJO_COTIDIANO
+  TAREA_CORTA
+  PRUEBA_CORTA
+  EXAMEN
+  RUBRICA
+  GUIA_AUTONOMA
+  PRACTICA
+  REPASO
+  RESUMEN
+  INFOGRAFIA
+  MATERIAL_APOYO
+  CAPSULA_FAMILIA
+}
+
+model PedagogicalResource {
+  id            String       @id @default(uuid()) @db.Uuid
+  title         String
+  type          ResourceType
+  contentJson   Json         @map("content_json")
+  htmlContent   String?      @map("html_content")
+  
+  subject       String
+  level         String
+  
+  authorId      String       @map("author_id") @db.Uuid
+  author        User         @relation(fields: [authorId], references: [id])
+  
+  assignedGroups Group[]     
+  linkedOutcome  LearningOutcome? @relation(fields: [outcomeId], references: [id])
+  outcomeId      String?     @map("outcome_id") @db.Uuid
+  
+  unidadEstudioId String?    @map("unidad_estudio_id") @db.Uuid
+  unidadEstudio   UnidadEstudio? @relation(fields: [unidadEstudioId], references: [id])
+  
+  version       Int          @default(1)
+  isTemplate    Boolean      @default(false)
+  
+  createdAt     DateTime     @default(now()) @map("created_at")
+  updatedAt     DateTime     @updatedAt @map("updated_at")
+  
+  pdfSourceHash String?      @map("pdf_source_hash")
+  year          Int          @default(2026) // 🆕 ADDED
+
+  @@index([type])
+  @@index([authorId])
+  @@index([year])
+  @@index([contentJson(ops: JsonbOps)], type: Gin)
+  @@map("pedagogical_resources")
+}
+
+model ImportLog {
+  id            String   @id @default(uuid()) @db.Uuid
+  institutionId String   @map("institution_id") @db.Uuid
+  userId        String   @map("user_id") @db.Uuid
+  filename      String
+  status        String
+  recordsCount  Int      @map("records_count")
+  errorLog      Json?    @map("error_log")
+  createdAt     DateTime @default(now()) @map("created_at")
+  
+  institution   Institution @relation(fields: [institutionId], references: [id])
+  user          User        @relation(fields: [userId], references: [id])
+  @@map("import_logs")
+}
+
+model FamilyCommunication {
+  id            String   @id @default(uuid()) @db.Uuid
+  studentId     String   @map("student_id") @db.Uuid
+  type          String
+  content       String
+  sentVia       String
+  status        String
+  sentAt        DateTime @default(now()) @map("sent_at")
+  
+  student       User     @relation(fields: [studentId], references: [id])
+  @@map("family_communications")
+}
+
+// =============================================================================
+// 4. GRADING & CONDUCT
+// =============================================================================
+
+model GradeBook {
+  id          String   @id @default(uuid()) @db.Uuid
+  teacherId   String   @map("teacher_id") @db.Uuid
+  groupId     String   @map("group_id") @db.Uuid
+  subject     String
+  period      String
+  weights     Json
+
+  teacher     User     @relation(fields: [teacherId], references: [id])
+  group       Group    @relation(fields: [groupId], references: [id])
+  entries     GradeEntry[]
+  
+  @@map("gradebooks")
+}
+
+model GradeEntry {
+  id            String   @id @default(uuid()) @db.Uuid
+  gradebookId   String   @map("gradebook_id") @db.Uuid
+  studentId     String   @map("student_id") @db.Uuid
+  category      String
+  score         Float
+  
+  gradebook     GradeBook @relation(fields: [gradebookId], references: [id])
+  student       User      @relation(fields: [studentId], references: [id])
+  
+  @@map("grade_entries")
+}
+
+model ConductReport {
+  id            String   @id @default(uuid()) @db.Uuid
+  studentId     String   @map("student_id") @db.Uuid
+  teacherId     String   @map("teacher_id") @db.Uuid
+  date          DateTime @default(now())
+  
+  type          String
+  points        Int
+  description   String
+  
+  student       User     @relation(fields: [studentId], references: [id])
+  teacher       User     @relation("TeacherConduct", fields: [teacherId], references: [id])
+  
+  @@index([studentId])
+  @@index([teacherId])
+  @@map("conduct_reports")
+}
+
+model GuideLog {
+  id            String   @id @default(uuid()) @db.Uuid
+  studentId     String   @map("student_id") @db.Uuid
+  teacherId     String   @map("teacher_id") @db.Uuid
+  date          DateTime @default(now())
+  
+  type          String
+  content       String
+  agreements    String?
+  
+  student       User     @relation(fields: [studentId], references: [id])
+  teacher       User     @relation("TeacherGuide", fields: [teacherId], references: [id])
+  
+  @@index([studentId])
+  @@index([teacherId])
+  @@map("guide_logs")
+}
+
+model Attendance {
+  id          String   @id @default(uuid()) @db.Uuid
+  date        DateTime @default(now())
+  studentId   String   @map("student_id") @db.Uuid
+  groupId     String   @map("group_id") @db.Uuid
+  status      String
+  
+  student     User     @relation(fields: [studentId], references: [id])
+  group       Group    @relation(fields: [groupId], references: [id])
+  @@map("attendance")
+}
+
+// =============================================================================
+// 5. ADVANCED PROFILES (NEURO/GAMIFICATION)
+// =============================================================================
+
+model NeuroProfile {
+  id            String   @id @default(uuid()) @db.Uuid
+  userId        String   @unique @map("user_id") @db.Uuid
+  
+  hasDiagnosis  Boolean  @default(false)
+  conditions    String[]
+  needsAccess   Boolean  @default(false)
+  needsNonSignif Boolean @default(false)
+  needsSignif   Boolean  @default(false)
+  
+  anxietyLevel  String?  @map("anxiety_level")
+  medication    String?
+  visionNeeds   String?  @map("vision_needs")
+
+  talents       String[]
+  notes         String?
+  
+  student       User     @relation(fields: [userId], references: [id])
+  @@map("neuro_profiles")
+}
+
+model GamificationProfile {
+  id            String   @id @default(uuid()) @db.Uuid
+  userId        String   @unique @map("user_id") @db.Uuid
+  xp            Int      @default(0)
+  level         Int      @default(1)
+  
+  user          User     @relation(fields: [userId], references: [id])
+  @@map("gamification_profiles")
+}
+
+model StudentAchievement {
+  id          String   @id @default(uuid()) @db.Uuid
+  studentId   String   @map("student_id") @db.Uuid
+  title       String
+  
+  student       User     @relation(fields: [studentId], references: [id])
+  @@map("student_achievements")
+}
+
+// =============================================================================
+// 6. CACHE & PREDICTION
+// =============================================================================
+
+model SemanticCache {
+  id        String   @id @default(uuid()) @db.Uuid
+  hash      String   @unique
+  content   Json
+  hits      Int      @default(0)
+  lastUsed  DateTime @default(now())
+  createdAt DateTime @default(now())
+  
+  @@map("semantic_cache")
+}
+
+model PredictiveDraft {
+  id            String   @id @default(uuid()) @db.Uuid
+  teacherId     String   @map("teacher_id") @db.Uuid
+  type          String
+  title         String
+  status        String
+  contentJson   Json
+  triggerDate   DateTime @default(now())
+  
+  teacher       User     @relation(fields: [teacherId], references: [id])
+  @@map("predictive_drafts")
+}
+
+// =============================================================================
+// 7. CURRICULUM GRAPH
+// =============================================================================
+
+model Modalidad {
+  id        String   @id @default(uuid()) @db.Uuid
+  name      String   @unique
+  levels    Nivel[]
+  @@map("modalidades")
+}
+
+model Nivel {
+  id           String      @id @default(uuid()) @db.Uuid
+  name         String
+  order        Int
+  modalidadId  String      @map("modalidad_id") @db.Uuid
+  
+  modalidad    Modalidad   @relation(fields: [modalidadId], references: [id])
+  asignaturas  Asignatura[]
+  
+  @@map("niveles")
+}
+
+model Asignatura {
+  id           String      @id @default(uuid()) @db.Uuid
+  name         String
+  nivelId      String      @map("nivel_id") @db.Uuid
+  
+  nivel        Nivel       @relation(fields: [nivelId], references: [id])
+  unidades     UnidadEstudio[]
+  
+  @@map("asignaturas")
+}
+
+model Subarea {
+  id           String      @id @default(uuid()) @db.Uuid
+  name         String
+  specialtyId  String?     @map("specialty_id") 
+  
+  unidades     UnidadEstudio[]
+  @@map("subareas")
+}
+
+model UnidadEstudio {
+  id                 String      @id @default(uuid()) @db.Uuid
+  title              String
+  asignaturaId       String?     @map("asignatura_id") @db.Uuid
+  subareaId          String?     @map("subarea_id") @db.Uuid
+  
+  curriculumBody     Json        @map("curriculum_body")
+  apoyosSugeridos    Json        @map("apoyos_sugeridos")
+  premiumTags        Json?       @map("premium_tags")
+  
+  pedagogicalHash    String      @unique @map("pedagogical_hash")
+  version            String
+  isActive           Boolean     @default(true) @map("is_active")
+  
+  asignatura         Asignatura? @relation(fields: [asignaturaId], references: [id])
+  subarea            Subarea?    @relation(fields: [subareaId], references: [id])
+  
+  resources          PedagogicalResource[]
+  rubrics            EvaluationCriteria[]
+  
+  @@index([curriculumBody(ops: JsonbOps)], type: Gin)
+  @@map("unidades_estudio")
+}
+
+model EvaluationCriteria {
+  id            String   @id @default(uuid()) @db.Uuid
+  unidadId      String   @map("unidad_id") @db.Uuid
+  criteriaJson  Json
+  
+  unidad        UnidadEstudio @relation(fields: [unidadId], references: [id])
+  @@map("evaluation_criteria")
+}
+
+// =============================================================================
+// 8. NORMATIVA & CONFIG
+// =============================================================================
+
+model Normativa {
+  id          String   @id @default(uuid()) @db.Uuid
+  modality    String
+  level       String
+  year        Int      @default(2025)
+  rules       Json     @map("rules_json")
+  isActive    Boolean  @default(true)
+  updatedAt   DateTime @updatedAt
+  
+  @@unique([modality, level, year])
+  @@index([rules(ops: JsonbOps)], type: Gin)
+  @@map("normativas")
+}
+
+model NormativaETP {
+  id          String   @id @default(uuid()) @db.Uuid
+  specialty   String
+  module      String
+  weights     Json
+  practiceHours Int    @default(320)
+  minGrade    Int      @default(70)
+  @@map("normativas_etp")
+}
+
+model EstrategiaMediacion {
+  id          String   @id @default(uuid()) @db.Uuid
+  name        String
+  type        String
+  details     Json
+  complexity  String
+  tags        String[]
+  @@map("estrategias_mediacion")
+}
+
+model FormatoEvaluacion {
+  id          String   @id @default(uuid()) @db.Uuid
+  title       String
+  type        String
+  structure   Json
+  rules       Json
+  @@map("formatos_evaluacion")
+}
+
+// =============================================================================
+// 9. MEDIATION BANK & HISTORY
+// =============================================================================
+
+model BancoMediacion {
+  id              String   @id @default(uuid()) @db.Uuid
+  nombre          String
+  descripcion     String
+  tipoInteraccion String
+  alineacionDUA   String
+  recursos        String[] 
+  fase            String
+  tags            String[]
+  bloomLevel      String?
+  evaluationType  String?
+  @@map("banco_mediacion")
+}
+
+model EstructuraETP {
+  id          String   @id @default(uuid()) @db.Uuid
+  specialty   String
+  skeleton    Json
+  version     String
+  @@map("estructuras_etp")
+}
+
+model HistorialPlanes {
+  id          String   @id @default(uuid()) @db.Uuid
+  userId      String   @map("user_id") @db.Uuid
+  title       String
+  type        String
+  document    Json
+  year        Int      @default(2026) // 🆕 ADDED
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt
+  
+  user        User     @relation(fields: [userId], references: [id])
+  @@map("historial_planes")
+}
+
+// =============================================================================
+// 10. AUDIT & MASTER DATA
+// =============================================================================
+
+model CurriculumMaster {
+  id          String   @id @default(uuid()) @db.Uuid
+  subject     String
+  level       String
+  unit        String
+  learningOutcome String 
+  indicators      String[]
+  saberes         String[]
+  hashSource      String   @map("hash_source")
+  sourceFile      String
+  createdAt       DateTime @default(now())
+  
+  @@index([subject, level])
+  @@map("curriculum_master")
+}
+
+model EncryptedGradeLog {
+  id            String   @id @default(uuid()) @db.Uuid
+  studentId     String   @map("student_id") @db.Uuid
+  encryptedBlob String 
+  iv            String 
+  createdAt     DateTime @default(now())
+  @@map("encrypted_grade_logs")
+}
+
+// =============================================================================
+// 11. KNOWLEDGE KERNEL (KAIZEN 1000.0 / 2000.0)
+// =============================================================================
+
+model KnowledgeKernel {
+  id                  String   @id @default(uuid()) @db.Uuid
+  semanticHash        String   @unique @map("semantic_hash")
+  
+  // High Density
+  jsonbData           Json     @map("jsonb_data") 
+  mepMetadata         Json     @map("mep_metadata") 
+  logicRules          Json     @map("logic_rules") 
+  classificationTags  Json     @map("classification_tags") 
+
+
+  // Kaizen 2000.0: Autonomous Curation
+  qualityScore        Float    @default(0.0) @map("quality_score")
+  isVerified          Boolean  @default(false) @map("is_verified")
+  sourceOrigin        String   @map("source_origin")
+  
+  // Kaizen 2000.0: Premium Bank Flag
+  isPremium           Boolean  @default(false) @map("is_premium")
+
+  createdAt           DateTime @default(now()) @map("created_at")
+  updatedAt           DateTime @updatedAt @map("updated_at")
+
+  @@map("knowledge_kernel")
+  
+  @@index([jsonbData(ops: JsonbOps)], type: Gin)
+  @@index([mepMetadata(ops: JsonbOps)], type: Gin)
+  @@index([classificationTags(ops: JsonbOps)], type: Gin) 
+}
+
+// =============================================================================
+// 12. ANTIGRAVITY INDUSTRIAL (MASTER MEMORY)
+// =============================================================================
+
+model MMepRespaldo {
+  idPrograma      String   @id @map("id_programa")
+  programaNombre  String   @map("programa_nombre")
+  docente         String   @map("docente") 
+  contenidoJson   Json     @map("contenido_json")
+  versionKaizen   String   @map("version_kaizen")
+  updatedAt       DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@map("m_mep_respaldo")
+}
+
+// =============================================================================
+// 13. ANTIGRAVITY ANALYTICS (KPI DASHBOARD)
+// =============================================================================
+
+model AnalyticsAntigravity {
+  id            String   @id @default(uuid()) @db.Uuid
+  planId        String   @map("plan_id")
+  suscriptorId  String   @map("suscriptor_id")
+  accion        String   // 'view', 'download_pdf', 'edit'
+  timestamp     DateTime @default(now())
+  
+  // Relaciones opcionales para integridad, aunque en Analytics a veces se prefiere desacople
+  // plan          MMepRespaldo? @relation(fields: [planId], references: [idPrograma])
+
+  @@index([planId])
+  @@index([accion])
+  @@index([timestamp])
+  @@map("analytics_antigravity")
+}
+
+// =============================================================================
+// 14. ANTIGRAVITY CLASSROOM (EVALUATION & ATTENDANCE)
+// =============================================================================
+
+model ClassroomRecordAntigravity {
+  id              String   @id @default(uuid()) @db.Uuid
+  docenteAdmin    String   @map("docente_admin")
+  grupoId         String   @map("grupo_id")
+  periodo         String
+  registroJson    Json     @map("registro_json") // Stores the full complex object (Attendance + Sumative)
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  @@index([docenteAdmin])
+  @@index([grupoId])
+  @@map("classroom_records_antigravity")
+}
+
+// =============================================================================
+// 15. ANTIGRAVITY GUIDE MODULE (CONDUCT & EXPEDIENT)
+// =============================================================================
+
+model GuideManagementAntigravity {
+  id              String   @id @default(uuid()) @db.Uuid
+  docenteAdmin    String   @map("docente_admin")
+  grupoId         String   @map("grupo_id")
+  gestionJson     Json     @map("gestion_json") // Stores docencia_guia (Conduct + Daily Attendance)
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  @@index([docenteAdmin])
+  @@index([grupoId])
+  @@map("guide_management_antigravity")
+}
+
+// =============================================================================
+// 16. SINPE & PAYMENTS (FINANCIAL CORE)
+// =============================================================================
+
+model PaymentReport {
+  id              String   @id @default(uuid()) @db.Uuid
+  userId          String   @map("user_id") @db.Uuid
+  comprobanteId   String   @unique @map("comprobante_id") // 🛡️ CAPA 1: UNICIDAD
+  monto           Float
+  fechaReporte    DateTime @default(now()) @map("fecha_reporte")
+  estado          String   @default("PENDING") // PENDING, APPROVED, REJECTED
+  imgUrl          String?  @map("img_url")
+  riskLevel       String   @default("LOW")     // LOW, WARNING, CRITICAL
+  
+  user            User     @relation(fields: [userId], references: [id])
+  @@map("payment_reports")
+}
+
+// =============================================================================
+// 17. SECURITY & RECOVERY
+// =============================================================================
+
+model PasswordResetToken {
+  id          String   @id @default(uuid()) @db.Uuid
+  email       String
+  tokenHash   String   @map("token_hash")
+  expiresAt   DateTime @map("expires_at")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@index([email])
+  @@map("password_reset_tokens")
+}

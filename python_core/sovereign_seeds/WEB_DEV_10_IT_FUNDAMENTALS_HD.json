@@ -1,0 +1,166 @@
+[
+    {
+        "jsonbData": {
+            "header": {
+                "docente": "[Nombre del Docente]",
+                "institucion": "[Institución]",
+                "logo": "[Logo Institucional]",
+                "periodo": "2026",
+                "eje_politica_educativa": "Educación para el desarrollo sostenible",
+                "competencia": "Solución"
+            },
+            "unit": "Unidad de Estudio: Fundamentos de tecnologías de información",
+            "estimated_time": "72 Horas",
+            "learning_outcomes": [
+                {
+                    "id": "RA 01",
+                    "description": "Caracterizar el hardware de un sistema de cómputo para proponer soluciones tecnológicas eficientes.",
+                    "saberes": [
+                        "Evolución de las TI",
+                        "Arquitectura de computadoras (Von Neumann)",
+                        "Periféricos (Entrada, Salida, Mixtos)",
+                        "Unidades de almacenamiento"
+                    ],
+                    "indicators": [
+                        "Identifica los componentes de la arquitectura de Von Neumann y su función dentro del procesamiento de datos."
+                    ],
+                    "mediation_strategies": {
+                        "free_teaser": {
+                            "teacher_role": "La persona docente modela la arquitectura interna de un computador y explica el ciclo de instrucción básico.",
+                            "student_role": "La persona estudiante identifica los componentes principales en un diagrama de bloques."
+                        },
+                        "pro_full": [
+                            {
+                                "phase": "Arquitectura y Evolución",
+                                "teacher_role": "La persona docente ejemplifica el flujo de datos desde la entrada hasta la salida utilizando simuladores de hardware.",
+                                "student_role": "La persona estudiante investiga la evolución de un componente específico (ej. Procesadores) y elabora un mapa mental sobre la interconexión de hardware."
+                            }
+                        ],
+                        "variants": [
+                            {
+                                "type": "Lúdica",
+                                "label": "El Camino del Bit",
+                                "description": "La persona docente y la persona estudiante simulan físicamente el procesamiento de una instrucción, asumiendo roles de CPU (Cerebro), RAM (Memoria rápida) y Bus de datos (Mensajero)."
+                            }
+                        ]
+                    },
+                    "dua_strategies": [
+                        {
+                            "population": "Baja Visión / Diversidad",
+                            "teacher_role": "La persona docente utiliza componentes de hardware a gran escala (desarmados) para reconocimiento táctil.",
+                            "student_role": "La persona estudiante explora las texturas y formas de los componentes mientras escucha descripciones audibles de la arquitectura.",
+                            "support": "Hardware táctil y descripciones audibles."
+                        },
+                        {
+                            "population": "Alta Dotación",
+                            "teacher_role": "La persona docente propone la investigación de la computación cuántica vs clásica.",
+                            "student_role": "La persona estudiante analiza el potencial impacto de los qubits en la velocidad de procesamiento global.",
+                            "enrichment": "Temas de frontera tecnológica."
+                        }
+                    ],
+                    "evidence": "Mapa mental de arquitectura de hardware y reporte de investigación técnica."
+                },
+                {
+                    "id": "RA 02",
+                    "description": "Aplicar principios de sostenibilidad en la gestión de recursos tecnológicos (Eje Sostenible).",
+                    "saberes": [
+                        "Gestión de residuos electrónicos (E-waste)",
+                        "Eficiencia energética",
+                        "Consumo responsable",
+                        "Ciclo de vida del hardware"
+                    ],
+                    "indicators": [
+                        "Diseña propuestas de gestión sostenible para el hardware alineadas con las políticas de desarrollo sostenible."
+                    ],
+                    "mediation_strategies": {
+                        "free_teaser": {
+                            "teacher_role": "La persona docente facilita el análisis del impacto ambiental de la tecnología (Huella de carbono).",
+                            "student_role": "La persona estudiante clasifica los tipos de residuos electrónicos según su peligrosidad."
+                        },
+                        "pro_full": [
+                            {
+                                "phase": "Gestión Sostenible",
+                                "teacher_role": "La persona docente proporciona protocolos de desecho seguro y guías de eficiencia energética.",
+                                "student_role": "La persona estudiante diseña una propuesta de 'Laboratorio Verde' y ejecuta un inventario de eficiencia energética en los equipos del taller."
+                            }
+                        ],
+                        "variants": [
+                            {
+                                "type": "STEAM",
+                                "label": "Eco-Hardware Lab",
+                                "description": "Los estudiantes deben proponer una solución para reutilizar componentes obsoletos (ej. ventiladores de fuente, motores de CD) en prototipos de robótica básica."
+                            }
+                        ]
+                    },
+                    "evidence": "Propuesta escrita de sostenibilidad y lista de verificación de eficiencia energética."
+                }
+            ],
+            "evaluation_instruments": [
+                {
+                    "type": "Rubric",
+                    "title": "Evaluación: Dominio de Arquitectura y Lógica de Solución",
+                    "is_premium": true,
+                    "criteria": [
+                        {
+                            "name": "Identificación de Componentes",
+                            "levels": {
+                                "inicial": "Identifica componentes aislados sin conexión lógica.",
+                                "intermedio": "Reconoce la interconexión básica entre hardware y software.",
+                                "avanzado": "Caracteriza el hardware de forma integral proponiendo soluciones eficientes."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Task",
+                    "title": "Glosario: Terminología de Hardware Sostenible",
+                    "is_premium": false,
+                    "challenge": "Elaboración de un glosario técnico bilingüe (Español/Inglés) sobre términos de hardware y sostenibilidad."
+                },
+                {
+                    "type": "Project",
+                    "title": "Diagnóstico: Eficiencia Tecnológica Institucional",
+                    "is_premium": true,
+                    "description": "Los estudiantes analizan el estado tecnológico del centro educativo bajo criterios de eficiencia energética y proponen mejoras Kaizen."
+                }
+            ]
+        },
+        "mepMetadata": {
+            "subject": "Desarrollo web - Soporte TI",
+            "grade_level": "10",
+            "module_id": "WD-IT-10",
+            "module_name": "Especialidad Desarrollo Web - Subárea Soporte TI",
+            "source": "Sovereign Curriculum Engine V2.0",
+            "curriculum_year": 2026,
+            "mnc_code": "0613-01-01-4",
+            "modalities": [
+                "Diurna",
+                "Nocturna",
+                "IPEC",
+                "CINDEA"
+            ],
+            "privacy_standard": "Verified (No PII)",
+            "tier_logic": "Hybrid (Free Teaser / Pro Full)",
+            "unit_id": "WD-IT-10-U01"
+        },
+        "logicRules": {
+            "sequence": [
+                "RA 01",
+                "RA 02"
+            ],
+            "prerequisites": [
+                "Ninguno (Unidad Inicial)"
+            ],
+            "steam_focus": "Arquitectura & Sostenibilidad"
+        },
+        "classificationTags": [
+            "Web Dev",
+            "Soporte TI",
+            "Hardware",
+            "Sostenibilidad",
+            "E-waste",
+            "Von Neumann",
+            "MNC 0613"
+        ]
+    }
+]

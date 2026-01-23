@@ -1,0 +1,38 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: [
+        "./app/**/*.{js,ts,jsx,tsx,mdx}",
+        "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+        "./components/**/*.{js,ts,jsx,tsx,mdx}",
+        "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    ],
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+                primary: "#4f46e5", // Indigo 600
+                secondary: "#0ea5e9", // Sky 500
+                accent: "#10b981", // Emerald 500
+            }
+        },
+    },
+    plugins: [require("daisyui")],
+    daisyui: {
+        themes: [
+            {
+                light: {
+                    ...require("daisyui/src/theming/themes")["light"],
+                    "primary": "#4f46e5",
+                    "secondary": "#0ea5e9",
+                    "accent": "#10b981",
+                    "neutral": "#1e293b",
+                    "base-100": "#ffffff",
+                    "base-200": "#f8fafc",
+                    "base-300": "#f1f5f9",
+                },
+            },
+        ],
+    },
+}

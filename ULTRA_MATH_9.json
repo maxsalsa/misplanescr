@@ -1,0 +1,65 @@
+{
+    "header": {
+        "subarea": "Matemáticas",
+        "unidad": "Geometría",
+        "super_usuario": "Max Salazar Sánchez",
+        "suscriptor": "{user.full_name}",
+        "modalidad": "Académica",
+        "nivel": "9no Año",
+        "tiempo": "24 Lecciones",
+        "mnc_nivel": "3"
+    },
+    "bloque_pedagogico": {
+        "unidad": "Teorema de Pitágoras y Geometría del Espacio",
+        "ra_principal": "Resolver problemas que involucren el Teorema de Pitágoras.",
+        "saberes_esenciales": [
+            "Triángulos rectángulos",
+            "Catetos e Hipotenusa",
+            "Relaciones métricas"
+        ],
+        "indicador_logro": "Calcula longitudes desconocidas en contextos reales y modelos matemáticos.",
+        "mediacion_6_rutas": [
+            {
+                "tipo": "Científica",
+                "docente": "Media una demostración científica usando agua y recipientes cuadrados para visualizar a² + b² = c².",
+                "estudiante": "Observa y registra la relación de volúmenes para deducir la fórmula por sí mismo.",
+                "ajuste_inclusion": "Uso de manipulativos físicos (bloques de madera) para representar los cuadrados de los catetos (TEA)."
+            },
+            {
+                "tipo": "STEAM",
+                "docente": "Plantea el reto de medir la altura del gimnasio del colegio sin escaleras.",
+                "estudiante": "Mide sombras en el patio del colegio para calcular alturas inaccesibles usando el teorema y clinómetros caseros.",
+                "ajuste_inclusion": "Roles de observador/anotador para participación guiada."
+            },
+            {
+                "tipo": "Bajo Costo",
+                "docente": "Facilita la construcción de 'Triángulos Egipcios' con cuerdas y nudos.",
+                "estudiante": "Verifica ángulos rectos en el piso usando la proporción 3-4-5.",
+                "ajuste_inclusion": "Reglas de cartón reciclado y tiza para dibujo en piso."
+            },
+            {
+                "tipo": "Analítica",
+                "docente": "Presenta mapas de rutas de navegación aérea.",
+                "estudiante": "Calcula la distancia directa de vuelo vs la distancia por rutas usando coordenadas.",
+                "ajuste_inclusion": "Mapas con alto contraste y rutas simplificadas."
+            },
+            {
+                "tipo": "Lúdica",
+                "docente": "Organiza una búsqueda del tesoro donde las pistas son hipotenusas faltantes.",
+                "estudiante": "Resuelve los cálculos para encontrar la siguiente ubicación en el mapa del colegio.",
+                "ajuste_inclusion": "Pistas con apoyo visual e instrucciones paso a paso."
+            },
+            {
+                "tipo": "Práctica",
+                "docente": "Propone un problema de diseño de rampas de acceso (Ley 7600).",
+                "estudiante": "Calcula la longitud necesaria de la rampa para cumplir con la pendiente legal.",
+                "ajuste_inclusion": "Conexión directa con necesidades de movilidad (Contexto real)."
+            }
+        ],
+        "evidencias": {
+            "conocimiento": "Prueba corta de cálculo de catetos",
+            "desempeño": "Resolución de problemas en pizarra",
+            "producto": "Reporte de medición de alturas en el campus"
+        }
+    }
+}

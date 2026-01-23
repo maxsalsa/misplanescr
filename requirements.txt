@@ -1,0 +1,23 @@
+# Core AI & Data
+langchain
+langchain-community
+langchain-core
+langchain-google-genai
+langchain-openai
+chromadb
+openai
+google-generativeai
+
+# Backend & Database
+psycopg2-binary
+pandas
+openpyxl
+python-dotenv
+
+# Frontend
+streamlit
+streamlit-extras
+
+# Utilities
+watchdog
+tornado

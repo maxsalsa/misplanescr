@@ -1,0 +1,42 @@
+// ... (Existing content remains similar, just fixing the syntax error near EncryptedGradeLog and KnowledgeKernel)
+
+// FIX: Ensure previous model is closed correctly
+model EncryptedGradeLog {
+  id            String   @id @default(uuid()) @db.Uuid
+  studentId     String   @map("student_id") @db.Uuid
+  encryptedBlob String // AES-256 encrypted grade data
+  iv            String // Initialization Vector
+  
+  createdAt   DateTime @default(now())
+  @@map("encrypted_grade_logs")
+}
+
+// =============================================================================
+// 12. THE KNOWLEDGE KERNEL (KAIZEN 1000.0 - SINGULARITY)
+// =============================================================================
+
+model KnowledgeKernel {
+  id                  String   @id @default(uuid()) @db.Uuid
+  semanticHash        String   @unique @map("semantic_hash") // SHA-256 for de-duplication
+  
+  // HIGH DENSITY JSONB STORAGE
+  jsonbData           Json     @map("jsonb_data") // { objectives, indicators, strategies, content }
+  mepMetadata         Json     @map("mep_metadata") // { modality: "CTP", level: "10", law: "REA-2024" }
+  logicRules          Json     @map("logic_rules") // { scoring_algo: "sum_points", max_time: 120 }
+  classificationTags  Json     @map("classification_tags") // { keywords: ["TEA", "Code"], bloom: "Create" }
+
+  // Auditing & Sovereignty
+  qualityScore        Float    @default(0.0) @map("quality_score")
+  isVerified          Boolean  @default(false) @map("is_verified") // "Self-Healing" status
+  sourceOrigin        String   @map("source_origin") // "mep.go.cr", "ctpmercedes", "user_upload"
+  
+  createdAt           DateTime @default(now()) @map("created_at")
+  updatedAt           DateTime @updatedAt @map("updated_at")
+
+  @@map("knowledge_kernel")
+  
+  // ZERO-LATENCY INDEXING
+  @@index([jsonbData(ops: JsonbOps)], type: Gin)
+  @@index([mepMetadata(ops: JsonbOps)], type: Gin)
+  @@index([classificationTags(ops: JsonbOps)], type: Gin) 
+}

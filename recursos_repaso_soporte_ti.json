@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "programa": "Soporte TI",
+    "nivel": "10mo",
+    "aligned_with": "IT Essentials / Cisco / MEP 2026",
+    "generated_at": "2026-01-23T00:50:56.251725"
+  },
+  "modulo_videos_oficiales": [
+    {
+      "titulo": "Arquitectura de Computadoras (Von Neumann)",
+      "tema": "Fundamentos de TI",
+      "url": "https://youtu.be/video_id_architecture",
+      "duracion": "10:15",
+      "offline_download": true
+    },
+    {
+      "titulo": "Instalación Limpia de Windows 11",
+      "tema": "Sistemas Operativos",
+      "url": "https://youtu.be/video_id_win11",
+      "duracion": "15:30",
+      "offline_download": true
+    },
+    {
+      "titulo": "Cómo ponchar un cable de red (Normas T568A/B)",
+      "tema": "Redes y Conectividad",
+      "url": "https://youtu.be/video_id_cabling",
+      "duracion": "08:45",
+      "offline_download": true
+    },
+    {
+      "titulo": "Ingeniería Social y Phishing",
+      "tema": "Ciberseguridad",
+      "url": "https://youtu.be/video_id_security",
+      "duracion": "12:00",
+      "offline_download": true
+    }
+  ],
+  "zona_gamificacion": [
+    {
+      "tipo": "Quiz Gamificado",
+      "nombre": "BIOS Master Challenge",
+      "objetivo": "Configurar orden de arranque en < 30 segs.",
+      "xp_reward": 500,
+      "mobile_view": "Story Mode"
+    },
+    {
+      "tipo": "Escape Room Digital",
+      "nombre": "Misión: La PC no enciende",
+      "objetivo": "Diagnosticar fallo de RAM vs Fuente de Poder.",
+      "xp_reward": 1000,
+      "mobile_view": "Interactive Chat"
+    },
+    {
+      "tipo": "Ticket de Salida",
+      "nombre": "Fast Check: Puertos",
+      "objetivo": "3 preguntas rápidas al final de la clase.",
+      "xp_reward": 100,
+      "mobile_view": "Pop-up Quiz"
+    }
+  ],
+  "simuladores_practica": [
+    {
+      "nombre": "Ensamble Virtual 3D",
+      "plataforma": "Cisco IT Essentials Virtual Desktop",
+      "acceso": "Integrado en Antigravity",
+      "skill": "Motora Fina y Secuencia Lógica"
+    }
+  ],
+  "flashcards_inteligentes": {
+    "deck_name": "Dictado de Puertos y Conectores",
+    "tarjetas": [
+      {
+        "frente": "HDMI",
+        "reverso": "Audio/Video Digital de Alta Definición"
+      },
+      {
+        "frente": "RJ-45",
+        "reverso": "Conector Ethernet para Redes LAN"
+      },
+      {
+        "frente": "DDR4",
+        "reverso": "Ranura de Memoria RAM con muesca desplazada"
+      }
+    ]
+  },
+  "security_hash": "7954373e3fa5f75b628f9d339c28ce1ce049ae08d19ae71c377295e88bb12c7e"
+}

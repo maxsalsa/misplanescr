@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "version": "GameCore v2.0",
+    "engine": "Framer Motion + React Confetti",
+    "seo_meta": "OpenGraph Ready",
+    "generated_at": "2026-01-23T00:53:00.429780"
+  },
+  "sistema_medallas": [
+    {
+      "id": "BADGE_BIOS_MASTER",
+      "nombre": "Master en BIOS",
+      "descripcion": "Configuró el orden de arranque en < 30 segundos.",
+      "categoria": "Técnica",
+      "tier": "DIAMANTE 💎",
+      "icono": "bios_chip_gold.svg"
+    },
+    {
+      "id": "BADGE_EFFICIENCY",
+      "nombre": "Eficiencia Técnica",
+      "descripcion": "Entregó el Portafolio de Evidencias antes de la fecha límite.",
+      "categoria": "Responsabilidad",
+      "tier": "ORO 🥇",
+      "icono": "flash_speed.svg"
+    },
+    {
+      "id": "BADGE_NETWORK_NINJA",
+      "nombre": "Ninja de Redes",
+      "descripcion": "Completó el ponchado de cable sin errores de par trenzado.",
+      "categoria": "Habilidad Manual",
+      "tier": "PLATA 🥈",
+      "icono": "ethernet_cable.svg"
+    }
+  ],
+  "catalogo_retos": [
+    {
+      "tipo": "Escape Room",
+      "titulo": "Laboratorio en Crisis: La PC no enciende",
+      "mecanica": "Resolver acertijos sobre voltajes, sockets y BIOS para salir.",
+      "recompensa_xp": 800,
+      "dispositivo_optimo": "PC (Teclado+Mouse)"
+    },
+    {
+      "tipo": "Duelo de Trivias",
+      "titulo": "Cyber-Safety Duel",
+      "mecanica": "Competencia PvP en tiempo real sobre protocolos de seguridad.",
+      "recompensa_xp": 300,
+      "dispositivo_optimo": "Móvil (Touch Swipe)"
+    }
+  ],
+  "banco_frases": [
+    "¡Calidad de Grado Industrial, Max!",
+    "¡Excelente! Tu código es tan limpio como una instalación nueva de Linux.",
+    "Has alcanzado el Nivel 3. ¡Eres una máquina de productividad!",
+    "¡Sigue así! La excelencia técnica es tu marca personal.",
+    "¡Impecable! Este trabajo merece estar en el manual oficial."
+  ],
+  "curva_progreso": {
+    "nivel_1": {
+      "xp": 0,
+      "titulo": "Novato Técnico"
+    },
+    "nivel_2": {
+      "xp": 1000,
+      "titulo": "Especialista Junior"
+    },
+    "nivel_3": {
+      "xp": 2500,
+      "titulo": "Ingeniero Industrial"
+    },
+    "nivel_max": {
+      "xp": 5000,
+      "titulo": "Leyenda Antigravity"
+    }
+  },
+  "security_integrity_hash": "fce69bf622823ab6296cf4587b6830acaeff6609c4ce0911404964cf94cd3bb4"
+}

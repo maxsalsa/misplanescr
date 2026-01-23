@@ -1,0 +1,48 @@
+// GENERADO POR ANTIGRAVITY V40
+generator client { provider = "prisma-client-js" }
+datasource db { provider = "postgresql"; url = env("DATABASE_URL") }
+
+enum MepProfile { ACADEMICO; TECNICO; PRIMARIA }
+
+model Plan {
+  id String @id @default(cuid())
+  userId String
+  titulo String
+  asignatura String
+  nivel String
+  perfil MepProfile @default(ACADEMICO)
+  
+  // MATRIZ V31
+  valores String[]
+  ejesTransversales String[]
+  marcoCualificaciones String?
+
+  bloques BloqueCurricular[]
+  createdAt DateTime @default(now())
+}
+
+model BloqueCurricular {
+  id String @id @default(cuid())
+  planId String
+  resultadoAprendizaje String
+  saberesEsenciales String[]
+  indicadoresLogro String[]
+  evidencias String[]
+  
+  actividades ActividadMediacion[]
+  plan Plan @relation(fields: [planId], references: [id])
+}
+
+model ActividadMediacion {
+  id String @id @default(cuid())
+  bloqueId String
+  fase String // Inicio, Desarrollo, Cierre
+  tiempo Int
+  
+  // SINTAXIS ESTRICTA
+  accionDocente String @db.Text
+  accionEstudiante String @db.Text
+  estrategia String?
+
+  bloque BloqueCurricular @relation(fields: [bloqueId], references: [id])
+}

@@ -1,0 +1,8 @@
+Program ID,Área,Logic Layer (Rutas),Security Seal (Integrity),Status
+PROG-TI-10,Soporte TI (10mo),6 Rutas Activas (Full-AI),856ed1c3140b9e4f...,BLINDADO
+PROG-WEB-11,Desarrollo Web (11mo),6 Rutas Activas (Full-AI),9f36d8c0182d42d8...,BLINDADO
+PROG-CIBER-12,Ciberseguridad (12mo),6 Rutas Activas (Full-AI),9f99e2bbc2cca771...,BLINDADO
+PROG-MAT-10,Matemáticas (10mo),6 Rutas Activas (Full-AI),c5e7cb81a2d78046...,BLINDADO
+PROG-ESP-11,Español (11mo),6 Rutas Activas (Full-AI),0d1756f1cb8bf08a...,BLINDADO
+PROG-ENG-N1,English for Tech (Nivel 1),6 Rutas Activas (Full-AI),ddd1e6295cd70f12...,BLINDADO
+PROG-CIV-12,Cívica (12mo),6 Rutas Activas (Full-AI),ac98264e2ccda8ec...,BLINDADO

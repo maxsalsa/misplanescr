@@ -1,0 +1,163 @@
+[
+    {
+        "jsonbData": {
+            "header": {
+                "docente": "[Nombre del Docente]",
+                "institucion": "[Institución]",
+                "logo": "[Logo Institucional]",
+                "periodo": "2026"
+            },
+            "unit": "Unidad de Estudio: Mantenimiento Correctivo de Hardware y Software",
+            "estimated_time": "40 Horas",
+            "learning_outcomes": [
+                {
+                    "id": "RA 01",
+                    "description": "Reparar fallas físicas en equipos de cómputo mediante la sustitución o reparación de componentes internos.",
+                    "saberes": [
+                        "Micro-soldadura básica",
+                        "Sustitución de pantallas (Laptops)",
+                        "Reemplazo de periféricos internos",
+                        "Gestión de repuestos"
+                    ],
+                    "indicators": [
+                        "Restaura la funcionalidad del hardware dañado aplicando técnicas de reparación profesional y normas de seguridad."
+                    ],
+                    "mediation_strategies": {
+                        "free_teaser": {
+                            "teacher_role": "La persona docente demuestra la técnica de apertura de dispositivos móviles/portátiles.",
+                            "student_role": "La persona estudiante observa el flujo de desmontaje y identifica componentes internos."
+                        },
+                        "pro_full": [
+                            {
+                                "phase": "Reparación de Hardware",
+                                "teacher_role": "La persona docente ejemplifica el cambio de un componente soldado de baja complejidad y el uso de la estación de calor.",
+                                "student_role": "La persona estudiante ejecuta la sustitución de un componente defectuoso siguiendo la guía de servicio y verifica el funcionamiento post-reparación."
+                            }
+                        ],
+                        "variants": [
+                            {
+                                "type": "Lúdica",
+                                "label": "Speed Repair Challenge",
+                                "description": "En parejas, los estudiantes reciben un equipo con 3 fallas ocultas. Deben diagnosticarlas y repararlas en el menor tiempo posible para ganar el 'Badge de Técnico Senior'."
+                            }
+                        ]
+                    },
+                    "dua_strategies": [
+                        {
+                            "population": "Diversidad / TEA",
+                            "teacher_role": "La persona docente proporciona organizadores de tornillos magnéticos con etiquetas visuales.",
+                            "student_role": "La persona estudiante utiliza una guía de pasos con fotos reales (sin texto excesivo) para reducir la carga cognitiva.",
+                            "support": "Organizadores visuales y guías fotográficas step-by-step."
+                        },
+                        {
+                            "population": "Alta Dotación",
+                            "teacher_role": "La persona docente propone la investigación de técnicas de reballing.",
+                            "student_role": "La persona estudiante realiza un análisis de fallas a nivel de esquemáticos eléctricos (diagramas de circuitos).",
+                            "enrichment": "Análisis de diagramas de placa base (Boardviews)."
+                        }
+                    ],
+                    "evidence": "Informe técnico de reparación final y lista de piezas sustituidas."
+                },
+                {
+                    "id": "RA 02",
+                    "description": "Resolver conflictos críticos de software y pérdida de datos utilizando herramientas de recuperación avanzada.",
+                    "saberes": [
+                        "Recuperación de particiones",
+                        "Boot Repair",
+                        "Eliminación de Malware persistente",
+                        "Backup forense de datos"
+                    ],
+                    "indicators": [
+                        "Soluciona fallas críticas de software asegurando la integridad de la información del usuario."
+                    ],
+                    "mediation_strategies": {
+                        "free_teaser": {
+                            "teacher_role": "La persona docente ilustra el uso de herramientas de recuperación de datos en vivo (Live USB).",
+                            "student_role": "La persona estudiante visualiza la estructura de particiones dañadas en un entorno controlado."
+                        },
+                        "pro_full": [
+                            {
+                                "phase": "Recuperación de Datos",
+                                "teacher_role": "La persona docente facilita el proceso de reconstrucción del sector de arranque y eliminación de rootkits.",
+                                "student_role": "La persona estudiante recupera archivos borrados accidentalmente en una unidad de prueba y repara un sistema operativo que no inicia."
+                            }
+                        ],
+                        "variants": [
+                            {
+                                "type": "STEAM",
+                                "label": "Ingeniería Inversa",
+                                "description": "La persona docente y la persona estudiante desarman un componente dañado (ej. una fuente de poder) para mapear su circuito y entender por qué falló, uniendo física y electrónica."
+                            }
+                        ]
+                    },
+                    "evidence": "Reporte de recuperación de datos y sistema operativo funcionando correctamente."
+                }
+            ],
+            "evaluation_instruments": [
+                {
+                    "type": "Rubric",
+                    "title": "Trabajo Cotidiano: Destreza en el Taller",
+                    "is_premium": true,
+                    "criteria": [
+                        {
+                            "name": "Habilidad Manual y Orden",
+                            "levels": {
+                                "inicial": "Desorden en el puesto de trabajo, manejo descuidado de herramientas.",
+                                "intermedio": "Mantiene el orden bajo supervisión, usa herramientas correctamente la mayor parte del tiempo.",
+                                "avanzado": "Ejecuta reparaciones limpias, usa químicos/herramientas con precisión profesional."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Task",
+                    "title": "Tarea: Presupuesto Técnico Profesional",
+                    "is_premium": false,
+                    "challenge": "Elaboración de un presupuesto técnico que incluya costo de repuestos y mano de obra para un caso real de reparación de laptop."
+                },
+                {
+                    "type": "Project",
+                    "title": "Proyecto: Clínica de Reparación Institucional",
+                    "is_premium": true,
+                    "description": "Un periodo donde los estudiantes atienden casos reales de la institución (maestros, oficina, otros alumnos) bajo supervisión docente."
+                }
+            ]
+        },
+        "mepMetadata": {
+            "subject": "Soporte TI",
+            "grade_level": "11",
+            "module_id": "IT-SUP-11",
+            "module_name": "Tecnologías de la Información - Soporte",
+            "source": "Sovereign Curriculum Engine V2.0",
+            "curriculum_year": 2026,
+            "mnc_level": 3,
+            "mnc_code": "TIC-SOT-N3-01",
+            "modalities": [
+                "Diurna",
+                "Nocturna",
+                "IPEC",
+                "CINDEA"
+            ],
+            "privacy_standard": "Verified (No PII)",
+            "tier_logic": "Hybrid (Free Teaser / Pro Full)",
+            "unit_id": "IT-SUP-11-U03"
+        },
+        "logicRules": {
+            "sequence": [
+                "RA 01",
+                "RA 02"
+            ],
+            "prerequisites": [
+                "Soporte TI 10mo"
+            ],
+            "steam_focus": "Electrónica Aplicada & Análisis Forense"
+        },
+        "classificationTags": [
+            "Soporte TI",
+            "Mantenimiento Correctivo",
+            "Reparación Hardware",
+            "Recuperación Software",
+            "MNC N3"
+        ]
+    }
+]

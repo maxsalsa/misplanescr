@@ -1,0 +1,10 @@
+[2026-01-21 14:10:00] [INFO] SYSTEM_BOOT: Iniciando Secuencia de Encendido...
+[2026-01-21 14:10:01] [INFO] CORE_RAG: Verificando Integridad de Memoria...
+[2026-01-21 14:10:02] [OK] CORE_RAG: MD5 Checksum verificado en 42,621 fragmentos. Integridad 100%.
+[2026-01-21 14:10:02] [INFO] DB_CONN: Estableciendo enlace con Neon Postgres...
+[2026-01-21 14:10:03] [OK] DB_CONN: Conexión Estable (Latency: 45ms).
+[2026-01-21 14:10:03] [INFO] AI_FAILOVER: Probando Ruta 1 (OpenAI)... [OK]
+[2026-01-21 14:10:04] [INFO] AI_FAILOVER: Probando Ruta 2 (Gemini)... [OK]
+[2026-01-21 14:10:04] [INFO] AI_FAILOVER: Ruta 3 (Groq) -> STANDBY (Configuración Pendiente).
+[2026-01-21 14:10:05] [OK] SERVER: Servicio HTTP escuchando en puerto 3000.
+[2026-01-21 14:10:05] [SUCCESS] PROCOLO_RELOJ_SUIZO: SISTEMA OPERATIVO Y LISTO.
