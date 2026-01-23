@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "antigravity-core-platform",
   "version": "15.0.0",
   "private": true,
@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "security-check": "node scripts/validate-integrity.js",
-    "postinstall": "prisma generate"
+    "postinstall": "npx prisma generate"
   },
   "dependencies": {
     "next": "^15.1.0",
