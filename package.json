@@ -46,8 +46,5 @@
     "architecture_type": "Hybrid (SSR + Client)",
     "security_level": "Military Grade (HMAC)",
     "performance_target": "Lighthouse 100/100"
-  },
-  "overrides": {
-    "react-dom": "-dom"
   }
 }
