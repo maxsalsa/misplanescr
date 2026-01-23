@@ -8,3 +8,5 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+
+// Forzando actualizacion de Vercel
