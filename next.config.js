@@ -1,12 +1,15 @@
 ﻿/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  images: { unoptimized: true },
+  reactStrictMode: false, // Desactivado para evitar doble render en dev
+  typescript: {
+    ignoreBuildErrors: true, // IGNORAR ERRORES TS
+  },
+  eslint: {
+    ignoreDuringBuilds: true, // IGNORAR ERRORES DE ESTILO
+  },
+  experimental: {
+    // Forzamos características estables
+  }
 }
 
 module.exports = nextConfig
-
-// Forzando actualizacion de Vercel
