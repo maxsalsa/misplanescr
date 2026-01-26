@@ -1,2 +1,5 @@
-﻿// Esta página ya no se renderiza. El middleware se encarga.
-export default function Page() { return null; }
+// PÁGINA DE REDIRECCIÓN (SYSTEM ROOT)
+// El Middleware se encarga de la seguridad.
+export default function RootPage() {
+  return null;
+}

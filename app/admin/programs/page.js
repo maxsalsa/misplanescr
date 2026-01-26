@@ -1,115 +1,58 @@
 ﻿"use client";
-import { useState, useEffect } from "react";
-import DashboardShell from "../../../components/DashboardShell";
-import { Upload, FileText, RefreshCw, CheckCircle, Database } from "lucide-react";
+import { useState } from "react";
+import { RefreshCw, CheckCircle, Database, Server } from "lucide-react";
+import { toast } from "sonner";
+import { ingestMepPrograms } from "@/app/actions/admin-actions";
 
-export default function ProgramManager() {
-  const [programs, setPrograms] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [uploading, setUploading] = useState(false);
+export default function AdminPrograms() {
+  const [loading, setLoading] = useState(false);
 
-  // 1. CARGAR LISTA ACTUAL DE NEON DB
-  useEffect(() => {
-    fetchPrograms();
-  }, []);
-
-  const fetchPrograms = async () => {
+  const handleIngest = async () => {
     setLoading(true);
-    try {
-      // Necesitaremos crear este endpoint de lectura simple
-      const res = await fetch("/api/programs/list"); 
-      const data = await res.json();
-      if(data.success) setPrograms(data.data);
-    } catch (e) { console.error(e); }
-    setLoading(false);
-  };
-
-  // 2. RE-ESCANEAR UN PROGRAMA ESPECÍFICO
-  const handleReScan = async (filename, rawText) => {
-    const originalText = document.getElementById(`btn-${filename}`).innerText;
-    document.getElementById(`btn-${filename}`).innerText = "⏳";
+    const toastId = toast.loading("Iniciando motor de ingesta...");
     
     try {
-      const res = await fetch("/api/programs/ingest", {
-        method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ filename, texto: rawText || "", provider: "OPENAI" })
-      });
-      const data = await res.json();
-      if(data.success) {
-        alert("✅ Programa actualizado con éxito en Neon DB");
-        fetchPrograms(); // Recargar lista
+      const result = await ingestMepPrograms();
+      if (result.success) {
+        toast.success(result.message, { id: toastId });
       } else {
-        alert("❌ Error: " + data.error);
+        toast.error(result.message, { id: toastId });
       }
-    } catch (e) { alert("Error de red"); }
-    
-    document.getElementById(`btn-${filename}`).innerText = originalText;
+    } catch (error) {
+      toast.error("Error de comunicación con el servidor", { id: toastId });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <DashboardShell>
-      <div className="space-y-6">
-        <div className="flex justify-between items-center">
-          <div>
-            <h1 className="text-3xl font-bold flex items-center gap-2">
-              <Database className="text-primary" /> Gestión Curricular (MEP)
-            </h1>
-            <p className="text-base-content/60">Base de Datos Maestra: Neon DB</p>
-          </div>
-          <button className="btn btn-primary" onClick={() => alert("Función de subida de PDF en desarrollo (Fase 2)")}>
-            <Upload size={18} /> Subir Nuevo PDF
-          </button>
-        </div>
+    <div className="max-w-4xl mx-auto space-y-6 animate-in fade-in">
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-bold text-slate-900">Gestión de Ingesta (MEP Core)</h1>
+        <span className="badge badge-neutral font-mono">SERVER ACTIONS ENABLED</span>
+      </div>
 
-        <div className="card bg-base-100 shadow-xl border border-base-200">
-          <div className="overflow-x-auto">
-            <table className="table table-zebra w-full">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Archivo / Asignatura</th>
-                  <th>Estructura (ADN)</th>
-                  <th>Último Escaneo</th>
-                  <th>Acciones</th>
-                </tr>
-              </thead>
-              <tbody>
-                {loading ? (
-                  <tr><td colSpan="5" className="text-center py-10">Cargando Bóveda...</td></tr>
-                ) : programs.map((prog) => (
-                  <tr key={prog.id}>
-                    <td className="font-mono text-xs opacity-50">#{prog.id}</td>
-                    <td>
-                      <div className="font-bold">{prog.subject || prog.filename}</div>
-                      <div className="text-xs opacity-70">{prog.filename}</div>
-                    </td>
-                    <td>
-                      {prog.structure_json ? (
-                        <div className="badge badge-success gap-1">
-                           <CheckCircle size={12} /> Detectado
-                        </div>
-                      ) : (
-                        <div className="badge badge-warning">Pendiente</div>
-                      )}
-                    </td>
-                    <td className="text-xs">
-                      {prog.last_deep_scan ? new Date(prog.last_deep_scan).toLocaleDateString() : "Nunca"}
-                    </td>
-                    <td>
-                      <button 
-                        id={`btn-${prog.filename}`}
-                        onClick={() => handleReScan(prog.filename, prog.raw_text)}
-                        className="btn btn-ghost btn-xs text-primary tooltip" data-tip="Re-Analizar con IA">
-                        <RefreshCw size={14} />
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+      <div className="card bg-white border border-slate-200 shadow-lg">
+        <div className="card-body">
+            <div className="flex items-start gap-4">
+                <div className="p-3 bg-blue-100 text-blue-700 rounded-lg"><Database size={24} /></div>
+                <div className="flex-1">
+                    <h3 className="font-bold text-lg">Sincronización de Base de Datos</h3>
+                    <p className="text-sm text-slate-500 mb-4">
+                        Ejecuta el script Python para leer PDFs y actualizar la tabla `mep_programs_core`.
+                    </p>
+                    <button 
+                        onClick={handleIngest} 
+                        disabled={loading}
+                        className="btn btn-primary btn-sm gap-2"
+                    >
+                        {loading ? <RefreshCw className="animate-spin" /> : <RefreshCw size={16} />}
+                        {loading ? "Procesando..." : "Ejecutar Ingesta V5"}
+                    </button>
+                </div>
+            </div>
         </div>
       </div>
-    </DashboardShell>
+    </div>
   );
 }

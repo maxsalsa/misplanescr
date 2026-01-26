@@ -1,33 +1,44 @@
-﻿export const authConfig = {
-  pages: {
-    signIn: "/login",
-  },
-  callbacks: {
-    authorized({ auth, request: { nextUrl } }) {
-      const isLoggedIn = !!auth?.user;
-      const isOnDashboard = nextUrl.pathname.startsWith("/dashboard");
-      const isOnAdmin = nextUrl.pathname.startsWith("/admin");
+export const authConfig = {
+    pages: {
+        signIn: "/login",
+    },
+    callbacks: {
+        authorized({ auth, request: { nextUrl } }) {
+            const isLoggedIn = !!auth?.user;
+            const isOnDashboard = nextUrl.pathname.startsWith("/dashboard");
+            const isOnAdmin = nextUrl.pathname.startsWith("/admin");
+            const isOnRoot = nextUrl.pathname === "/";
 
-      if (isOnDashboard || isOnAdmin) {
-        if (isLoggedIn) return true;
-        return false; // Redirigir a login
-      }
-      return true;
+            // PROTECCIÓN DE RUTAS PRIVADAS
+            if (isOnDashboard || isOnAdmin) {
+                if (isLoggedIn) return true;
+                return false; // Redirigir a login
+            }
+
+            // REDIRECCIÓN INTELIGENTE EN RAÍZ
+            if (isOnRoot) {
+                if (isLoggedIn) {
+                    return Response.redirect(new URL('/dashboard', nextUrl));
+                }
+                return false; // Redirigir a login
+            }
+
+            return true;
+        },
+        jwt({ token, user }) {
+            if (user) {
+                token.role = user.role;
+                token.id = user.id;
+            }
+            return token;
+        },
+        session({ session, token }) {
+            if (token && session.user) {
+                session.user.role = token.role;
+                session.user.id = token.id;
+            }
+            return session;
+        },
     },
-    jwt({ token, user }) {
-      if (user) {
-        token.role = user.role;
-        token.id = user.id;
-      }
-      return token;
-    },
-    session({ session, token }) {
-      if (token && session.user) {
-        session.user.role = token.role;
-        session.user.id = token.id;
-      }
-      return session;
-    },
-  },
-  providers: [], 
+    providers: [],
 };

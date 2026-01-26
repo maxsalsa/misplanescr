@@ -1,45 +1,102 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
-// -----------------------------------------------------------------------------
-// ANTIGRAVITY DATA ENGINE: CURRICULUM SEEDER
-// Paste the JSON output from the AI here.
-// -----------------------------------------------------------------------------
-
-const CURRICULUM_DATA = [
-    // EXAMPLE DATA (Replace with AI Output)
+// OFFICIAL MEP DATA (Extracted from lib/mep-data.js)
+const CURRICULUM_BATCH = [
+    // -------------------------------------------------------------------------
+    // PRIMARY
+    // -------------------------------------------------------------------------
     {
-        "unit_uuid": "550e8400-e29b-41d4-a716-446655440000",
-        "specialty": "Ciberseguridad",
-        "level": 10,
-        "ui_family": "HARD_TECH",
-        "learning_outcome": {
-            "text": "Analizar fallos de seguridad en sistemas operativos...",
-            "code": "LO_01"
-        },
-        // ... rest of the object
+        program_name: "Estudios Sociales",
+        grade_level: "4",
+        raw_content: JSON.stringify({
+            "I Periodo": {
+                "Estudios Sociales": [{
+                    id: "soc_4_1",
+                    aprendizaje: "Reconocer las sociedades antiguas de Costa Rica (Cacicazgos).",
+                    saberes: ["Modo de vida", "Organización social", "Legado cultural"],
+                    indicadores: ["Describe la organización social.", "Identifica el legado artístico.", "Valora el aporte indígena."]
+                }]
+            }
+        })
+    },
+
+    // -------------------------------------------------------------------------
+    // SECONDARY ACADEMIC (7-11)
+    // -------------------------------------------------------------------------
+    {
+        program_name: "Español",
+        grade_level: "7",
+        raw_content: JSON.stringify({
+            "I Periodo": {
+                "Español": [{
+                    id: "esp_7_1",
+                    aprendizaje: "Analizar textos literarios del género cuento.",
+                    saberes: ["Género literario: Cuento", "Narrador", "Código apreciativo"],
+                    indicadores: ["Identifica características del cuento.", "Reconoce tipos de narrador.", "Infiere el código apreciativo."]
+                }]
+            }
+        })
+    },
+    {
+        program_name: "Matemáticas",
+        grade_level: "10",
+        raw_content: JSON.stringify({
+            "I Periodo": {
+                "Matemáticas": [{
+                    id: "mat_10_1",
+                    aprendizaje: "Identificar y representar circunferencias.",
+                    saberes: ["Circunferencia", "Centro", "Radio", "Ecuación"],
+                    indicadores: ["Reconoce la ecuación algebraicamente.", "Representa gráficamente la circunferencia."]
+                }]
+            }
+        })
+    },
+
+    // -------------------------------------------------------------------------
+    // TECHNICAL (Desarrollo Web) - THE FLAGSHIP
+    // -------------------------------------------------------------------------
+    {
+        program_name: "Desarrollo Web",
+        grade_level: "10",
+        raw_content: JSON.stringify({
+            "I Periodo": {
+                "Tecnologías de Información": [{
+                    unit: "Unidad 1: Fundamentos de TI",
+                    aprendizaje: "Reconocer componentes básicos de cómputo.",
+                    saberes: ["Hardware/Software", "Sistemas Operativos"],
+                    indicadores: ["Identifica componentes.", "Describe funciones."]
+                }],
+                "Programación Web": [{
+                    unit: "Unidad 2: HTML y Estructura",
+                    aprendizaje: "Construir páginas web utilizando HTML.",
+                    saberes: ["Etiquetas semánticas", "Enlaces", "Listas"],
+                    indicadores: ["Estructura páginas funcionales.", "Utiliza etiquetas correctamente."]
+                }]
+            }
+        })
     }
 ];
 
 async function main() {
-    console.log('🚀 Antigravity Data Injection Started...');
+    console.log('🚀 INICIANDO INYECCIÓN DE ADN CURRICULAR (MEP) ...');
 
-    for (const item of CURRICULUM_DATA) {
-        // In a real scenario, we might have a specific 'Curriculum' table.
-        // For now, we seed into 'PedagogicalPlan' as a template or a new model if schema evolved.
-        // Assuming we treat these as 'Official Templates' owned by a System Admin.
+    // CLEAR EXISTING (To avoid duplicates in this demo phase)
+    await prisma.mep_programs_core.deleteMany({});
+    console.log('🧹 Tabla mep_programs_core limpiada.');
 
-        // Since schema.prisma only has PedagogicalPlan and it handles generic content:
-
-        console.log(`Processing: ${item.specialty} - Unit ${item.unit_uuid}`);
-
-        // Logic to upsert or create would go here.
-        // const res = await prisma.pedagogicalPlan.create({ ... })
-
-        console.log(`  ✅ Ingested: ${item.learning_outcome.code} [${item.ui_family}]`);
+    for (const prog of CURRICULUM_BATCH) {
+        await prisma.mep_programs_core.create({
+            data: {
+                program_name: prog.program_name,
+                grade_level: prog.grade_level,
+                raw_content: prog.raw_content
+            }
+        });
+        console.log(`✅ Inyectado: ${prog.program_name} - Nivel ${prog.grade_level}`);
     }
 
-    console.log('🏁 Data Injection Complete.');
+    console.log('🏁 INYECCIÓN COMPLETADA. Base de datos curricular lista.');
 }
 
 main()

@@ -1,34 +1,34 @@
 ﻿import { NextResponse } from "next/server";
-import { jwtVerify } from "jose";
+import { auth } from "@/auth"; // Tu configuración de Auth
 
-const SECRET = new TextEncoder().encode(process.env.AUTH_SECRET || "antigravity-secret-key-mep-2026");
+export default auth((req) => {
+  const isLoggedIn = !!req.auth;
+  const isOnDashboard = req.nextUrl.pathname.startsWith("/dashboard");
+  const isOnAdmin = req.nextUrl.pathname.startsWith("/admin");
 
-export async function middleware(req) {
-  const { pathname } = req.nextUrl;
-
-  // RUTAS PÚBLICAS
-  if (pathname.startsWith("/api") || pathname.startsWith("/_next") || pathname.startsWith("/static") || pathname === "/login") {
-    return NextResponse.next();
+  // 1. PROTECCIÓN DE RUTAS (REDIRECCIÓN)
+  if (isOnDashboard || isOnAdmin) {
+    if (!isLoggedIn) {
+      return NextResponse.redirect(new URL("/login", req.nextUrl));
+    }
   }
 
-  // VERIFICAR TOKEN
-  const token = req.cookies.get("auth-token")?.value;
-  let isAuthenticated = false;
-
-  if (token) {
-    try { await jwtVerify(token, SECRET); isAuthenticated = true; } catch (e) {}
-  }
-
-  // LÓGICA DE REDIRECCIÓN
-  if (!isAuthenticated) {
-    return NextResponse.redirect(new URL("/login", req.url));
-  }
+  // 2. INYECCIÓN DE CABECERAS DE SEGURIDAD (HARDENING)
+  const response = NextResponse.next();
   
-  if (isAuthenticated && pathname === "/") {
-    return NextResponse.redirect(new URL("/dashboard", req.url));
-  }
+  // Evita que tu web sea incrustada en iframes de otros sitios (Clickjacking)
+  response.headers.set("X-Frame-Options", "DENY");
+  // Previene que el navegador "adivine" tipos de archivos (MIME Sniffing)
+  response.headers.set("X-Content-Type-Options", "nosniff");
+  // Protección básica XSS
+  response.headers.set("X-XSS-Protection", "1; mode=block");
+  // Fuerza HTTPS estricto (HSTS) - Vital para datos sensibles
+  response.headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
 
-  return NextResponse.next();
-}
+  return response;
+});
 
-export const config = { matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"] };
+export const config = {
+  // Excluimos archivos estáticos e imágenes del middleware
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+};

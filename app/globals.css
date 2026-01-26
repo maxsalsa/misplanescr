@@ -2,8 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-/* FORZAR FONDO BLANCO/GRIS INSTITUCIONAL */
-body {
-  background-color: #f1f5f9; /* Slate 100 */
-  color: #0f172a; /* Slate 900 */
+@layer base {
+  :root {
+    --bg-body: 210 40% 98%;      /* Slate-50 */
+    --text-main: 222 47% 11%;    /* Slate-900 */
+    --brand-blue: 221 83% 53%;   /* Blue-600 */
+    --solemn-dark: 217 33% 17%;  /* Slate-800 */
+  }
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1; /* Tipografía limpia */
+  }
+}
+
+@layer components {
+  /* Tarjeta Institucional: Sombra difusa, borde sutil */
+  .card-solemn {
+    @apply bg-white border border-slate-200 shadow-sm rounded-xl transition-all duration-300 hover:shadow-md hover:border-blue-200;
+  }
+  
+  /* Botón de Acción Principal (Call to Action) */
+  .btn-institutional {
+    @apply btn bg-slate-900 text-white hover:bg-slate-800 border-none rounded-lg font-medium tracking-wide px-6 shadow-lg shadow-slate-900/20;
+  }
+  
+  /* Botón de Venta (Destacado) */
+  .btn-gold {
+    @apply btn bg-blue-700 text-white hover:bg-blue-800 border-none rounded-lg font-bold tracking-wide shadow-lg shadow-blue-700/30;
+  }
 }

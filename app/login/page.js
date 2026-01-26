@@ -1,108 +1,85 @@
 ﻿"use client";
-import { useState } from "react";
-import { ShieldCheck, Lock, User, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
-import { toast } from "sonner";
+import { useState, useEffect } from "react";
+import { GraduationCap, ArrowRight, ShieldCheck, RefreshCw } from "lucide-react";
+import Link from "next/link";
+import { getRandomQuote } from "@/lib/quotes";
 
 export default function LoginPage() {
-  const [loading, setLoading] = useState(false);
+  // Estado para la frase (Inicia vacía para evitar error de hidratación)
+  const [quote, setQuote] = useState(null);
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    
-    try {
-      const res = await fetch("/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: e.target.email.value,
-          password: e.target.password.value
-        })
-      });
-
-      const data = await res.json();
-
-      if (data.success) {
-        toast.success("Credenciales Verificadas");
-        window.location.href = "/dashboard";
-      } else {
-        toast.error(data.error || "Acceso Denegado");
-        setLoading(false);
-      }
-    } catch (err) {
-      toast.error("Error de conexión. Revisa la consola.");
-      setLoading(false);
-    }
-  };
+  // Al montar el componente, elegimos una frase al azar
+  useEffect(() => {
+    setQuote(getRandomQuote());
+  }, []);
 
   return (
-    <div className="min-h-screen flex font-sans bg-white">
-      {/* IZQUIERDA: MARCA INSTITUCIONAL */}
-      <div className="hidden lg:flex w-1/2 bg-slate-900 flex-col justify-between p-12 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+    <div className="min-h-screen flex bg-slate-50 animate-in fade-in duration-700">
+      
+      {/* LADO IZQUIERDO: EL ALMA (Dinámica) */}
+      <div className="hidden lg:flex w-1/2 bg-slate-900 relative items-center justify-center overflow-hidden transition-all">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-slate-900 opacity-90"></div>
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(#475569 1px, transparent 1px)", backgroundSize: "32px 32px" }}></div>
         
-        <div className="relative z-10 flex items-center gap-3">
-          <div className="bg-blue-600 p-2 rounded-lg">
-            <ShieldCheck size={32} />
+        <div className="relative z-10 p-12 text-white max-w-lg">
+          <div className="mb-8 p-3 bg-white/10 w-fit rounded-xl backdrop-blur-sm border border-white/20 shadow-lg shadow-blue-900/50">
+            <GraduationCap size={40} />
           </div>
-          <span className="text-xl font-bold tracking-widest">AULAPLAN MEP</span>
-        </div>
+          
+          {/* FRASE DINÁMICA */}
+          {quote ? (
+            <div className="animate-in slide-in-from-bottom-4 duration-1000">
+              <h2 className="text-3xl font-black tracking-tight mb-6 leading-tight">
+                "{quote.text}"
+              </h2>
+              <div className="border-l-4 border-blue-500 pl-4">
+                <p className="text-blue-200 font-bold text-lg">{quote.author}</p>
+                <p className="text-slate-400 text-sm uppercase tracking-wider font-medium">{quote.role}</p>
+              </div>
+            </div>
+          ) : (
+            // Skeleton Loader mientras carga la inspiración
+            <div className="space-y-4 animate-pulse">
+              <div className="h-8 bg-slate-700 rounded w-3/4"></div>
+              <div className="h-8 bg-slate-700 rounded w-1/2"></div>
+              <div className="h-4 bg-slate-800 rounded w-1/4 mt-4"></div>
+            </div>
+          )}
 
-        <div className="relative z-10 max-w-lg">
-          <h1 className="text-4xl font-extrabold mb-4 leading-tight">Gestión Curricular Industrial.</h1>
-          <p className="text-slate-400 text-lg">Plataforma oficial de planeamiento y evaluación educativa. Acceso restringido a personal autorizado.</p>
-        </div>
-
-        <div className="relative z-10 text-xs text-slate-500 font-mono">
-          SYSTEM STATUS: ONLINE | V4.2 STABLE
+          <div className="mt-12 flex items-center gap-4 text-sm text-slate-500">
+             <ShieldCheck size={16} /> Plataforma Oficial AulaPlan CR
+          </div>
         </div>
       </div>
 
-      {/* DERECHA: FORMULARIO */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-slate-50">
-        <div className="w-full max-w-md bg-white p-10 rounded-2xl shadow-xl border border-slate-100">
-          
-          <div className="mb-8 text-center lg:text-left">
-            <h2 className="text-2xl font-bold text-slate-900">Iniciar Sesión</h2>
-            <p className="text-slate-500 text-sm mt-1">Ingrese sus credenciales institucionales.</p>
+      {/* LADO DERECHO: FORMULARIO */}
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
+        <div className="max-w-md w-full space-y-8">
+          <div className="text-center lg:text-left">
+            <h1 className="text-3xl font-black text-slate-900">Bienvenido a AulaPlan</h1>
+            <p className="text-slate-500 mt-2">Su comando central pedagógico está listo.</p>
           </div>
 
-          <form onSubmit={handleLogin} className="space-y-6">
+          <form className="space-y-6 mt-8">
             <div>
-              <label className="block text-xs font-bold text-slate-700 uppercase mb-2">Correo Oficial</label>
-              <div className="relative">
-                <User className="absolute left-3 top-3 h-5 w-5 text-slate-400" />
-                <input 
-                  name="email" 
-                  type="email" 
-                  defaultValue="max.salazar.sanchez@mep.go.cr"
-                  className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all text-sm font-medium text-slate-900"
-                  required 
-                />
-              </div>
+              <label className="label text-xs font-bold text-slate-700 uppercase">Correo Institucional</label>
+              <input type="email" placeholder="docente@mep.go.cr" className="input input-bordered w-full bg-white" />
+            </div>
+            <div>
+              <label className="label text-xs font-bold text-slate-700 uppercase">Contraseña</label>
+              <input type="password" placeholder="••••••••" className="input input-bordered w-full bg-white" />
             </div>
 
-            <div>
-              <label className="block text-xs font-bold text-slate-700 uppercase mb-2">Contraseña</label>
-              <div className="relative">
-                <Lock className="absolute left-3 top-3 h-5 w-5 text-slate-400" />
-                <input 
-                  name="password" 
-                  type="password" 
-                  placeholder="••••••••"
-                  className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all text-sm font-medium text-slate-900"
-                  required 
-                />
-              </div>
-            </div>
-
-            <button disabled={loading} className="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 rounded-lg shadow-md transition-all flex items-center justify-center gap-2">
-              {loading ? <Loader2 className="animate-spin" /> : "ACCEDER AHORA"}
-            </button>
+            <Link href="/dashboard" className="btn btn-institutional w-full shadow-lg shadow-blue-900/20 group">
+              Iniciar Sesión <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform"/>
+            </Link>
           </form>
 
-          <div className="mt-8 pt-6 border-t border-slate-100 text-center">
-             <span className="text-xs text-slate-400">¿Olvidó sus credenciales? Contacte a Soporte Técnico.</span>
+          <div className="divider text-xs text-slate-400">MEMBRESÍA PROFESIONAL</div>
+          <div className="text-center text-xs text-slate-400">
+            <Link href="/dashboard/subscription" className="text-blue-700 font-bold hover:underline">
+              Ver Planes (8k / 15k)
+            </Link>
           </div>
         </div>
       </div>
