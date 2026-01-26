@@ -1,0 +1,86 @@
+{
+  "subject": "filosofia",
+  "level": "General",
+  "units": [
+    {
+      "name": "Unidad General",
+      "outcomes": [
+        {
+          "description": "Resultados Generales",
+          "indicators": [
+            {
+              "description": "LA TRANSVERSALIDAD EN LOS De acuerdo con los lineamientos emanados del Consejo",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: LA TRANSVERSALIDAD EN LOS De a...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "PROGRAMAS DE ESTUDIO Superior de Educación (SE 339-2003), el único eje",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: PROGRAMAS DE ESTUDIO Superior ...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "transversal del currículo costarricense es el de valores.",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: transversal del currículo cost...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "De esta manera, el abordaje sistemático de los Valores",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: De esta manera, el abordaje si...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Los cambios sociales, económicos, culturales,",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Los cambios sociales, económic...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

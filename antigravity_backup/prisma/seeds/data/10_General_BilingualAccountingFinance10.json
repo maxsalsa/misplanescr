@@ -1,0 +1,48 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "Bilingual Accounting and Finance",
+      "ui_family": "DATA_GRID",
+      "learning_outcome": {
+        "text": "To empower students to analyze and develop financial investment projects, control economic activities, and register them, acquiring knowledge in finance, mastering basic accounting concepts and elements, and analyzing them financially to make informed decisions for investment and resource allocation within a company. This also includes adhering to professional ethics and responsibility, enabling successful entry into the labor market or entrepreneurial initiatives in the bilingual accounting and finance field.",
+        "code": "LO_01"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela la introducción al tema, reta a los estudiantes a recordar y activar conocimientos previos.",
+          "student_action": "Diseña conexiones con experiencias previas, construye un marco inicial de entendimiento del nuevo contenido.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Modela estrategias de trabajo en equipo, reta a los estudiantes a compartir ideas y resolver problemas colectivamente.",
+          "student_action": "Diseña soluciones en grupo, construye conocimiento compartido a través del debate y la interacción.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Modela la aplicación de conceptos y herramientas, reta a los estudiantes a diseñar y construir productos o proyectos prácticos.",
+          "student_action": "Diseña prototipos, modelos o soluciones originales, construye artefactos o informes basados en la aplicación del aprendizaje.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Modela la reflexión crítica sobre los procesos y resultados, reta a los estudiantes a justificar sus métodos y conclusiones.",
+          "student_action": "Diseña argumentos para defender su trabajo, construye conclusiones claras y realiza autoevaluaciones de su aprendizaje.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

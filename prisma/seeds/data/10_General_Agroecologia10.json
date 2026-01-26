@@ -1,0 +1,48 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "Agroecología",
+      "ui_family": "DATA_GRID",
+      "learning_outcome": {
+        "text": "El estudiante aplicará los conocimientos y herramientas de informática (procesadores de texto, hojas electrónicas, software de presentaciones, internet) y paquetes afines para gestionar, analizar y optimizar procesos en la agroecología, buscando aumentar rendimientos, reducir costos y mejorar la calidad del producto de manera sostenible y respetuosa con el ambiente.",
+        "code": "LO_AGRO_01"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Detecta y confirma las necesidades y conocimientos previos de los estudiantes, modelando situaciones problemáticas del sector agroecológico y propiciando la interconexión con el entorno.",
+          "student_action": "Relaciona sus conocimientos previos con la nueva información propuesta, identificando desafíos iniciales y conectando con la realidad biofísica y social para la construcción de su aprendizaje.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Guía la realización de tareas completas y complejas, fomentando el trabajo en equipo, la discusión informal y la aplicación de estrategias cognitivas como la clasificación y la interpretación.",
+          "student_action": "Participa activamente en la construcción gradual del conocimiento a través del trabajo en equipo, organizando la información de manera significativa y desarrollando análisis críticos para la resolución de problemas.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Modela la solución de problemas complejos y reta a los estudiantes a investigar y aplicar herramientas informáticas y paquetes afines en contextos reales o simulados, como pasantías o talleres tecnológicos, integrando la salud ocupacional e inocuidad.",
+          "student_action": "Diseña y construye soluciones aplicando la computadora como herramienta (hojas electrónicas, software de presentaciones) para gestionar y optimizar procesos agroecológicos, investigando y experimentando de forma creativa y crítica en el laboratorio y campo.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": true
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Evalúa y retroalimenta el progreso de aprendizaje individual y colectivo, utilizando criterios de evaluación de competencias para asegurar el producto final esperado y orientar el camino para el logro de objetivos.",
+          "student_action": "Revisa y ajusta su proceso de aprendizaje a partir de la realimentación recibida, consolidando el conocimiento y demostrando el dominio de las competencias esperadas en su desempeño autónomo.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

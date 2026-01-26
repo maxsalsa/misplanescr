@@ -1,0 +1,16 @@
+{
+  "asignatura": "OTROS",
+  "nivel": "Sin Nivel",
+  "modalidad": "NORMATIVA",
+  "units": [
+    {
+      "title": "Unidad General",
+      "outcomes": [
+        {
+          "desc": "Resultados Generales (Heurístico)",
+          "indicators": []
+        }
+      ]
+    }
+  ]
+}

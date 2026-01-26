@@ -1,0 +1,152 @@
+{
+    "meta": {
+        "version": "Kaizen 70.0",
+        "authority": "Lic. Max Salazar Sánchez",
+        "generated_at": "2026-01-21",
+        "compliance": "REA 2024 & ETP 2023"
+    },
+    "normativa": {
+        "academica": {
+            "I_Ciclo": {
+                "components": {
+                    "cotidiano": 50,
+                    "tareas": 10,
+                    "pruebas": 20,
+                    "proyectos": 20
+                },
+                "rules": [
+                    "No exams in Year 1 Period 1"
+                ],
+                "pass_mark": 65
+            },
+            "III_Ciclo": {
+                "components": {
+                    "cotidiano": 45,
+                    "tareas": 10,
+                    "pruebas": 25,
+                    "asistencia": 10,
+                    "comportamiento": 10
+                },
+                "pass_mark": 65
+            },
+            "Diversificada": {
+                "components": {
+                    "cotidiano": 40,
+                    "tareas": 10,
+                    "pruebas": 30,
+                    "asistencia": 10,
+                    "proyecto": 10
+                },
+                "pass_mark": 70
+            }
+        },
+        "etp": {
+            "general": {
+                "components": {
+                    "cotidiano": 60,
+                    "tareas": 10,
+                    "pruebas": 20,
+                    "asistencia": 10
+                },
+                "pass_mark": 70
+            },
+            "tecnico_especialidad": {
+                "components": {
+                    "cotidiano": 40,
+                    "pruebas": 30,
+                    "proyecto": 30
+                },
+                "pass_mark": 70,
+                "practice_hours": 320
+            }
+        }
+    },
+    "estrategias_mediacion": [
+        {
+            "id": "estr_001",
+            "nombre": "Seis Sombreros para Pensar (Adaptado MEP)",
+            "tipo": "Individual",
+            "fase_aplicacion": "Desarrollo",
+            "descripcion": "El estudiante analiza una situación desde 6 perspectivas (Emocional, Lógica, Crítica, etc.).",
+            "sugerencia_DUA": "Permitir uso de iconos visuales para cada sombrero.",
+            "complejidad": "Media"
+        },
+        {
+            "id": "estr_002",
+            "nombre": "Debate Socrático",
+            "tipo": "Grupal",
+            "fase_aplicacion": "Cierre",
+            "descripcion": "Discusión guiada por preguntas detonadoras.",
+            "sugerencia_DUA": "Proveer las preguntas por escrito con anticipación.",
+            "complejidad": "Alta"
+        },
+        {
+            "id": "estr_003",
+            "nombre": "Estudio de Caso Técnico",
+            "tipo": "Grupal",
+            "fase_aplicacion": "Desarrollo",
+            "descripcion": "Análisis de falla real en equipo o software.",
+            "sugerencia_DUA": "Videos del fallo en funcionamiento.",
+            "complejidad": "Alta"
+        },
+        {
+            "id": "estr_004",
+            "nombre": "Galería de Aprendizaje",
+            "tipo": "Grupal",
+            "fase_aplicacion": "Focalización",
+            "descripcion": "Recorrido por estaciones con material visual.",
+            "sugerencia_DUA": "Material táctil y descripciones de audio.",
+            "complejidad": "Baja"
+        }
+    ],
+    "estructuras_etp": {
+        "Desarrollo Web": {
+            "subareas": [
+                "Tecnologías de Información",
+                "Diseño y Desarrollo Web",
+                "Mantenimiento"
+            ],
+            "10": {
+                "unidades": [
+                    {
+                        "titulo": "Fundamentos de Lógica",
+                        "resultados_aprendizaje": [
+                            {
+                                "ra": "Aplicar estructuras algorítmicas básicas.",
+                                "indicadores": [
+                                    "Identifica variables",
+                                    "Construye diagramas de flujo",
+                                    "Codifica pseudocódigo"
+                                ],
+                                "tiempo_estimado": 40
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "Contabilidad": {
+            "subareas": [
+                "Contabilidad Financiera",
+                "Costos"
+            ],
+            "10": {
+                "unidades": [
+                    {
+                        "titulo": "Ciclo Contable Básico",
+                        "resultados_aprendizaje": [
+                            {
+                                "ra": "Registrar transacciones en libro diario.",
+                                "indicadores": [
+                                    "Clasifica cuentas",
+                                    "Aplica partida doble"
+                                ],
+                                "tiempo_estimado": 60
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

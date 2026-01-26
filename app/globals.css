@@ -1,0 +1,9 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FORZAR FONDO BLANCO/GRIS INSTITUCIONAL */
+body {
+  background-color: #f1f5f9; /* Slate 100 */
+  color: #0f172a; /* Slate 900 */
+}

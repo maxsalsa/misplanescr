@@ -1,0 +1,86 @@
+{
+  "subject": "ControlCalidadSoftware",
+  "level": "10mo Año",
+  "units": [
+    {
+      "name": "Unidad General",
+      "outcomes": [
+        {
+          "description": "Resultados Generales",
+          "indicators": [
+            {
+              "description": "Versión final aprobada por el Consejo Superior de Educación. Sesión 45-2024,",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Versión final aprobada por el ...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "acuerdo AC-CSE-0303-45-2024 del 08/08/2024",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: acuerdo AC-CSE-0303-45-2024 de...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Aprobado por el Consejo Superior de Educación, en la sesión XX-XXXX, acuerdo XX-XX-2024 del XX/XX/2024",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Aprobado por el Consejo Superi...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "El Ministerio de Educación Pública (MEP), como autor del presente programa de estudio, se reserva los",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: El Ministerio de Educación Púb...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "derechos morales y patrimoniales de esta obra, siendo responsabilidad de cualquier usuario o entidad",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: derechos morales y patrimonial...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

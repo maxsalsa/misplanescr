@@ -1,0 +1,48 @@
+{
+  "asignatura": "12",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "Fundamentos y Orientaciones del Programa de Agroecología",
+      "ui_family": "DATA_GRID",
+      "learning_outcome": {
+        "text": "Desarrollar competencias técnicas en Agroecología con una visión integral, promoviendo la sostenibilidad, la eficiencia productiva y la gestión empresarial, a través de la aplicación de valores, habilidades digitales y la capacidad de responder a las demandas del mercado laboral, contribuyendo al mejoramiento de la calidad de vida y la sociedad.",
+        "code": "LO_AGROECOLOGIA_GENERAL"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Detectar y confirmar las necesidades de aprendizaje del estudiantado, activando sus conocimientos previos y contextualizando los temas emergentes a través de la problematización del entorno agroecológico.",
+          "student_action": "Participar activamente en la identificación de sus saberes previos y relacionarlos con los nuevos contenidos, expresando sus expectativas y planteando preguntas iniciales para la construcción del aprendizaje.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Modelar estrategias de investigación y análisis de información, desafiando a los estudiantes a discutir y proponer soluciones a problemas socioambientales relevantes, fomentando el trabajo en equipo y el pensamiento crítico.",
+          "student_action": "Diseñar y ejecutar actividades colaborativas, como investigaciones y análisis de casos, debatiendo ideas y construyendo soluciones de forma conjunta, aplicando valores como el respeto y la tolerancia en la interacción grupal.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Retar a los estudiantes a aplicar conocimientos técnicos y habilidades prácticas en proyectos concretos, guiando la experimentación en laboratorios y talleres, y utilizando tecnologías actuales para el desarrollo de productos o sistemas agroecológicos.",
+          "student_action": "Construir soluciones y productos a través de la aplicación práctica de conocimientos, diseñando proyectos, experimentando en talleres y laboratorios, y utilizando herramientas tecnológicas para optimizar procesos agroecológicos de forma creativa.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Realimentar el proceso de aprendizaje individual y grupal, evaluando el desempeño con criterios claros y promoviendo la reflexión crítica sobre los resultados obtenidos y los valores vivenciados, sugiriendo mejoras y futuras aplicaciones.",
+          "student_action": "Valorar su propio progreso y el de sus pares mediante la autoevaluación y coevaluación, consolidando los aprendizajes, organizando su portafolio de evidencias y proponiendo mejoras para futuras aplicaciones en contextos reales.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

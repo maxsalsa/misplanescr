@@ -1,0 +1,177 @@
+[
+  {
+    "header": {
+      "program_id": "PROG-TI-10",
+      "title": "Soporte TI",
+      "level": "10mo",
+      "version": "v11.0-KA"
+    },
+    "logic_layer": {
+      "routes_active": [
+        "Tecnica",
+        "STEAM",
+        "Ludica",
+        "Analitica",
+        "Social",
+        "Inclusiva"
+      ],
+      "ai_engine": "Predictive Mediation v5.0",
+      "speed_logic": "O(1) Access"
+    },
+    "security_layer": {
+      "encryption": "AES-256 (Sensitive Data)",
+      "audit_log": "Enabled"
+    },
+    "security_seal": "856ed1c3140b9e4f8a0738d71ae4d26b7dbd2376f3f683533c1e366b0d47ce62"
+  },
+  {
+    "header": {
+      "program_id": "PROG-WEB-11",
+      "title": "Desarrollo Web",
+      "level": "11mo",
+      "version": "v11.0-KA"
+    },
+    "logic_layer": {
+      "routes_active": [
+        "Tecnica",
+        "STEAM",
+        "Ludica",
+        "Analitica",
+        "Social",
+        "Inclusiva"
+      ],
+      "ai_engine": "Predictive Mediation v5.0",
+      "speed_logic": "O(1) Access"
+    },
+    "security_layer": {
+      "encryption": "AES-256 (Sensitive Data)",
+      "audit_log": "Enabled"
+    },
+    "security_seal": "9f36d8c0182d42d81f299e491d30be941f0fb0820edb859de928572ef12694e0"
+  },
+  {
+    "header": {
+      "program_id": "PROG-CIBER-12",
+      "title": "Ciberseguridad",
+      "level": "12mo",
+      "version": "v11.0-KA"
+    },
+    "logic_layer": {
+      "routes_active": [
+        "Tecnica",
+        "STEAM",
+        "Ludica",
+        "Analitica",
+        "Social",
+        "Inclusiva"
+      ],
+      "ai_engine": "Predictive Mediation v5.0",
+      "speed_logic": "O(1) Access"
+    },
+    "security_layer": {
+      "encryption": "AES-256 (Sensitive Data)",
+      "audit_log": "Enabled"
+    },
+    "security_seal": "9f99e2bbc2cca771ad26e0e54f97c1b11b8e23f251efc5cd68f8e74b717fbe8d"
+  },
+  {
+    "header": {
+      "program_id": "PROG-MAT-10",
+      "title": "Matemáticas",
+      "level": "10mo",
+      "version": "v11.0-KA"
+    },
+    "logic_layer": {
+      "routes_active": [
+        "Tecnica",
+        "STEAM",
+        "Ludica",
+        "Analitica",
+        "Social",
+        "Inclusiva"
+      ],
+      "ai_engine": "Predictive Mediation v5.0",
+      "speed_logic": "O(1) Access"
+    },
+    "security_layer": {
+      "encryption": "AES-256 (Sensitive Data)",
+      "audit_log": "Enabled"
+    },
+    "security_seal": "c5e7cb81a2d78046bc534f283c7a3b5c85a8912fc1723f86b5ddeb04315145f1"
+  },
+  {
+    "header": {
+      "program_id": "PROG-ESP-11",
+      "title": "Español",
+      "level": "11mo",
+      "version": "v11.0-KA"
+    },
+    "logic_layer": {
+      "routes_active": [
+        "Tecnica",
+        "STEAM",
+        "Ludica",
+        "Analitica",
+        "Social",
+        "Inclusiva"
+      ],
+      "ai_engine": "Predictive Mediation v5.0",
+      "speed_logic": "O(1) Access"
+    },
+    "security_layer": {
+      "encryption": "AES-256 (Sensitive Data)",
+      "audit_log": "Enabled"
+    },
+    "security_seal": "0d1756f1cb8bf08a817b2af2c1ade8e4eef2c740e10f30ea663c3a9e11e707a5"
+  },
+  {
+    "header": {
+      "program_id": "PROG-ENG-N1",
+      "title": "English for Tech",
+      "level": "Nivel 1",
+      "version": "v11.0-KA"
+    },
+    "logic_layer": {
+      "routes_active": [
+        "Tecnica",
+        "STEAM",
+        "Ludica",
+        "Analitica",
+        "Social",
+        "Inclusiva"
+      ],
+      "ai_engine": "Predictive Mediation v5.0",
+      "speed_logic": "O(1) Access"
+    },
+    "security_layer": {
+      "encryption": "AES-256 (Sensitive Data)",
+      "audit_log": "Enabled"
+    },
+    "security_seal": "ddd1e6295cd70f1251926f9e6b0040f798be2ba48478144ea3f65f5dda34fe0c"
+  },
+  {
+    "header": {
+      "program_id": "PROG-CIV-12",
+      "title": "Cívica",
+      "level": "12mo",
+      "version": "v11.0-KA"
+    },
+    "logic_layer": {
+      "routes_active": [
+        "Tecnica",
+        "STEAM",
+        "Ludica",
+        "Analitica",
+        "Social",
+        "Inclusiva"
+      ],
+      "ai_engine": "Predictive Mediation v5.0",
+      "speed_logic": "O(1) Access"
+    },
+    "security_layer": {
+      "encryption": "AES-256 (Sensitive Data)",
+      "audit_log": "Enabled"
+    },
+    "security_seal": "ac98264e2ccda8ec47f119953e3bffa72e23dbe8672a30d6ef0cae91720cc101"
+  }
+]

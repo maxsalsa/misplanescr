@@ -1,0 +1,102 @@
+{
+    "id_programa": "MEP-TI-10mo-U2-Seguridad",
+    "metadata": {
+        "autor_auditor": "Max Salazar Sánchez",
+        "version_motor": "Antigravity-Diamante-v4",
+        "nivel": "10mo",
+        "especialidad": "Informática en Soporte",
+        "subarea": "Tecnologías de Información",
+        "unidad_numero": 2,
+        "unidad_nombre": "Unidad 2: Salud Ocupacional y Gestión de Desechos",
+        "carga_horaria": "36h",
+        "keywords": [
+            "Seguridad",
+            "Ergonomía",
+            "Reciclaje",
+            "Normativa"
+        ],
+        "complejidad_nivel": 7
+    },
+    "encabezado_dinamico": {
+        "suscriptor_placeholder": "{user.full_name}",
+        "institucion_placeholder": "{user.current_school}",
+        "estado_licencia": "Verificado Neon"
+    },
+    "planificacion": [
+        {
+            "ra_id": "RA-01",
+            "resultado_aprendizaje": "Aplicar normativa de salud ocupacional y gestión de desechos electrónicos.",
+            "saberes_esenciales": [
+                "Normas INTECO",
+                "Ergonomía",
+                "Protocolo de emergencias",
+                "Gestión RAEE"
+            ],
+            "indicadores_mnc": [
+                "MNC-L3-K3: Conoce normativa",
+                "MNC-L3-S2: Aplica protocolos"
+            ],
+            "tiempo_estimado": "36 horas",
+            "mediacion_pedagogica": [
+                {
+                    "tipo": "Lúdica",
+                    "titulo": "Simulacro Gamificado",
+                    "docente": "La persona docente facilita un simulacro de evacuación con roles asignados (brigadista, víctima, líder) y obstáculos sorpresa.",
+                    "estudiante": "La persona estudiante ejecuta el protocolo de seguridad y posterior al ejercicio participa en un debriefing para ganar insignias de seguridad.",
+                    "inclusion_tdah": "Roles activos de movimiento (Brigadista).",
+                    "recursos": "Cronómetro, chalecos"
+                },
+                {
+                    "tipo": "STEAM",
+                    "titulo": "Mapa de Riesgos Digital 3D",
+                    "docente": "La persona docente muestra cómo utilizar herramientas de modelado simple (SketchUp Free) para el laboratorio.",
+                    "estudiante": "La persona estudiante crea un mapa tridimensional del aula identificando zonas de riesgo eléctrico y sísmico.",
+                    "inclusion_tea": "Trabajo individual estructurado con software.",
+                    "recursos": "Laboratorio de cómputo"
+                },
+                {
+                    "tipo": "Científica",
+                    "titulo": "Análisis de EPP",
+                    "docente": "La persona docente presenta diferentes tipos de Equipo de Protección Personal (gafas, guantes, cascos) sometiéndolos a pruebas de estrés controladas.",
+                    "estudiante": "La persona estudiante registra la resistencia de materiales y justifica científicamente el uso de cada elemento.",
+                    "recursos": "Muestras de EPP"
+                },
+                {
+                    "tipo": "Analítica",
+                    "titulo": "CSI: Informático",
+                    "docente": "La persona docente presenta fotos de 'Escenas del Crimen' (estaciones de trabajo con mala ergonomía y riesgos).",
+                    "estudiante": "La persona estudiante analiza las evidencias, identifica las violaciones a la norma y redacta un reporte pericial.",
+                    "recursos": "Proyector, fotos impresas"
+                },
+                {
+                    "tipo": "Práctica",
+                    "titulo": "Ergonomía en Acción",
+                    "docente": "La persona docente facilita una sesión de ajuste de estaciones de trabajo (sillas, monitores, periféricos).",
+                    "estudiante": "La persona estudiante realiza pausas activas y ajusta su entorno según la norma de higiene postural.",
+                    "inclusion_motora": "Adaptación de mobiliario para accesibilidad.",
+                    "recursos": "Mobiliario del aula"
+                },
+                {
+                    "tipo": "Social",
+                    "titulo": "Campaña RAEE",
+                    "docente": "La persona docente coordina una campaña de recolección de residuos electrónicos con una gestora autorizada.",
+                    "estudiante": "La persona estudiante diseña material informativo y clasifica los residuos recibidos según su toxicidad.",
+                    "recursos": "Contenedores, material gráfico"
+                }
+            ],
+            "evidencias": {
+                "conocimiento": "Quiz sobre normativa de seguridad",
+                "desempeno": "Observación de postura ergonómica",
+                "producto": "Plan de gestión de desechos del aula"
+            },
+            "adecuaciones": {
+                "acceso": "Uso de dictado por voz para reporte de riesgos.",
+                "no_significativa": "Priorizar señalización visual sobre normativa escrita."
+            }
+        }
+    ],
+    "canales_oficiales": {
+        "teams_post_md": "Seguridad ante todo. Esta semana analizaremos ergonomía y riesgos. Traer ropa cómoda para el simulacro.",
+        "correo_asunto": "Unidad 2 Seguridad Industrial - Material"
+    }
+}

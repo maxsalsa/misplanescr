@@ -1,0 +1,86 @@
+{
+  "subject": "electronica-mantenimiento-equipos_",
+  "level": "10mo Año",
+  "units": [
+    {
+      "name": "Unidad General",
+      "outcomes": [
+        {
+          "description": "Resultados Generales",
+          "indicators": [
+            {
+              "description": "San José - Costa Rica",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: San José - Costa Rica...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Ministerio de Educación Pública",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Ministerio de Educación Públic...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Departamento de Educación Técnica",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Departamento de Educación Técn...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "MSc. Francisco González Calvo",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: MSc. Francisco González Calvo...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Ing. Fernando Bogantes Cruz",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Ing. Fernando Bogantes Cruz...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

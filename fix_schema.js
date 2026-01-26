@@ -1,0 +1,173 @@
+﻿const fs = require("fs");
+const path = require("path");
+
+const schemaContent = `generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// --- USUARIOS Y SEGURIDAD ---
+model User {
+  id                 String    @id @default(cuid())
+  email              String    @unique
+  password           String
+  name               String?
+  role               String    @default("DOCENTE") 
+  subscriptionStatus String  @default("FREE") 
+  subscriptionPlan   String  @default("BASIC")
+  subscriptionEnd    DateTime?
+  createdAt          DateTime  @default(now())
+  
+  plans              PedagogicalPlan[]
+  students           Student[]
+  // NOTA: Se eliminó la relación 'logs' para evitar errores circulares.
+  // Los logs se consultan por email directamente en la tabla SystemLog.
+
+  @@index([email])
+}
+
+// --- AUDITORÍA (LOGS INDEPENDIENTES) ---
+model SystemLog {
+  id        Int      @id @default(autoincrement())
+  level     String   
+  action    String   
+  message   String   
+  user      String?  // Guarda el email como texto (Historial Inmutable)
+  metadata  Json?    
+  createdAt DateTime @default(now())
+
+  @@index([action])
+  @@index([createdAt])
+}
+
+// --- CURRÍCULO MEP (ADN) ---
+model mep_programs_core {
+  id              Int      @id @default(autoincrement())
+  filename        String
+  subject         String?
+  level           String?
+  cycle           String?
+  raw_text        String?  @db.Text
+  structure_json  Json?    
+  status          String   @default("ACTIVE")
+  fundamentacion  String?  @db.Text
+  perfil_salida   String?  @db.Text
+  last_deep_scan  DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt 
+  
+  @@index([filename])
+  @@index([subject])
+}
+
+// --- GESTIÓN DE AULA Y ESTUDIANTES ---
+model Group {
+  id        String    @id @default(cuid())
+  name      String    
+  level     String    
+  year      Int
+  students  Student[]
+  createdAt DateTime  @default(now())
+}
+
+model Student {
+  id             String        @id @default(cuid())
+  cedula         String?       @unique
+  fullName       String
+  
+  teacherId      String?
+  teacher        User?         @relation(fields: [teacherId], references: [id])
+  
+  groupId        String?
+  group          Group?        @relation(fields: [groupId], references: [id])
+  
+  grades         Grade[]
+  conduct        ConductLog[]
+  attendance     Attendance[]
+  createdAt      DateTime      @default(now())
+
+  @@index([teacherId])
+  @@index([fullName])
+}
+
+// --- PLANEAMIENTO DIDÁCTICO ---
+model PedagogicalPlan {
+  id             Int      @id @default(autoincrement())
+  title          String
+  subject        String
+  level          String
+  content        Json     
+  evidences      Json?    
+  status         String
+  userId         String
+  user           User     @relation(fields: [userId], references: [id])
+  createdAt      DateTime @default(now())
+  riskProtocol   Boolean  @default(false)
+
+  @@index([userId])
+}
+
+// --- EVALUACIÓN Y CALIFICACIONES ---
+model GradeComponent {
+  id          String   @id @default(cuid())
+  name        String   
+  type        String   
+  percentage  Float    
+  rubricJson  Json?    
+  grades      Grade[]
+}
+
+model Grade {
+  id            String          @id @default(cuid())
+  studentId     String
+  student       Student         @relation(fields: [studentId], references: [id])
+  
+  componentId   String?
+  component     GradeComponent? @relation(fields: [componentId], references: [id])
+  componentName String?         
+  
+  score         Float
+  rubricApplied Json?    
+  feedback      String?
+  date          DateTime        @default(now())
+
+  @@index([studentId])
+}
+
+// --- CONDUCTA Y ASISTENCIA ---
+model Attendance {
+  id        String   @id @default(cuid())
+  studentId String
+  student   Student  @relation(fields: [studentId], references: [id])
+  date      DateTime
+  status    String   
+  lesson    String?  
+}
+
+model ConductLog {
+  id             String   @id @default(cuid())
+  studentId      String
+  student        Student  @relation(fields: [studentId], references: [id])
+  severity       String   
+  description    String   @db.Text
+  articleApplied String?
+  sanction       String?
+  status         String   @default("OPEN")
+  date           DateTime @default(now())
+}
+
+// --- CONFIGURACIÓN DEL SISTEMA ---
+model SystemSetting {
+  key         String   @id
+  value       String   @db.Text
+  description String?
+  updatedAt   DateTime @updatedAt
+}
+`;
+
+fs.writeFileSync(path.join("prisma", "schema.prisma"), schemaContent.trim(), "utf8");
+console.log("✅ SCHEMA BLINDADO: Relaciones conflictivas eliminadas.");

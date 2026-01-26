@@ -1,0 +1,38 @@
+{
+    "subject": "Matemáticas",
+    "level": "7mo Año",
+    "units": [
+        {
+            "title": "Geometría Euclídea I",
+            "outcomes": [
+                {
+                    "desc": "Identificar figuras planas en el entorno.",
+                    "indicators": [
+                        {
+                            "desc": "Clasifica triángulos según la medida de sus lados.",
+                            "suggested_activities": [
+                                {
+                                    "title": "Cacería de Triángulos (Entorno Escolar)",
+                                    "type": "COTIDIANO",
+                                    "rubric_level_3": "Clasifica correctamente escalenos, isósceles y equiláteros hallados en el aula.",
+                                    "rubric_level_1": "Confunde los tipos de triángulos o no logra mediciones precisas."
+                                }
+                            ]
+                        },
+                        {
+                            "desc": "Aplica la desigualdad triangular.",
+                            "suggested_activities": [
+                                {
+                                    "title": "Construcción con Pajillas",
+                                    "type": "TRABAJO_COTIDIANO",
+                                    "rubric_level_3": "Demuestra matemáticamente por qué ciertos triángulos no se pueden cerrar.",
+                                    "rubric_level_1": "Intenta construir sin verificar la suma de lados."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

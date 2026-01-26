@@ -1,0 +1,86 @@
+{
+  "subject": "matematica",
+  "level": "General",
+  "units": [
+    {
+      "name": "Unidad General",
+      "outcomes": [
+        {
+          "description": "Resultados Generales",
+          "indicators": [
+            {
+              "description": "I y II Ciclo de la Educación Primaria,",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: I y II Ciclo de la Educación P...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "III Ciclo de Educación General Básica y Educación Diversificada",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: III Ciclo de Educación General...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "San José, Costa Rica",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: San José, Costa Rica...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Programas de Estudio de Matemáticas",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Programas de Estudio de Matemá...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "La resolución de problemas: enfoque principal del currículo .................................................................. 13",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: La resolución de problemas: en...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

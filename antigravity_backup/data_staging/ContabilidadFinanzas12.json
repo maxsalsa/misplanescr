@@ -1,0 +1,86 @@
+{
+  "subject": "ContabilidadFinanzas",
+  "level": "12mo Año",
+  "units": [
+    {
+      "name": "Unidad General",
+      "outcomes": [
+        {
+          "description": "Resultados Generales",
+          "indicators": [
+            {
+              "description": "Aprobado por el Consejo Superior de Educación, en la sesión 53-2021, acuerdo 07-53-2021 del 18/10/2021",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Aprobado por el Consejo Superi...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Aprobado por el Consejo Superior de Educación, en la sesión 53-2021, acuerdo 07-53-2021 del 18/10/2021",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Aprobado por el Consejo Superi...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Tabla de contenidos ............................................................................................................................................................................ 2",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Tabla de contenidos .............",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Créditos ................................................................................................................................................................................................ 6",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Créditos ........................",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Autoridades ......................................................................................................................................................................................... 6",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Autoridades .....................",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+langchain-openai
+langchain-google-genai
+chromadb
+pypdf
+reportlab
+qrcode
+python-dotenv
+beautifulsoup4
+requests
+psycopg2-binary

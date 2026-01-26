@@ -1,0 +1,16 @@
+{
+  "asignatura": "OTROS",
+  "nivel": "Sin Nivel",
+  "modalidad": "TECNICO_CTP",
+  "units": [
+    {
+      "title": "Unidad General",
+      "outcomes": [
+        {
+          "desc": "Resultados Generales (Heurístico)",
+          "indicators": []
+        }
+      ]
+    }
+  ]
+}

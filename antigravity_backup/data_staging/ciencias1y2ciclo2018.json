@@ -1,0 +1,86 @@
+{
+  "subject": "cienciasyciclo",
+  "level": "1mo Año",
+  "units": [
+    {
+      "name": "Unidad General",
+      "outcomes": [
+        {
+          "description": "Resultados Generales",
+          "indicators": [
+            {
+              "description": "Transformación curricular: un avance decisivo hacia la Nueva Ciudadanía",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Transformación curricular: un ...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "En el marco de una concepción renovada del fortalecimiento educativo, visión integral que hemos",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: En el marco de una concepción ...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "denominado Educar para una nueva ciudadanía, distintas iniciativas innovadoras hemos puesto en",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: denominado Educar para una nue...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "marcha. Estas incluyen procesos de gestión más dinámicos y abarcadores, proyectos ambiciosos con un",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: marcha. Estas incluyen proceso...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "impacto integral dentro del Ministerio de Educación Pública, y evidentemente una serie de cambios",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: impacto integral dentro del Mi...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

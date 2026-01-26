@@ -1,0 +1,7 @@
+Plan ID,Título del Plan,Nivel,Rutas Activas,Integrity Hash (HMAC-SHA256),Estado,Latencia (ms)
+PROG-TI-10-1,Soporte TI - Fundamentos HW,10mo,6,0e7e4fc6aa1464b4b919140f...,ACTIVO,32ms
+PROG-WEB-11-2,Desarrollo Web - Backend,11mo,6,5873230e0dc8287df3b6fcf7...,ACTIVO,32ms
+PROG-CIBER-12-1,Ciberseguridad - Hacking Ético,12mo,6,3cfe03b9a30dfc620fd2c2ae...,ACTIVO,32ms
+PROG-MAT-9-1,Matemáticas - Geometría,9no,6,a9b09f1931efb97a38eadac8...,ACTIVO,32ms
+PROG-ENG-NOCT-2,English for Tech - Level 2,Noc-2,6,7796e01da3eee90ddd38699c...,ACTIVO,32ms
+PROG-CIV-10-1,Educación Cívica - Sistema Político,10mo,6,201dbc8744d8e1a40e3fb378...,ACTIVO,32ms

@@ -1,0 +1,212 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String
+  password      String
+  role          String    @default("DOCENTE") // SUPER_ADMIN, DOCENTE
+  subscriptionStatus String @default("FREE")    // FREE, PENDING, ACTIVE
+  isPremium     Boolean   @default(false)       // Gating Flag
+  centerName    String?
+  plans         PedagogicalPlan[]
+  students      Student[]
+  // V5.5 Relations
+  groups        AcademicGroup[]
+  sessions      Session[]
+  accounts      Account[]
+  
+  createdAt     DateTime  @default(now())
+}
+
+model PedagogicalPlan {
+  id            String    @id @default(cuid())
+  title         String
+  subject       String    // Subárea (e.g. Programación)
+  specialty     String?   // Especialidad (e.g. Ciberseguridad)
+  uiFamily      String?   // HARD_TECH | SOFT_SKILLS
+  level         String
+  unitUuid      String?   // ID Oficial del MEP
+  riskProtocol  Boolean   @default(false) // Trigger Botón Rojo
+  
+  content       String    // JSON Completo (Actividades, DUA, DUA Suggestions)
+  status        String    @default("BORRADOR")
+  
+  habilidad     String?
+  indicador     String?
+  
+  userId        String
+  user          User      @relation(fields: [userId], references: [id])
+  
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([uiFamily])
+  @@index([specialty])
+}
+
+model Student {
+  id              String   @id @default(cuid())
+  name            String
+  identifier      String?
+  condition       String?
+  teacherId       String
+  teacher         User     @relation(fields: [teacherId], references: [id])
+  
+  // V5.5 Relations
+  groupId         String?
+  group           AcademicGroup? @relation(fields: [groupId], references: [id])
+  
+  grades          Grade[]
+  attendance      AttendanceRecord[]
+  conduct         ConductReport[]
+  evidence        StudentEvidence[]
+  evaluations     EvaluationLog[]
+}
+
+// AUTH & SESSIONS
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Account {
+  id                 String  @id @default(cuid())
+  userId             String
+  type               String
+  provider           String
+  providerAccountId  String
+  refresh_token      String?
+  access_token       String?
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String?
+  session_state      String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+// --------------------------------------------------------
+// ANTIGRAVITY V5.5 DATA CORE
+// --------------------------------------------------------
+
+model Grade {
+  id          String   @id @default(cuid())
+  studentId   String
+  student     Student  @relation(fields: [studentId], references: [id])
+  type        String
+  value       Int
+  feedback    String?
+  date        DateTime @default(now())
+}
+
+model AcademicGroup {
+  id        String    @id @default(cuid())
+  name      String    // e.g. "10-1 Ciberseguridad"
+  year      String    @default("2026")
+  teacherId String
+  teacher   User      @relation(fields: [teacherId], references: [id])
+  students  Student[]
+  
+  attendance AttendanceRecord[]
+  createdAt DateTime  @default(now())
+}
+
+model AttendanceRecord {
+  id        String        @id @default(cuid())
+  date      DateTime      @default(now())
+  status    String        // PRESENTE, AUSENTE, TARDIA
+  studentId String
+  student   Student       @relation(fields: [studentId], references: [id])
+  groupId   String
+  group     AcademicGroup @relation(fields: [groupId], references: [id])
+
+  @@index([studentId])
+  @@index([groupId])
+  @@index([date])
+}
+
+model ConductReport {
+  id              String   @id @default(cuid())
+  type            String   // LEVE, GRAVE, MUY_GRAVE
+  description     String
+  protocolTriggered Boolean @default(false)
+  riskLevel       String?  // BAJO, MEDIO, ALTO
+  studentId       String
+  student         Student  @relation(fields: [studentId], references: [id])
+  timestamp       DateTime @default(now())
+
+  @@index([studentId])
+  @@index([type])
+}
+
+model StudentEvidence {
+  id              String   @id @default(cuid())
+  type            String   // JUEGO, PRACTICA, FOTO
+  fileUrl         String?
+  learningOutcome String?  // Vinculación Curricular
+  feedback        String?
+  status          String   @default("PENDIENTE")
+  studentId       String
+  student         Student  @relation(fields: [studentId], references: [id])
+  createdAt       DateTime @default(now())
+
+  @@index([studentId])
+  @@index([status])
+}
+
+model EvaluationLog {
+  id              String   @id @default(cuid())
+  component       String   // COTIDIANO, PRUEBA
+  grade           Float
+  rubricLinked    Boolean  @default(true) // Blindaje Normativo
+  studentId       String
+  student         Student  @relation(fields: [studentId], references: [id])
+  createdAt       DateTime @default(now())
+
+  @@index([studentId])
+}
+
+// --------------------------------------------------------
+// ANTIGRAVITY MASTER COMPENDIUM (ETL v3.0)
+// --------------------------------------------------------
+
+model MasterModule {
+  id               String   @id // Unique Hash (e.g. CIBER_11_U3)
+  specialty        String
+  level            Int
+  unitTitle        String
+  uiFamily         String   // HARD_TECH | SOFT_SKILLS
+  
+  learningOutcomes MasterLearningOutcome[]
+  
+  updatedAt        DateTime @updatedAt
+}
+
+model MasterLearningOutcome {
+  id                 String       @id @default(cuid())
+  code               String       // RA1
+  description        String
+  bloomVerb          String
+  hours              Int
+  essentialKnowledge String[]
+  indicators         String[]
+  duaMatrix          Json         // { visual, auditory, kinesthetic }
+  dependsOn          String[]
+  
+  moduleId           String
+  module             MasterModule @relation(fields: [moduleId], references: [id])
+}

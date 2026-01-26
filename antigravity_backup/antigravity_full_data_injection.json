@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "fecha_generacion": "2026-01-23T00:37:09.378137",
+    "autor": "Max Salazar Sánchez",
+    "version_core": "Antigravity v15.0",
+    "global_integrity_hash": "48b78cdc128cc9d1cf404eba1fa5dfe60da42a9bcccafde66d2b17de5939a3e5"
+  },
+  "tablas_inteligentes": {
+    "programas": [
+      {
+        "id": "PROG-TI-10-1",
+        "titulo": "Soporte TI 10mo - Fundamentos",
+        "rutas_activas": [
+          "Técnica",
+          "STEAM",
+          "Lúdica",
+          "Analítica",
+          "Social",
+          "Inclusiva"
+        ],
+        "indicadores": [
+          {
+            "nivel": "Inicial",
+            "texto": "Identifica componentes internos del hardware."
+          },
+          {
+            "nivel": "Avanzado",
+            "texto": "Explica el ensamble de computadoras bajo normas de seguridad."
+          }
+        ],
+        "security_hash": "db242d6ce623e9b94ab19ed9b1e443af2052a838787b9d1d7e41168117ab4b2a"
+      },
+      {
+        "id": "PROG-WEB-N2",
+        "titulo": "Desarrollo Web - Nivel 2 Nocturno",
+        "rutas_activas": 6,
+        "security_hash": "8b1ba95a687a2b1c08f7bb827832e7e9ecc7f133db9dae23f7c7093f9d08e0c2"
+      }
+    ],
+    "estudiantes": [
+      {
+        "id": "EST-10-1-001",
+        "nombre": "Carlos Solís",
+        "seccion": "10-1",
+        "modalidad": "Diurna"
+      },
+      {
+        "id": "EST-N2-005",
+        "nombre": "Ana Méndez",
+        "seccion": "Nivel 2",
+        "modalidad": "Nocturna"
+      },
+      {
+        "id": "EST-RIESGO-99",
+        "nombre": "Jorge Fallas",
+        "seccion": "10-1",
+        "modalidad": "Diurna"
+      }
+    ],
+    "evaluaciones": [
+      {
+        "estudiante_id": "EST-10-1-001",
+        "materia": "Soporte TI",
+        "rubro": "Cotidiano",
+        "nota": 100,
+        "observacion": "Excelente dominio del ensamble.",
+        "security_hash": "efb597bc0d78dc9b0911ef3576a62f363542c5a09129a32982e46eb18cd121d0"
+      }
+    ],
+    "asistencia": [
+      {
+        "estudiante_id": "EST-RIESGO-99",
+        "fecha": "2026-02-15",
+        "estado": "Ausente",
+        "bloque": "4 Lecciones",
+        "security_hash": "ad1d5e3f64892a1dd3b9e09e4e52d0907aaa50ccf47f3dfd66fade2c92e0054a"
+      }
+    ],
+    "conducta": [
+      {
+        "estudiante_id": "EST-10-1-001",
+        "falta": "Uso de celular en clase",
+        "tipo": "Leve",
+        "puntos_restados": 5,
+        "nota_conducta_actual": 95,
+        "security_hash": "923d7e2cf423f82c95866bb99586fbdad64edca34f0d3b4d9e4f83df51f5e8f4"
+      }
+    ],
+    "incidentes": [
+      {
+        "id": "INC-ARMAS-01",
+        "tipo": "Hallazgo Armas",
+        "estudiante_reportado": "Carlos Solís (10-1)",
+        "protocolo_paso_actual": 2,
+        "descripcion": "Hallazgo de navaja en el bulto durante taller de hardware.",
+        "estado": "ACTIVO - Protocolo en Curso",
+        "seguridad": "Integrity Seal Verified ✅"
+      }
+    ],
+    "alertas_upre": [
+      {
+        "estudiante_id": "EST-RIESGO-99",
+        "riesgo": "Ausentismo > 15%",
+        "mensaje": "El estudiante ha faltado a 3 bloques consecutivos.",
+        "accion_sugerida": "Visita al Hogar",
+        "security_hash": "fb92352e27e05e14d36d93d05cbcddf67a4c4107b5977a945ae61d5424c01f0c"
+      }
+    ]
+  }
+}

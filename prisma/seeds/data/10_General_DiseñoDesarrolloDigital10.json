@@ -1,0 +1,48 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "Fundamentos de Diseño y Desarrollo Digital",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "El estudiante aplicará los conocimientos y habilidades fundamentales en Diseño y Desarrollo Digital, utilizando tecnologías actuales para resolver problemas técnicos y contribuir a la competitividad del país.",
+        "code": "LO_DDD01"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Detecta y confirma conocimientos previos del estudiantado, relacionándolos con la unidad de estudio y motivando la participación inicial.",
+          "student_action": "Activa y comparte sus conocimientos previos, mostrando apertura e interés hacia los nuevos contenidos.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Diseña actividades que promueven el trabajo individual y en equipo, fomentando la discusión informal y la investigación guiada para tareas complejas.",
+          "student_action": "Participa activamente en discusiones y proyectos grupales, investigando y proponiendo soluciones colectivas.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía el proceso de construcción de conocimientos en ambientes prácticos, estimulando el pensamiento crítico, la experimentación y la creatividad a través de proyectos.",
+          "student_action": "Diseña, construye y experimenta activamente soluciones a problemas, aplicando estrategias cognitivas y desarrollando su creatividad en proyectos técnicos.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Realimenta el proceso de aprendizaje del estudiante, evaluando los logros y ofreciendo apoyo individualizado para consolidar conocimientos y destrezas.",
+          "student_action": "Demuestra la adquisición de competencias, reflexiona sobre su desempeño y busca activamente la realimentación para mejorar.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

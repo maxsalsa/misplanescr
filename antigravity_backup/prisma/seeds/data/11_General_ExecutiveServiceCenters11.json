@@ -1,0 +1,174 @@
+{
+  "asignatura": "11",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "Oral Communication in English",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "Develop proficiency in oral English communication for professional interactions, covering company structure, labor conditions, occupational health, and customer service.",
+        "code": "LO_OCIE_1"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela situaciones de interacción oral y presenta vocabulario clave, conectando con el uso del inglés en contextos empresariales reales.",
+          "student_action": "Participa en dinámicas de activación de conocimientos, compartiendo experiencias previas y comprendiendo la relevancia del inglés oral en el ámbito laboral.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes con escenarios de roleplay sobre servicio al cliente, comunicación corporativa y situaciones laborales, facilitando la práctica grupal.",
+          "student_action": "Colabora en actividades de simulación y debate, aplicando vocabulario y estructuras gramaticales para resolver problemas de comunicación y negociar en inglés.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la producción de diálogos, presentaciones y simulaciones de llamadas utilizando software de pronunciación, proveyendo herramientas para mejorar la fluidez.",
+          "student_action": "Diseña y construye sus propias intervenciones orales, presentaciones sobre temas corporativos y escenarios de interacción, aplicando las herramientas lingüísticas adquiridas.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Ofrece retroalimentación detallada sobre pronunciación, entonación y claridad del mensaje, clarificando dudas sobre el uso idiomático y cultural del inglés.",
+          "student_action": "Revisa y perfecciona su desempeño oral a partir de la retroalimentación, identificando áreas de mejora y reforzando su confianza comunicativa.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Corporate Communication",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "Master effective oral and written corporate communication, including etiquette, protocol, and quality customer service in a business environment.",
+        "code": "LO_CC_1"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Presenta casos de estudio sobre la importancia de la comunicación corporativa, etiqueta y protocolo, conectando con la imagen profesional y el servicio.",
+          "student_action": "Participa en discusiones iniciales sobre la relevancia de la comunicación efectiva y el impacto de la etiqueta en el entorno corporativo.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a resolver dilemas de comunicación empresarial en equipo, fomentando el debate sobre las mejores prácticas y respuestas.",
+          "student_action": "Colabora en análisis de casos, roleplays de atención al cliente y simulaciones de reuniones, aplicando principios de etiqueta y protocolo en la interacción.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la elaboración de documentos de comunicación interna/externa, políticas de servicio al cliente y guiones para interacciones telefónicas/presenciales.",
+          "student_action": "Diseña y construye mensajes corporativos escritos y orales, simulaciones de atención al cliente y documentos que reflejen el protocolo empresarial adecuado.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Ofrece retroalimentación detallada sobre la claridad, tono y cumplimiento de los estándares de comunicación corporativa y protocolo.",
+          "student_action": "Reflexiona sobre su desempeño en la comunicación corporativa, identificando puntos fuertes y áreas de mejora en la aplicación de la etiqueta y el protocolo.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Administration for Service Center",
+      "ui_family": "DATA_GRID",
+      "learning_outcome": {
+        "text": "Acquire administrative, statistical, and marketing fundamentals for effective service center management, human relations, and entrepreneurial initiatives.",
+        "code": "LO_ASC_1"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Introduce conceptos clave de contabilidad, estadística y marketing, conectando con ejemplos prácticos de administración de centros de servicio.",
+          "student_action": "Participa en la activación de conocimientos previos sobre gestión empresarial, planteando preguntas y mostrando interés en la aplicación práctica de los conceptos.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a analizar datos, elaborar presupuestos y planes de marketing para 'empresas simuladas', fomentando la discusión de estrategias.",
+          "student_action": "Colabora en proyectos de análisis estadístico, preparación de informes financieros y desarrollo de estrategias de mercadeo y relaciones públicas.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la elaboración de tablas financieras, informes estadísticos, planes de negocio y estructuras de servicio al cliente, supervisando el uso de herramientas administrativas.",
+          "student_action": "Diseña y construye tablas de datos, proyecciones financieras y planes operativos para un centro de servicios, aplicando principios de contabilidad, estadística y marketing.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Clarifica dudas sobre la interpretación de datos, la aplicación de principios administrativos y la viabilidad de los planes propuestos, retroalimentando los proyectos.",
+          "student_action": "Revisa y perfecciona sus modelos administrativos y financieros, buscando la exactitud y la coherencia en la toma de decisiones para un centro de servicio.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Destrezas Computacionales",
+      "ui_family": "DATA_GRID",
+      "learning_outcome": {
+        "text": "Develop advanced proficiency in office software, databases, networking, and digital document creation for business applications, including legal and commercial documents.",
+        "code": "LO_DC_1"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Presenta las herramientas de software de Office, conceptos de bases de datos y redes, conectando con su aplicación práctica en el entorno empresarial.",
+          "student_action": "Participa en demostraciones iniciales de software, compartiendo conocimientos previos sobre el uso de computadoras y aplicaciones de oficina.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a desarrollar proyectos colaborativos que integren varias herramientas de Office, bases de datos y la creación de documentos empresariales.",
+          "student_action": "Colabora en la creación de documentos complejos, hojas de cálculo, presentaciones y bases de datos, aplicando soluciones informáticas en equipo.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la implementación de bases de datos, la gestión de hojas de cálculo con gráficos y la producción de documentos legales y comerciales usando suites de oficina.",
+          "student_action": "Diseña y construye bases de datos en Access, hojas de cálculo en Excel, presentaciones en PowerPoint y documentos en Word/Publisher, aplicando habilidades informáticas avanzadas.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Retroalimenta el uso de las herramientas informáticas, clarificando procedimientos y optimizando la eficiencia en el manejo de software y la creación de documentos.",
+          "student_action": "Depura sus archivos y documentos digitales, buscando la máxima funcionalidad y profesionalismo en los productos finales y la optimización de procesos.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "Operaciones de servicios de salón",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "Esta subárea forma a la persona estudiante para que organice la distribución de las instalaciones del restaurante en función del ambiente, el servicio y las áreas de producción, con el fin de que las actividades fluyan y se aumente la productividad del negocio. Es fundamental que el estudiantado domine la puesta a punto, los tipos de servicios y la forma de almacenar los insumos del restaurante. La persona estudiante aprenderá a desempeñarse como salonero principal, respetando el protocolo establecido por la empresa y la normativa relacionada con la alerta sanitaria del Coronavirus y protocolos vigentes. Es necesario que domine la preparación de ciertos alimentos frente a la vista del cliente – con la guía del chef – y la selección y manejo de los carros auxiliares o gueridón. Como parte de sus funciones, el salonero principal debe dominar los aspectos relacionados con la producción, elaboración, clasificación y conservación del vino, así como el protocolo para servirlo y responder consultas afines planteadas por los clientes.",
+        "code": "LO_SALON_01"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela el protocolo de atención al cliente en un restaurante, presentando casos y buenas prácticas.",
+          "student_action": "Comparte experiencias previas como cliente o trabajador en servicios de salón y discute sus expectativas sobre el protocolo.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a organizar un plano de distribución de mesas para un evento específico, fomentando el trabajo en equipo.",
+          "student_action": "Diseña en grupo una propuesta de distribución de salón, justificando decisiones y colaborando en la planificación.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Provee escenarios para que el estudiante realice la 'puesta a punto' de una mesa o un servicio de vino, ofreciendo retroalimentación.",
+          "student_action": "Construye y ejecuta la 'puesta a punto' de una mesa para un tipo de servicio específico y practica el protocolo de servicio de vino.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Guía una sesión de reflexión sobre los desafíos encontrados en el servicio de salón y aclara dudas sobre normativas sanitarias.",
+          "student_action": "Reflexiona sobre su desempeño, identifica áreas de mejora y formula preguntas para clarificar procedimientos y normativas.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Operaciones para la preparación de bebidas con o sin alcohol",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "El propósito de esta subárea es brindar a la persona estudiante los conocimientos, habilidades y destrezas para la preparación de bebidas frías y calientes, con o sin alcohol. Para tal efecto, requiere conocer el arte de la mixología, los métodos y técnicas para la elaboración de cocteles innovadores según las tendencias de vanguardia. Es fundamental que la persona estudiante reconozca las funciones principales del bartender y la clasificación de las bebidas alcohólicas e infusiones para la preparación de cocteles nacionales e internacionales, así como bebidas calientes. Dentro de sus ocupaciones como barista, la persona estudiante será capaz de aplicar el proceso para la elaboración de bebidas calientes a base de café verde. Por otra parte, es fundamental que domine el arte del tostado del café, la puesta punto de la estación de trabajo, el manejo de equipos y herramientas, además de la elaboración del café espresso que da origen a otras bebidas combinadas con alcohol. El dominio del arte latte, la elaboración del menú y el procedimiento para el cálculo del costo de los alimentos y platillos incluidos en el menú del restaurante complementan la diversidad de competencias que adquirirá en la subárea Operaciones en preparación de bebidas con o sin alcohol.",
+        "code": "LO_BEBIDAS_02"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela diferentes técnicas de preparación de bebidas y reta a identificar los ingredientes y el equipo necesario.",
+          "student_action": "Diseña un 'mapa mental' de sus bebidas favoritas y construye preguntas sobre su preparación.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los equipos a crear un nuevo cóctel o bebida innovadora, fomentando la experimentación y el trabajo en equipo.",
+          "student_action": "Colabora en la investigación de tendencias de mixología y en la experimentación para diseñar una nueva bebida.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía al estudiante en la aplicación de técnicas de tostado de café y en la elaboración de arte latte, brindando retroalimentación.",
+          "student_action": "Construye una serie de bebidas (cafés, cócteles) aplicando las técnicas aprendidas y diseña un mini-menú.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Aclara dudas sobre la clasificación de bebidas alcohólicas y los procedimientos para el cálculo de costos en un menú.",
+          "student_action": "Presenta su mini-menú y solicita clarificaciones sobre aspectos de costo o presentación de bebidas.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Organización y servicios de eventos especiales",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "La subárea prepara a la persona estudiante para la organización de diversos tipos de eventos empresariales como simposios, convenciones, ruedas de prensa, seminarios, desayunos o almuerzos de trabajo, entre otros. En consecuencia, el estudiantado requiere dominar el proceso para la planificación, organización y logística de los eventos empresariales y corporativos organizados en diferentes tipos de lugares. Cabe mencionar la importancia de la etiqueta empresarial aplicada en este tipo de actividades. Como parte de la organización de eventos también se incluye el tema de la decoración, por lo que la persona estudiante será capaz de crear ideas creativas e innovadoras, según el tipo de evento, espacio disponible, estilo de la decoración, iluminación y materiales.",
+        "code": "LO_EVENTOS_03"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Presenta diferentes ejemplos de eventos exitosos y fallidos, y reta a identificar los elementos clave de la organización.",
+          "student_action": "Comparte experiencias personales en eventos y discute los aspectos que considera más importantes para su éxito.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Propone un caso de estudio de un evento empresarial y reta a los grupos a diseñar un plan logístico detallado.",
+          "student_action": "Colabora en la planificación de un evento ficticio, asignando roles, presupuestando y diseñando la decoración.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Modela la aplicación de la etiqueta empresarial y reta al estudiante a simular situaciones de interacción en un evento.",
+          "student_action": "Diseña y construye maquetas o presentaciones de propuestas de decoración para diferentes tipos de eventos.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Aclara dudas sobre la normativa de seguridad en eventos masivos y los aspectos legales de la contratación de servicios.",
+          "student_action": "Revisa su plan de evento y formula preguntas para asegurar el cumplimiento de normativas y la viabilidad.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Diseño y organización de menús para establecimientos gastronómicos",
+      "ui_family": "DATA_GRID",
+      "learning_outcome": {
+        "text": "El marketing gastronómico se define como el conjunto de acciones llevadas a cabo para captar y cautivar clientes a fin de satisfacer sus necesidades a través de productos y servicios gastronómicos. Para alcanzar este propósito, los propietarios no se pueden conformar con solo la carta que se expone al ingreso del restaurante; es necesario implementar estrategias como las redes sociales, copywriting, segmentación, hiperespecialización, entre otros. En esta subárea la persona estudiante será capaz de diseñar un plan de marketing gastronómico que refleje los objetivos y estrategias para destacar al restaurante y diferenciarlo de los demás. Finalmente, el estudiantado diseñará un proyecto gastronómico con productos de la zona y que satisfaga una necesidad específica de los habitantes de la comunidad.",
+        "code": "LO_MENUS_04"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Reta a los estudiantes a analizar menús de restaurantes locales e identificar sus estrategias de marketing implícitas.",
+          "student_action": "Compara diferentes menús y discute cómo intentan atraer a los clientes, compartiendo sus observaciones.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Modela la creación de un plan de marketing para un restaurante, retando a los grupos a adaptarlo a un concepto específico.",
+          "student_action": "Diseña en equipo un plan de marketing gastronómico completo para un restaurante ficticio o real, incluyendo estrategias de redes sociales.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía en la elaboración de un proyecto gastronómico, enfocándose en la selección de productos locales y la satisfacción de una necesidad comunitaria.",
+          "student_action": "Construye un prototipo de menú y lo integra en un proyecto gastronómico que resuelva una necesidad identificada en la comunidad.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Aclara conceptos de segmentación de mercado y copywriting aplicados al diseño de menús y estrategias gastronómicas.",
+          "student_action": "Presenta su proyecto gastronómico y solicita retroalimentación sobre la efectividad de sus estrategias de marketing.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "English Oriented to Food and Beverages Service Operations",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "English Oriented to Food and Beverages Service Operations contempla 320 horas anuales. La persona estudiante recibirá ocho horas semanales de inglés, lo que facilita alcanzar la meta B2+ establecida por el Marco Común Europeo. En relación con el Marco Nacional de Cualificaciones, el técnico en el nivel medio de Organización de Operaciones y Servicios de alimentos y bebidas alcanzará un desarrollo pleno y capaz de un profesional en turismo del nivel 4 de cualificación.",
+        "code": "LO_ENGLISH_05"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela diálogos en inglés relevantes para el servicio de alimentos y bebidas, retando a identificar frases clave.",
+          "student_action": "Practica frases de saludo y atención al cliente en inglés, compartiendo sus conocimientos previos.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a preparar y presentar una descripción de un plato o bebida en inglés para un turista.",
+          "student_action": "Colabora en la creación de guiones para atender situaciones comunes con clientes de habla inglesa en un restaurante.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la simulación de un restaurante o bar donde el inglés es el idioma principal de comunicación.",
+          "student_action": "Construye y participa en 'role-plays' complejos donde asume el rol de salonero/bartender en inglés, gestionando pedidos y quejas.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Aclara dudas sobre gramática y vocabulario específico del sector de alimentos y bebidas en inglés.",
+          "student_action": "Recibe retroalimentación sobre su fluidez y precisión en inglés, y busca clarificación sobre expresiones idiomáticas.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

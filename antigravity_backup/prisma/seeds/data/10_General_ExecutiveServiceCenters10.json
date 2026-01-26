@@ -1,0 +1,90 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "Oral Communication in English",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "Develop proficient oral communication skills in English for professional interactions, customer service, and understanding corporate structures and operations, including appropriate pronunciation.",
+        "code": "LO_ORAL_COMM_ENG"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Modela diálogos y situaciones de servicio al cliente en inglés, retando a los estudiantes a practicar interacciones complejas en el laboratorio de idiomas.",
+          "student_action": "Diseña y construye role-plays sobre escenarios de comunicación oral en inglés, enfocándose en la interacción, servicio al cliente y pronunciación correcta.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Written Communication in English",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "Master written communication in English for business contexts, including grammatical sentence construction and various paragraph types relevant to modern company operations.",
+        "code": "LO_WRITTEN_COMM_ENG"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Construcción",
+          "teacher_action": "Modela la estructura de diferentes tipos de documentos comerciales en inglés y reta a los estudiantes a aplicar las reglas gramaticales y estilos de redacción.",
+          "student_action": "Diseña y construye textos y documentos comerciales en inglés, asegurando coherencia gramatical, estructura adecuada y propósito comunicativo.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Business Management",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "Understand fundamental business management principles, including administrative theories (Taylor, Fayol), occupational health, office and document administration, human development, labor rights, and quality culture.",
+        "code": "LO_BUSINESS_MGMT"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela casos de estudio de gestión empresarial y reta a los estudiantes a identificar y aplicar principios administrativos en situaciones reales de la empresa.",
+          "student_action": "Diseña soluciones a problemas de gestión y construye análisis de casos, aplicando los principios administrativos y de cultura de calidad aprendidos.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Computer Skills",
+      "ui_family": "DATA_GRID",
+      "learning_outcome": {
+        "text": "Acquire advanced computer skills using Office suite applications (Word, Excel, Access, PowerPoint, Publisher) to master tools for business documents, manage databases, utilize internet resources, and produce legal and commercial documents.",
+        "code": "LO_COMP_SKILLS"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Construcción",
+          "teacher_action": "Modela el uso avanzado de herramientas de Office (Excel, Access, PowerPoint) para la creación de documentos, hojas de cálculo, bases de datos y presentaciones, retando a los estudiantes a optimizar procesos.",
+          "student_action": "Diseña y construye hojas de cálculo complejas, bases de datos, presentaciones y documentos legales/comerciales, aplicando herramientas computacionales para la eficiencia empresarial.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "subject": "ingles-espanol-ciclo",
+  "level": "3mo Año",
+  "units": [
+    {
+      "name": "Unidad General",
+      "outcomes": [
+        {
+          "description": "Resultados Generales",
+          "indicators": [
+            {
+              "description": "San José, Costa Rica",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: San José, Costa Rica...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Purpose of the New English Syllabus for Bilingual Schools in Costa Rica ................................................................................... 9",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Purpose of the New English Syl...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "A) Rationalism ..................................................................................................................................................................................................... 21",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: A) Rationalism ..................",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "B) Humanism: ...................................................................................................................................................................................................... 21",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: B) Humanism: ....................",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "C) Constructivism: ............................................................................................................................................................................................... 21",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: C) Constructivism: ..............",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

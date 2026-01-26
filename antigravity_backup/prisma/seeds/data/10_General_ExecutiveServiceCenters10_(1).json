@@ -1,0 +1,174 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "Oral Communication in English",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "Develop effective oral communication skills in English for professional interactions, company structure, labor conditions, team collaboration, occupational health, and customer service, utilizing language laboratory tools for pronunciation.",
+        "code": "LO_10_OCENG"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela el interés por el tema, presenta escenarios comunicativos iniciales y activa conocimientos previos sobre interacciones laborales en inglés.",
+          "student_action": "Reconoce la relevancia de la comunicación oral en inglés, comparte ideas iniciales sobre situaciones laborales y se involucra en actividades introductorias.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a interactuar en simulaciones de rol, facilita el trabajo en equipo para diálogos y guía la discusión sobre la cultura laboral en países de habla inglesa.",
+          "student_action": "Diseña diálogos conjuntos, construye conversaciones en grupo y negocia significados para resolver problemas comunicativos simulados.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Modela estrategias de pronunciación y entonación, reta a la aplicación de vocabulario técnico en presentaciones orales y provee recursos para la práctica constante.",
+          "student_action": "Construye presentaciones orales sobre temas de la empresa, diseña interacciones de servicio al cliente y aplica las técnicas aprendidas en situaciones simuladas.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a la reflexión sobre el desempeño oral, modela retroalimentación efectiva y consolida los aprendizajes mediante la corrección de errores comunes y la práctica guiada.",
+          "student_action": "Clarifica dudas sobre gramática y fluidez, reflexiona sobre su proceso de mejora y presenta conclusiones sobre la importancia de la comunicación oral efectiva.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Written Communication in English",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "Master written communication in English, including grammatical sentence structure and various paragraph types, for effective communication within a modern company context.",
+        "code": "LO_10_WCENG"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela el interés por la escritura profesional, presenta ejemplos de documentos empresariales y activa conocimientos previos sobre estructura de frases.",
+          "student_action": "Reconoce la importancia de la escritura clara y precisa, comparte ideas iniciales sobre tipos de documentos y se involucra en actividades de análisis de textos.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a co-escribir párrafos, facilita el trabajo en equipo para la revisión por pares y guía la discusión sobre la coherencia y cohesión textual.",
+          "student_action": "Diseña estructuras de párrafos conjuntamente, construye textos en grupo y negocia las mejores formas de expresar ideas por escrito.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Modela estrategias de redacción formal, reta a la aplicación de diferentes tipos de párrafos en documentos comerciales y provee recursos para la mejora gramatical.",
+          "student_action": "Construye documentos comerciales, diseña informes breves y aplica las reglas gramaticales y de estilo en la creación de textos originales.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a la reflexión sobre la calidad de los textos escritos, modela retroalimentación constructiva y consolida los aprendizajes a través de la reescritura y edición.",
+          "student_action": "Clarifica dudas sobre vocabulario y gramática, reflexiona sobre las mejoras en sus textos y presenta versiones finales de documentos.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Gestión Empresarial",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "Acquire foundational knowledge in business management, including administrative principles, occupational health, office and document administration, human development, labor rights, and quality culture for effective organizational performance.",
+        "code": "LO_10_GE"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela la relevancia de los principios administrativos, presenta casos de estudio históricos y activa conocimientos previos sobre la organización del trabajo.",
+          "student_action": "Reconoce la importancia de la gestión en las empresas, comparte ideas iniciales sobre liderazgo y se involucra en el análisis de problemas empresariales.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a analizar modelos de gestión en equipo, facilita la discusión sobre ética laboral y guía la creación de planes de mejora para casos simulados.",
+          "student_action": "Diseña soluciones a problemas de gestión conjuntamente, construye argumentos basados en principios y negocia estrategias para implementar cambios.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Modela la aplicación de normativas de salud ocupacional, reta a la elaboración de organigramas y provee recursos para la comprensión de derechos laborales y cultura de calidad.",
+          "student_action": "Construye documentos de gestión, diseña propuestas de mejora de procesos y aplica los conceptos de calidad y salud ocupacional en proyectos de aula.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a la reflexión sobre el impacto de la gestión, modela la retroalimentación sobre proyectos y consolida los aprendizajes mediante la presentación de soluciones y debates.",
+          "student_action": "Clarifica dudas sobre conceptos administrativos, reflexiona sobre la viabilidad de sus propuestas y presenta resultados de análisis de casos.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Destrezas Computacionales",
+      "ui_family": "DATA_GRID",
+      "learning_outcome": {
+        "text": "Develop proficiency in essential computer tools such as Office suite applications (Word, Excel, Access, PowerPoint), internet, email, Publisher, and graphic manipulation for business document production and data management.",
+        "code": "LO_10_DC"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela el uso básico de herramientas de Office, presenta ejemplos de documentos comerciales y activa conocimientos previos sobre sistemas operativos.",
+          "student_action": "Reconoce la utilidad de las herramientas informáticas en el ámbito empresarial, comparte experiencias con software y se involucra en la exploración inicial de interfaces.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a colaborar en la creación de hojas de cálculo, facilita el trabajo en equipo para bases de datos sencillas y guía la resolución de problemas técnicos.",
+          "student_action": "Diseña estructuras de datos conjuntamente, construye presentaciones grupales y negocia las funcionalidades de software para optimizar resultados.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Modela la creación de documentos legales y comerciales, reta a la aplicación de funciones avanzadas en Excel y Access y provee recursos para el uso efectivo de Internet y email.",
+          "student_action": "Construye documentos complejos con Word y Publisher, diseña bases de datos funcionales y aplica herramientas gráficas para mejorar presentaciones.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a la reflexión sobre la eficiencia en el uso de software, modela la retroalimentación sobre proyectos digitales y consolida los aprendizajes mediante la depuración de archivos y tutoriales avanzados.",
+          "student_action": "Clarifica dudas sobre funcionalidades específicas, reflexiona sobre la optimización de procesos y presenta proyectos finales que demuestran dominio de herramientas.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

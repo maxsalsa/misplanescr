@@ -5,457 +5,162 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
 }
 
-// =============================================================================
-// 1. CORE & AUTH (Multi-Tenant)
-// =============================================================================
-
-model Institution {
-  id                String   @id @default(uuid()) @db.Uuid
-  code              String   @unique
-  name              String
-  subscriptionPlan  String   @default("free")
-  
-  users             User[]
-  groups            Group[]
-  periods           Period[]
-  
-  @@map("institutions")
-}
-
-enum UserRole {
-  SUPER_ADMIN
-  ADMIN
-  TEACHER
-  STUDENT
-  FAMILY
-  SUBSCRIBER // Nuevo rol SaaS
-}
-
-enum AccessLevel {
-  FULL_ACCESS
-  ACADEMIC_MATH_ONLY
-  TECHNICAL_ONLY
-  ARTS_ONLY
-}
-
-model Subscription {
-  id              String      @id @default(uuid()) @db.Uuid
-  userId          String      @unique @map("user_id") @db.Uuid
-  user            User        @relation(fields: [userId], references: [id])
-  
-  accessLevel     AccessLevel @default(FULL_ACCESS) @map("access_level")
-  isActive        Boolean     @default(true) @map("is_active")
-  expirationDate  DateTime    @map("expiration_date")
-  
-  createdAt       DateTime    @default(now()) @map("created_at")
-  updatedAt       DateTime    @updatedAt @map("updated_at")
-
-  @@map("subscriptions")
-}
-
+// --- USUARIOS Y SEGURIDAD ---
 model User {
-  id            String    @id @default(uuid()) @db.Uuid
-  email         String    @unique
-  name          String?
-  role          UserRole  @default(TEACHER)
-  passwordHash  String?
+  id                 String    @id @default(cuid())
+  email              String    @unique
+  password           String
+  name               String?
+  role               String    @default("DOCENTE") 
+  subscriptionStatus String  @default("FREE") 
+  subscriptionPlan   String  @default("BASIC")
+  subscriptionEnd    DateTime?
+  createdAt          DateTime  @default(now())
   
-  institutionId String?   @map("institution_id") @db.Uuid
-  institution   Institution? @relation(fields: [institutionId], references: [id])
-  
-  subscription  Subscription? // SaaS Link
-  
-  // Teaching
-  groupsOwned   Group[]   @relation("TeacherGroups")
-  groupsGuided  Group[]   @relation("GuideGroups")
-  plansCreated  Planning[]
-  
-  // Student
-  enrollments   Enrollment[]
-  submissions   EvidenceSubmission[]
-  quizAttempts  QuizAttempt[]
-  
-  // Evaluation
-  assignedActivities EvaluationActivity[] @relation("ActivityAssignees")
-  
-  // Collab
-  collabGroups  StudentGroupMember[]
+  plans              PedagogicalPlan[]
+  students           Student[]
+  // NOTA: Se eliminó la relación 'logs' para evitar errores circulares.
+  // Los logs se consultan por email directamente en la tabla SystemLog.
 
-  @@map("users")
+  @@index([email])
 }
 
-model Period {
-  id            String   @id @default(uuid()) @db.Uuid
-  name          String   
-  isActive      Boolean  @default(false)
-  institutionId String   @map("institution_id") @db.Uuid
-  institution   Institution @relation(fields: [institutionId], references: [id])
-  
-  @@map("periods")
+// --- AUDITORÍA (LOGS INDEPENDIENTES) ---
+model SystemLog {
+  id        Int      @id @default(autoincrement())
+  level     String   
+  action    String   
+  message   String   
+  user      String?  // Guarda el email como texto (Historial Inmutable)
+  metadata  Json?    
+  createdAt DateTime @default(now())
+
+  @@index([action])
+  @@index([createdAt])
 }
 
-// =============================================================================
-// 2. MNC CURRICULUM DNA (Hierarchical)
-// =============================================================================
-
-model CurriculumMap {
-  id              String   @id @default(uuid()) @db.Uuid
-  mncCode         String   @unique @map("mnc_code") 
-  subject         String
-  level           String
-  unitTitle       String   @map("unit_title")
-  
-  outcomes        LearningOutcome[]
-  
-  isOfficialTemplate Boolean @default(false) @map("is_official_template") // Solo SUPER_ADMIN edita
-  
+// --- CURRÍCULO MEP (ADN) ---
+model mep_programs_core {
+  id              Int      @id @default(autoincrement())
+  filename        String
+  subject         String?
+  level           String?
+  cycle           String?
+  raw_text        String?  @db.Text
+  structure_json  Json?    
+  status          String   @default("ACTIVE")
+  fundamentacion  String?  @db.Text
+  perfil_salida   String?  @db.Text
+  last_deep_scan  DateTime?
   createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt 
   
-  @@map("curriculum_maps")
+  @@index([filename])
+  @@index([subject])
 }
 
-model LearningOutcome {
-  id              String   @id @default(uuid()) @db.Uuid
-  curriculumId    String   @map("curriculum_id") @db.Uuid
-  curriculum      CurriculumMap @relation(fields: [curriculumId], references: [id])
-  
-  description     String   // "Resultado de Aprendizaje"
-  indicators      Indicator[]
-  
-  @@map("learning_outcomes")
-}
-
-model Indicator {
-  id              String   @id @default(uuid()) @db.Uuid
-  outcomeId       String   @map("outcome_id") @db.Uuid
-  outcome         LearningOutcome @relation(fields: [outcomeId], references: [id])
-  
-  description     String   // "Indicador Específico"
-  estimatedLessons Int?    @default(1) @map("estimated_lessons") // Vital para el cálculo de pruebas (Prompt 3)
-  
-  // Relacion obligatoria con Actividades
-  activities      EvaluationActivity[]
-  
-  @@map("indicators")
-}
-
-// =============================================================================
-// 3. GROUPS & GUIDANCE
-// =============================================================================
-
-enum ModalityTag {
-  PREESCOLAR
-  ACADEMICO
-  TECNICO
-  CINDEA
-  EDUCACION_ESPECIAL
-}
-
+// --- GESTIÓN DE AULA Y ESTUDIANTES ---
 model Group {
-  id            String   @id @default(uuid()) @db.Uuid
-  name          String   
-  institutionId String   @map("institution_id") @db.Uuid
-  
-  // Profesores
-  teacherId     String   @map("teacher_id") @db.Uuid // Profesor Materia
-  guideTeacherId String? @map("guide_teacher_id") @db.Uuid // Profesor Guía (Conducta Global)
-  
-  modalityTag   ModalityTag @default(ACADEMICO) @map("modality_tag")
-  
-  institution   Institution @relation(fields: [institutionId], references: [id])
-  teacher       User        @relation("TeacherGroups", fields: [teacherId], references: [id])
-  guideTeacher  User?       @relation("GuideGroups", fields: [guideTeacherId], references: [id])
-  
-  students      Enrollment[]
-  plans         Planning[]
-  studentGroups StudentGroup[]
-  
-  // Notas Globales de Conducta (Solo visibles por Guía)
-  conductGrades ConductGrade[]
-
-  @@map("groups")
+  id        String    @id @default(cuid())
+  name      String    
+  level     String    
+  year      Int
+  students  Student[]
+  createdAt DateTime  @default(now())
 }
 
-model ConductGrade {
-  id            String   @id @default(uuid()) @db.Uuid
-  groupId       String   @map("group_id") @db.Uuid
-  studentId     String   @map("student_id") @db.Uuid
-  periodId      String   @map("period_id") @db.Uuid // Vincular a Periodo
+model Student {
+  id             String        @id @default(cuid())
+  cedula         String?       @unique
+  fullName       String
   
-  currentScore  Decimal  @db.Decimal(5, 2) // 100 base
+  teacherId      String?
+  teacher        User?         @relation(fields: [teacherId], references: [id])
   
-  group         Group    @relation(fields: [groupId], references: [id])
-  // Student relation skipped for brevity in this block, typically linked to User
+  groupId        String?
+  group          Group?        @relation(fields: [groupId], references: [id])
   
-  @@unique([groupId, studentId, periodId])
-  @@map("conduct_grades")
+  grades         Grade[]
+  conduct        ConductLog[]
+  attendance     Attendance[]
+  createdAt      DateTime      @default(now())
+
+  @@index([teacherId])
+  @@index([fullName])
 }
 
-// =============================================================================
-// 4. EVALUATION ENGINE (Rubrics & Exams)
-// =============================================================================
+// --- PLANEAMIENTO DIDÁCTICO ---
+model PedagogicalPlan {
+  id             Int      @id @default(autoincrement())
+  title          String
+  subject        String
+  level          String
+  content        Json     
+  evidences      Json?    
+  status         String
+  userId         String
+  user           User     @relation(fields: [userId], references: [id])
+  createdAt      DateTime @default(now())
+  riskProtocol   Boolean  @default(false)
 
-model EvaluationSettings {
-  id             String @id @default(uuid()) @db.Uuid
-  groupId        String @unique @map("group_id") @db.Uuid
-  // (Simplified relations for Group <-> Settings)
-  // ...
-  components     EvaluationComponent[]
-
-  @@map("evaluation_settings")
+  @@index([userId])
 }
 
-model EvaluationComponent {
-  id          String @id @default(uuid()) @db.Uuid
-  settingsId  String @map("settings_id") @db.Uuid
-  settings    EvaluationSettings @relation(fields: [settingsId], references: [id])
-  
-  name        String  
-  percentage  Decimal @db.Decimal(5, 2)
-  
-  activities  EvaluationActivity[]
-
-  @@map("evaluation_components")
+// --- EVALUACIÓN Y CALIFICACIONES ---
+model GradeComponent {
+  id          String   @id @default(cuid())
+  name        String   
+  type        String   
+  percentage  Float    
+  rubricJson  Json?    
+  grades      Grade[]
 }
 
-model EvaluationActivity {
-  id          String   @id @default(uuid()) @db.Uuid
-  title       String
-  date        DateTime @default(now())
+model Grade {
+  id            String          @id @default(cuid())
+  studentId     String
+  student       Student         @relation(fields: [studentId], references: [id])
   
-  componentId String?   @map("component_id") @db.Uuid
-  component   EvaluationComponent? @relation(fields: [componentId], references: [id])
+  componentId   String?
+  component     GradeComponent? @relation(fields: [componentId], references: [id])
+  componentName String?         
   
-  // REGLA: Conexión con Indicador (OBLIGATORIA PEDAGÓGICAMENTE)
-  indicatorId String?   @map("indicator_id") @db.Uuid 
-  indicator   Indicator? @relation(fields: [indicatorId], references: [id])
-  
-  // Tipos de Evaluación
-  rubric      Rubric?
-  examDesign  ExamDesign? // Tabla de Especificaciones
-  
-  assignedStudents User[] @relation("ActivityAssignees") // DUA
-  
-  scores      StudentScore[]
+  score         Float
+  rubricApplied Json?    
+  feedback      String?
+  date          DateTime        @default(now())
 
-  @@map("evaluation_activities")
+  @@index([studentId])
 }
 
-// --- RÚBRICAS 1-3 ---
-
-model Rubric {
-  id          String   @id @default(uuid()) @db.Uuid
-  activityId  String   @unique @map("activity_id") @db.Uuid
-  activity    EvaluationActivity @relation(fields: [activityId], references: [id])
-  criteria    RubricCriterion[]
-
-  @@map("rubrics")
+// --- CONDUCTA Y ASISTENCIA ---
+model Attendance {
+  id        String   @id @default(cuid())
+  studentId String
+  student   Student  @relation(fields: [studentId], references: [id])
+  date      DateTime
+  status    String   
+  lesson    String?  
 }
 
-model RubricCriterion {
-  id          String   @id @default(uuid()) @db.Uuid
-  rubricId    String   @map("rubric_id") @db.Uuid
-  rubric      Rubric   @relation(fields: [rubricId], references: [id])
-  description String
-  maxPoints   Int      @default(3)
-  
-  // Niveles Estandarizados (1-3)
-  descLevel1  String?  @map("desc_level_1") // Inicial
-  descLevel2  String?  @map("desc_level_2") // Intermedio
-  descLevel3  String?  @map("desc_level_3") // Avanzado
-  
-  scores      StudentScoreDetail[]
-
-  @@map("rubric_criteria")
+model ConductLog {
+  id             String   @id @default(cuid())
+  studentId      String
+  student        Student  @relation(fields: [studentId], references: [id])
+  severity       String   
+  description    String   @db.Text
+  articleApplied String?
+  sanction       String?
+  status         String   @default("OPEN")
+  date           DateTime @default(now())
 }
 
-// --- TABLA DE ESPECIFICACIONES (PRUEBAS) ---
-
-model ExamDesign {
-  id            String   @id @default(uuid()) @db.Uuid
-  activityId    String   @unique @map("activity_id") @db.Uuid
-  activity      EvaluationActivity @relation(fields: [activityId], references: [id])
-  
-  totalPoints   Int      @map("total_points")
-  totalLessons  Int      @map("total_lessons")
-  constantK     Decimal  @map("constant_k") @db.Decimal(10, 4)
-  
-  topics        ExamTopic[]
-
-  @@map("exam_designs")
-}
-
-model ExamTopic {
-  id            String   @id @default(uuid()) @db.Uuid
-  examDesignId  String   @map("exam_design_id") @db.Uuid
-  examDesign    ExamDesign @relation(fields: [examDesignId], references: [id])
-  
-  indicatorId   String?  @map("indicator_id") @db.Uuid
-  description   String   // Snapshot description
-  lessonsTaught Int      @map("lessons_taught")
-  
-  calculatedPoints Decimal @map("calculated_points") @db.Decimal(10, 4) // Puntos matemáticos
-  finalPoints      Int     @map("final_points") // Puntos redondeados (MEP)
-
-  @@map("exam_topics")
-}
-
-// =============================================================================
-// 5. STUDENT SCORES
-// =============================================================================
-
-model StudentScore {
-  id          String   @id @default(uuid()) @db.Uuid
-  studentId   String   @map("student_id") @db.Uuid
-  activityId  String   @map("activity_id") @db.Uuid
-  
-  student     User     @relation(fields: [studentId], references: [id])
-  activity    EvaluationActivity @relation(fields: [activityId], references: [id])
-  
-  obtainedPoints Decimal @db.Decimal(5, 2)
-  finalGrade     Decimal @db.Decimal(5, 2)
-  
-  details     StudentScoreDetail[]
-
-  @@map("student_scores")
-}
-
-model StudentScoreDetail {
-  id          String   @id @default(uuid()) @db.Uuid
-  scoreId     String   @map("score_id") @db.Uuid
-  score       StudentScore @relation(fields: [scoreId], references: [id])
-  
-  criterionId String   @map("criterion_id") @db.Uuid
-  criterion   RubricCriterion @relation(fields: [criterionId], references: [id])
-  
-  levelAchieved Int
-  feedback      String? 
-
-  @@map("student_score_details")
-}
-
-// =============================================================================
-// 6. SUPPORT MODULES (Planning, Evidence, Quiz, etc)
-// =============================================================================
-
-model Planning {
-  id            String   @id @default(uuid()) @db.Uuid
-  title         String
-  // Relation to Group skipped for brevity
-  createdAt     DateTime @default(now())
-  
-  @@map("plannings")
-}
-
-model Enrollment {
-  id        String @id @default(uuid()) @db.Uuid
-  studentId String @map("student_id") @db.Uuid
-  groupId   String @map("group_id") @db.Uuid
-  
-  student   User   @relation(fields: [studentId], references: [id])
-  group     Group  @relation(fields: [groupId], references: [id]) // Assuming Group linkage
-  
-  @@unique([studentId, groupId])
-  @@map("enrollments")
-}
-
-model EvidenceSubmission {
-  id            String   @id @default(uuid()) @db.Uuid
-  studentId     String   @map("student_id") @db.Uuid
-  student       User     @relation(fields: [studentId], references: [id])
-  title         String
-  fileUrl       String   @map("file_url")
-  fileType      String
-  description   String?
-  submittedAt   DateTime @default(now())
-  
-  @@map("evidence_submissions")
-}
-
-model Quiz {
-  id          String   @id @default(uuid()) @db.Uuid
-  title       String
+// --- CONFIGURACIÓN DEL SISTEMA ---
+model SystemSetting {
+  key         String   @id
+  value       String   @db.Text
   description String?
-  isActive    Boolean  @default(true)
-  questions   Question[]
-  attempts    QuizAttempt[]
-  @@map("quizzes")
-}
-
-model Question {
-  id          String   @id @default(uuid()) @db.Uuid
-  quizId      String   @map("quiz_id") @db.Uuid
-  quiz        Quiz     @relation(fields: [quizId], references: [id])
-  text        String
-  type        String   @default("MULTIPLE_CHOICE")
-  points      Int      @default(1)
-  options     Option[]
-  @@map("questions")
-}
-
-model Option {
-  id          String   @id @default(uuid()) @db.Uuid
-  questionId  String   @map("question_id") @db.Uuid
-  question    Question @relation(fields: [questionId], references: [id])
-  text        String
-  isCorrect   Boolean  @default(false)
-  @@map("options")
-}
-
-model QuizAttempt {
-  id          String   @id @default(uuid()) @db.Uuid
-  quizId      String   @map("quiz_id") @db.Uuid
-  studentId   String   @map("student_id") @db.Uuid
-  score       Int
-  startedAt   DateTime @default(now())
-  completedAt DateTime?
-  quiz        Quiz     @relation(fields: [quizId], references: [id])
-  student     User     @relation(fields: [studentId], references: [id])
-  @@map("quiz_attempts")
-}
-
-model ConductRule {
-  id            String   @id @default(uuid()) @db.Uuid
-  name          String
-  pointsToDeduct Decimal @db.Decimal(5, 2)
-  events        ConductEvent[]
-  @@map("conduct_rules")
-}
-
-model ConductEvent {
-  id            String   @id @default(uuid()) @db.Uuid
-  ruleId        String   @map("rule_id") @db.Uuid
-  rule          ConductRule @relation(fields: [ruleId], references: [id])
-  date          DateTime @default(now())
-  pointsApplied Decimal  @db.Decimal(5, 2)
-  @@map("conduct_events")
-}
-
-model AlertUPRE {
-  id            String   @id @default(uuid()) @db.Uuid
-  courseName    String
-  reason        String
-  severity      String
-  detectedAt    DateTime @default(now())
-  status        String   @default("OPEN")
-  @@map("alerts_upre")
-}
-
-model StudentGroup {
-  id            String   @id @default(uuid()) @db.Uuid
-  name          String
-  members       StudentGroupMember[]
-  @@map("student_groups")
-}
-
-model StudentGroupMember {
-  id            String   @id @default(uuid()) @db.Uuid
-  studentGroupId String  @map("student_group_id") @db.Uuid
-  group         StudentGroup @relation(fields: [studentGroupId], references: [id])
-  studentId     String   @map("student_id") @db.Uuid
-  student       User     @relation(fields: [studentId], references: [id])
-  @@map("student_group_members")
+  updatedAt   DateTime @updatedAt
 }

@@ -1,0 +1,300 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "Tecnologías de la información aplicada a la Animación 2D",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "Fortalecer competencias digitales para la formación del ciudadano digital, desarrollando sistemas ágiles que garanticen la calidad en un entorno tecnológico.",
+        "code": "LO_1"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela el contexto de la ciudadanía digital y reta a identificar desafíos tecnológicos actuales.",
+          "student_action": "Diseña preguntas iniciales sobre su interacción con la tecnología y construye un mapa mental de conocimientos previos.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a debatir soluciones para problemáticas de calidad en sistemas digitales, guiando la discusión hacia enfoques ágiles.",
+          "student_action": "Colabora en equipos para analizar casos de estudio sobre desarrollo de sistemas y propone mejoras conjuntas.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Modela el uso de herramientas para el diseño de sistemas ágiles y reta a aplicar principios de calidad en un prototipo digital.",
+          "student_action": "Construye un prototipo de sistema digital aplicando principios de agilidad y documenta los procesos de calidad.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a los estudiantes a presentar sus prototipos y argumentar las decisiones técnicas, ofreciendo retroalimentación constructiva.",
+          "student_action": "Clarifica su comprensión de las competencias digitales mediante la presentación de su prototipo y la reflexión sobre el aprendizaje.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Dibujo en la animación y stopmotion",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "Aplicar principios de color y técnicas de dibujo manual y digital para crear animaciones con muñecos y stop motion, comprendiendo la actualidad del dibujo animado.",
+        "code": "LO_2"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela ejemplos históricos y actuales de dibujo animado y stop motion, retando a los estudiantes a reconocer los principios visuales.",
+          "student_action": "Investiga sobre la evolución del dibujo animado y stop motion, conectando con sus intereses visuales y expresivos.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a colaborar en la identificación de las propiedades del color en diferentes obras de animación y modela técnicas de aplicación digital.",
+          "student_action": "Experimenta con técnicas de color manual y digital en grupos, comparando resultados y construyendo paletas de colores compartidas.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la creación de personajes y escenarios para stop motion, retando a los estudiantes a aplicar técnicas de dibujo manual y digital.",
+          "student_action": "Diseña y construye un corto de stop motion, aplicando técnicas de dibujo aprendidas y experimentando con movimientos de muñecos.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Facilita la crítica constructiva de los proyectos de stop motion, retando a los estudiantes a justificar sus decisiones artísticas y técnicas.",
+          "student_action": "Clarifica los procesos y resultados de su animación, reflexionando sobre las dificultades y aprendizajes en el uso de técnicas de dibujo y stop motion.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Principios, técnicas y diseño para la animación",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "Dominar principios y técnicas de diseño gráfico y animación 2D, incluyendo historia del arte, tipografía, diagramación, iluminación, edición de sonido y efectos visuales.",
+        "code": "LO_3"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela la influencia de la historia del arte en la animación y reta a los estudiantes a identificar principios de diseño en obras contemporáneas.",
+          "student_action": "Explora la historia del arte y su relación con la animación, identificando elementos de diseño que le interesan para futuros proyectos.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a colaborar en la creación de bocetos gráficos aplicando principios de tipografía y diagramación, modelando técnicas avanzadas.",
+          "student_action": "Construye propuestas de diseño gráfico en equipo, aplicando los principios de tipografía y diagramación, y retroalimentando a sus compañeros.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la aplicación de principios de animación, iluminación, edición de sonido y efectos en un proyecto 2D, retando a integrar todos los elementos.",
+          "student_action": "Diseña y construye una secuencia de animación 2D, incorporando iluminación, sonido y efectos especiales, y demostrando su comprensión de los principios.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a los estudiantes a presentar y defender sus proyectos de animación, clarificando las decisiones de diseño y las técnicas empleadas.",
+          "student_action": "Reflexiona sobre su proceso de diseño y animación, clarificando los desafíos superados y las habilidades desarrolladas en la integración de elementos.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Personas y narrativa",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "Desarrollar competencias en diseño de personajes y estructuras narrativas para el entretenimiento audiovisual y los nuevos medios, incluyendo narrativa en tiempo real y producción virtual.",
+        "code": "LO_4"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela ejemplos de diseño de personajes exitosos y diferentes estructuras narrativas, retando a los estudiantes a analizar su impacto.",
+          "student_action": "Explora diversos estilos de personajes y narrativas audiovisuales, conectando con sus preferencias y buscando inspiración.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a colaborar en la creación de arquetipos de personajes y estructuras de guion para una narrativa audiovisual, guiando el proceso creativo.",
+          "student_action": "Diseña personajes y desarrolla una trama narrativa en equipo, construyendo la historia y los diálogos de forma colaborativa.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la implementación de narrativas en tiempo real y conceptos de producción virtual, retando a los estudiantes a crear un mini-storyboard interactivo.",
+          "student_action": "Construye un storyboard o maqueta interactiva, aplicando principios de narrativa en tiempo real y explorando posibilidades de nuevos medios.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a los estudiantes a presentar sus narrativas y justificar las decisiones de diseño de personajes y estructura, facilitando la retroalimentación entre pares.",
+          "student_action": "Clarifica su comprensión de la narrativa y el diseño de personajes mediante la defensa de su trabajo y la reflexión crítica sobre su aplicación en nuevos medios.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Emprendimiento e innovación aplicada a la Animación 2D",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "Desarrollar capacidades de emprendimiento e innovación para crear planes de vida y modelos de negocios exitosos en la industria de la Animación 2D.",
+        "code": "LO_5"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela casos de emprendedores en animación 2D y reta a los estudiantes a identificar oportunidades de negocio y tendencias de mercado.",
+          "student_action": "Investiga sobre modelos de negocios en tendencia y emprendimientos exitosos en animación, conectando con sus aspiraciones profesionales.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a colaborar en la ideación de un proyecto de emprendimiento, modelando metodologías de innovación como Design Thinking.",
+          "student_action": "Genera ideas innovadoras para un proyecto de animación en equipo, construyendo un concepto de negocio inicial y un plan de vida asociado.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la elaboración de un plan de negocios simplificado, retando a los estudiantes a definir su propuesta de valor, mercado y estrategias de monetización.",
+          "student_action": "Diseña y construye un borrador de plan de negocios para su proyecto de animación, incluyendo análisis de mercado y proyecciones básicas.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a los estudiantes a presentar sus modelos de negocios, facilitando la retroalimentación de expertos o compañeros y clarificando sus próximos pasos.",
+          "student_action": "Clarifica la viabilidad y el potencial de su proyecto de emprendimiento, reflexionando sobre las fortalezas y áreas de mejora identificadas.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Interfaz gráfica de usuario (IGU)",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "Alcanzar competencias en principios, metodologías y procesos para el diseño de interfaces gráficas de usuario (IGU) para productos digitales y dispositivos móviles.",
+        "code": "LO_6"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela ejemplos de interfaces gráficas de usuario exitosas y fallidas, retando a los estudiantes a identificar los principios de un buen diseño.",
+          "student_action": "Analiza interfaces gráficas de usuario de aplicaciones móviles y web, conectando con sus experiencias de usuario y preferencias.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a colaborar en el análisis de usabilidad de interfaces existentes, modelando herramientas de prototipado de baja fidelidad.",
+          "student_action": "Participa en sesiones de ideación y sketching de interfaces en equipo, construyendo wireframes colaborativos para una aplicación móvil.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la aplicación de metodologías de diseño de IGU (ej. atomic design) y reta a los estudiantes a construir un prototipo interactivo para un caso de estudio.",
+          "student_action": "Diseña y construye un prototipo interactivo de interfaz gráfica de usuario para un producto digital, aplicando principios de usabilidad y accesibilidad.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a los estudiantes a presentar y justificar sus diseños de IGU, facilitando sesiones de prueba de usuario y recolectando retroalimentación.",
+          "student_action": "Clarifica su proceso de diseño de IGU y las decisiones tomadas, reflexionando sobre los resultados de las pruebas de usuario y la iteración del diseño.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Proyectos animados",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "Desarrollar saberes esenciales en gestión de proyectos, preproducción, postproducción, efectos especiales y animación 2D avanzada para proyectos animados.",
+        "code": "LO_7"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela ejemplos de proyectos animados complejos, destacando las fases de preproducción, producción y postproducción y reta a los estudiantes a identificar los desafíos.",
+          "student_action": "Investiga sobre la gestión de grandes proyectos animados, conectando con las etapas y roles involucrados en la industria.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a colaborar en la planificación de un proyecto animado (preproducción), modelando herramientas de gestión y cronogramas.",
+          "student_action": "Trabaja en equipo para construir un plan de preproducción detallado, incluyendo guion, storyboard y diseño de personajes para un proyecto animado.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la fase de producción y postproducción, retando a los estudiantes a aplicar técnicas de animación 2D avanzada y efectos especiales.",
+          "student_action": "Produce y edita un segmento de animación 2D avanzada, incorporando efectos especiales y resolviendo problemas técnicos en la postproducción.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a los estudiantes a presentar el proyecto animado final, defendiendo sus decisiones técnicas y creativas y clarificando el proceso completo.",
+          "student_action": "Clarifica su rol en la gestión del proyecto, la aplicación de técnicas avanzadas y la resolución de desafíos, reflexionando sobre el producto final.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

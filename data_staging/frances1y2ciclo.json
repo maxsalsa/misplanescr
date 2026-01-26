@@ -1,0 +1,86 @@
+{
+  "subject": "francesyciclo",
+  "level": "1mo Año",
+  "units": [
+    {
+      "name": "Unidad General",
+      "outcomes": [
+        {
+          "description": "Resultados Generales",
+          "indicators": [
+            {
+              "description": "Transformación curricular: un avance decisivo hacia la Nueva Ciudadanía",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Transformación curricular: un ...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "En el marco de una concepción renovada del fortalecimiento educativo, visión integral que hemos denominado Educar para una nueva ciudadanía, distintas",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: En el marco de una concepción ...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "iniciativas innovadoras hemos puesto en marcha. Estas incluyen procesos de gestión más dinámicos y abarcadores, proyectos ambiciosos con un impacto",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: iniciativas innovadoras hemos ...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "integral dentro del Ministerio de Educación Pública, y evidentemente una serie de cambios sustantivos en el ámbito propiamente educativo. La",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: integral dentro del Ministerio...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "transformación curricular que ha producido nuevos programas de estudio para el ciclo lectivo 2017 es un claro ejemplo de ello.",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: transformación curricular que ...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

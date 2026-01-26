@@ -1,0 +1,48 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "Configuración y administración de servicios en la nube",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "Al finalizar esta carrera técnica, las personas estudiantes serán capaces de configurar y administrar infraestructuras de TI en la nube, implementar soluciones de plataforma como servicio e infraestructura como servicio. Tendrán un sólido entendimiento de los conceptos de seguridad en la nube y serán capaces de diseñar soluciones que cumplan con los estándares de cumplimiento y privacidad. Esto incluye ejecutar la configuración, operación y monitoreo de ambientes y servicios en la nube, implementando seguridad y mejores prácticas, actuando con ética a nivel personal y profesional, participando en equipos de trabajo en la solución de problemas, con comunicación asertiva y promoviendo un ambiente de sana convivencia.",
+        "code": "LO_CLOUD_ADMIN"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Presenta un caso de estudio real sobre un desafío en la configuración de servicios en la nube para despertar el interés, modelando el análisis inicial y retando a la observación crítica.",
+          "student_action": "Investiga conceptos clave de computación en la nube, formula preguntas iniciales sobre el caso y conecta con conocimientos previos, diseñando sus primeras hipótesis.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Facilita la discusión en equipos pequeños, reta a los estudiantes a identificar posibles soluciones y arquitecturas de nube, modelando el proceso de análisis colaborativo.",
+          "student_action": "Colabora activamente en equipo para analizar el caso, debatiendo y diseñando enfoques técnicos para la configuración y administración de servicios en la nube.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la implementación práctica en entornos de laboratorio (simulados o reales), modelando la configuración de servicios específicos y retando a los estudiantes a aplicar y adaptar las soluciones diseñadas.",
+          "student_action": "Diseña e implementa configuraciones de servicios en la nube, construye scripts o plantillas de automatización, y resuelve problemas técnicos que surjan durante la práctica.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a los estudiantes a presentar sus soluciones, justificar decisiones técnicas y reflexionar sobre el proceso, modelando la evaluación crítica de los resultados y las lecciones aprendidas.",
+          "student_action": "Presenta y defiende las soluciones implementadas, explica las configuraciones realizadas, y reflexiona críticamente sobre la efectividad y posibles mejoras, construyendo conclusiones claras.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "Tecnologías de Información aplicada al Desarrollo de aplicaciones móviles",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "Aplicar herramientas y tecnologías digitales, incluyendo software de código abierto y licenciado, automatización, análisis de datos y protección de la integridad de los datos, para enfrentar los cambios tecnológicos y desempeñarse exitosamente en situaciones de aprendizaje y la vida real.",
+        "code": "LO_TI_DAM_1"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela la introducción a herramientas digitales y sus aplicaciones, captando la atención y estableciendo la relevancia de la ciberseguridad y el análisis de datos.",
+          "student_action": "Conecta con el tema de las tecnologías digitales, comparte saberes previos sobre software y explora la problemática de la gestión de datos.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta al estudiante a trabajar en equipo para investigar y comparar herramientas de código abierto vs. licenciado, facilitando la discusión sobre su aplicación y seguridad.",
+          "student_action": "Colabora activamente en equipos para investigar y discutir el uso de tecnologías digitales, compartiendo hallazgos y buscando soluciones para problemas de automatización.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la aplicación práctica de herramientas digitales, ofreciendo recursos para la automatización y modelando procesos de análisis y protección de datos.",
+          "student_action": "Diseña y construye soluciones utilizando software, aplica conceptos de automatización y realiza la evaluación de alternativas para la protección e integridad de datos.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a la reflexión crítica sobre la efectividad de las herramientas aplicadas y consolida el aprendizaje, ofreciendo retroalimentación sobre la integridad y seguridad de los datos.",
+          "student_action": "Clarifica dudas, reflexiona sobre el proceso de aplicación de tecnologías, y presenta sus conclusiones o productos relacionados con el uso ético y seguro de datos.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Desarrollo de aplicaciones móviles y bases de datos",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "Adquirir conocimientos, habilidades y destrezas en la generación de aplicaciones nativas (iOS y Android) y WebApps, mediante la codificación, construcción, prueba y configuración en entornos de desarrollo, bajo estándares de calidad y software seguro, incluyendo la gestión de bases de datos.",
+        "code": "LO_DAM_BD_1"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela la introducción a los paradigmas de programación móvil y bases de datos, destacando la diferencia entre Apps Nativas y WebApps.",
+          "student_action": "Conecta con los conceptos de desarrollo de aplicaciones móviles y bases de datos, comparte conocimientos previos sobre programación y explora las tendencias actuales.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta al estudiante a colaborar en el diseño de la arquitectura de una aplicación móvil, facilitando la discusión sobre la elección de lenguajes y bases de datos.",
+          "student_action": "Colabora activamente en equipos para diseñar la estructura de una aplicación, compartiendo ideas sobre codificación y resolviendo problemas de integración de bases de datos.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la codificación y construcción de componentes de software para aplicaciones nativas o WebApps, modelando las buenas prácticas de programación y gestión de bases de datos.",
+          "student_action": "Diseña y construye una aplicación móvil o un componente de software, codifica, realiza pruebas y configura el entorno de desarrollo, integrando bases de datos.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a la reflexión crítica sobre el funcionamiento del software desarrollado y consolida el aprendizaje, ofreciendo retroalimentación sobre la eficiencia y seguridad del código.",
+          "student_action": "Clarifica dudas sobre el desarrollo y la base de datos, reflexiona sobre el proceso de construcción y presenta el producto final de la aplicación, defendiendo sus decisiones técnicas.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Soporte y seguridad de aplicaciones móviles",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "Implementar técnicas de soporte y seguridad para aplicaciones móviles (iOS o Android), desarrollando y probando características de seguridad para mitigar vulnerabilidades, aplicando conocimientos de eficiencia energética, sistemas operativos (Linux), fundamentos de soporte técnico para apps, ciberseguridad y redes, bajo estándares de calidad.",
+        "code": "LO_SSAM_1"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela la introducción a los conceptos de soporte técnico y ciberseguridad en aplicaciones móviles, mostrando casos de vulnerabilidades y buenas prácticas.",
+          "student_action": "Conecta con la importancia del soporte y la seguridad en apps, comparte conocimientos previos sobre sistemas operativos y explora las amenazas comunes.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta al estudiante a trabajar en equipo para analizar un caso de brecha de seguridad en una aplicación, facilitando la discusión sobre posibles soluciones y protocolos.",
+          "student_action": "Colabora activamente en equipos para identificar vulnerabilidades, aplicar principios de ciberseguridad y diseñar estrategias de mitigación en aplicaciones móviles.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la implementación de características de seguridad y técnicas de soporte en una aplicación, modelando la aplicación de conocimientos de Linux y eficiencia energética.",
+          "student_action": "Diseña y construye soluciones de seguridad para aplicaciones móviles, aplica fundamentos de soporte técnico y comprueba la efectividad de las medidas implementadas.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a la reflexión crítica sobre la robustez de las soluciones de seguridad implementadas y consolida el aprendizaje, ofreciendo retroalimentación sobre el cumplimiento de estándares.",
+          "student_action": "Clarifica dudas sobre los protocolos de seguridad y soporte, reflexiona sobre el impacto de las vulnerabilidades y presenta un informe técnico de las mejoras aplicadas.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "Emprendimiento e innovación aplicada al desarrollo de aplicaciones móviles",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "Desarrollar capacidades en emprendimiento y empresarialidad mediante la identificación de oportunidades de negocios en el sector de aplicaciones móviles, aplicación de metodologías para la construcción de modelos de negocios, creación de empresas de práctica y diseño de un proyecto de vida con compromiso local y social.",
+        "code": "LO_EI_DAM_1"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela la identificación de oportunidades de negocio en el sector tecnológico, captando la atención sobre el potencial del emprendimiento y la innovación.",
+          "student_action": "Conecta con el concepto de emprendimiento e innovación, comparte ideas de negocio y explora las necesidades del mercado de aplicaciones móviles.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta al estudiante a trabajar en equipo para desarrollar una idea de negocio, facilitando la discusión sobre modelos de negocio y la viabilidad del proyecto.",
+          "student_action": "Colabora activamente en equipos para construir un modelo de negocio para una aplicación móvil, compartiendo roles y buscando soluciones innovadoras.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la creación de una empresa de práctica o un proyecto de emprendimiento, ofreciendo recursos y modelando la aplicación de metodologías de diseño y gestión empresarial.",
+          "student_action": "Diseña y construye un prototipo de modelo de negocio, aplica conceptos de emprendimiento y genera un plan para su proyecto de vida o empresa.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a la reflexión crítica sobre la sostenibilidad del emprendimiento y consolida el aprendizaje, ofreciendo retroalimentación sobre la propuesta de valor y el impacto social.",
+          "student_action": "Clarifica dudas sobre el plan de negocio, reflexiona sobre la viabilidad de su emprendimiento y presenta su proyecto de vida, articulando sus competencias y compromiso.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "English Oriented to Apps Development",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "Desarrollar las cuatro competencias lingüísticas del inglés para fines específicos (ESP) utilizando los seis niveles del Marco Común Europeo de Referencia (MCER), con saberes esenciales propios del área de desarrollo de aplicaciones móviles, para comunicarse efectivamente en un contexto técnico.",
+        "code": "LO_EOAD_1"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela la introducción a la terminología técnica en inglés relevante para el desarrollo de apps, captando la atención y estableciendo la importancia del idioma en la industria.",
+          "student_action": "Conecta con la necesidad de aprender inglés técnico, comparte su nivel de inglés previo y explora vocabulario específico del desarrollo de aplicaciones.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta al estudiante a trabajar en parejas para practicar diálogos sobre especificaciones técnicas de apps, facilitando la discusión y el uso de expresiones idiomáticas.",
+          "student_action": "Colabora activamente en equipos para realizar actividades de speaking y listening relacionadas con el desarrollo de software, compartiendo roles y buscando mejorar la fluidez.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la redacción de documentación técnica en inglés (e.g., requisitos, manuales) o la presentación oral de un proyecto de app, modelando la gramática y el vocabulario adecuado.",
+          "student_action": "Diseña y construye presentaciones o documentos técnicos en inglés, aplica reglas gramaticales y vocabulario especializado, y genera productos comunicativos relevantes.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a la reflexión crítica sobre la precisión lingüística y consolida el aprendizaje, ofreciendo retroalimentación sobre la pronunciación, entonación y la claridad en la comunicación técnica.",
+          "student_action": "Clarifica dudas sobre el uso del inglés técnico, reflexiona sobre sus errores y aciertos y presenta sus conclusiones o proyectos, demostrando sus competencias lingüísticas.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "subject": "efisicayciclo",
+  "level": "1mo Año",
+  "units": [
+    {
+      "name": "Unidad General",
+      "outcomes": [
+        {
+          "description": "Resultados Generales",
+          "indicators": [
+            {
+              "description": "Primero y Segundo Ciclos de la Educación General Básica",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Primero y Segundo Ciclos de la...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "San José, Costa Rica",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: San José, Costa Rica...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Ética, estética y ciudadanía: educar para la vida 5",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Ética, estética y ciudadanía: ...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Enfoque curricular de la educación física 17",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Enfoque curricular de la educa...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "¿En qué consiste este programa? 17",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: ¿En qué consiste este programa...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+Estudiante,Indicador,Nivel (1-3),Descripción Logro,Estado Evidencia,Alerta UX,Color UI,Acción Automática
+María López,Identifica componentes...,1,Presenta dificultades para identificar componentes.,NO_ENTREGADA,🚨 UPRE: Riesgo Académico,ROJO,Notificación Push + Ficha UPRE Auto-completada
+Carlos Solís,Explica desmontaje...,2,"Identifica algunos componentes, pero omite detalles.",INCOMPLETA,🟡 Seguimiento Requerido,AMARILLO,Recordatorio de Entrega / Refuerzo
+Lucía Méndez,Identifica componentes...,3,Identifica y describe todos con ejemplos claros.,COMPLETA,🟢 Estable,VERDE,Ninguna (Felicitar)

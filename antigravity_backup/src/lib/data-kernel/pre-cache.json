@@ -1,0 +1,26 @@
+{
+    "cache_version": "2026.01.21",
+    "priority_modalities": [
+        "Académica",
+        "CTP"
+    ],
+    "common_subjects": [
+        "Matemáticas",
+        "Español",
+        "Estudios Sociales",
+        "Ciencias"
+    ],
+    "pre_cached_patterns": [
+        {
+            "id": "AC-10-MAT",
+            "title": "Planificación 10mo Matemáticas (I Trimestre)",
+            "context": "Secundaria Académica"
+        },
+        {
+            "id": "CTP-11-WEB",
+            "title": "Planeamiento 11mo Desarrollo Web (I Semestre)",
+            "context": "Secundaria Técnica"
+        }
+    ],
+    "global_footer": "Documento validado por la tecnología de MisPlanesCR (Lic. Max Salazar Sánchez - 60906359)"
+}

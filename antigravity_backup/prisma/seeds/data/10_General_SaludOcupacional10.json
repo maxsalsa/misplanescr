@@ -1,0 +1,174 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "TECNOLOGÍAS DE INFORMACIÓN Y COMUNICACIÓN",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "Contempla todos los elementos necesarios para desarrollar los conocimientos, habilidades y destrezas necesarios para formar un usuario experto de estas tecnologías. Se incluyen aspectos tales como hardware, software, Internet, bases de datos, sistemas de información especializados y conectividad con equipos móviles.",
+        "code": "LO_TIC"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela la introducción a nuevos conceptos tecnológicos.",
+          "student_action": "Diseña un mapa mental de conocimientos previos sobre TIC.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a resolver problemas prácticos en equipo usando software.",
+          "student_action": "Construye una solución colaborativa para un escenario de ciberseguridad.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Reta a la creación de un prototipo de sistema de información simple.",
+          "student_action": "Diseña y construye un CodeMockup de una aplicación.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Modela la revisión y retroalimentación de los proyectos desarrollados.",
+          "student_action": "Diseña una presentación de los resultados y aprendizajes.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "SEGURIDAD E HIGIENE LABORAL",
+      "ui_family": "DATA_GRID",
+      "learning_outcome": {
+        "text": "Se integran contenidos básicos relacionados con la seguridad e higiene en el trabajo, las medidas de prevención necesarias para el manejo y control de riesgos y accidentes de trabajo.",
+        "code": "LO_SHL"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela la importancia de la seguridad y las normativas.",
+          "student_action": "Diseña una lista de chequeo de riesgos comunes en el entorno.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a investigar y presentar casos de accidentes laborales.",
+          "student_action": "Construye un análisis de caso sobre prevención de riesgos.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": true
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Reta a diseñar un plan de emergencia para un escenario específico.",
+          "student_action": "Diseña y construye un 'data grid' de protocolos de seguridad.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": true
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Modela la síntesis de las mejores prácticas en higiene laboral.",
+          "student_action": "Diseña un informe de conclusiones sobre la implementación de medidas preventivas.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "ENTORNO ADMINISTRATIVO DE LA SALUD OCUPACIONAL",
+      "ui_family": "DATA_GRID",
+      "learning_outcome": {
+        "text": "Promueve el desarrollo de conocimientos, habilidades y destrezas que le permitan convertirse en auto o cogestionarios; de modo que no solo se preparen para desempeñarse como empleados, sino para que, también puedan formar sus propias empresas.",
+        "code": "LO_EASO"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela la estructura organizativa de una empresa y su gestión.",
+          "student_action": "Diseña un organigrama de una Pyme de salud ocupacional.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a elaborar un caso de estudio sobre gestión empresarial.",
+          "student_action": "Construye en equipo un plan de negocios básico.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Reta a desarrollar un sistema de registro administrativo para la salud ocupacional.",
+          "student_action": "Diseña y construye tablas para seguimiento de indicadores de gestión.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Modela la presentación de informes financieros y administrativos.",
+          "student_action": "Diseña una propuesta de mejora para un proceso administrativo.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "CONVERSATIONAL ENGLISH",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "Se pretende desarrollar en el o la estudiante los conocimientos, habilidades y destrezas para la interpretación y comprensión del lenguaje técnico asociado a la especialidad; cabe destacar que se contempla una sub – área específica de Salud Ocupacional que debe ser desarrollada en inglés.",
+        "code": "LO_CE"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela diálogos y vocabulario técnico en inglés.",
+          "student_action": "Diseña un glosario bilingüe de términos de salud ocupacional.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a practicar conversaciones de escenarios laborales.",
+          "student_action": "Construye Roleplays de interacción con clientes o colegas internacionales.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Reta a la presentación de informes técnicos en inglés.",
+          "student_action": "Diseña y presenta un Roleplay simulando una auditoría de seguridad en inglés.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Modela la corrección de pronunciación y gramática en contextos profesionales.",
+          "student_action": "Diseña un guion para una llamada de emergencia en inglés.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

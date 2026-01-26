@@ -1,0 +1,48 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "Unidad de Animación 3D: Fundamentos y Producción",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "El egresado desarrollará competencias para brindar servicios como animador 3D, elaborando dibujos, concepto visual y guion audiovisual, controlando el proceso. Podrá desarrollar storyboard, animatic, y ejecutar procesos de producción y postproducción de proyectos animados en 3D, utilizando software especializado.",
+        "code": "LO_ANIM3D_01"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela una situación o problema inicial que active conocimientos previos y genere interés, retando al estudiante a reflexionar sobre el tema.",
+          "student_action": "Activa sus conocimientos previos, expresa dudas, formula preguntas y se involucra activamente con la problemática planteada.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Guía el trabajo en equipo, fomenta el diálogo constructivo y propone desafíos cognoscitivos que requieran interacción para su resolución.",
+          "student_action": "Trabaja en equipo, argumenta sus ideas, participa en la resolución conjunta de problemas y respeta las diversas perspectivas de sus compañeros.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Reta al estudiante a diseñar y construir soluciones, provee recursos, andamiaje necesario y facilita la investigación autónoma y creativa.",
+          "student_action": "Diseña y construye soluciones, investiga, explora, crea nuevas ideas, acepta sus errores como parte del aprendizaje y propone nuevas situaciones.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Modela la reflexión crítica, reta a los estudiantes a argumentar y justificar sus procesos y resultados, verificando la comprensión y consolidación del aprendizaje.",
+          "student_action": "Clarifica conceptos, argumenta y justifica sus decisiones, reflexiona sobre el proceso y los resultados, y evalúa su propio aprendizaje.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica de Proyecto",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

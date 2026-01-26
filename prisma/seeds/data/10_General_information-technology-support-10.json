@@ -1,0 +1,174 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "INFORMATION AND COMMUNICATION TECHNOLOGIES",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "El estudiante desarrollará conocimientos, habilidades y destrezas para la aplicación efectiva de tecnologías de información y comunicación.",
+        "code": "LO_ICT_01"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela el uso básico de una herramienta TIC y reta a los estudiantes a identificar su propósito.",
+          "student_action": "Diseña un esquema conceptual de los componentes de la herramienta.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a resolver un problema de conectividad en grupo.",
+          "student_action": "Construye una solución colaborativa para el problema planteado.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Modela la configuración de un sistema de información y reta a la optimización.",
+          "student_action": "Diseña y construye un prototipo funcional de un sistema de información o una base de datos.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a los estudiantes a explicar y defender sus diseños de TIC.",
+          "student_action": "Clarifica y presenta la lógica detrás de sus construcciones TIC y recibe retroalimentación.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "PROGRAMACIÓN",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "El estudiante desarrollará conocimientos, habilidades y destrezas en los principios fundamentales de la programación y el desarrollo de software.",
+        "code": "LO_PRG_01"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela un algoritmo simple y reta a los estudiantes a identificar su lógica.",
+          "student_action": "Diseña el pseudocódigo para un problema dado.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a depurar un fragmento de código con errores en equipo.",
+          "student_action": "Construye una solución colaborativa para corregir los errores de programación.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Modela un patrón de diseño de software y reta a su implementación.",
+          "student_action": "Diseña y construye un módulo de software utilizando los principios aprendidos.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a los estudiantes a explicar la eficiencia y escalabilidad de su código.",
+          "student_action": "Clarifica y optimiza su código basándose en la retroalimentación y los criterios de rendimiento.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "COMPUTER MAINTENANCE",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "El estudiante desarrollará conocimientos, habilidades y destrezas para realizar mantenimiento preventivo y correctivo de equipos de cómputo y redes.",
+        "code": "LO_CMT_01"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela el proceso de diagnóstico de un problema de hardware y reta a identificar la causa.",
+          "student_action": "Diseña un diagrama de flujo para la resolución de un problema de mantenimiento común.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a reparar un equipo defectuoso en equipo.",
+          "student_action": "Construye una estrategia colaborativa para el mantenimiento y reparación de componentes.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Modela técnicas avanzadas de configuración de sistemas operativos y redes.",
+          "student_action": "Diseña e implementa una configuración de red o un sistema operativo desde cero.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a los estudiantes a documentar y justificar sus procedimientos de mantenimiento.",
+          "student_action": "Clarifica y presenta la eficacia de sus soluciones de mantenimiento y la documentación técnica.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "ENGLISH FOR COMMUNICATION",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "El estudiante desarrollará conocimientos, habilidades y destrezas para la interpretación y comunicación efectiva en inglés técnico y profesional.",
+        "code": "LO_ENG_01"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela la lectura comprensiva de un texto técnico en inglés y reta a extraer ideas principales.",
+          "student_action": "Diseña un resumen de un párrafo técnico utilizando vocabulario clave.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a discutir en inglés un tema tecnológico complejo en parejas o grupos.",
+          "student_action": "Construye argumentos y participa activamente en un debate o conversación técnica en inglés.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Modela la estructura de una presentación profesional en inglés y reta a su elaboración.",
+          "student_action": "Diseña y construye una presentación oral sobre un tema técnico en inglés.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Reta a los estudiantes a responder preguntas sobre su presentación en inglés de forma clara y concisa.",
+          "student_action": "Clarifica puntos de su presentación y defiende sus ideas en una sesión de preguntas y respuestas.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "INFORMATION AND COMMUNICATION TECHNOLOGIES",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "Desarrollar conocimientos, habilidades y destrezas para preparar al usuario experto de tecnologías de información y comunicación, incluyendo hardware, software, Internet, bases de datos, sistemas de información especializados y conectividad con equipos móviles.",
+        "code": "LO_ICT_T10"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela la relevancia de las TIC en escenarios reales y reta a los estudiantes a identificar sus conocimientos previos sobre herramientas tecnológicas.",
+          "student_action": "Diseña conexiones entre sus experiencias tecnológicas y los conceptos iniciales, construyendo preguntas exploratorias.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes con problemas de integración de hardware/software en equipos, fomentando la solución colaborativa y el intercambio de ideas técnicas.",
+          "student_action": "Diseña y construye soluciones técnicas en equipo para configurar o solucionar problemas de conectividad, aplicando habilidades de programación básica.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la construcción de sistemas o la configuración de redes, modelando el proceso de implementación y depuración.",
+          "student_action": "Construye y configura entornos de trabajo, programas sencillos o prototipos, aplicando los conocimientos adquiridos de manera práctica.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Modela la revisión crítica de soluciones implementadas, retando a los estudiantes a explicar sus decisiones técnicas y a justificar sus resultados.",
+          "student_action": "Diseña presentaciones o informes que clarifican el funcionamiento de sus soluciones, construye argumentos y resuelve dudas sobre su implementación.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "PROGRAMACIÓN",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "Desarrollar habilidades de pensamiento lógico y resolución de problemas a través de la codificación, diseño de algoritmos y la implementación de soluciones programáticas.",
+        "code": "LO_PROG_T10"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela la lógica detrás de problemas cotidianos resueltos por programas, retando a identificar patrones y secuencias en tareas simples.",
+          "student_action": "Diseña diagramas de flujo o pseudocódigo inicial, construyendo la comprensión de problemas algorítmicos.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a diseñar algoritmos colaborativos para problemas complejos, modelando técnicas de depuración en grupo.",
+          "student_action": "Diseña y construye segmentos de código en equipo, colaborando en la resolución de errores y optimización de programas.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la implementación de programas completos, retando a los estudiantes a aplicar estructuras de control y tipos de datos de forma eficiente.",
+          "student_action": "Construye aplicaciones funcionales o módulos de software, diseñando su propia lógica y probando su efectividad.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Modela la evaluación de código y la retroalimentación constructiva, retando a los estudiantes a justificar sus decisiones de diseño y a refactorizar su código.",
+          "student_action": "Diseña mejoras para su código, construye explicaciones claras de su funcionamiento y clarifica sus procesos de desarrollo.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "COMPUTER MAINTENANCE",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "Aplicar conocimientos y habilidades para diagnosticar, mantener, ensamblar y reparar equipos informáticos, asegurando su correcto funcionamiento y prolongando su vida útil.",
+        "code": "LO_CM_T10"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela problemas comunes de hardware, retando a los estudiantes a identificar los componentes básicos y sus funciones a partir de situaciones reales.",
+          "student_action": "Diseña hipótesis sobre fallas de hardware, construyendo un listado de posibles causas y soluciones iniciales.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a desmontar y ensamblar equipos en grupos, modelando las precauciones de seguridad y el uso correcto de herramientas.",
+          "student_action": "Diseña un plan de mantenimiento preventivo en equipo, construyendo un cronograma y una lista de verificación de tareas.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía el proceso de diagnóstico y reparación de fallas específicas, retando a los estudiantes a aplicar protocolos de solución de problemas.",
+          "student_action": "Construye un informe técnico detallado de una reparación realizada, diseñando soluciones efectivas y documentando el proceso.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Modela la presentación de informes técnicos y la comunicación efectiva de problemas/soluciones, retando a clarificar sus hallazgos y recomendaciones.",
+          "student_action": "Diseña una guía rápida de diagnóstico para un problema común, construye argumentos sobre la importancia del mantenimiento y clarifica procedimientos.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    },
+    {
+      "unit_title": "ENGLISH FOR COMMUNICATION",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "Desarrollar el conocimiento, las habilidades y destrezas del estudiante para la interpretación y comprensión del lenguaje técnico asociado con la especialidad de redes informáticas, impartido exclusivamente en inglés.",
+        "code": "LO_ENGC_T10"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela la lectura comprensiva de textos técnicos en inglés, retando a los estudiantes a identificar vocabulario clave y la idea principal.",
+          "student_action": "Diseña un glosario de términos técnicos en inglés, construyendo asociaciones con sus equivalentes en español.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a discutir y resumir artículos técnicos en inglés en parejas o grupos, modelando la expresión oral clara y concisa.",
+          "student_action": "Diseña presentaciones orales en inglés sobre temas técnicos, construyendo argumentos y respondiendo preguntas en el idioma.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la elaboración de reportes técnicos o manuales sencillos en inglés, retando a los estudiantes a aplicar la gramática y estructura adecuadas.",
+          "student_action": "Construye descripciones de procesos técnicos o componentes en inglés, diseñando su propia redacción para clarificar conceptos.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Modela la autoevaluación y coevaluación de la comunicación técnica en inglés, retando a los estudiantes a identificar y corregir errores.",
+          "student_action": "Diseña ejercicios de auto-corrección, construye una lista de verificación para la escritura técnica y clarifica puntos gramaticales o de vocabulario.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

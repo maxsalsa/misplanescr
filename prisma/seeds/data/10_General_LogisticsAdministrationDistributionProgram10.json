@@ -1,0 +1,48 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "Nombre Unidad",
+      "ui_family": "DATA_GRID",
+      "learning_outcome": {
+        "text": "The student develops integrated competencies (knowledge, procedures, attitudes, and values) to successfully and autonomously handle individual and social situations within the context of logistical administration and distribution, applying critical thinking and problem-solving skills.",
+        "code": "LO_X"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Detects and confirms student learning needs through diagnostic activities to recognize prior knowledge and set the stage for new information.",
+          "student_action": "Actively recognizes and relates previous knowledge with new information, identifying personal learning needs and interests.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Plans and guides teaching-learning strategies that foster group work and mutual support, motivating students to explore diverse resources and perspectives.",
+          "student_action": "Engages in collaborative activities, respecting diversity and working with peers to identify problems and propose solutions.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Implements pedagogical mediation, challenging students with complex tasks and providing resources for experimentation, analysis, and synthesis.",
+          "student_action": "Constructs knowledge through active design, experimentation, and critical analysis, applying cognitive strategies to solve problems and develop new solutions.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Evaluates student progress and provides constructive feedback (formative and summative), ensuring clear understanding of learning outcomes and performance criteria.",
+          "student_action": "Organizes newly acquired knowledge in a meaningful way, reflects on their learning process, and seeks clarification to reinforce understanding and apply competencies.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

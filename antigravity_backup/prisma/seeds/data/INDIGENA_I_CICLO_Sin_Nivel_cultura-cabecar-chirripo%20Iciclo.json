@@ -1,0 +1,16 @@
+{
+  "asignatura": "I_CICLO",
+  "nivel": "Sin Nivel",
+  "modalidad": "INDIGENA",
+  "units": [
+    {
+      "title": "Unidad General",
+      "outcomes": [
+        {
+          "desc": "Resultados Generales (Heurístico)",
+          "indicators": []
+        }
+      ]
+    }
+  ]
+}

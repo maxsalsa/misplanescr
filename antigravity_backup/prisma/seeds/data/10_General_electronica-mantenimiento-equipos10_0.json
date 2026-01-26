@@ -1,0 +1,48 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "Orientaciones Pedagógicas Generales de la Especialidad",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "Proporcionar conocimientos, desarrollar habilidades y destrezas, así como lograr cambios en las actitudes y aptitudes de los y las estudiantes, formando profesionales críticos y creativos capaces de dar soluciones innovadoras a los retos del mercado laboral y de la sociedad.",
+        "code": "LO_10"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Detectar y confirmar las necesidades de aprendizaje de los alumnos mediante una evaluación diagnóstica inicial.",
+          "student_action": "Reconocer y activar los conocimientos previos para establecer una base sólida para los nuevos aprendizajes.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Planear estrategias de enseñanza-aprendizaje basadas en el perfil del alumno y los contenidos, promoviendo el trabajo en equipo y la investigación orientada.",
+          "student_action": "Establecer relaciones entre los conocimientos previos y la nueva información, organizando los aprendizajes de manera significativa y participativa.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Ejecutar el proceso de mediación pedagógica, modelando y retando al estudiante a aplicar estrategias cognitivas como comparación, clasificación, análisis y experimentación para la resolución de problemas.",
+          "student_action": "Construir el conocimiento de forma gradual mediante la realización de tareas completas y complejas, aplicando diversas estrategias cognitivas y proponiendo soluciones creativas.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Evaluar y realimentar continuamente el proceso de enseñanza-aprendizaje, identificando fortalezas y debilidades, tanto del estudiante como del método pedagógico.",
+          "student_action": "Analizar su propio progreso, reflexionar sobre el feedback recibido, identificar áreas de mejora y ajustar su enfoque de aprendizaje de manera autónoma.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Instrumentos Variados",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

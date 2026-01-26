@@ -1,0 +1,86 @@
+{
+  "subject": "operacionesempresasalojamiento-",
+  "level": "12mo Año",
+  "units": [
+    {
+      "name": "Unidad General",
+      "outcomes": [
+        {
+          "description": "Resultados Generales",
+          "indicators": [
+            {
+              "description": "Aprobado por el Consejo Superior de Educación, en la sesión 70-2020, acuerdo 04-70-2020 del 17/12/2020",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Aprobado por el Consejo Superi...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Aprobado por el Consejo Superior de Educación, en la sesión 70-2020, acuerdo 04-70-2020 del 17/12/2020",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Aprobado por el Consejo Superi...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Tabla de Contenidos ........................................................................................................................................................................... 1",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Tabla de Contenidos .............",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Créditos .............................................................................................................................................................................................. 6T",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Créditos ........................",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Autoridades ......................................................................................................................................................................................... 6",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Autoridades .....................",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

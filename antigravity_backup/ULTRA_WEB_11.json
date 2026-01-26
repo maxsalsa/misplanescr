@@ -1,0 +1,65 @@
+{
+    "header": {
+        "subarea": "Programación de Aplicaciones Web",
+        "unidad": "Unidad 1: Desarrollo Front-end",
+        "super_usuario": "Max Salazar Sánchez",
+        "suscriptor": "{user.full_name}",
+        "modalidad": "Técnica - Informática en Desarrollo de Software",
+        "nivel": "11mo Año",
+        "tiempo": "80h",
+        "mnc_nivel": "4"
+    },
+    "bloque_pedagogico": {
+        "unidad": "Construcción de Interfaces Web Interactivas",
+        "ra_principal": "Construir el Front-end de aplicaciones web interactivas.",
+        "saberes_esenciales": [
+            "HTML5 semántico",
+            "CSS3 (Flexbox/Grid)",
+            "JavaScript ES6"
+        ],
+        "indicador_logro": "Maqueta sitios web adaptables (Responsive Design) usando estándares W3C.",
+        "mediacion_6_rutas": [
+            {
+                "tipo": "Lúdica",
+                "docente": "Facilita un 'Web-Challenge' de bajo costo usando tarjetas físicas para ordenar la jerarquía del DOM.",
+                "estudiante": "Organiza las tarjetas en una carrera contra reloj para reconstruir la estructura de una landing page.",
+                "ajuste_inclusion": "Uso de tarjetas con código de colores para estudiantes visuales."
+            },
+            {
+                "tipo": "Práctica",
+                "docente": "Guía el reto 'Cero Píxeles Muertos' donde deben replicar un diseño exacto.",
+                "estudiante": "Construye una interfaz funcional y aplica estilos CSS para igualar el mockup entregado.",
+                "ajuste_inclusion": "Uso de la técnica Pomodoro para sesiones de codificación con descansos de movimiento (TDAH)."
+            },
+            {
+                "tipo": "Alta Dotación",
+                "docente": "Propone un desafío de performance web.",
+                "estudiante": "Optimiza la carga crítica de CSS y JS logrando un puntaje >90 en Lighthouse.",
+                "ajuste_inclusion": "Reto de optimización de carga y accesibilidad nivel WCAG 2.1."
+            },
+            {
+                "tipo": "STEAM",
+                "docente": "Demuestra la relación entre la proporción áurea y el diseño web moderno.",
+                "estudiante": "Diseña un layout utilizando Grid CSS basado en secuencias matemáticas.",
+                "ajuste_inclusion": "Herramientas de visualización de grids."
+            },
+            {
+                "tipo": "Analítica",
+                "docente": "Presenta sitios web con errores de usabilidad intencionales.",
+                "estudiante": "Audita el código y documenta errores semánticos y de accesibilidad.",
+                "ajuste_inclusion": "Lectores de pantalla para validación auditiva."
+            },
+            {
+                "tipo": "Social",
+                "docente": "Organiza un 'Hackathon Solidario' para una ONG local.",
+                "estudiante": "Desarrolla una landing page simple para una necesidad real de la comunidad.",
+                "ajuste_inclusion": "Roles específicos (Tester, Documentador) para participación equitativa."
+            }
+        ],
+        "evidencias": {
+            "conocimiento": "Quiz sobre selectores CSS y semántica HTML",
+            "desempeño": "Maquetación en tiempo real de un wireframe",
+            "producto": "Sitio web personal tipo Portafolio publicado en GitHub Pages"
+        }
+    }
+}

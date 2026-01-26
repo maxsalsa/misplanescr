@@ -1,0 +1,26 @@
+{
+  "institucion": "CTP Mercedes Norte",
+  "titulo": "ACUERDO DE REFUERZO ACADÉMICO - UPRE",
+  "fecha": "2026-01-23T00:47:13.450619",
+  "estudiante": {
+    "id": "EST-05",
+    "nombre": "María López",
+    "seccion": "10-1",
+    "indicador_bajo": "Identifica componentes internos del hardware"
+  },
+  "situacion_detectada": {
+    "indicador": "Identifica componentes internos del hardware",
+    "nivel_actual": "1 (Inicial)",
+    "riesgo": "Alto"
+  },
+  "plan_accion_concertado": {
+    "compromiso_docente": "Aplicar Ruta Inclusiva: Simuladores visuales y tarjetas táctiles.",
+    "compromiso_encargado": "Supervisar entrega de 'Mapa Mental' en 3 días.",
+    "fecha_revision": "En 3 días hábiles"
+  },
+  "metadata_legal": {
+    "hash_integridad": "22d5eb524e099d22fd1553cefd6bb03466195de02762249a7b027350e4295c6e",
+    "qr_validacion": "UPRE-ACTA-22D5EB52",
+    "estado": "PENDIENTE_FIRMA_PADRE"
+  }
+}

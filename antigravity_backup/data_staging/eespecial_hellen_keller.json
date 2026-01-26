@@ -1,0 +1,86 @@
+{
+  "subject": "eespecial_hellen_keller",
+  "level": "General",
+  "units": [
+    {
+      "name": "Unidad General",
+      "outcomes": [
+        {
+          "description": "Resultados Generales",
+          "indicators": [
+            {
+              "description": "Ministerio de Educación",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Ministerio de Educación...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "DIRECCIÓN DE DESARROLLO CURRICULAR Dirección",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: DIRECCIÓN DE DESARROLLO CURRIC...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Centro Nacional de Educación",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Centro Nacional de Educación...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Centro Nacional de Educación Helen Keller",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Centro Nacional de Educación H...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Sonia Marta Mora Escalante, Ministra de Educación Pública",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Sonia Marta Mora Escalante, Mi...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

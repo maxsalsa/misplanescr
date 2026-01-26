@@ -1,0 +1,1946 @@
+{
+  "meta": {
+    "fecha_generacion": "2026-01-20T23:10:47.907Z",
+    "fuente": "MEP_ORDENADO",
+    "total_archivos": 170,
+    "version": "1.0.0"
+  },
+  "modalidades": {
+    "ACADEMICO": {
+      "10": {
+        "programas": {
+          "accounting10_10": {
+            "id": "accounting10_10",
+            "nombre": "Accounting10",
+            "archivo": "Accounting10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/Accounting10.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:33:44.595Z"
+          },
+          "agroecologia10_10": {
+            "id": "agroecologia10_10",
+            "nombre": "Agroecologia10",
+            "archivo": "Agroecologia10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/Agroecologia10.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T21:10:00.358Z"
+          },
+          "animacion2d10_10": {
+            "id": "animacion2d10_10",
+            "nombre": "Animacion2D10",
+            "archivo": "Animacion2D10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/Animacion2D10.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T21:10:51.108Z"
+          },
+          "animacion3d10_10": {
+            "id": "animacion3d10_10",
+            "nombre": "Animacion3D10",
+            "archivo": "Animacion3D10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/Animacion3D10.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T21:10:26.861Z"
+          },
+          "bilingualaccountingfinance10_10": {
+            "id": "bilingualaccountingfinance10_10",
+            "nombre": "BilingualAccountingFinance10",
+            "archivo": "BilingualAccountingFinance10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/BilingualAccountingFinance10.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T21:11:00.595Z"
+          },
+          "bilingualsecretary10_10": {
+            "id": "bilingualsecretary10_10",
+            "nombre": "BilingualSecretary10",
+            "archivo": "BilingualSecretary10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/BilingualSecretary10.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:24:20.028Z"
+          },
+          "computernetworking10_10": {
+            "id": "computernetworking10_10",
+            "nombre": "ComputerNetworking10",
+            "archivo": "ComputerNetworking10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/ComputerNetworking10.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:35:14.985Z"
+          },
+          "configuracionserviciosnube10_10": {
+            "id": "configuracionserviciosnube10_10",
+            "nombre": "ConfiguracionServiciosNube10",
+            "archivo": "ConfiguracionServiciosNube10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/ConfiguracionServiciosNube10.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T21:10:20.197Z"
+          },
+          "desarrolloaplicacionesmoviles10_10": {
+            "id": "desarrolloaplicacionesmoviles10_10",
+            "nombre": "DesarrolloAplicacionesMoviles10",
+            "archivo": "DesarrolloAplicacionesMoviles10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/DesarrolloAplicacionesMoviles10.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T21:17:26.963Z"
+          },
+          "disenodesarrollodigital10_10": {
+            "id": "disenodesarrollodigital10_10",
+            "nombre": "DiseñoDesarrolloDigital10",
+            "archivo": "DiseñoDesarrolloDigital10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/DiseñoDesarrolloDigital10.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:24:38.520Z"
+          },
+          "electronica_mantenimiento_equipos10_0_10": {
+            "id": "electronica_mantenimiento_equipos10_0_10",
+            "nombre": "electronica-mantenimiento-equipos10 0",
+            "archivo": "electronica-mantenimiento-equipos10_0.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/electronica-mantenimiento-equipos10_0.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T20:20:09.632Z"
+          },
+          "executiveservicecenters10_10": {
+            "id": "executiveservicecenters10_10",
+            "nombre": "ExecutiveServiceCenters10",
+            "archivo": "ExecutiveServiceCenters10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/ExecutiveServiceCenters10.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T21:14:21.912Z"
+          },
+          "information_technology_support_10_10": {
+            "id": "information_technology_support_10_10",
+            "nombre": "information-technology-support-10",
+            "archivo": "information-technology-support-10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/information-technology-support-10.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:21:55.173Z"
+          },
+          "inteligenciaartificial10_10": {
+            "id": "inteligenciaartificial10_10",
+            "nombre": "InteligenciaArtificial10",
+            "archivo": "InteligenciaArtificial10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/InteligenciaArtificial10.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:17:57.557Z"
+          },
+          "logisticsadministrationdistributionprogram10_10": {
+            "id": "logisticsadministrationdistributionprogram10_10",
+            "nombre": "LogisticsAdministrationDistributionProgram10",
+            "archivo": "LogisticsAdministrationDistributionProgram10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/LogisticsAdministrationDistributionProgram10.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:22:52.474Z"
+          },
+          "operacionesempresasalojamiento10_10": {
+            "id": "operacionesempresasalojamiento10_10",
+            "nombre": "OperacionesEmpresasAlojamiento10",
+            "archivo": "OperacionesEmpresasAlojamiento10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/OperacionesEmpresasAlojamiento10.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:19:54.323Z"
+          },
+          "organizacionoperacionesserviciosab10_10": {
+            "id": "organizacionoperacionesserviciosab10_10",
+            "nombre": "OrganizacionOperacionesServiciosAB10",
+            "archivo": "OrganizacionOperacionesServiciosAB10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/OrganizacionOperacionesServiciosAB10.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:17:02.430Z"
+          },
+          "saludocupacional10_10": {
+            "id": "saludocupacional10_10",
+            "nombre": "SaludOcupacional10",
+            "archivo": "SaludOcupacional10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/10/SaludOcupacional10.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:36:22.580Z"
+          }
+        }
+      },
+      "11": {
+        "programas": {
+          "accounting11_11": {
+            "id": "accounting11_11",
+            "nombre": "Accounting11",
+            "archivo": "Accounting11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/11/Accounting11.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:33:42.617Z"
+          },
+          "agroecologia11_11": {
+            "id": "agroecologia11_11",
+            "nombre": "Agroecologia11",
+            "archivo": "Agroecologia11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/11/Agroecologia11.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "11",
+            "last_modified": "2026-01-18T21:09:42.548Z"
+          },
+          "bilingualsecretary11_11": {
+            "id": "bilingualsecretary11_11",
+            "nombre": "BilingualSecretary11",
+            "archivo": "BilingualSecretary11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/11/BilingualSecretary11.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:24:13.845Z"
+          },
+          "computernetworking11_11": {
+            "id": "computernetworking11_11",
+            "nombre": "ComputerNetworking11",
+            "archivo": "ComputerNetworking11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/11/ComputerNetworking11.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:26:44.339Z"
+          },
+          "desarrolloaplicacionesmoviles11_11": {
+            "id": "desarrolloaplicacionesmoviles11_11",
+            "nombre": "DesarrolloAplicacionesMoviles11",
+            "archivo": "DesarrolloAplicacionesMoviles11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/11/DesarrolloAplicacionesMoviles11.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "11",
+            "last_modified": "2026-01-18T21:17:04.413Z"
+          },
+          "disenodesarrollodigital11_11": {
+            "id": "disenodesarrollodigital11_11",
+            "nombre": "DiseñoDesarrolloDigital11",
+            "archivo": "DiseñoDesarrolloDigital11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/11/DiseñoDesarrolloDigital11.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:24:29.093Z"
+          },
+          "executiveservicecenters11_11": {
+            "id": "executiveservicecenters11_11",
+            "nombre": "ExecutiveServiceCenters11",
+            "archivo": "ExecutiveServiceCenters11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/11/ExecutiveServiceCenters11.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "11",
+            "last_modified": "2026-01-18T21:14:19.464Z"
+          },
+          "information_technology_11_11": {
+            "id": "information_technology_11_11",
+            "nombre": "information-technology-11",
+            "archivo": "information-technology-11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/11/information-technology-11.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:22:01.893Z"
+          },
+          "inteligenciaartificial11_0_11": {
+            "id": "inteligenciaartificial11_0_11",
+            "nombre": "InteligenciaArtificial11 0",
+            "archivo": "InteligenciaArtificial11_0.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/11/InteligenciaArtificial11_0.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:16:42.929Z"
+          },
+          "logisticsadministrationdistributionprogram11_11": {
+            "id": "logisticsadministrationdistributionprogram11_11",
+            "nombre": "LogisticsAdministrationDistributionProgram11",
+            "archivo": "LogisticsAdministrationDistributionProgram11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/11/LogisticsAdministrationDistributionProgram11.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:22:21.435Z"
+          },
+          "operacionesempresasalojamiento11_11": {
+            "id": "operacionesempresasalojamiento11_11",
+            "nombre": "OperacionesEmpresasAlojamiento11",
+            "archivo": "OperacionesEmpresasAlojamiento11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/11/OperacionesEmpresasAlojamiento11.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "11",
+            "last_modified": "2026-01-18T21:16:02.486Z"
+          },
+          "organizacionoperacionesserviciosab11_11": {
+            "id": "organizacionoperacionesserviciosab11_11",
+            "nombre": "OrganizacionOperacionesServiciosAB11",
+            "archivo": "OrganizacionOperacionesServiciosAB11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/11/OrganizacionOperacionesServiciosAB11.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:16:36.457Z"
+          },
+          "saludocupacional11_11": {
+            "id": "saludocupacional11_11",
+            "nombre": "SaludOcupacional11",
+            "archivo": "SaludOcupacional11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/11/SaludOcupacional11.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:30:44.810Z"
+          }
+        }
+      },
+      "12": {
+        "programas": {
+          "accounting12_12": {
+            "id": "accounting12_12",
+            "nombre": "Accounting12",
+            "archivo": "Accounting12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/12/Accounting12.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:26:50.603Z"
+          },
+          "agroecologia12_12": {
+            "id": "agroecologia12_12",
+            "nombre": "Agroecologia12",
+            "archivo": "Agroecologia12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/12/Agroecologia12.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "12",
+            "last_modified": "2026-01-18T21:09:50.293Z"
+          },
+          "bilingualsecretary12_12": {
+            "id": "bilingualsecretary12_12",
+            "nombre": "BilingualSecretary12",
+            "archivo": "BilingualSecretary12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/12/BilingualSecretary12.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:24:08.876Z"
+          },
+          "computernetworking12_12": {
+            "id": "computernetworking12_12",
+            "nombre": "ComputerNetworking12",
+            "archivo": "ComputerNetworking12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/12/ComputerNetworking12.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:26:30.449Z"
+          },
+          "desarrolloaplicacionesmoviles12_0_12": {
+            "id": "desarrolloaplicacionesmoviles12_0_12",
+            "nombre": "DesarrolloAplicacionesMoviles12 0",
+            "archivo": "DesarrolloAplicacionesMoviles12_0.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/12/DesarrolloAplicacionesMoviles12_0.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "12",
+            "last_modified": "2026-01-18T21:16:57.565Z"
+          },
+          "disenodesarrollodigital12_12": {
+            "id": "disenodesarrollodigital12_12",
+            "nombre": "DiseñoDesarrolloDigital12",
+            "archivo": "DiseñoDesarrolloDigital12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/12/DiseñoDesarrolloDigital12.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:24:25.981Z"
+          },
+          "executiveservicecenters12_12": {
+            "id": "executiveservicecenters12_12",
+            "nombre": "ExecutiveServiceCenters12",
+            "archivo": "ExecutiveServiceCenters12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/12/ExecutiveServiceCenters12.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "12",
+            "last_modified": "2026-01-18T21:14:10.422Z"
+          },
+          "information_technology_12_12": {
+            "id": "information_technology_12_12",
+            "nombre": "information-technology-12",
+            "archivo": "information-technology-12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/12/information-technology-12.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:21:49.778Z"
+          },
+          "inteligenciaartificial12_12": {
+            "id": "inteligenciaartificial12_12",
+            "nombre": "InteligenciaArtificial12",
+            "archivo": "InteligenciaArtificial12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/12/InteligenciaArtificial12.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:16:52.990Z"
+          },
+          "logisticsadministrationdistributionprogram12_12": {
+            "id": "logisticsadministrationdistributionprogram12_12",
+            "nombre": "LogisticsAdministrationDistributionProgram12",
+            "archivo": "LogisticsAdministrationDistributionProgram12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/12/LogisticsAdministrationDistributionProgram12.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:22:07.123Z"
+          },
+          "operacionesempresasalojamiento_12_12": {
+            "id": "operacionesempresasalojamiento_12_12",
+            "nombre": "operacionesempresasalojamiento-12",
+            "archivo": "operacionesempresasalojamiento-12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/12/operacionesempresasalojamiento-12.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:18:02.657Z"
+          },
+          "operacionesempresasalojamiento12_12": {
+            "id": "operacionesempresasalojamiento12_12",
+            "nombre": "OperacionesEmpresasAlojamiento12",
+            "archivo": "OperacionesEmpresasAlojamiento12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/12/OperacionesEmpresasAlojamiento12.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "12",
+            "last_modified": "2026-01-18T21:15:52.932Z"
+          },
+          "organizacionoperacionesserviciosab12_12": {
+            "id": "organizacionoperacionesserviciosab12_12",
+            "nombre": "OrganizacionOperacionesServiciosAB12",
+            "archivo": "OrganizacionOperacionesServiciosAB12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/12/OrganizacionOperacionesServiciosAB12.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:16:29.872Z"
+          },
+          "saludocupacional12_12": {
+            "id": "saludocupacional12_12",
+            "nombre": "SaludOcupacional12",
+            "archivo": "SaludOcupacional12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/12/SaludOcupacional12.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:31:28.368Z"
+          }
+        }
+      },
+      "III_CICLO": {
+        "programas": {
+          "artesindustriales3ciclo_iii_ciclo": {
+            "id": "artesindustriales3ciclo_iii_ciclo",
+            "nombre": "artesindustriales3ciclo",
+            "archivo": "artesindustriales3ciclo.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/III_CICLO/artesindustriales3ciclo.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "III_CICLO",
+            "last_modified": "2026-01-18T20:22:02.070Z"
+          },
+          "artesplasticas3cicloydiversificada_iii_ciclo": {
+            "id": "artesplasticas3cicloydiversificada_iii_ciclo",
+            "nombre": "artesplasticas3cicloydiversificada",
+            "archivo": "artesplasticas3cicloydiversificada.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/III_CICLO/artesplasticas3cicloydiversificada.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "III_CICLO",
+            "last_modified": "2026-01-18T20:22:17.883Z"
+          },
+          "ciencias3ciclo_iii_ciclo": {
+            "id": "ciencias3ciclo_iii_ciclo",
+            "nombre": "ciencias3ciclo",
+            "archivo": "ciencias3ciclo.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/III_CICLO/ciencias3ciclo.pdf",
+            "area": "Ciencias",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "III_CICLO",
+            "last_modified": "2026-01-18T20:21:47.196Z"
+          },
+          "civica3ciclo_diversificada_iii_ciclo": {
+            "id": "civica3ciclo_diversificada_iii_ciclo",
+            "nombre": "civica3ciclo diversificada",
+            "archivo": "civica3ciclo_diversificada.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/III_CICLO/civica3ciclo_diversificada.pdf",
+            "area": "Educación Cívica",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "III_CICLO",
+            "last_modified": "2026-01-18T20:23:25.408Z"
+          },
+          "educfisica3cicloydiversificada_iii_ciclo": {
+            "id": "educfisica3cicloydiversificada_iii_ciclo",
+            "nombre": "educfisica3cicloydiversificada",
+            "archivo": "educfisica3cicloydiversificada.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/III_CICLO/educfisica3cicloydiversificada.pdf",
+            "area": "Ciencias",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "III_CICLO",
+            "last_modified": "2026-01-18T20:23:18.292Z"
+          },
+          "educreligiosa3ciclo_1996_iii_ciclo": {
+            "id": "educreligiosa3ciclo_1996_iii_ciclo",
+            "nombre": "educreligiosa3ciclo-1996",
+            "archivo": "educreligiosa3ciclo-1996.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/III_CICLO/educreligiosa3ciclo-1996.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "III_CICLO",
+            "last_modified": "2026-01-18T20:22:09.384Z"
+          },
+          "esociales3ciclo_diversificada_iii_ciclo": {
+            "id": "esociales3ciclo_diversificada_iii_ciclo",
+            "nombre": "esociales3ciclo diversificada",
+            "archivo": "esociales3ciclo_diversificada.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/III_CICLO/esociales3ciclo_diversificada.pdf",
+            "area": "Estudios Sociales",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "III_CICLO",
+            "last_modified": "2026-01-18T20:14:00.624Z"
+          },
+          "espanol3ciclo_diversificada_iii_ciclo": {
+            "id": "espanol3ciclo_diversificada_iii_ciclo",
+            "nombre": "espanol3ciclo diversificada",
+            "archivo": "espanol3ciclo_diversificada.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/III_CICLO/espanol3ciclo_diversificada.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "III_CICLO",
+            "last_modified": "2026-01-18T20:19:00.263Z"
+          },
+          "frances3ciclo_diversificada_iii_ciclo": {
+            "id": "frances3ciclo_diversificada_iii_ciclo",
+            "nombre": "frances3ciclo diversificada",
+            "archivo": "frances3ciclo_diversificada.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/III_CICLO/frances3ciclo_diversificada.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "III_CICLO",
+            "last_modified": "2026-01-18T20:17:15.861Z"
+          },
+          "ingles_espanol_3ciclo_iii_ciclo": {
+            "id": "ingles_espanol_3ciclo_iii_ciclo",
+            "nombre": "ingles-espanol-3ciclo",
+            "archivo": "ingles-espanol-3ciclo.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/III_CICLO/ingles-espanol-3ciclo.pdf",
+            "area": "Inglés",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "III_CICLO",
+            "last_modified": "2026-01-18T20:16:10.419Z"
+          },
+          "ingles3ciclo_diversificada_iii_ciclo": {
+            "id": "ingles3ciclo_diversificada_iii_ciclo",
+            "nombre": "ingles3ciclo diversificada",
+            "archivo": "ingles3ciclo_diversificada.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/III_CICLO/ingles3ciclo_diversificada.pdf",
+            "area": "Inglés",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "III_CICLO",
+            "last_modified": "2026-01-18T20:17:00.396Z"
+          },
+          "italiano_3ciclo_diversificada_iii_ciclo": {
+            "id": "italiano_3ciclo_diversificada_iii_ciclo",
+            "nombre": "italiano 3ciclo diversificada",
+            "archivo": "italiano_3ciclo_diversificada.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/III_CICLO/italiano_3ciclo_diversificada.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "III_CICLO",
+            "last_modified": "2026-01-18T20:13:32.164Z"
+          },
+          "musica3cicloydiversificada_iii_ciclo": {
+            "id": "musica3cicloydiversificada_iii_ciclo",
+            "nombre": "musica3cicloydiversificada",
+            "archivo": "musica3cicloydiversificada.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/III_CICLO/musica3cicloydiversificada.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "III_CICLO",
+            "last_modified": "2026-01-18T20:23:32.497Z"
+          },
+          "psicologia3cicloydiversificada_iii_ciclo": {
+            "id": "psicologia3cicloydiversificada_iii_ciclo",
+            "nombre": "psicologia3cicloydiversificada",
+            "archivo": "psicologia3cicloydiversificada.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/III_CICLO/psicologia3cicloydiversificada.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "III_CICLO",
+            "last_modified": "2026-01-18T20:13:42.819Z"
+          }
+        }
+      },
+      "II_CICLO": {
+        "programas": {
+          "educreligiosa2ciclo_1996_ii_ciclo": {
+            "id": "educreligiosa2ciclo_1996_ii_ciclo",
+            "nombre": "educreligiosa2ciclo-1996",
+            "archivo": "educreligiosa2ciclo-1996.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/II_CICLO/educreligiosa2ciclo-1996.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "II_CICLO",
+            "last_modified": "2026-01-18T20:21:23.508Z"
+          },
+          "espanol2ciclo_ii_ciclo": {
+            "id": "espanol2ciclo_ii_ciclo",
+            "nombre": "espanol2ciclo",
+            "archivo": "espanol2ciclo.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/II_CICLO/espanol2ciclo.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "II_CICLO",
+            "last_modified": "2026-01-18T20:19:23.804Z"
+          },
+          "ingles_2ciclo_ii_ciclo": {
+            "id": "ingles_2ciclo_ii_ciclo",
+            "nombre": "ingles 2ciclo",
+            "archivo": "ingles_2ciclo.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/II_CICLO/ingles_2ciclo.pdf",
+            "area": "Inglés",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "II_CICLO",
+            "last_modified": "2026-01-18T20:16:53.205Z"
+          }
+        }
+      },
+      "I_CICLO": {
+        "programas": {
+          "1y2cicloeducgeneralbasica_i_ciclo": {
+            "id": "1y2cicloeducgeneralbasica_i_ciclo",
+            "nombre": "1y2cicloeducgeneralbasica",
+            "archivo": "1y2cicloeducgeneralbasica.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/I_CICLO/1y2cicloeducgeneralbasica.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:24:07.508Z"
+          },
+          "aplasticas1y2ciclo_i_ciclo": {
+            "id": "aplasticas1y2ciclo_i_ciclo",
+            "nombre": "aplasticas1y2ciclo",
+            "archivo": "aplasticas1y2ciclo.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/I_CICLO/aplasticas1y2ciclo.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:21:03.407Z"
+          },
+          "artesindustriales1y2ciclo_i_ciclo": {
+            "id": "artesindustriales1y2ciclo_i_ciclo",
+            "nombre": "artesindustriales1y2ciclo",
+            "archivo": "artesindustriales1y2ciclo.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/I_CICLO/artesindustriales1y2ciclo.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:21:11.638Z"
+          },
+          "ciencias1y2ciclo2018_i_ciclo": {
+            "id": "ciencias1y2ciclo2018_i_ciclo",
+            "nombre": "ciencias1y2ciclo2018",
+            "archivo": "ciencias1y2ciclo2018.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/I_CICLO/ciencias1y2ciclo2018.pdf",
+            "area": "Ciencias",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:18:53.694Z"
+          },
+          "educreligiosa1ciclo_1996_i_ciclo": {
+            "id": "educreligiosa1ciclo_1996_i_ciclo",
+            "nombre": "educreligiosa1ciclo-1996",
+            "archivo": "educreligiosa1ciclo-1996.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/I_CICLO/educreligiosa1ciclo-1996.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:24:23.618Z"
+          },
+          "efisica1y2ciclo_i_ciclo": {
+            "id": "efisica1y2ciclo_i_ciclo",
+            "nombre": "efisica1y2ciclo",
+            "archivo": "efisica1y2ciclo.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/I_CICLO/efisica1y2ciclo.pdf",
+            "area": "Ciencias",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:21:30.795Z"
+          },
+          "emusical1y2ciclo_i_ciclo": {
+            "id": "emusical1y2ciclo_i_ciclo",
+            "nombre": "emusical1y2ciclo",
+            "archivo": "emusical1y2ciclo.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/I_CICLO/emusical1y2ciclo.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:21:39.283Z"
+          },
+          "esocialesecivica1y2ciclo_i_ciclo": {
+            "id": "esocialesecivica1y2ciclo_i_ciclo",
+            "nombre": "esocialesecivica1y2ciclo",
+            "archivo": "esocialesecivica1y2ciclo.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/I_CICLO/esocialesecivica1y2ciclo.pdf",
+            "area": "Estudios Sociales",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:24:55.317Z"
+          },
+          "espanol1ciclo_i_ciclo": {
+            "id": "espanol1ciclo_i_ciclo",
+            "nombre": "espanol1ciclo",
+            "archivo": "espanol1ciclo.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/I_CICLO/espanol1ciclo.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:25:05.350Z"
+          },
+          "frances1y2ciclo_i_ciclo": {
+            "id": "frances1y2ciclo_i_ciclo",
+            "nombre": "frances1y2ciclo",
+            "archivo": "frances1y2ciclo.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/I_CICLO/frances1y2ciclo.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:17:24.988Z"
+          },
+          "frances_espanol_1y2ciclo_i_ciclo": {
+            "id": "frances_espanol_1y2ciclo_i_ciclo",
+            "nombre": "frances espanol 1y2ciclo",
+            "archivo": "frances_espanol_1y2ciclo.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/I_CICLO/frances_espanol_1y2ciclo.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:16:45.811Z"
+          },
+          "ingles1ciclo_i_ciclo": {
+            "id": "ingles1ciclo_i_ciclo",
+            "nombre": "ingles1ciclo",
+            "archivo": "ingles1ciclo.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/I_CICLO/ingles1ciclo.pdf",
+            "area": "Inglés",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:17:07.294Z"
+          },
+          "italiano_1y2ciclo_i_ciclo": {
+            "id": "italiano_1y2ciclo_i_ciclo",
+            "nombre": "italiano 1y2ciclo",
+            "archivo": "italiano_1y2ciclo.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/I_CICLO/italiano_1y2ciclo.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:15:36.087Z"
+          },
+          "vida_cotidiana1y2ciclos_i_ciclo": {
+            "id": "vida_cotidiana1y2ciclos_i_ciclo",
+            "nombre": "vida-cotidiana1y2ciclos",
+            "archivo": "vida-cotidiana1y2ciclos.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/I_CICLO/vida-cotidiana1y2ciclos.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:15:43.904Z"
+          }
+        }
+      },
+      "OTROS": {
+        "programas": {
+          "biologia_otros": {
+            "id": "biologia_otros",
+            "nombre": "biologia",
+            "archivo": "biologia.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/OTROS/biologia.pdf",
+            "area": "Ciencias",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "OTROS",
+            "last_modified": "2026-01-18T20:23:38.554Z"
+          },
+          "biologia2017_otros": {
+            "id": "biologia2017_otros",
+            "nombre": "biologia2017",
+            "archivo": "biologia2017.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/OTROS/biologia2017.pdf",
+            "area": "Ciencias",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "OTROS",
+            "last_modified": "2026-01-18T20:16:20.406Z"
+          },
+          "educacion_vida_cotidiana_otros": {
+            "id": "educacion_vida_cotidiana_otros",
+            "nombre": "educacion-vida-cotidiana",
+            "archivo": "educacion-vida-cotidiana.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/OTROS/educacion-vida-cotidiana.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "OTROS",
+            "last_modified": "2026-01-18T20:19:57.605Z"
+          },
+          "educacion_preescolar_otros": {
+            "id": "educacion_preescolar_otros",
+            "nombre": "educacion preescolar",
+            "archivo": "educacion_preescolar.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/OTROS/educacion_preescolar.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "OTROS",
+            "last_modified": "2026-01-18T20:19:41.288Z"
+          },
+          "educreligiosadiversificada_1996_otros": {
+            "id": "educreligiosadiversificada_1996_otros",
+            "nombre": "educreligiosadiversificada-1996",
+            "archivo": "educreligiosadiversificada-1996.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/OTROS/educreligiosadiversificada-1996.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "OTROS",
+            "last_modified": "2026-01-18T20:23:46.960Z"
+          },
+          "filosofia_otros": {
+            "id": "filosofia_otros",
+            "nombre": "filosofia",
+            "archivo": "filosofia.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/OTROS/filosofia.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "OTROS",
+            "last_modified": "2026-01-18T20:23:58.394Z"
+          },
+          "filosofia2017_otros": {
+            "id": "filosofia2017_otros",
+            "nombre": "filosofia2017",
+            "archivo": "filosofia2017.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/OTROS/filosofia2017.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "OTROS",
+            "last_modified": "2026-01-18T20:16:33.633Z"
+          },
+          "fisica2018_otros": {
+            "id": "fisica2018_otros",
+            "nombre": "fisica2018",
+            "archivo": "fisica2018.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/OTROS/fisica2018.pdf",
+            "area": "Ciencias",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "OTROS",
+            "last_modified": "2026-01-18T20:16:38.402Z"
+          },
+          "inglestransicion_otros": {
+            "id": "inglestransicion_otros",
+            "nombre": "inglestransicion",
+            "archivo": "inglestransicion.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/OTROS/inglestransicion.pdf",
+            "area": "Inglés",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "OTROS",
+            "last_modified": "2026-01-18T20:24:16.277Z"
+          },
+          "italiano_otros": {
+            "id": "italiano_otros",
+            "nombre": "italiano",
+            "archivo": "italiano.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/OTROS/italiano.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "OTROS",
+            "last_modified": "2026-01-18T20:19:49.512Z"
+          },
+          "matematica_otros": {
+            "id": "matematica_otros",
+            "nombre": "matematica",
+            "archivo": "matematica.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/OTROS/matematica.pdf",
+            "area": "Matemáticas",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "OTROS",
+            "last_modified": "2026-01-18T20:25:14.873Z"
+          },
+          "orientacion_nuevo_otros": {
+            "id": "orientacion_nuevo_otros",
+            "nombre": "orientacion-nuevo",
+            "archivo": "orientacion-nuevo.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/OTROS/orientacion-nuevo.pdf",
+            "area": "General",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "OTROS",
+            "last_modified": "2026-01-18T20:15:53.412Z"
+          },
+          "quimica2018_otros": {
+            "id": "quimica2018_otros",
+            "nombre": "quimica2018",
+            "archivo": "quimica2018.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ACADEMICO/OTROS/quimica2018.pdf",
+            "area": "Ciencias",
+            "tipo": "Académica",
+            "modalidad": "ACADEMICO",
+            "nivel": "OTROS",
+            "last_modified": "2026-01-18T20:16:28.688Z"
+          }
+        }
+      }
+    },
+    "ESPECIAL": {
+      "OTROS": {
+        "programas": {
+          "eespecial_hellen_keller_otros": {
+            "id": "eespecial_hellen_keller_otros",
+            "nombre": "eespecial hellen keller",
+            "archivo": "eespecial_hellen_keller.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/ESPECIAL/OTROS/eespecial_hellen_keller.pdf",
+            "area": "General",
+            "tipo": "Complementaria",
+            "modalidad": "ESPECIAL",
+            "nivel": "OTROS",
+            "last_modified": "2026-01-18T20:19:13.007Z"
+          }
+        }
+      }
+    },
+    "INDIGENA": {
+      "I_CICLO": {
+        "programas": {
+          "cosmovision_cabecar_talamanca_iiiciclo_diversificada_i_ciclo": {
+            "id": "cosmovision_cabecar_talamanca_iiiciclo_diversificada_i_ciclo",
+            "nombre": "cosmovision-cabecar-talamanca-IIIciclo-diversificada",
+            "archivo": "cosmovision-cabecar-talamanca-IIIciclo-diversificada.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/INDIGENA/I_CICLO/cosmovision-cabecar-talamanca-IIIciclo-diversificada.pdf",
+            "area": "General",
+            "tipo": "Complementaria",
+            "modalidad": "INDIGENA",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:08:21.703Z"
+          },
+          "cultura_cabecar_chirripo_20iciclo_i_ciclo": {
+            "id": "cultura_cabecar_chirripo_20iciclo_i_ciclo",
+            "nombre": "cultura-cabecar-chirripo%20Iciclo",
+            "archivo": "cultura-cabecar-chirripo%20Iciclo.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/INDIGENA/I_CICLO/cultura-cabecar-chirripo%20Iciclo.pdf",
+            "area": "General",
+            "tipo": "Complementaria",
+            "modalidad": "INDIGENA",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:08:52.258Z"
+          },
+          "lengua_boruca_1y2ciclos_i_ciclo": {
+            "id": "lengua_boruca_1y2ciclos_i_ciclo",
+            "nombre": "lengua boruca 1y2ciclos",
+            "archivo": "lengua_boruca_1y2ciclos.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/INDIGENA/I_CICLO/lengua_boruca_1y2ciclos.pdf",
+            "area": "General",
+            "tipo": "Complementaria",
+            "modalidad": "INDIGENA",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:16:05.523Z"
+          },
+          "ngabere_iyiiciclos_i_ciclo": {
+            "id": "ngabere_iyiiciclos_i_ciclo",
+            "nombre": "ngabere-IyIIciclos",
+            "archivo": "ngabere-IyIIciclos.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/INDIGENA/I_CICLO/ngabere-IyIIciclos.pdf",
+            "area": "General",
+            "tipo": "Complementaria",
+            "modalidad": "INDIGENA",
+            "nivel": "I_CICLO",
+            "last_modified": "2026-01-18T20:09:05.364Z"
+          }
+        }
+      }
+    },
+    "NORMATIVA": {
+      "OTROS": {
+        "programas": {
+          "guiadocente_otros": {
+            "id": "guiadocente_otros",
+            "nombre": "guiadocente",
+            "archivo": "guiadocente.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/NORMATIVA/OTROS/guiadocente.pdf",
+            "area": "General",
+            "tipo": "Complementaria",
+            "modalidad": "NORMATIVA",
+            "nivel": "OTROS",
+            "last_modified": "2026-01-18T20:19:33.544Z"
+          }
+        }
+      }
+    },
+    "TECNICO_CTP": {
+      "10": {
+        "programas": {
+          "administyoperacaduanera10_10": {
+            "id": "administyoperacaduanera10_10",
+            "nombre": "administyoperacaduanera10",
+            "archivo": "administyoperacaduanera10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/administyoperacaduanera10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:31:56.619Z"
+          },
+          "admlogisticadistribucion10_10": {
+            "id": "admlogisticadistribucion10_10",
+            "nombre": "AdmLogisticaDistribucion10",
+            "archivo": "AdmLogisticaDistribucion10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/AdmLogisticaDistribucion10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:26:00.453Z"
+          },
+          "admoperacionaduanera10_10": {
+            "id": "admoperacionaduanera10_10",
+            "nombre": "AdmOperacionAduanera10",
+            "archivo": "AdmOperacionAduanera10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/AdmOperacionAduanera10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:24:04.202Z"
+          },
+          "bancafinanzas10_10": {
+            "id": "bancafinanzas10_10",
+            "nombre": "BancaFinanzas10",
+            "archivo": "BancaFinanzas10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/BancaFinanzas10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:33:50.284Z"
+          },
+          "ciberseguridad10_10": {
+            "id": "ciberseguridad10_10",
+            "nombre": "Ciberseguridad10",
+            "archivo": "Ciberseguridad10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/Ciberseguridad10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:20:23.837Z"
+          },
+          "computer_software_10_10": {
+            "id": "computer_software_10_10",
+            "nombre": "computer-software-10",
+            "archivo": "computer-software-10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/computer-software-10.pdf",
+            "area": "Tecnologia",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:32:06.807Z"
+          },
+          "computersciencesoftwaredevelopment10_10": {
+            "id": "computersciencesoftwaredevelopment10_10",
+            "nombre": "ComputerScienceSoftwareDevelopment10",
+            "archivo": "ComputerScienceSoftwareDevelopment10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/ComputerScienceSoftwareDevelopment10.pdf",
+            "area": "Tecnologia",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T21:14:03.660Z"
+          },
+          "configuracionsoportercso10_10": {
+            "id": "configuracionsoportercso10_10",
+            "nombre": "ConfiguracionSoporteRCSO10",
+            "archivo": "ConfiguracionSoporteRCSO10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/ConfiguracionSoporteRCSO10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:20:56.463Z"
+          },
+          "contabilidad10_10": {
+            "id": "contabilidad10_10",
+            "nombre": "Contabilidad10",
+            "archivo": "Contabilidad10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/Contabilidad10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:35:17.257Z"
+          },
+          "contabilidadcontrolinterno10_10": {
+            "id": "contabilidadcontrolinterno10_10",
+            "nombre": "ContabilidadControlInterno10",
+            "archivo": "ContabilidadControlInterno10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/ContabilidadControlInterno10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:18:53.094Z"
+          },
+          "contabilidadcostos10_10": {
+            "id": "contabilidadcostos10_10",
+            "nombre": "ContabilidadCostos10",
+            "archivo": "ContabilidadCostos10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/ContabilidadCostos10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:35:40.728Z"
+          },
+          "contabilidadfinanzas10_10": {
+            "id": "contabilidadfinanzas10_10",
+            "nombre": "ContabilidadFinanzas10",
+            "archivo": "ContabilidadFinanzas10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/ContabilidadFinanzas10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:35:28.007Z"
+          },
+          "controlcalidadsoftware10_10": {
+            "id": "controlcalidadsoftware10_10",
+            "nombre": "ControlCalidadSoftware10",
+            "archivo": "ControlCalidadSoftware10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/ControlCalidadSoftware10.pdf",
+            "area": "Tecnologia",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T21:10:07.100Z"
+          },
+          "desarrolloweb10_10": {
+            "id": "desarrolloweb10_10",
+            "nombre": "DesarrolloWeb10",
+            "archivo": "DesarrolloWeb10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/DesarrolloWeb10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:20:50.122Z"
+          },
+          "ecoturismo10_10": {
+            "id": "ecoturismo10_10",
+            "nombre": "Ecoturismo10",
+            "archivo": "Ecoturismo10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/Ecoturismo10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:18:33.486Z"
+          },
+          "ejecutivocomercialserviciocliente10_10": {
+            "id": "ejecutivocomercialserviciocliente10_10",
+            "nombre": "EjecutivoComercialServicioCliente10",
+            "archivo": "EjecutivoComercialServicioCliente10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/EjecutivoComercialServicioCliente10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:20:04.178Z"
+          },
+          "gerenciaproduccioncocina10_10": {
+            "id": "gerenciaproduccioncocina10_10",
+            "nombre": "GerenciaProduccionCocina10",
+            "archivo": "GerenciaProduccionCocina10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/GerenciaProduccionCocina10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:16:25.199Z"
+          },
+          "informatica_redes_10_10": {
+            "id": "informatica_redes_10_10",
+            "nombre": "informatica-redes-10",
+            "archivo": "informatica-redes-10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/informatica-redes-10.pdf",
+            "area": "Tecnologia",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:33:11.773Z"
+          },
+          "informatica_soporte_10_10": {
+            "id": "informatica_soporte_10_10",
+            "nombre": "informatica-soporte-10",
+            "archivo": "informatica-soporte-10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/informatica-soporte-10.pdf",
+            "area": "Tecnologia",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:33:17.479Z"
+          },
+          "informaticadesarrollosoftware10_10": {
+            "id": "informaticadesarrollosoftware10_10",
+            "nombre": "InformaticaDesarrolloSoftware10",
+            "archivo": "InformaticaDesarrolloSoftware10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/InformaticaDesarrolloSoftware10.pdf",
+            "area": "Tecnologia",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T21:10:45.344Z"
+          },
+          "informaticaempresarial10_10": {
+            "id": "informaticaempresarial10_10",
+            "nombre": "InformaticaEmpresarial10",
+            "archivo": "InformaticaEmpresarial10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/InformaticaEmpresarial10.pdf",
+            "area": "Tecnologia",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:26:04.543Z"
+          },
+          "mercadeo10_10": {
+            "id": "mercadeo10_10",
+            "nombre": "Mercadeo10",
+            "archivo": "Mercadeo10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/Mercadeo10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:20:00.053Z"
+          },
+          "reparacion_sistemas_vehiculos_livianos_10_10": {
+            "id": "reparacion_sistemas_vehiculos_livianos_10_10",
+            "nombre": "reparacion-sistemas-vehiculos-livianos-10",
+            "archivo": "reparacion-sistemas-vehiculos-livianos-10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/reparacion-sistemas-vehiculos-livianos-10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:20:16.540Z"
+          },
+          "secretariadoejecutivo10_10": {
+            "id": "secretariadoejecutivo10_10",
+            "nombre": "SecretariadoEjecutivo10",
+            "archivo": "SecretariadoEjecutivo10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/SecretariadoEjecutivo10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:36:02.643Z"
+          },
+          "turismo_costero_10_10": {
+            "id": "turismo_costero_10_10",
+            "nombre": "turismo-costero-10",
+            "archivo": "turismo-costero-10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/turismo-costero-10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:33:19.709Z"
+          },
+          "turismorural10_10": {
+            "id": "turismorural10_10",
+            "nombre": "TurismoRural10",
+            "archivo": "TurismoRural10.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/10/TurismoRural10.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "10",
+            "last_modified": "2026-01-18T22:36:28.060Z"
+          }
+        }
+      },
+      "11": {
+        "programas": {
+          "administyoperacaduanera11_11": {
+            "id": "administyoperacaduanera11_11",
+            "nombre": "administyoperacaduanera11",
+            "archivo": "administyoperacaduanera11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/administyoperacaduanera11.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:33:26.964Z"
+          },
+          "admlogisticadistribucion11_11": {
+            "id": "admlogisticadistribucion11_11",
+            "nombre": "AdmLogisticaDistribucion11",
+            "archivo": "AdmLogisticaDistribucion11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/AdmLogisticaDistribucion11.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:23:08.644Z"
+          },
+          "admoperacionaduanera11_11": {
+            "id": "admoperacionaduanera11_11",
+            "nombre": "AdmOperacionAduanera11",
+            "archivo": "AdmOperacionAduanera11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/AdmOperacionAduanera11.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:23:59.431Z"
+          },
+          "bancafinanzas11_11": {
+            "id": "bancafinanzas11_11",
+            "nombre": "BancaFinanzas11",
+            "archivo": "BancaFinanzas11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/BancaFinanzas11.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:33:57.058Z"
+          },
+          "ciberseguridad11_11": {
+            "id": "ciberseguridad11_11",
+            "nombre": "Ciberseguridad11",
+            "archivo": "Ciberseguridad11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/Ciberseguridad11.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:19:47.456Z"
+          },
+          "computer_software_11_11": {
+            "id": "computer_software_11_11",
+            "nombre": "computer-software-11",
+            "archivo": "computer-software-11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/computer-software-11.pdf",
+            "area": "Tecnologia",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:26:19.194Z"
+          },
+          "computersciencesoftwaredevelopment11_11": {
+            "id": "computersciencesoftwaredevelopment11_11",
+            "nombre": "ComputerScienceSoftwareDevelopment11",
+            "archivo": "ComputerScienceSoftwareDevelopment11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/ComputerScienceSoftwareDevelopment11.pdf",
+            "area": "Tecnologia",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T21:11:23.681Z"
+          },
+          "configuracionsoportercso11_11": {
+            "id": "configuracionsoportercso11_11",
+            "nombre": "ConfiguracionSoporteRCSO11",
+            "archivo": "ConfiguracionSoporteRCSO11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/ConfiguracionSoporteRCSO11.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:19:39.714Z"
+          },
+          "contabilidad11_0_11": {
+            "id": "contabilidad11_0_11",
+            "nombre": "Contabilidad11 0",
+            "archivo": "Contabilidad11_0.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/Contabilidad11_0.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T21:11:06.078Z"
+          },
+          "contabilidadcontrolinterno11_11": {
+            "id": "contabilidadcontrolinterno11_11",
+            "nombre": "ContabilidadControlInterno11",
+            "archivo": "ContabilidadControlInterno11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/ContabilidadControlInterno11.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T21:15:01.654Z"
+          },
+          "contabilidadcostos11_11": {
+            "id": "contabilidadcostos11_11",
+            "nombre": "ContabilidadCostos11",
+            "archivo": "ContabilidadCostos11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/ContabilidadCostos11.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:35:48.189Z"
+          },
+          "contabilidadfinanzas11_11": {
+            "id": "contabilidadfinanzas11_11",
+            "nombre": "ContabilidadFinanzas11",
+            "archivo": "ContabilidadFinanzas11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/ContabilidadFinanzas11.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:35:35.023Z"
+          },
+          "desarrolloweb11_11": {
+            "id": "desarrolloweb11_11",
+            "nombre": "DesarrolloWeb11",
+            "archivo": "DesarrolloWeb11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/DesarrolloWeb11.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:18:46.257Z"
+          },
+          "ecoturismo11_11": {
+            "id": "ecoturismo11_11",
+            "nombre": "Ecoturismo11",
+            "archivo": "Ecoturismo11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/Ecoturismo11.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T21:15:28.851Z"
+          },
+          "ejecutivocomercialserviciocliente11_11": {
+            "id": "ejecutivocomercialserviciocliente11_11",
+            "nombre": "EjecutivoComercialServicioCliente11",
+            "archivo": "EjecutivoComercialServicioCliente11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/EjecutivoComercialServicioCliente11.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T21:15:42.905Z"
+          },
+          "gerenciaproduccioncocina11_11": {
+            "id": "gerenciaproduccioncocina11_11",
+            "nombre": "GerenciaProduccionCocina11",
+            "archivo": "GerenciaProduccionCocina11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/GerenciaProduccionCocina11.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:16:20.018Z"
+          },
+          "informatica_redes_11_11": {
+            "id": "informatica_redes_11_11",
+            "nombre": "informatica-redes-11",
+            "archivo": "informatica-redes-11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/informatica-redes-11.pdf",
+            "area": "Tecnologia",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:33:34.731Z"
+          },
+          "informaticadesarrollosoftware11_11": {
+            "id": "informaticadesarrollosoftware11_11",
+            "nombre": "InformaticaDesarrolloSoftware11",
+            "archivo": "InformaticaDesarrolloSoftware11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/InformaticaDesarrolloSoftware11.pdf",
+            "area": "Tecnologia",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:35:59.457Z"
+          },
+          "informaticaempresarial11_11": {
+            "id": "informaticaempresarial11_11",
+            "nombre": "InformaticaEmpresarial11",
+            "archivo": "InformaticaEmpresarial11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/InformaticaEmpresarial11.pdf",
+            "area": "Tecnologia",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:25:52.503Z"
+          },
+          "mercadeo11_11": {
+            "id": "mercadeo11_11",
+            "nombre": "Mercadeo11",
+            "archivo": "Mercadeo11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/Mercadeo11.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T21:16:33.751Z"
+          },
+          "secretariadoejecutivo11_11": {
+            "id": "secretariadoejecutivo11_11",
+            "nombre": "SecretariadoEjecutivo11",
+            "archivo": "SecretariadoEjecutivo11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/SecretariadoEjecutivo11.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:31:08.423Z"
+          },
+          "turismo_costero_11_11": {
+            "id": "turismo_costero_11_11",
+            "nombre": "turismo-costero-11",
+            "archivo": "turismo-costero-11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/turismo-costero-11.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:28:59.181Z"
+          },
+          "turismorural11_11": {
+            "id": "turismorural11_11",
+            "nombre": "TurismoRural11",
+            "archivo": "TurismoRural11.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/11/TurismoRural11.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "11",
+            "last_modified": "2026-01-18T22:31:51.635Z"
+          }
+        }
+      },
+      "12": {
+        "programas": {
+          "administyoperacaduanera12_12": {
+            "id": "administyoperacaduanera12_12",
+            "nombre": "administyoperacaduanera12",
+            "archivo": "administyoperacaduanera12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/administyoperacaduanera12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:28:53.760Z"
+          },
+          "admlogisticadistribucion12_12": {
+            "id": "admlogisticadistribucion12_12",
+            "nombre": "AdmLogisticaDistribucion12",
+            "archivo": "AdmLogisticaDistribucion12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/AdmLogisticaDistribucion12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:23:00.754Z"
+          },
+          "admoperacionaduanera12_12": {
+            "id": "admoperacionaduanera12_12",
+            "nombre": "AdmOperacionAduanera12",
+            "archivo": "AdmOperacionAduanera12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/AdmOperacionAduanera12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:23:13.593Z"
+          },
+          "bancafinanzas12_12": {
+            "id": "bancafinanzas12_12",
+            "nombre": "BancaFinanzas12",
+            "archivo": "BancaFinanzas12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/BancaFinanzas12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:29:31.566Z"
+          },
+          "ciberseguridad12_12": {
+            "id": "ciberseguridad12_12",
+            "nombre": "Ciberseguridad12",
+            "archivo": "Ciberseguridad12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/Ciberseguridad12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T21:16:48.668Z"
+          },
+          "computer_software_12_12": {
+            "id": "computer_software_12_12",
+            "nombre": "computer-software-12",
+            "archivo": "computer-software-12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/computer-software-12.pdf",
+            "area": "Tecnologia",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:26:12.899Z"
+          },
+          "configuracionsoportercso12_12": {
+            "id": "configuracionsoportercso12_12",
+            "nombre": "ConfiguracionSoporteRCSO12",
+            "archivo": "ConfiguracionSoporteRCSO12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/ConfiguracionSoporteRCSO12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T21:16:42.796Z"
+          },
+          "contabilidad12_12": {
+            "id": "contabilidad12_12",
+            "nombre": "Contabilidad12",
+            "archivo": "Contabilidad12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/Contabilidad12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:35:22.451Z"
+          },
+          "contabilidadfinanzas12_12": {
+            "id": "contabilidadfinanzas12_12",
+            "nombre": "ContabilidadFinanzas12",
+            "archivo": "ContabilidadFinanzas12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/ContabilidadFinanzas12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:18:27.415Z"
+          },
+          "desarrolloweb12_12": {
+            "id": "desarrolloweb12_12",
+            "nombre": "DesarrolloWeb12",
+            "archivo": "DesarrolloWeb12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/DesarrolloWeb12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T21:15:09.960Z"
+          },
+          "ecoturismo12_12": {
+            "id": "ecoturismo12_12",
+            "nombre": "Ecoturismo12",
+            "archivo": "Ecoturismo12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/Ecoturismo12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:18:16.085Z"
+          },
+          "ejecutivocomercial_serviciocliente_12_12": {
+            "id": "ejecutivocomercial_serviciocliente_12_12",
+            "nombre": "ejecutivocomercial-serviciocliente-12",
+            "archivo": "ejecutivocomercial-serviciocliente-12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/ejecutivocomercial-serviciocliente-12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:18:08.751Z"
+          },
+          "ejecutivocomercialserviciocliente12_12": {
+            "id": "ejecutivocomercialserviciocliente12_12",
+            "nombre": "EjecutivoComercialServicioCliente12",
+            "archivo": "EjecutivoComercialServicioCliente12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/EjecutivoComercialServicioCliente12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T21:15:35.619Z"
+          },
+          "gerenciaproduccioncocina12_12": {
+            "id": "gerenciaproduccioncocina12_12",
+            "nombre": "GerenciaProduccionCocina12",
+            "archivo": "GerenciaProduccionCocina12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/GerenciaProduccionCocina12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T21:17:35.443Z"
+          },
+          "informatica_redes_12_12": {
+            "id": "informatica_redes_12_12",
+            "nombre": "informatica-redes-12",
+            "archivo": "informatica-redes-12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/informatica-redes-12.pdf",
+            "area": "Tecnologia",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:29:10.517Z"
+          },
+          "informatica_soporte_12_12": {
+            "id": "informatica_soporte_12_12",
+            "nombre": "informatica-soporte-12",
+            "archivo": "informatica-soporte-12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/informatica-soporte-12.pdf",
+            "area": "Tecnologia",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:29:14.907Z"
+          },
+          "informaticadesarrollosoftware12_12": {
+            "id": "informaticadesarrollosoftware12_12",
+            "nombre": "InformaticaDesarrolloSoftware12",
+            "archivo": "InformaticaDesarrolloSoftware12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/InformaticaDesarrolloSoftware12.pdf",
+            "area": "Tecnologia",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:29:39.789Z"
+          },
+          "informaticaempresarial12_12": {
+            "id": "informaticaempresarial12_12",
+            "nombre": "InformaticaEmpresarial12",
+            "archivo": "InformaticaEmpresarial12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/InformaticaEmpresarial12.pdf",
+            "area": "Tecnologia",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:24:45.062Z"
+          },
+          "mercadeo12_12": {
+            "id": "mercadeo12_12",
+            "nombre": "Mercadeo12",
+            "archivo": "Mercadeo12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/Mercadeo12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T21:16:25.046Z"
+          },
+          "secretariadoejecutivo12_12": {
+            "id": "secretariadoejecutivo12_12",
+            "nombre": "SecretariadoEjecutivo12",
+            "archivo": "SecretariadoEjecutivo12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/SecretariadoEjecutivo12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:29:44.203Z"
+          },
+          "turismo_costero_12_12": {
+            "id": "turismo_costero_12_12",
+            "nombre": "turismo-costero-12",
+            "archivo": "turismo-costero-12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/turismo-costero-12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:29:26.197Z"
+          },
+          "turismo_ecologico_12_12": {
+            "id": "turismo_ecologico_12_12",
+            "nombre": "turismo-ecologico-12",
+            "archivo": "turismo-ecologico-12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/turismo-ecologico-12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:29:22.857Z"
+          },
+          "turismoalimentosbebidas12_0_12": {
+            "id": "turismoalimentosbebidas12_0_12",
+            "nombre": "TurismoAlimentosBebidas12 0",
+            "archivo": "TurismoAlimentosBebidas12_0.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/TurismoAlimentosBebidas12_0.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:31:18.357Z"
+          },
+          "turismohoteleria12_12": {
+            "id": "turismohoteleria12_12",
+            "nombre": "TurismoHoteleria12",
+            "archivo": "TurismoHoteleria12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/TurismoHoteleria12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:31:35.257Z"
+          },
+          "turismorural12_12": {
+            "id": "turismorural12_12",
+            "nombre": "TurismoRural12",
+            "archivo": "TurismoRural12.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/12/TurismoRural12.pdf",
+            "area": "General",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "12",
+            "last_modified": "2026-01-18T22:31:44.937Z"
+          }
+        }
+      },
+      "OTROS": {
+        "programas": {
+          "inglesturismo_3_otros": {
+            "id": "inglesturismo_3_otros",
+            "nombre": "inglesturismo 3",
+            "archivo": "inglesturismo_3.pdf",
+            "path_relativo": "/mep-docs/MEP_ORDENADO/TECNICO_CTP/OTROS/inglesturismo_3.pdf",
+            "area": "Inglés",
+            "tipo": "Técnica",
+            "modalidad": "TECNICO_CTP",
+            "nivel": "OTROS",
+            "last_modified": "2026-01-18T22:26:52.894Z"
+          }
+        }
+      }
+    }
+  }
+}

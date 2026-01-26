@@ -1,0 +1,48 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "Recepción Hotelera",
+      "ui_family": "SOFT_SKILLS",
+      "learning_outcome": {
+        "text": "Desempeñarse eficazmente en la recepción de un hotel, gestionando el primer contacto con el cliente, sus impresiones y atendiendo a sus necesidades o dificultades, visualizando la recepción como extensión de la gerencia.",
+        "code": "LO_RH_01"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela una situación de 'check-in' y presenta un escenario de cliente con solicitud especial o problema, retando a los estudiantes a identificar la información clave y las emociones implicadas.",
+          "student_action": "Observa el modelado, analiza la situación del cliente e identifica los puntos críticos para una atención efectiva.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a trabajar en equipos para diseñar posibles respuestas y soluciones al escenario del cliente, fomentando el debate y la propuesta de estrategias de comunicación y servicio.",
+          "student_action": "Colabora en equipo para diseñar un plan de acción para la atención al cliente, incluyendo opciones de solución y frases clave para la interacción.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Guía la puesta en escena de roleplays basados en los planes de acción diseñados, retando a los estudiantes a actuar como recepcionistas y clientes, ofreciendo retroalimentación constructiva sobre su desempeño en tiempo real.",
+          "student_action": "Construye la experiencia a través del roleplay, asumiendo el rol de recepcionista o cliente y aplicando las estrategias diseñadas, adaptándose a las dinámicas de la interacción.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Facilita una discusión para clarificar los aprendizajes, destacando las mejores prácticas, las dificultades encontradas y cómo la empatía y la resolución de problemas impactan la experiencia del huésped.",
+          "student_action": "Reflexiona sobre las habilidades desarrolladas en el roleplay, clarifica los principios de servicio al cliente y consolida su comprensión de la importancia de la primera impresión en hotelería.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

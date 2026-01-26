@@ -1,0 +1,50 @@
+{
+    "system_version": "v8.5 Gold (Antigravity)",
+    "architecture": {
+        "framework": "Next.js 14+ (App Router)",
+        "styling": "Tailwind CSS 4 (Target) / DaisyUI 5 (Target)",
+        "database": "Neon DB (PostgreSQL Serverless)",
+        "orm": "Prisma"
+    },
+    "database_schema": {
+        "core_tables": [
+            "User (Docente/SuperAdmin)",
+            "Account (OAuth)",
+            "Session (Security 20min)",
+            "Student (Estudiante)",
+            "PedagogicalPlan (Planeamientos)"
+        ],
+        "antigravity_tables": [
+            "AcademicGroup (Secciones)",
+            "AttendanceRecord (Asistencia)",
+            "ConductReport (Botón Rojo)",
+            "StudentEvidence (Portafolio Multimedia)",
+            "EvaluationLog (Calificaciones Blindadas)"
+        ]
+    },
+    "route_map": {
+        "auth": "/app/(auth)/login",
+        "dashboard_core": "/app/dashboard",
+        "modules": [
+            "/app/dashboard/grupos (Asistencia/Conducta)",
+            "/app/dashboard/life (Protocolos)",
+            "/app/dashboard/control (Suscriptor Admin)",
+            "/app/dashboard/generator (IA Pedagógica)",
+            "/app/student/portal (Gamificación)"
+        ],
+        "demo": "/app/demo (Sales Shield)"
+    },
+    "security_protocols": {
+        "session_timeout": "20 Minutes (Hard Limit)",
+        "middleware": "AuthGuard Global",
+        "ip_rate_limit": "Enabled (100 req/min)",
+        "antipiracy": "Dynamic Watermarking per Subscriber"
+    },
+    "dependencies": {
+        "core": "next, react, react-dom",
+        "auth": "next-auth, bcryptjs",
+        "ui": "tailwindcss, daisyui, lucide-react, framer-motion (target)",
+        "ai": "@google/generative-ai",
+        "utils": "jspdf, sonner, sweetalert2"
+    }
+}

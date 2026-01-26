@@ -1,0 +1,86 @@
+{
+  "subject": "AnimacionD",
+  "level": "3mo Año",
+  "units": [
+    {
+      "name": "Unidad General",
+      "outcomes": [
+        {
+          "description": "Resultados Generales",
+          "indicators": [
+            {
+              "description": "Versión final aprobada por el Consejo",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Versión final aprobada por el ...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Superior de Educación. Sesión 49-2024,",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Superior de Educación. Sesión ...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "acuerdo AC-CSE-0342-49-2024 del 03/09/2024",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: acuerdo AC-CSE-0342-49-2024 de...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Aprobado por el Consejo Superior de Educación, en la sesión XX-XXXX, acuerdo XX-XX-2024 del XX/XX/2024",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Aprobado por el Consejo Superi...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "El Ministerio de Educación Pública (MEP), como autor del presente programa de estudio, se reserva los derechos morales",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: El Ministerio de Educación Púb...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

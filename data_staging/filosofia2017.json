@@ -1,0 +1,86 @@
+{
+  "subject": "filosofia",
+  "level": "2017mo Año",
+  "units": [
+    {
+      "name": "Unidad General",
+      "outcomes": [
+        {
+          "description": "Resultados Generales",
+          "indicators": [
+            {
+              "description": "Educación Diversificada",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Educación Diversificada...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "San José, Costa Rica",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: San José, Costa Rica...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Este documento utiliza un lenguaje inclusivo en el formato escrito y",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Este documento utiliza un leng...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "responde a procesos de participación activa de hombres",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: responde a procesos de partici...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "y mujeres en equidad.",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: y mujeres en equidad....",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

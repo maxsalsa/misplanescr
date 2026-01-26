@@ -1,0 +1,86 @@
+{
+  "subject": "cosmovision-cabecar-talamanca-IIIciclo-diversificada",
+  "level": "General",
+  "units": [
+    {
+      "name": "Unidad General",
+      "outcomes": [
+        {
+          "description": "Resultados Generales",
+          "indicators": [
+            {
+              "description": "III Ciclo y Educación Diversificada",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: III Ciclo y Educación Diversif...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "1.Presentación ................................................................................................................... 3",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: 1.Presentación ..................",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "2. Introducción .................................................................................................................... 6",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: 2. Introducción .................",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "2.1 Antecedentes: Educación indígena costarricense ............................................................ 7",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: 2.1 Antecedentes: Educación in...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "2.1.1 Los idiomas indígenas y su situación ante el español .............................................. 7",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: 2.1.1 Los idiomas indígenas y ...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

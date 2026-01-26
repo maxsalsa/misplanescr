@@ -1,0 +1,48 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "Gestión Contable",
+      "ui_family": "DATA_GRID",
+      "learning_outcome": {
+        "text": "El estudiante aplicará los principios y ciclos contables, la legislación tributaria y herramientas digitales para gestionar información financiera de empresas y organizaciones, desarrollando competencias para la toma de decisiones y la inserción laboral en el ámbito contable.",
+        "code": "LO_ACC_001"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela y reta al estudiante a activar conocimientos previos sobre conceptos contables básicos y su relevancia, estableciendo el contexto de aprendizaje a través de preguntas provocadoras.",
+          "student_action": "Diseña y construye preguntas iniciales, comparte experiencias previas y relaciona el tema con su entorno inmediato, asumiendo un rol activo en la integración de conocimientos.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Reta a los estudiantes a resolver casos prácticos contables en grupo, modelando el proceso de análisis de situaciones financieras y fomentando el diálogo constructivo entre pares.",
+          "student_action": "Diseña y construye soluciones a problemas contables en equipo, argumentando sus decisiones, respetando las ideas de otros y buscando información relevante para la resolución colectiva.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Modela la aplicación de software contable (ej. hojas de cálculo, sistemas de gestión) y reta al estudiante a diseñar sus propios registros y análisis financieros, promoviendo el aprendizaje activo y la experimentación.",
+          "student_action": "Diseña y construye registros, informes financieros o proyectos contables utilizando herramientas digitales, explorando y experimentando con autonomía, y aceptando sus errores como parte del proceso de aprendizaje.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Modela la retroalimentación constructiva sobre los proyectos o trabajos contables, retando al estudiante a reflexionar críticamente sobre sus procesos, resultados y posibles mejoras.",
+          "student_action": "Diseña y construye presentaciones de sus hallazgos, clarificando dudas, consolidando su comprensión del conocimiento contable y comprometiéndose con la actividad intelectual de justificación.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica de Proyecto Contable",
+        "requires_instrument": true
+      }
+    }
+  ]
+}

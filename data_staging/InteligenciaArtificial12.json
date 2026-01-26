@@ -1,0 +1,86 @@
+{
+  "subject": "InteligenciaArtificial",
+  "level": "12mo Año",
+  "units": [
+    {
+      "name": "Unidad General",
+      "outcomes": [
+        {
+          "description": "Resultados Generales",
+          "indicators": [
+            {
+              "description": "Aprobado por el Consejo Superior de Educación, en la sesión 11-2022, acuerdo 03-11-2022 del 08/03/2022",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Aprobado por el Consejo Superi...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Dirección de Educación Técnica y Capacidades Emprendedoras, Departamento de Especialidades Técnicas, Sección Curricular",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Dirección de Educación Técnica...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": " Central Telefónica: 2221-9107 Extensión: 4500  Correo Electrónico: detce@mep.go.cr Sitio Web: detce.mep.go.cr Pág. 1",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación:  Central Telefónica: 2221-910...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Aprobado por el Consejo Superior de Educación, en la sesión 11-2022, acuerdo 03-11-2022 del 08/03/2022",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Aprobado por el Consejo Superi...",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            },
+            {
+              "description": "Tabla de contenidos ..................................................................................................................................................... 2",
+              "suggested_activities": [
+                {
+                  "title": "Estrategia de Mediación: Tabla de contenidos .............",
+                  "type": "COTIDIANO",
+                  "adaptation_dua": "Proporcionar opciones de percepción visual."
+                }
+              ],
+              "meta_tags": {
+                "has_template": false,
+                "has_specs": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "asignatura": "10",
+  "nivel": "General",
+  "units": [
+    {
+      "unit_title": "Inteligencia Artificial",
+      "ui_family": "HARD_TECH",
+      "learning_outcome": {
+        "text": "Desarrollar destrezas y competencias en soluciones informáticas para inteligencia artificial (aprendizaje automático, visión por computadora, procesamiento de lenguaje natural), cumpliendo con requerimientos del cliente y actuando con ética.",
+        "code": "LO_AI_D10"
+      },
+      "mediation_strategies": [
+        {
+          "moment": "Conexión",
+          "teacher_action": "Modela al presentar situaciones contextualizadas, Reta a los estudiantes a activar conocimientos previos y explorar el contexto del aprendizaje.",
+          "student_action": "Diseña conexiones entre nuevas ideas y experiencias previas, Construye su comprensión inicial del tema.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Colaboración",
+          "teacher_action": "Modela estrategias de trabajo en equipo y comunicación efectiva, Reta a los estudiantes a resolver problemas o tareas en conjunto.",
+          "student_action": "Diseña roles y estrategias de grupo para la interacción, Construye soluciones colectivas y comparte conocimientos.",
+          "dua_suggestion": "structure_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Construcción",
+          "teacher_action": "Modela el pensamiento crítico y la aplicación de conocimientos, Reta a los estudiantes a aplicar habilidades en proyectos o actividades prácticas.",
+          "student_action": "Diseña artefactos, modelos o soluciones innovadoras, Construye conocimiento significativo a través de la práctica activa y la creación.",
+          "dua_suggestion": "challenge_mode",
+          "risk_protocol_linked": false
+        },
+        {
+          "moment": "Clarificación",
+          "teacher_action": "Modela la reflexión y metacognición, Reta a los estudiantes a justificar sus procesos, resultados y aprendizajes.",
+          "student_action": "Diseña formas de comunicar y presentar su aprendizaje, Construye una comprensión consolidada y realiza ajustes basados en la retroalimentación.",
+          "dua_suggestion": "focus_mode",
+          "risk_protocol_linked": false
+        }
+      ],
+      "evaluation": {
+        "instrument_type": "Rúbrica",
+        "requires_instrument": true
+      }
+    }
+  ]
+}
