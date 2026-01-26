@@ -16,5 +16,6 @@ module.exports = {
   daisyui: {
     themes: ["light", "corporate"], // Temas profesionales de alto contraste
     darkTheme: "light", // Evitamos modo oscuro accidental que rompa la UI
+    logs: false, // Disable logs to prevent build crash in CI
   },
 };
