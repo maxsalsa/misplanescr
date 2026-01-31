@@ -36,7 +36,7 @@ export default function PlanRenderer({ plan, currentVersion, versions = [], onUp
 
     // Visual Mode Logic
     const isTecnico = plan.modalidad === 'TECNICO_CTP' || plan.especialidad;
-    const ModeIcon = isTecnico ? Hammer ;
+    const ModeIcon = isTecnico ? Hammer : School;
     const themeColor = isTecnico ? "amber" : "indigo";
 
     return (
@@ -204,7 +204,7 @@ export default function PlanRenderer({ plan, currentVersion, versions = [], onUp
 // HELPER COMPONENTS
 // -----------------------------------------------------------------------------
 
-function SaberItem({ text, color }: { text, color }) {
+function SaberItem({ text, color }) {
     return (
         <li className="flex items-start gap-2 text-sm text-slate-600 leading-snug">
             <span className={`mt-1.5 w-1.5 h-1.5 rounded-full bg-${color}-400 flex-shrink-0`} />
@@ -272,7 +272,7 @@ function MediationCard({ fase, idx, themeColor, readOnly }) {
     );
 }
 
-function IronLawGuard({ content }: { content }) {
+function IronLawGuard({ content }) {
     if (!content) return <span className="text-gray-300 italic text-xs">Sin asignar.</span>;
     const hasIronPrefix = content.includes("La persona docente");
 

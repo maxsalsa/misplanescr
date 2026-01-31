@@ -2,32 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --bg-body: 210 40% 98%;      /* Slate-50 */
-    --text-main: 222 47% 11%;    /* Slate-900 */
-    --brand-blue: 221 83% 53%;   /* Blue-600 */
-    --solemn-dark: 217 33% 17%;  /* Slate-800 */
-  }
-  body {
-    @apply bg-slate-50 text-slate-900 antialiased;
-    font-feature-settings: "rlig" 1, "calt" 1; /* Tipografía limpia */
-  }
+/* BLINDAJE AULAPLAN V152: ANTI-SELECCIÓN GLOBAL */
+body {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
+/* Permitir selección solo en inputs para funcionalidad */
+input, textarea {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+/* TEMA: SOLEMN INSTITUTIONAL V200 */
+:root {
+  --foreground-rgb: 15, 23, 42; /* Slate 900 */
+  --background-start-rgb: 248, 250, 252; /* Slate 50 */
+  --background-end-rgb: 255, 255, 255;
+  --mep-blue: #2563EB;
+  --mep-success: #10B981;
+  --mep-alert: #F59E0B;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: 'Arial', sans-serif; /* Normativa DAJ-001 */
+}
+
+/* CLASES DE UTILIDAD PARA COHERENCIA */
 @layer components {
-  /* Tarjeta Institucional: Sombra difusa, borde sutil */
+  /* Tarjetas Oficiales */
   .card-solemn {
-    @apply bg-white border border-slate-200 shadow-sm rounded-xl transition-all duration-300 hover:shadow-md hover:border-blue-200;
+    @apply bg-white rounded-2xl border border-slate-200 shadow-sm p-6 transition-all hover:shadow-md;
   }
   
-  /* Botón de Acción Principal (Call to Action) */
+  /* Botones Institucionales */
   .btn-institutional {
-    @apply btn bg-slate-900 text-white hover:bg-slate-800 border-none rounded-lg font-medium tracking-wide px-6 shadow-lg shadow-slate-900/20;
+    @apply btn bg-slate-900 text-white border-none hover:bg-blue-800 shadow-lg shadow-blue-900/20;
   }
-  
-  /* Botón de Venta (Destacado) */
-  .btn-gold {
-    @apply btn bg-blue-700 text-white hover:bg-blue-800 border-none rounded-lg font-bold tracking-wide shadow-lg shadow-blue-700/30;
+
+  /* Inputs Validados */
+  .input-mep {
+    @apply input input-bordered w-full bg-slate-50 focus:bg-white focus:border-blue-500 transition-colors;
   }
+}
+/* --- CAPA DE SEGURIDAD V190 --- */
+body {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none; /* Standard */
+}
+
+/* Permitir interacción solo en inputs para que puedan escribir */
+input, textarea {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Marca de Agua en Pantalla (Sutil) */
+.watermark-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='50%25' y='50%25' font-size='10' fill='%23000000' fill-opacity='0.03' transform='rotate(-45 50 50)' text-anchor='middle'%3EPROPIEDAD DE AULAPLAN%3C/text%3E%3C/svg%3E");
 }

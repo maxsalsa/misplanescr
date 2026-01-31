@@ -1,78 +1,97 @@
-﻿import { getUserPlans } from "@/app/actions/library"; // Server Component
-import { FileText, Calendar, Trash2, Download, Search } from "lucide-react";
-import DeleteButton from "./delete-btn"; // Client Component pequeño
+﻿import { prisma } from "@/lib/db";
+import CategoryFilter from "@/components/dashboard/CategoryFilter";
+import { BookOpen, Gamepad2, Palette, BrainCircuit, Wrench, Sparkles, Code, FlaskConical, Briefcase } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
 
-export default async function LibraryPage() {
-  const plans = await getUserPlans();
+// 🧬 DNA FAMILY MAPPING (The Brain Logic - Server Side)
+const DNA_MAP = {
+  HARD_TECH: { keywords: ['Ciber', 'Web', 'Software', 'Redes', 'Infor', 'Datos', 'Prog', 'Python'], label: 'HARD TECH' },
+  STEAM: { keywords: ['Cien', 'Fís', 'Quí', 'Bio', 'Mate', 'Investig', 'Ingen'], label: 'STEAM' },
+  SERVICE: { keywords: ['Turis', 'Conta', 'Ejec', 'Banca', 'Hotel', 'Event'], label: 'GESTIÓN' },
+  ART: { keywords: ['Arte', 'Músic', 'Pint', 'Danz', 'Teat'], label: 'ART/CULT' },
+  ACADEMIC: { keywords: ['Espa', 'Social', 'Cívic', 'Ingl', 'Fran', 'Filo'], label: 'ACADÉMICO' },
+};
+
+export default async function LibraryPage({ searchParams }) {
+  const category = searchParams?.category || "Todo";
+
+  // 1. Construct Filter (Backend Logic)
+  let whereClause = { status: "PUBLISHED" };
+
+  if (category !== "Todo" && DNA_MAP[category]) {
+    whereClause.OR = DNA_MAP[category].keywords.map(k => ({
+      subject: { contains: k, mode: 'insensitive' }
+    }));
+  }
+
+  const plans = await prisma.lessonPlan.findMany({
+    where: whereClause,
+    take: 50,
+    orderBy: { createdAt: "desc" }
+  });
+
+  // HELPER PARA ICONOS DE SABOR
+  const getFlavorIcon = (flavor) => {
+    switch (flavor) {
+      case "GAMIFICATION": return <Gamepad2 size={14} className="text-purple-600" />;
+      case "CREATIVE": return <Palette size={14} className="text-pink-600" />;
+      case "ANALYTICAL": return <BrainCircuit size={14} className="text-blue-600" />;
+      case "TECHNICAL": return <Wrench size={14} className="text-slate-600" />;
+      default: return <Sparkles size={14} className="text-amber-500" />;
+    }
+  };
 
   return (
-    <div className="space-y-8 animate-in fade-in duration-500">
-      <div className="flex justify-between items-end border-b border-slate-200 pb-6">
+    <div className="p-8 max-w-7xl mx-auto space-y-6">
+      <div className="flex flex-col md:flex-row justify-between items-end gap-4">
         <div>
-          <h1 className="text-3xl font-black text-slate-900 tracking-tight">Portafolio Digital</h1>
-          <p className="text-slate-500">Repositorio histórico de su práctica pedagógica.</p>
-        </div>
-        <div className="bg-white border border-slate-300 rounded-lg flex items-center px-3 py-2 gap-2 text-slate-400">
-          <Search size={16} />
-          <span className="text-xs font-mono">Buscar expedientes...</span>
+          <h1 className="text-3xl font-black text-slate-900 flex items-center gap-2">
+            <BookOpen className="text-blue-600" /> Librería Infinita
+          </h1>
+          <p className="text-slate-500">Recursos: Juegos, Trivias, Proyectos y Retos.</p>
         </div>
       </div>
 
-      {plans.length === 0 ? (
-        <div className="text-center py-20 bg-slate-50 rounded-xl border-2 border-dashed border-slate-200">
-           <FileText size={48} className="mx-auto text-slate-300 mb-4" />
-           <h3 className="text-lg font-bold text-slate-600">Portafolio Vacío</h3>
-           <p className="text-slate-400 mb-6">Aún no ha generado documentos.</p>
-           <a href="/dashboard/create" className="btn btn-institutional">Crear Primer Plan</a>
-        </div>
-      ) : (
-        <div className="overflow-x-auto bg-white rounded-xl shadow-sm border border-slate-200">
-          <table className="table w-full">
-            <thead className="bg-slate-50 text-slate-700 font-bold uppercase text-xs">
-              <tr>
-                <th>Documento / Título</th>
-                <th>Asignatura & Nivel</th>
-                <th>Fecha Creación</th>
-                <th className="text-right">Acciones</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-100">
-              {plans.map((plan) => (
-                <tr key={plan.id} className="hover:bg-slate-50/50 transition-colors">
-                  <td>
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 bg-blue-50 text-blue-600 rounded-lg">
-                        <FileText size={20} />
-                      </div>
-                      <div>
-                        <div className="font-bold text-slate-800">{plan.title || "Sin Título"}</div>
-                        <div className="text-xs text-slate-400 font-mono uppercase">ID: {plan.id.substring(0,8)}</div>
-                      </div>
+      <CategoryFilter />
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {plans.map((plan) => {
+          const flavor = plan.content?.meta?.flavor || "GENERAL";
+          const activity = plan.content?.planning_module?.mediation?.[2]?.activity || "Actividad General";
+
+          return (
+            <Link key={plan.id} href={`/dashboard/library/${plan.id}`}>
+              <Card className="group hover:shadow-xl transition-all border-slate-200 h-full cursor-pointer hover:-translate-y-1 duration-300 overflow-hidden">
+                <div className={`h-2 w-full ${flavor === "GAMIFICATION" ? "bg-purple-500" :
+                    flavor === "CREATIVE" ? "bg-pink-500" :
+                      flavor === "TECHNICAL" ? "bg-slate-700" : "bg-blue-500"
+                  }`}></div>
+
+                <CardHeader className="pb-2">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">{plan.subject}</span>
+                    <div className="flex items-center gap-1 bg-slate-50 px-2 py-1 rounded border border-slate-100">
+                      {getFlavorIcon(flavor)}
+                      <span className="text-[10px] font-bold text-slate-600">{flavor}</span>
                     </div>
-                  </td>
-                  <td>
-                    <div className="text-sm font-medium text-slate-700">{plan.subject}</div>
-                    <span className="badge badge-ghost badge-sm text-xs">{plan.gradeLevel}</span>
-                  </td>
-                  <td>
-                    <div className="flex items-center gap-2 text-slate-500 text-sm">
-                      <Calendar size={14} />
-                      {new Date(plan.createdAt).toLocaleDateString("es-CR")}
-                    </div>
-                  </td>
-                  <td className="text-right flex justify-end gap-2">
-                    <button className="btn btn-ghost btn-sm text-blue-600 gap-1">
-                      <Download size={14} /> <span className="hidden md:inline">Ver</span>
-                    </button>
-                    {/* Botón de Borrar (Componente Cliente) */}
-                    <DeleteButton id={plan.id} />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
+                  </div>
+                  <CardTitle className="text-lg font-bold text-slate-900 leading-tight">
+                    {plan.title.replace("MEP VARIETY:", "").replace("MEP 2026:", "").replace("MEP OFICIAL:", "")}
+                  </CardTitle>
+                </CardHeader>
+
+                <CardContent>
+                  <div className="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                    <p className="text-xs text-slate-500 font-bold uppercase mb-1">Actividad Central:</p>
+                    <p className="text-sm text-slate-700 font-medium line-clamp-2">{activity}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 }

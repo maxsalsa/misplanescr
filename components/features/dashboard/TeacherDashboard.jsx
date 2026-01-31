@@ -166,7 +166,7 @@ export default function TeacherDashboard() {
                                     <h2 className="card-title text-xl">Centro de Entrenamiento Estudiantil</h2>
                                     <p className="opacity-90 max-w-lg">
                                         Los estudiantes han completado 450 misiones esta semana.
-                                        El tema "Revolución Industrial" tiene una tasa de éxito del 95%.
+                                        El tema &quot;Revolución Industrial&quot; tiene una tasa de éxito del 95%.
                                     </p>
                                     <div className="card-actions justify-end mt-4">
                                         <button className="btn btn-warning border-0 bg-yellow-400 text-yellow-900 hover:bg-yellow-300">

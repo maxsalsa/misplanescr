@@ -1,1 +1,0 @@
-"Actúa como el Antigravity Data Analyst. Analiza los logs de descarga de Neon DB y genera un reporte de tendencias. Identifica qué subáreas técnicas están liderando el interés de los suscriptores y sugiere nuevas 'Rutas de Mediación' basadas en el comportamiento del usuario. Mantén el formato de reporte profesional para la Gerencia General (Max Salazar Sánchez)."

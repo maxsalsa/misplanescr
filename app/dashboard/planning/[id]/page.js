@@ -42,36 +42,37 @@ export default function PlanEditorPage() {
     const [viewMode, setViewMode] = useState('split'); // split, edit, preview
 
     // Load Plan
+    // Load Plan
     useEffect(() => {
         if (!id || !user) return;
-        loadPlanData();
-    }, [id, user]);
 
-    async function loadPlanData() {
-        try {
-            const data = await getPlanById(id);
-            if (!data) {
-                toast.error("Plan no encontrado");
-                router.push('/dashboard/planning');
-                return;
-            }
-            // Security Check
-            if (data.userId !== user.id && data.userId !== 'demo-user') {
-                toast.error("Acceso denegado");
-                router.push('/dashboard/planning');
-                return;
-            }
+        async function loadPlanData() {
+            try {
+                const data = await getPlanById(id);
+                if (!data) {
+                    toast.error("Plan no encontrado");
+                    router.push('/dashboard/planning');
+                    return;
+                }
+                // Security Check
+                if (data.userId !== user.id && data.userId !== 'demo-user') {
+                    toast.error("Acceso denegado");
+                    router.push('/dashboard/planning');
+                    return;
+                }
 
-            setPlan(data);
-            // Prefer rawContent if available (hybrid output), else fallback
-            setContent(data.rawContent || "");
-        } catch (e) {
-            console.error(e);
-            toast.error("Error cargando el documento.");
-        } finally {
-            setLoading(false);
+                setPlan(data);
+                setContent(data.rawContent || "");
+            } catch (e) {
+                console.error(e);
+                toast.error("Error cargando el documento.");
+            } finally {
+                setLoading(false);
+            }
         }
-    }
+
+        loadPlanData();
+    }, [id, user, router]);
 
     // Save Function
     const handleSave = async () => {
@@ -93,57 +94,98 @@ export default function PlanEditorPage() {
         }
     };
 
-    // PDF Export (Simplified Logic reusing the text)
-    // NOTE: For best results, we should reuse the sophisticated PDF logic from Generator, 
-    // but here we will implement a quick Markdown->PDF export or text dump.
-    // For now, let's keep it simple: Download as .MD or standardized PDF.
-    const handleExportPDF = () => {
-        // const doc = new jsPDF();
+    // PDF BLINDADO Y ESTRATÉGICO (DRM V195)
+    const handleExportPDF = async () => {
+        if (!plan) return;
+        setSaving(true);
+        try {
+            const jsPDF = (await import('jspdf')).default;
+            const autoTable = (await import('jspdf-autotable')).default;
 
-        // Title
-        // doc.setFontSize(18);
-        // doc.text(plan.title || "Planeamiento Didáctico", 14, 20);
+            const doc = new jsPDF();
+            const pageWidth = doc.internal.pageSize.width;
+            const pageHeight = doc.internal.pageSize.height;
 
-        // doc.setFontSize(11);
-        // doc.text("Generado por AulaPlan (www.misplanescr.com)", 14, 28);
+            // 0. VERIFICACIÓN DE ESTATUS (DRM)
+            const isPremium = user?.planType === 'ULTRA' || user?.role === 'SUPER_ADMIN';
 
-        // Simple text dump for now (Markdown is hard to parse to PDF perfectly on client without library)
-        // A better approach is to rely on the JSON data if we have it.
-        // Let's try to print the JSON tables if they exist in plan.data
-
-        // let yPos = 40;
-
-        /*
-        if (plan.data && plan.data.secciones) {
-            // We have structured data!
-            try {
-                const headers = [["Indicador", "Estrategias", "Evaluación"]];
-                const rows = plan.data.secciones.map(s => [
-                    s.indicador_aprendizaje || "-",
-                    `${s.estrategias_mediacion?.inicio}\n\n${s.estrategias_mediacion?.desarrollo}\n\n${s.estrategias_mediacion?.cierre}`,
-                    `${s.evaluacion?.tecnica} - ${s.evaluacion?.instrumento}`
-                ]);
-
-                autoTable(doc, {
-                    startY: yPos,
-                    head: headers,
-                    body: rows,
-                    theme: 'grid',
-                    styles: { fontSize: 9, cellPadding: 3 },
-                });
-                doc.save(`Planeamiento_MEP_${plan.id}.pdf`);
-                return;
-            } catch (e) {
-                console.warn("Could not generate from JSON, falling back to text", e);
+            // 1. MARCA DE AGUA CONDICIONAL
+            if (!isPremium) {
+                // MODO FREE: MARCA INTRUSIVA (EL GANCHO)
+                doc.saveGraphicsState();
+                doc.setGState(new doc.GState({ opacity: 0.15 }));
+                doc.setFontSize(40);
+                doc.setTextColor(200, 0, 0); // Rojo Tenue
+                doc.text("VISTA PREVIA - SIN LICENCIA", pageWidth / 2, pageHeight / 2 - 20, { align: 'center', angle: 45 });
+                doc.text("ADQUIERA PLAN ULTRA", pageWidth / 2, pageHeight / 2 + 20, { align: 'center', angle: 45 });
+                doc.setFontSize(20);
+                doc.text("SINPE: 6090-6359", pageWidth / 2, pageHeight / 2 + 50, { align: 'center', angle: 45 });
+                doc.restoreGraphicsState();
+            } else {
+                // MODO ULTRA: LIMPIO Y ELEGANTE
+                // Sin marca diagonal. Solo calidad.
             }
-        }
-        */
 
-        // Fallback
-        // const splitText = doc.splitTextToSize(content.replace(/---JSON_DATA_START---[\s\S]*---JSON_DATA_END---/, ''), 180);
-        // doc.text(splitText, 14, yPos);
-        // doc.save(`Plan_Texto_${plan.id}.pdf`);
-        toast.info("Función PDF deshabilitada temporalmente para mantenimiento.");
+            // 2. ENCABEZADO OFICIAL
+            doc.setFontSize(18);
+            doc.setTextColor(0, 0, 0);
+            doc.text(plan.title || "Planeamiento Didáctico", 14, 20);
+
+            doc.setFontSize(10);
+            doc.setTextColor(100, 100, 100);
+            doc.text(`Generado el: ${new Date().toLocaleDateString()}`, 14, 26);
+
+            // 3. CONTENIDO
+            let yPos = 35;
+
+            // Intentar renderizar tabla si existe Data Estructurada (JSON)
+            if (plan.metadata && plan.metadata.columns) {
+                // Lógica para tablas dinámicas (V300)
+                // Por ahora, fallback a texto si no hay estructura compleja
+            }
+
+            // Fallback a Texto Plano pero formateado
+            const splitText = doc.splitTextToSize(content.replace(/---JSON_DATA_START---[\s\S]*?---JSON_DATA_END---/g, ''), 180);
+            doc.setFontSize(11);
+            doc.setTextColor(0, 0, 0);
+            doc.text(splitText, 14, yPos);
+
+            // 4. PIE DE PÁGINA (SOBERANÍA)
+            // Esto se mantiene para TODOS (Marca de Origen)
+            const pageCount = doc.internal.getNumberOfPages();
+            for (let i = 1; i <= pageCount; i++) {
+                doc.setPage(i);
+                doc.setFontSize(8);
+                doc.setTextColor(100, 100, 100);
+                doc.line(14, pageHeight - 15, pageWidth - 14, pageHeight - 15);
+
+                const subscriberName = user.name ? user.name.toUpperCase() : "USUARIO";
+                // Si es premium, licenciamiento oficial. Si es free, advertencia.
+                const licenseText = isPremium
+                    ? `LICENCIA ULTRA CERTIFICADA: ${subscriberName}`
+                    : `DOCUMENTO NO OFICIAL - GENERADO POR AULAPLAN`;
+
+                doc.text(licenseText, 14, pageHeight - 10);
+                doc.text(`Página ${i} de ${pageCount}`, pageWidth - 30, pageHeight - 10);
+            }
+
+            doc.save(`AULAPLAN_${isPremium ? 'OFICIAL' : 'PREVIEW'}_${plan.id}.pdf`);
+
+            if (isPremium) {
+                toast.success("Documento Certificado Exportado.");
+            } else {
+                toast("Modo Vista Previa", {
+                    description: "Suscríbase al Plan Ultra para remover la marca de agua.",
+                    action: { label: "Activar", onClick: () => alert("SINPE: 6090-6359") }
+                });
+            }
+
+        } catch (e) {
+            console.error("PDF Error:", e);
+            toast.error("Error al generar PDF.");
+        } finally {
+            setSaving(false);
+        }
     };
 
     if (loading) return (
@@ -176,10 +218,21 @@ export default function PlanEditorPage() {
                         <button className={`join-item btn btn-sm ${viewMode === 'preview' ? 'btn-neutral' : 'btn-ghost'}`} onClick={() => setViewMode('preview')}>Vista Previa</button>
                     </div>
 
-                    <button className="btn btn-ghost btn-sm text-slate-600" onClick={handleExportPDF}>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-                        PDF
-                    </button>
+                    {/* PAYWALL V300: Solo ULTRA descarga. FREE ve candado. */}
+                    {user?.planType === 'ULTRA' || user?.role === 'SUPER_ADMIN' ? (
+                        <button className="btn btn-ghost btn-sm text-slate-600" onClick={handleExportPDF}>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                            PDF
+                        </button>
+                    ) : (
+                        <button
+                            className="btn btn-sm btn-ghost text-slate-400 cursor-not-allowed gap-2"
+                            onClick={() => toast("Función Ultra Bloqueada", { description: "Active su licencia al 6090-6359 para descargar.", action: { label: "SINPE", onClick: () => { } } })}
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            Descarga Bloqueada
+                        </button>
+                    )}
 
                     <button
                         onClick={handleSave}

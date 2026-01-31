@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import DashboardShell from "../../../components/DashboardShell";
+import DashboardShell from "@/components/layout/DashboardShell";
 import { FileText, Gavel, ClipboardCheck, GraduationCap, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 

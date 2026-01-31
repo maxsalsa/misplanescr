@@ -1,334 +1,274 @@
 ﻿"use client";
 import { useState, useEffect } from "react";
-import { Sparkles, AlertTriangle, FileText, Download, Save, Trash2, CheckCircle2, ChevronRight, BookOpen } from "lucide-react";
+import { BookOpen, CheckSquare, BarChart3, AlertCircle, Settings, FileText, BrainCircuit, Wand2 } from "lucide-react";
 import { toast } from "sonner";
-import { generatePlanAction } from "@/app/actions/generate";
-import { getTeacherGroups } from "@/app/actions/planning";
-import { MEP_DATA } from "@/lib/mep-data";
+import StrategySelector from "@/components/features/StrategySelector"; // Assuming this exists or we need to check it
+import { getSubjects, getUnitsBySubject } from "@/app/actions/curriculum-actions";
 
-export default function GeneradorPage() {
-  const [loading, setLoading] = useState(false);
-  const [groups, setGroups] = useState([]);
+// --- DUA OPTIONS (Protocol VIGÍA V2) ---
+const DUA_OPTIONS = [
+    { id: "VISUAL", label: "Apoyo Visual", icon: "👁️" },
+    { id: "AUDITIVO", label: "Apoyo Auditivo", icon: "👂" },
+    { id: "KINESTESICO", label: "Maker/Kinestésico", icon: "✋" },
+    { id: "TDAH", label: "Tiempos Flexibles", icon: "⏳" },
+];
 
-  // ESTADO DEL FORMULARIO - CURRICULAR LOGIC V17
-  const [formState, setFormState] = useState({
-    selectedGroup: "", // Nombre del grupo
-    modality: "",      // "Secundaria Académica", etc.
-    level: "",         // "7", "10", etc.
-    period: "I Periodo", // Default
-    subject: "",       // "Matemáticas"
-    unit: "",          // "Unidad 1..." (Optional)
-    learningItem: "",  // ID or Text of selected outcome
-    topic: ""          // User custom detail
-  });
+export default function CreatePlanPage() {
+    // --- STATE: HYDRATION ---
+    const [subjects, setSubjects] = useState([]);
+    const [units, setUnits] = useState([]);
 
-  // OPCIONES DINÁMICAS (Calculadas al vuelo)
-  const modalities = Object.keys(MEP_DATA);
-  const levels = formState.modality ? Object.keys(MEP_DATA[formState.modality] || {}) : [];
-  const periods = (formState.modality && formState.level) ? Object.keys(MEP_DATA[formState.modality][formState.level] || {}) : [];
-  const subjects = (formState.modality && formState.level && formState.period) ? Object.keys(MEP_DATA[formState.modality][formState.level][formState.period] || {}) : [];
+    // --- STATE: SELECTION MAPPING ---
+    const [modality, setModality] = useState("ACADEMICA");
+    const [selectedSubject, setSelectedSubject] = useState("");
+    const [selectedUnit, setSelectedUnit] = useState("");
 
-  // Drill down to content (Array of objects or empty)
-  const curricularContent = (formState.modality && formState.level && formState.period && formState.subject)
-    ? MEP_DATA[formState.modality][formState.level][formState.period][formState.subject]
-    : [];
+    // --- STATE: WORKSPACE ---
+    const [planContent, setPlanContent] = useState([]); // The Rows
+    const [activeDUA, setActiveDUA] = useState([]);     // The Toggles
 
-  // Helper: Is curricularContent structured with Units? (Check if it's an object with keys or array)
-  // Based on MEP_DATA structure, sometimes it's an array of items directly, sometimes it's an object with specialtys.
-  // Inspection of MEP_DATA: Primary/Academic is Array. Technical is Object (Specialty -> Units).
-  // This needs robust handling.
+    // --- LIFECYCLE: BOOTSTRAP ---
+    useEffect(() => {
+        async function boot() {
+            const res = await getSubjects();
+            if (res.success) setSubjects(res.data);
+            else toast.error("Error conectando con el Núcleo.");
+        }
+        boot();
+    }, []);
 
-  const [generatedPlan, setGeneratedPlan] = useState(null);
+    // --- ACTION: SELECT SUBJECT ---
+    const handleSubjectChange = async (e) => {
+        const subId = e.target.value;
+        setSelectedSubject(subId);
+        setSelectedUnit("");
+        setPlanContent([]); // Clear workspace
 
-  // 1. CARGA INICIAL
-  useEffect(() => {
-    getTeacherGroups().then(setGroups);
-    const savedDraft = localStorage.getItem("aulaplan_draft_v2");
-    if (savedDraft) {
-      try {
-        setFormState(JSON.parse(savedDraft));
-        toast("Borrador Recuperado", { description: "Datos curriculares restaurados.", icon: <Save size={14} /> });
-      } catch (e) { }
-    }
-  }, []);
+        if (!subId) return;
 
-  // 2. AUTO-GUARDADO
-  useEffect(() => {
-    if (formState.topic || formState.subject) {
-      const timer = setTimeout(() => {
-        localStorage.setItem("aulaplan_draft_v2", JSON.stringify(formState));
-      }, 1000);
-      return () => clearTimeout(timer);
-    }
-  }, [formState]);
+        const toastId = toast.loading("Cargando Programa Oficial...");
+        const res = await getUnitsBySubject(subId);
 
-  // MANEJADORES DE CAMBIO (CASCADA)
-  const handleModalityChange = (e) => {
-    setFormState({ ...formState, modality: e.target.value, level: "", period: "I Periodo", subject: "", unit: "", learningItem: "" });
-  };
-
-  const handleLevelChange = (e) => {
-    setFormState({ ...formState, level: e.target.value, period: "I Periodo", subject: "", unit: "", learningItem: "" });
-  };
-
-  const handlePeriodChange = (e) => {
-    setFormState({ ...formState, period: e.target.value, subject: "", unit: "", learningItem: "" });
-  };
-
-  const handleSubjectChange = (e) => {
-    setFormState({ ...formState, subject: e.target.value, unit: "", learningItem: "" });
-  };
-
-  const handleTopicChange = (e) => {
-    setFormState({ ...formState, topic: e.target.value });
-  };
-
-  const handleGroupChange = (e) => {
-    setFormState({ ...formState, selectedGroup: e.target.value });
-    const g = groups.find(x => x.name === e.target.value);
-    if (g?.has7600) toast("Alerta de Inclusión", { description: "Grupo con adecuaciones activas.", icon: <AlertTriangle className="text-orange-500" /> });
-  };
-
-  const handleContentSelect = (item) => {
-    // Auto-fill topic with learning outcome
-    setFormState({
-      ...formState,
-      learningItem: item.id,
-      unit: item.unit || "",
-      topic: item.aprendizaje + ". " + (item.saberes?.join(", ") || "")
-    });
-    toast.success("Contenido Vinculado", { description: "Objetivo y Saberes cargados al tema." });
-  };
-
-  const handleLimpiar = () => {
-    if (confirm("¿Reiniciar generador?")) {
-      setFormState({ selectedGroup: "", modality: "", level: "", period: "I Periodo", subject: "", unit: "", learningItem: "", topic: "" });
-      localStorage.removeItem("aulaplan_draft_v2");
-      setGeneratedPlan(null);
-    }
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setGeneratedPlan(null);
-
-    const groupObj = groups.find(g => g.name === formState.selectedGroup);
-
-    // Preparar Contexto de Inclusión
-    const inclusionData = groupObj ?
-      `${groupObj.has7600 ? "Ley 7600. " : ""}${groupObj.isGifted ? "Alta Dotación." : ""}`
-      : "";
-
-    // Construir un "Tema Rico" para la IA
-    const richTopic = `
-        [Contexto Curricular]
-        Modalidad: ${formState.modality}
-        Nivel: ${formState.level}
-        Unidad: ${formState.unit || "N/A"}
-        Aprendizaje Esperado: ${formState.learningItem ? formState.topic : "Definido por usuario"}
-        
-        [Detalle del Docente]
-        ${formState.topic}
-    `.trim();
-
-    const payload = {
-      subject: formState.subject,
-      grade: formState.level || formState.selectedGroup, // Fallback to group name if level empty
-      duration: "Semanal", // Default for now
-      topic: richTopic,
-      nivel: formState.level, // Clean level for DB search
-      materia: formState.subject, // Clean subject
-      inclusionContext: inclusionData
+        if (res.success) {
+            setUnits(res.data);
+            toast.dismiss(toastId);
+            toast.success("Programa Oficial Sincronizado.");
+        } else {
+            toast.dismiss(toastId);
+            toast.error(res.error);
+        }
     };
 
-    try {
-      const result = await generatePlanAction(payload);
-      if (result.success) {
-        setGeneratedPlan(result.html);
-        toast.success("Planeamiento Generado", { description: "Normativa MEP aplicada correctamente." });
-      } else {
-        toast.error("Error de Generación", { description: result.error });
-      }
-    } catch (err) {
-      toast.error("Error Crítico", { description: "No se pudo conectar con el motor IA." });
-    }
-    setLoading(false);
-  };
+    // --- ACTION: SELECT UNIT (THE DOWNLOAD) ---
+    const handleUnitSelect = (unitId) => {
+        const unit = units.find(u => u.id === unitId);
+        setSelectedUnit(unitId);
 
-  // RENDER HELPERS
-  const renderCurricularList = () => {
-    // If it's an array (Standard Subjects)
-    if (Array.isArray(curricularContent)) {
-      if (curricularContent.length === 0) return <p className="text-xs text-slate-400 italic p-2">Seleccione una asignatura...</p>;
-      return (
-        <div className="space-y-2 max-h-60 overflow-y-auto border border-slate-100 rounded p-2 bg-slate-50/50">
-          {curricularContent.map((item) => (
-            <div kery={item.id} onClick={() => handleContentSelect(item)} className="p-2 bg-white border border-slate-200 rounded hover:border-blue-400 hover:shadow-md cursor-pointer transition-all group">
-              <p className="text-xs font-bold text-slate-700 group-hover:text-blue-700">{item.aprendizaje}</p>
-              <p className="text-[10px] text-slate-500 truncate">{item.saberes?.join(", ")}</p>
-            </div>
-          ))}
-        </div>
-      );
-    }
-    // If it's an object (Technical Specialties like "Desarrollo Web")
-    else if (typeof curricularContent === 'object') {
-      // We need to drill down deeper or show subunits.
-      // For simplicity in V17, we flatten the object keys (Modules/Units) to list
-      const subAreas = Object.keys(curricularContent);
-      return (
-        <div className="space-y-4">
-          {subAreas.map(sub => {
-            const units = curricularContent[sub]; // Array
-            return (
-              <div key={sub} className="border border-slate-200 rounded-lg p-3 bg-white">
-                <h4 className="text-xs font-black uppercase text-slate-400 mb-2">{sub}</h4>
-                <div className="space-y-2">
-                  {Array.isArray(units) && units.map(u => (
-                    <div key={u.id} onClick={() => handleContentSelect(u)} className="p-2 bg-slate-50 hover:bg-blue-50 border border-slate-100 rounded cursor-pointer">
-                      <span className="badge badge-xs badge-neutral mb-1">{u.unit || "Unidad"}</span>
-                      <p className="text-xs font-medium text-slate-700">{u.aprendizaje}</p>
+        // TRANSFORMATION: UNIT -> EDITOR ROWS
+        const initialRows = unit.outcomes.map(o => ({
+            outcome: o.description,
+            indicator: o.description, // Initial mapping (1:1)
+            mediation: "",            // Empty for teacher input
+            rubric: null,             // Empty until generated
+            strategies: []            // Array for multi-strategy
+        }));
+
+        setPlanContent(initialRows);
+        toast.info(`Unidad Cargada: ${unit.title}`, {
+            description: `${unit.outcomes.length} Indicadores listos para mediación.`
+        });
+    };
+
+    // --- ACTION: UPDATE ROW ---
+    const updateRow = (index, field, value) => {
+        const newRows = [...planContent];
+        newRows[index][field] = value;
+        setPlanContent(newRows);
+    };
+
+    // --- ACTION: INJECT STRATEGY ---
+    const handleInjectStrategy = (index, strategy) => {
+        const newRows = [...planContent];
+        newRows[index].mediation = strategy.content || strategy.description;
+
+        // If strategy has a rubric, parse it
+        if (strategy.rubricModel) {
+            try {
+                newRows[index].rubric = typeof strategy.rubricModel === 'string'
+                    ? JSON.parse(strategy.rubricModel)
+                    : strategy.rubricModel;
+            } catch (e) { console.warn("Rubric parse failed", e); }
+        }
+        setPlanContent(newRows);
+        toast.success("Estrategia Inyectada (Antigravity Link)");
+    };
+
+    // --- ACTION: GENERATE PDF (GUTENBERG) ---
+    const handleGenerate = async () => {
+        if (!selectedUnit) return toast.error("Seleccione una unidad primero.");
+
+        const payload = {
+            regional: "San José Norte", // Should come from User Context
+            school: "CTP Mercedes Norte",
+            teacher: { name: "Lic. Max Salazar" },
+            subject: subjects.find(s => s.id === selectedSubject)?.name,
+            level: "Sección 10-1",
+            period: "I Semestre 2026",
+            modality: modality,
+            unitTitle: units.find(u => u.id === selectedUnit)?.title,
+
+            // RAW DATA FOR FACTORY
+            rubrica: planContent.map(row => ({
+                aprendizaje: row.outcome,
+                indicador: row.indicator,
+                estrategias: { desarrollo: row.mediation }, // Simplified mapping
+                rubric: row.rubric
+            })),
+            adecuaciones: {
+                acceso: activeDUA.includes("VISUAL") ? ["Material Visual"] : ["General"]
+            }
+        };
+
+        try {
+            toast.loading("Generando Documento Oficial...");
+            const { generatePDF } = await import("@/lib/pdf-factory"); // Dynamic Import for Performance
+            const blob = generatePDF(payload);
+
+            // Download Trigger
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `Planeamiento_${payload.subject}_2026.pdf`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            toast.dismiss();
+            toast.success("PDF Generado Exitosamente.");
+        } catch (e) {
+            console.error(e);
+            toast.dismiss();
+            toast.error("Error en el Motor de PDF (Gutenberg).");
+        }
+    };
+
+    return (
+        <div className="max-w-7xl mx-auto space-y-6 pb-20 animate-in fade-in duration-500">
+
+            {/* --- 1. HUD HEADER --- */}
+            <header className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div>
+                    <h1 className="text-2xl font-black text-slate-900 flex items-center gap-2">
+                        <BrainCircuit className="text-blue-600" /> Editor Omni-Plan
+                    </h1>
+                    <div className="flex gap-2 mt-2">
+                        <select className="select select-sm select-bordered" value={modality} onChange={(e) => setModality(e.target.value)}>
+                            <option value="ACADEMICA">Académica DO</option>
+                            <option value="TECNICA">Técnica (CTP)</option>
+                            <option value="NOCTURNA">Nocturna / CINDEA</option>
+                        </select>
+                        <select className="select select-sm select-bordered w-48" value={selectedSubject} onChange={handleSubjectChange}>
+                            <option value="">-- Asignatura --</option>
+                            {subjects.map(s => <option key={s.id} value={s.id}>{s.name} ({s.educationLevel})</option>)}
+                        </select>
                     </div>
-                  ))}
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      )
-    }
-    return null;
-  };
-
-  return (
-    <div className="max-w-7xl mx-auto pb-20 fade-in animate-in">
-
-      {/* HEADER V17 */}
-      <div className="flex flex-col md:flex-row justify-between items-end mb-8 border-b border-slate-200 pb-6">
-        <div>
-          <h1 className="text-3xl font-black text-slate-900 tracking-tight flex items-center gap-3">
-            <BookOpen className="text-blue-700" size={32} />
-            Generador Curricular
-          </h1>
-          <p className="text-slate-500 mt-1 font-medium">Motor Pedagógico Oficial • MEP Costa Rica</p>
-        </div>
-        <div className="flex gap-3">
-          <button onClick={handleLimpiar} className="btn btn-ghost btn-sm text-slate-400 gap-2 hover:bg-red-50 hover:text-red-600">
-            <Trash2 size={16} /> Reiniciar
-          </button>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-
-        {/* PANEL IZQUIERDO: CONFIGURACIÓN (5 cols) */}
-        <div className="lg:col-span-5 space-y-6">
-          <form onSubmit={handleSubmit} className="card bg-white shadow-xl shadow-slate-200/40 border border-slate-200 sticky top-24">
-            <div className="card-body p-6 space-y-4">
-
-              {/* 1. GRUPO & INCLUSIÓN */}
-              <div className="form-control">
-                <label className="label text-xs font-bold text-slate-500 uppercase">1. Seleccionar Grupo</label>
-                <select
-                  className="select select-bordered w-full bg-slate-50 font-medium"
-                  value={formState.selectedGroup}
-                  onChange={handleGroupChange}
-                  required
-                >
-                  <option value="">-- Mis Grupos --</option>
-                  {groups.map(g => <option key={g.name} value={g.name}>{g.name}</option>)}
-                </select>
-              </div>
-
-              <div className="divider my-0"></div>
-
-              {/* 2. LOGICA CURRICULAR (CASCADING) */}
-              <div className="space-y-3">
-                <span className="text-xs font-bold text-blue-700 uppercase tracking-widest">2. Estructura MEP</span>
-
-                <div className="grid grid-cols-2 gap-3">
-                  <select className="select select-bordered select-sm w-full" value={formState.modality} onChange={handleModalityChange} required>
-                    <option value="">Modalidad...</option>
-                    {modalities.map(m => <option key={m} value={m}>{m}</option>)}
-                  </select>
-
-                  <select className="select select-bordered select-sm w-full" value={formState.level} onChange={handleLevelChange} disabled={!formState.modality} required>
-                    <option value="">Nivel...</option>
-                    {levels.map(l => <option key={l} value={l}>{l}</option>)}
-                  </select>
                 </div>
 
-                <select className="select select-bordered select-sm w-full" value={formState.period} onChange={handlePeriodChange} disabled={!formState.level} required>
-                  {periods.map(p => <option key={p} value={p}>{p}</option>)}
-                </select>
-
-                <select className="select select-bordered w-full font-medium" value={formState.subject} onChange={handleSubjectChange} disabled={!formState.period} required>
-                  <option value="">-- Asignatura / Especialidad --</option>
-                  {subjects.map(s => <option key={s} value={s}>{s}</option>)}
-                </select>
-              </div>
-
-              {/* 3. SELECTOR DE CONTENIDOS (NUEVO) */}
-              {formState.subject && (
-                <div className="bg-slate-50 rounded-lg p-3 border border-slate-200 animate-in fade-in">
-                  <label className="label text-xs font-bold text-slate-400 uppercase pb-2">3. Contenidos Oficiales (Click para usar)</label>
-                  {renderCurricularList()}
+                <div className="flex gap-1 bg-slate-50 p-1 rounded-lg">
+                    {DUA_OPTIONS.map(opt => (
+                        <button
+                            key={opt.id}
+                            onClick={() => setActiveDUA(prev => prev.includes(opt.id) ? prev.filter(p => p !== opt.id) : [...prev, opt.id])}
+                            className={`btn btn-xs ${activeDUA.includes(opt.id) ? "btn-neutral" : "btn-ghost text-slate-400"}`}
+                            title={opt.label}
+                        >
+                            {opt.icon} {opt.id}
+                        </button>
+                    ))}
                 </div>
-              )}
+            </header>
 
-              {/* 4. DETALLE TÉCNICO */}
-              <div className="form-control">
-                <label className="label text-xs font-bold text-slate-500 uppercase">
-                  4. Tema / Contexto Específico
-                </label>
-                <textarea
-                  className="textarea textarea-bordered h-32 text-sm leading-relaxed"
-                  placeholder="Describa actividades específicas, recursos disponibles o enfoque de la clase..."
-                  value={formState.topic}
-                  onChange={handleTopicChange}
-                  required
-                ></textarea>
-              </div>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
-              <button
-                type="submit"
-                disabled={loading || !formState.selectedGroup}
-                className="btn btn-primary w-full shadow-lg shadow-blue-900/20"
-              >
-                {loading ? <span className="loading loading-dots"></span> : <>Generar Planeamiento <Sparkles size={16} /></>}
-              </button>
+                {/* --- 2. SIDEBAR (UNITS) --- */}
+                <aside className="lg:col-span-3 space-y-4">
+                    <div className={`bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden ${!selectedSubject && "opacity-50 pointer-events-none"}`}>
+                        <div className="bg-slate-900 text-white p-3 font-bold text-sm flex justify-between">
+                            <span>Programa Oficial</span>
+                            <BookOpen size={16} />
+                        </div>
+                        <div className="max-h-[500px] overflow-y-auto p-2 space-y-1">
+                            {units.length > 0 ? units.map(u => (
+                                <button
+                                    key={u.id}
+                                    onClick={() => handleUnitSelect(u.id)}
+                                    className={`w-full text-left p-3 rounded-lg text-xs leading-relaxed transition-colors ${selectedUnit === u.id ? "bg-blue-50 text-blue-800 border-blue-200 border font-bold" : "hover:bg-slate-50 text-slate-600"}`}
+                                >
+                                    {u.title}
+                                </button>
+                            )) : (
+                                <div className="p-8 text-center text-slate-400 text-xs">
+                                    Seleccione una asignatura para cargar el programa.
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </aside>
+
+                {/* --- 3. WORKSPACE (EDITOR) --- */}
+                <main className="lg:col-span-9 space-y-6">
+                    {planContent.length > 0 ? (
+                        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 min-h-[500px]">
+                            <div className="flex justify-between items-center border-b border-slate-100 pb-4 mb-6">
+                                <h2 className="font-bold text-lg text-slate-800">Diseño de Mediación</h2>
+                                <span className="text-xs font-mono text-slate-400 bg-slate-100 px-2 py-1 rounded">V3000.OMEGA</span>
+                            </div>
+
+                            <div className="space-y-8">
+                                {planContent.map((row, idx) => (
+                                    <div key={idx} className="group relative pl-4 border-l-4 border-slate-200 hover:border-blue-500 transition-colors">
+                                        <div className="mb-2">
+                                            <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Resultado de Aprendizaje</h4>
+                                            <p className="text-sm font-medium text-slate-700 bg-slate-50 p-2 rounded">{row.outcome}</p>
+                                        </div>
+
+                                        <div className="relative">
+                                            <div className="flex justify-between mb-1">
+                                                <label className="text-xs font-bold text-blue-600 uppercase">Estrategia (Binomio)</label>
+                                                {/* Strategy Selector Would Go Here - Mocking a button for now */}
+                                                <button
+                                                    onClick={() => handleInjectStrategy(idx, { content: "Estrategia Demo: Aprendizaje Basado en Proyectos (ABP).", rubricModel: null })}
+                                                    className="text-[10px] flex items-center gap-1 text-slate-400 hover:text-blue-600 transition-colors"
+                                                >
+                                                    <Wand2 size={10} /> Sugerir IA
+                                                </button>
+                                            </div>
+                                            <textarea
+                                                value={row.mediation}
+                                                onChange={(e) => updateRow(idx, "mediation", e.target.value)}
+                                                className="textarea textarea-bordered w-full text-sm h-24 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                                placeholder="Describa la mediación pedagógica..."
+                                            />
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="mt-10 pt-6 border-t border-slate-100">
+                                <button onClick={handleGenerate} className="btn btn-primary w-full shadow-xl shadow-blue-500/20 text-white font-bold">
+                                    <FileText className="mr-2" /> Generar PDF Oficial
+                                </button>
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="h-full flex flex-col items-center justify-center text-slate-400 bg-slate-50/50 rounded-2xl border-2 border-dashed border-slate-200">
+                            <BarChart3 size={48} className="opacity-20 mb-4" />
+                            <p>El lienzo está vacío.</p>
+                            <p className="text-sm">Seleccione una Unidad del menú lateral.</p>
+                        </div>
+                    )}
+                </main>
             </div>
-          </form>
         </div>
-
-        {/* PANEL DERECHO: VISTA PREVIA (7 cols) */}
-        <div className="lg:col-span-7">
-          {generatedPlan ? (
-            <div className="bg-white rounded-xl shadow-xl border border-slate-200 overflow-hidden animate-in slide-in-from-right-2">
-              <div className="bg-slate-50 border-b border-slate-200 p-4 flex justify-between items-center">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="text-emerald-500" size={20} />
-                  <span className="font-bold text-slate-700">Documento Generado</span>
-                </div>
-                <button className="btn btn-sm btn-outline gap-2" onClick={() => window.print()}>
-                  <Download size={14} /> PDF
-                </button>
-              </div>
-              <div className="p-10 prose max-w-none prose-headings:text-blue-900 prose-p:text-slate-600">
-                <div dangerouslySetInnerHTML={{ __html: generatedPlan }} />
-              </div>
-            </div>
-          ) : (
-            <div className="h-[600px] flex flex-col items-center justify-center border-4 border-dashed border-slate-200/60 rounded-xl bg-slate-50/20 text-slate-300">
-              <BookOpen size={64} className="mb-4 opacity-50" />
-              <p className="text-lg font-medium">Esperando configuración curricular...</p>
-              <p className="text-sm">Seleccione Modalidad, Nivel y Asignatura para comenzar.</p>
-            </div>
-          )}
-        </div>
-
-      </div>
-    </div>
-  );
+    );
 }

@@ -8,47 +8,78 @@ datasource db {
 }
 
 model User {
-  id                 String    @id @default(cuid())
-  email              String    @unique
-  name               String?
-  role               String    @default("TEACHER") 
-  subscriptionPlan   String    @default("FREE")
-  createdAt          DateTime  @default(now())
-  plans              PedagogicalPlan[]
-  students           Student[]
-  logs               AuditLog[] // Relación con los logs
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      String   @default("DOCENTE")
+  createdAt DateTime @default(now())
+  
+  institutionId String?
+  institution   Institution? @relation(fields: [institutionId], references: [id])
+  
+  plans     LessonPlan[]
+  groups    Group[]
+}
+
+// 🏛️ NUEVA ENTIDAD: EL CENTRO EDUCATIVO
+model Institution {
+  id        String   @id @default(cuid())
+  name      String   // Ej: CTP de San Pedro
+  type      String   // CTP, LICEO, ESCUELA, CINDEA, UNIDOCENTE
+  region    String   // Ej: San José Norte, Limón, Coto
+  code      String   // Código Presupuestario
+  
+  users     User[]
+  groups    Group[]
+}
+
+model LessonPlan {
+  id        String   @id @default(cuid())
+  title     String
+  subject   String
+  level     String
+  content   Json
+  status    String   @default("DRAFT")
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+  
+  grades    Grade[]
+}
+
+model Group {
+  id            String      @id @default(cuid())
+  name          String
+  grade         String
+  shift         String
+  
+  institutionId String?     // VINCULACIÓN INSTITUCIONAL
+  institution   Institution? @relation(fields: [institutionId], references: [id])
+  
+  userId        String
+  user          User        @relation(fields: [userId], references: [id])
+  students      Student[]
 }
 
 model Student {
-  id               String   @id @default(cuid())
-  name             String
-  section          String
-  has7600          Boolean  @default(false)
-  isGifted         Boolean  @default(false)
-  clinicalNotes    String?  // DATO SENSIBLE: Encriptación lógica aplicada
-  createdAt        DateTime @default(now())
-  teacherId        String
-  teacher          User     @relation(fields: [teacherId], references: [id])
+  id          String  @id @default(cuid())
+  name        String
+  needs       String? 
+  profile     Json?
+  groupId     String
+  group       Group   @relation(fields: [groupId], references: [id])
+  grades      Grade[]
 }
 
-model PedagogicalPlan {
-  id          String   @id @default(cuid())
-  title       String
-  subject     String
-  gradeLevel  String
-  content     String   @db.Text
-  createdAt   DateTime @default(now())
-  userId      String
-  user        User     @relation(fields: [userId], references: [id])
-}
-
-// NUEVA TABLA: CAJA NEGRA DEL SISTEMA
-model AuditLog {
-  id        String   @id @default(cuid())
-  action    String   // EJ: "GENERATE_PLAN", "DELETE_FILE"
-  details   String?
-  ipAddress String?  // Rastro de seguridad
-  createdAt DateTime @default(now())
-  userId    String
-  user      User     @relation(fields: [userId], references: [id])
+model Grade {
+  id           String     @id @default(cuid())
+  score        Float
+  total        Float
+  feedback     String?
+  studentId    String
+  student      Student    @relation(fields: [studentId], references: [id])
+  planId       String
+  plan         LessonPlan @relation(fields: [planId], references: [id])
+  createdAt    DateTime   @default(now())
 }

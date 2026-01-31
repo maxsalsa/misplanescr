@@ -15,9 +15,9 @@ export default function GeneratorConfigForm({
     // --- LOGIC MOVED FROM PAGE.JS ---
 
     // 1. UNIQUE MODALITIES
-    const modalidades = catalog
+    const modalidades = React.useMemo(() => catalog
         ? [...new Set(catalog.map(item => item.modalidad))].sort()
-        : [];
+        : [], [catalog]);
 
     // 2. LEVELS (Dependent on Modality)
     const filteredLevels = catalog.filter(item => item.modalidad === configuracion_curricular.modalidad);

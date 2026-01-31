@@ -6,8 +6,8 @@ import { calculateTableSpecs, ExamObjective, ExamSpecRow } from "@/lib/mep-math"
 
 
 export default function ExamGenerator({ indicators, onSave }) {
-    const [totalPoints, setTotalPoints] = useState<number>(30);
-    const [grid, setGrid] = useState<ExamSpecRow[]>([]);
+    const [totalPoints, setTotalPoints] = useState(30);
+    const [grid, setGrid] = useState([]);
     const [viewMath, setViewMath] = useState(false);
 
     // Auto-Calculate on Input Change

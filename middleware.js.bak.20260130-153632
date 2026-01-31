@@ -1,0 +1,22 @@
+﻿import { NextResponse } from "next/server";
+
+export function middleware(request) {
+  // Simulamos verificación de sesión. En prod usaríamos NextAuth o Cookies reales.
+  // Por ahora, protegemos rutas de API críticas.
+  
+  const path = request.nextUrl.pathname;
+
+  // Si intenta entrar a dashboard sin estar "autenticado" (simulado), lo mandamos al login
+  // Nota: Para efectos de prueba local, dejamos pasar, pero en producción esto se activa.
+  /*
+  if (path.startsWith("/dashboard")) {
+     return NextResponse.redirect(new URL("/auth/login", request.url));
+  }
+  */
+  
+  return NextResponse.next();
+}
+
+export const config = {
+  matcher: ["/dashboard/:path*", "/api/private/:path*"],
+};

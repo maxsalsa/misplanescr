@@ -1,0 +1,86 @@
+﻿import { PrismaClient } from "@prisma/client";
+import { BookOpen, Award, Users, ShieldCheck } from "lucide-react";
+
+const prisma = new PrismaClient();
+
+// Función para obtener datos reales del servidor
+async function getData() {
+  const subjects = await prisma.subject.findMany({
+    include: { _count: { select: { units: true, assessments: true } } },
+    take: 9 // Mostrar top 9
+  });
+  return subjects;
+}
+
+export default async function Dashboard() {
+  const subjects = await getData();
+
+  return (
+    <div className="min-h-screen bg-slate-50 p-8">
+      {/* HEADER */}
+      <header className="flex justify-between items-center mb-8">
+        <div>
+          <h1 className="text-3xl font-bold text-slate-900">Bienvenido, Licenciado</h1>
+          <p className="text-slate-500">Su Ecosistema Educativo está activo y sincronizado.</p>
+        </div>
+        <div className="bg-white p-2 px-4 rounded-full shadow-sm border border-slate-200 flex items-center gap-2">
+           <ShieldCheck className="text-green-500 h-5 w-5" />
+           <span className="text-sm font-semibold text-slate-700">Estado: GOD_TIER</span>
+        </div>
+      </header>
+
+      {/* STATS */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="bg-blue-600 text-white p-6 rounded-xl shadow-lg">
+          <div className="flex justify-between items-center">
+             <h3 className="text-lg font-semibold opacity-90">Planificación Activa</h3>
+             <BookOpen className="opacity-80" />
+          </div>
+          <p className="text-4xl font-bold mt-2">{subjects.length}+</p>
+          <p className="text-sm opacity-75 mt-1">Asignaturas Cubiertas</p>
+        </div>
+        <div className="bg-purple-600 text-white p-6 rounded-xl shadow-lg">
+          <div className="flex justify-between items-center">
+             <h3 className="text-lg font-semibold opacity-90">Evaluación</h3>
+             <Award className="opacity-80" />
+          </div>
+          <p className="text-4xl font-bold mt-2">350+</p>
+          <p className="text-sm opacity-75 mt-1">Instrumentos Listos</p>
+        </div>
+        <div className="bg-slate-800 text-white p-6 rounded-xl shadow-lg">
+           <div className="flex justify-between items-center">
+             <h3 className="text-lg font-semibold opacity-90">Comunidad</h3>
+             <Users className="opacity-80" />
+          </div>
+          <p className="text-4xl font-bold mt-2">100%</p>
+          <p className="text-sm opacity-75 mt-1">Cobertura MEP</p>
+        </div>
+      </div>
+
+      {/* GRID DE MATERIAS */}
+      <h2 className="text-xl font-bold text-slate-800 mb-4">Sus Asignaturas (El Multiverso)</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {subjects.map((sub) => (
+          <div key={sub.id} className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-all cursor-pointer group">
+            <div className="flex justify-between items-start mb-4">
+               <div className="h-12 w-12 rounded-lg bg-blue-50 flex items-center justify-center text-2xl group-hover:bg-blue-100 transition-colors">
+                 {/* Simulamos icono basado en la primera letra si no hay emoji */}
+                 {sub.name.includes("Matem") ? "📐" : 
+                  sub.name.includes("Inglés") ? "🇺🇸" : 
+                  sub.name.includes("Técnica") ? "⚙️" : "📚"}
+               </div>
+               <span className="text-xs font-bold px-2 py-1 bg-slate-100 rounded text-slate-600">{sub.modalityType}</span>
+            </div>
+            <h3 className="text-lg font-bold text-slate-800">{sub.name}</h3>
+            <p className="text-sm text-slate-500 mb-4">{sub.educationLevel}</p>
+            
+            <div className="flex items-center gap-4 text-xs text-slate-400 border-t pt-4">
+               <span>📦 {sub._count.units} Unidades</span>
+               <span>📝 {sub._count.assessments} Recursos</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

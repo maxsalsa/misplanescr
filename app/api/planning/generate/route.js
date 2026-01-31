@@ -1,10 +1,9 @@
 ﻿import { NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/db";
 import { auth } from "@/auth"; // V5 Auth
 
-const prisma = new PrismaClient();
+// const prisma = new PrismaClient(); // REMOVED TO PREVENT CONNECTION LEAK
 const KEY_NAMES = { OPENAI: "OPENAI_API_KEY", GROQ: "GROQ_API_KEY", GOOGLE: "GEMINI_API_KEY" };
-
 // CONSTANTS FOR FALLBACK LOGIC
 const PROVIDER_ORDER = ["OPENAI", "GROQ"]; // Order of preference
 
@@ -59,18 +58,33 @@ export async function POST(req) {
     }
     const userId = session.user.id;
 
-    // 1.1 SUBSCRIPTION CHECK (COMMERCIAL PILLAR)
-    // Fetch full user structure to get subscriptionPlan
+    // 1.1 SUBSCRIPTION CHECK (LEY DE SUSCRIPCIONES V90)
+    // Fetch full user structure to get subscriptionStatus & Role
     const user = await prisma.user.findUnique({
       where: { id: userId },
-      select: { subscriptionPlan: true, role: true }
+      select: { subscriptionStatus: true, role: true, subscriptionPlan: true }
     });
 
-    const isVip = user?.subscriptionPlan === 'PRO' || user?.subscriptionPlan === 'ULTRA' || user?.role === 'SUPER_ADMIN';
+    // LA INMUNIDAD DEL ARQUITECTO
+    const isSuperAdmin = user?.role === 'SUPER_ADMIN';
+    const isActive = user?.subscriptionStatus === 'ACTIVE';
+
+    // EL FILTRO DE EJECUCIÓN (CHECK PREVIO)
+    if (!isActive && !isSuperAdmin) {
+      console.log(`[ANTIGRAVITY] ⛔ BLOCKING User ${userId} (Status: ${user?.subscriptionStatus}). Sending SINPE message.`);
+      // Retornamos un "Error" controlado que el frontend mostrará amablemente
+      return NextResponse.json({
+        success: false,
+        error: "Estimado docente, esta funcionalidad avanzada es exclusiva del Plan Activo. Para desbloquearla de inmediato y proteger su planificación, por favor regularice su suscripción mediante SINPE Móvil al 6090-6359 (Max Salazar). Una vez reportado, su acceso será restablecido en tiempo real.",
+        isSubscriptionError: true // Flag para que el frontend muestre el modal de pago si existe
+      }, { status: 403 });
+    }
+
+    const isVip = user?.subscriptionPlan === 'PRO' || user?.subscriptionPlan === 'ULTRA' || isSuperAdmin;
 
     // TIERED AI ACCESS: VIP gets GPT-4o, Free gets Groq (Llama-3)
     const TIER_PROVIDER_ORDER = isVip ? ["OPENAI", "GROQ"] : ["GROQ"];
-    console.log(`[ANTIGRAVITY] User ${userId} is ${user?.subscriptionPlan || 'FREE'}. AI Tier: ${isVip ? 'VIP (GPT-4o)' : 'STANDARD (Llama-3)'}`);
+    console.log(`[ANTIGRAVITY] User ${userId} Access GRANTED. Tier: ${isVip ? 'VIP' : 'STANDARD'}`);
 
     // 2. PARSE BODY
     const body = await req.json();

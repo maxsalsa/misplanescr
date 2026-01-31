@@ -8,10 +8,22 @@ import React from 'react';
 // Placeholder for official MEP Shield (User needs to upload real one)
 const MEP_SHIELD = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Coat_of_arms_of_Costa_Rica.svg/282px-Coat_of_arms_of_Costa_Rica.svg.png";
 
+import Image from 'next/image';
+
+// ... (existing constants)
+
 export const HeaderFormal = ({ institution, teacher, group, resource }) => (
     <header className="w-full border-b-2 border-black mb-6 pb-2 font-serif">
         <div className="flex justify-between items-start mb-4">
-            <img src={MEP_SHIELD} alt="Escudo CR" className="w-20 h-auto" />
+            <div className="w-20 relative h-20">
+                <Image
+                    src={MEP_SHIELD}
+                    alt="Escudo CR"
+                    fill
+                    className="object-contain"
+                    unoptimized
+                />
+            </div>
 
             <div className="text-center flex-1 px-4">
                 <h1 className="font-bold text-lg uppercase tracking-wide">Ministerio de Educación Pública</h1>
@@ -20,7 +32,15 @@ export const HeaderFormal = ({ institution, teacher, group, resource }) => (
                 {(institution.circuit) && <p className="text-sm">Circuito {institution.circuit}</p>}
             </div>
 
-            <img src={institution.logoUrl || "https://placehold.co/80?text=LOGO"} alt="Logo Inst" className="w-20 h-20 object-contain" />
+            <div className="w-20 relative h-20">
+                <Image
+                    src={institution.logoUrl || "https://placehold.co/80?text=LOGO"}
+                    alt="Logo Inst"
+                    fill
+                    className="object-contain"
+                    unoptimized
+                />
+            </div>
         </div>
 
         <div className="grid grid-cols-2 gap-x-8 gap-y-1 text-sm border-t border-black pt-2">

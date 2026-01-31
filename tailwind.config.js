@@ -6,16 +6,10 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
-      },
-    },
+    extend: {},
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["light", "corporate"], // Temas profesionales de alto contraste
-    darkTheme: "light", // Evitamos modo oscuro accidental que rompa la UI
-    logs: false, // Disable logs to prevent build crash in CI
+    themes: ["light"], // Forzamos un solo tema para evitar errores de compilación
   },
 };

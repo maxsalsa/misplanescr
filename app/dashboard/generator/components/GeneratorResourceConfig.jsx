@@ -57,7 +57,7 @@ export default function GeneratorResourceConfig({
                         onChange={e => setConfigRecurso({ ...config_recurso, tipo: e.target.value })}
                     >
                         <option>Quiz Interactivo (10+ Preguntas)</option>
-                        <option>Juego "Jeopardy" de Repaso</option>
+                        <option>Juego &quot;Jeopardy&quot; de Repaso</option>
                         <option>Sopa de Letras (20+ Palabras)</option>
                         <option>Escape Room de Aula (5 Retos)</option>
                         <option>Proyecto con Rúbrica (Evaluación)</option>

@@ -9,7 +9,7 @@ export default function HelpCenter() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
+
         {/* GUÍA 1: PEDAGOGÍA */}
         <div className="card-solemn p-6">
           <h3 className="font-bold text-blue-800 flex items-center gap-2 mb-4">
@@ -30,7 +30,7 @@ export default function HelpCenter() {
             <Shield size={20} /> Protocolo Ley 7600
           </h3>
           <p className="text-sm text-slate-600 mb-4">
-            El sistema detecta automáticamente las banderas en "Mis Estudiantes".
+            El sistema detecta automáticamente las banderas en &quot;Mis Estudiantes&quot;.
           </p>
           <div className="text-xs bg-orange-50 text-orange-900 p-3 rounded border border-orange-200">
             <strong>Nota:</strong> Usted no debe pedir la adecuación en el prompt. Si el estudiante existe en la base de datos, la IA lo sabrá.

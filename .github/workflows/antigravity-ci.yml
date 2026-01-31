@@ -1,0 +1,39 @@
+﻿name: Antigravity CI (Quality Gate)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    name: 🛡️ Escudo de Calidad
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Código
+      uses: actions/checkout@v3
+
+    - name: Instalar Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+        cache: 'npm'
+
+    - name: 📦 Instalar Dependencias
+      run: npm ci
+
+    - name: 🔍 Análisis Estático (Linting)
+      run: npm run lint
+      # Esto asegura que no haya errores de sintaxis o malas prácticas
+
+    - name: 🧪 Ejecutar Pruebas de Inteligencia (Jest)
+      run: npm test
+      # Esto verifica que el cerebro pedagógico siga funcionando bien
+
+    - name: 🏗️ Prueba de Compilación (Build)
+      run: npm run build
+      env:
+        DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        # Simulamos la construcción para asegurar que Next.js no explote

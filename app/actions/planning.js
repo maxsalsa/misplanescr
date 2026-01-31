@@ -1,27 +1,38 @@
 ﻿"use server";
 import { prisma } from "@/lib/db";
-import { auth } from "@/auth"; // Ajustar según tu config de Auth
 
+// Acción para obtener los grupos del docente
 export async function getTeacherGroups() {
-  // En producción usaríamos: const session = await auth();
-  // Por ahora simulamos al usuario maestro para que funcione la demo
-  const user = await prisma.user.findUnique({
-    where: { email: "max.salazar@mep.go.cr" },
-    include: { students: true }
-  });
+  try {
+    // Buscamos al usuario maestro (Max Salazar)
+    // En producción esto usará la sesión real del usuario logueado
+    const user = await prisma.user.findUnique({
+      where: { email: "max.salazar@mep.go.cr" },
+      include: { 
+        students: true // Traemos estudiantes para inferir grupos
+      }
+    });
 
-  if (!user) return [];
+    if (!user) return [];
 
-  // Extraer secciones únicas y detectar banderas
-  const groups = {};
-  user.students.forEach(s => {
-    if (!groups[s.section]) {
-      groups[s.section] = { name: s.section, count: 0, has7600: false, isGifted: false };
-    }
-    groups[s.section].count++;
-    if (s.has7600) groups[s.section].has7600 = true;
-    if (s.isGifted) groups[s.section].isGifted = true;
-  });
+    // Lógica para extraer grupos únicos de la lista de estudiantes
+    // Ej: Si hay 5 estudiantes de la 10-1, solo devolvemos "10-1" una vez.
+    const uniqueSections = [...new Set(user.students.map(s => s.section))];
+    
+    // Mapeamos a objetos con banderas de inclusión
+    const groups = uniqueSections.map(section => {
+      const studentsInGroup = user.students.filter(s => s.section === section);
+      return {
+        name: section,
+        has7600: studentsInGroup.some(s => s.has7600),
+        isGifted: studentsInGroup.some(s => s.isGifted)
+      };
+    });
 
-  return Object.values(groups);
+    return groups;
+
+  } catch (error) {
+    console.error("Error obteniendo grupos:", error);
+    return []; // Retornamos array vacío para no romper la UI
+  }
 }

@@ -34,7 +34,7 @@ export default function FamilyCapsuleGenerator({ topic, learningOutcome }) {
                     <Heart size={20} className="text-pink-500" /> Vínculo con el Hogar
                 </h3>
                 <p className="text-xs text-purple-700/70 mb-2">
-                    Transforma el tema <strong>"{topic}"</strong> en un mensaje simple para WhatsApp.
+                    Transforma el tema <strong>&quot;{topic}&quot;</strong> en un mensaje simple para WhatsApp.
                 </p>
 
                 {!capsule && !loading && (
@@ -62,7 +62,7 @@ export default function FamilyCapsuleGenerator({ topic, learningOutcome }) {
 
                         <div className="bg-amber-50 p-3 rounded-lg border border-amber-100">
                             <div className="text-xs font-bold text-amber-800 uppercase tracking-wide mb-1">Reto para la cena:</div>
-                            <div className="text-sm text-amber-900 italic">"{capsule.action_item}"</div>
+                            <div className="text-sm text-amber-900 italic">&quot;{capsule.action_item}&quot;</div>
                         </div>
                     </div>
                 )}

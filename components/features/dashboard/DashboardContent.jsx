@@ -10,7 +10,7 @@ import { toast } from 'sonner';
 
 export default function DashboardContent({ initialPlans, userRole, userName }) {
     // Admin State & Context State
-    const [adminStats, setAdminStats] = useState<any>(null);
+    const [adminStats, setAdminStats] = useState < any > (null);
     const [contexto, setContexto] = useState('DIURNA'); // DIURNA | NOCTURNA
 
     const handleAdminAudit = async () => {
@@ -154,7 +154,7 @@ export default function DashboardContent({ initialPlans, userRole, userName }) {
                             <Sparkles size={18} /> Misión Diaria
                         </h2>
                         <p className="text-indigo-100 mt-2 relative z-10 text-sm">
-                            Genera 1 planeamiento de Ciencias para desbloquear la insignia "Científico Loco".
+                            Genera 1 planeamiento de Ciencias para desbloquear la insignia &quot;Científico Loco&quot;.
                         </p>
                         <div className="mt-4 relative z-10">
                             <div className="w-full bg-indigo-900/50 rounded-full h-2 mb-1">

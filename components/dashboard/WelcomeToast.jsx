@@ -8,7 +8,7 @@ import { Rocket, Crown } from 'lucide-react'
 // Define explicit interface locally to avoid 'any' if types aren't perfect yet
 
 
-export const WelcomeToast = ({ user }: { user }) => {
+export const WelcomeToast = ({ user }) => {
 
     useEffect(() => {
         // Si la bandera en DB ya dice TRUE, no hacemos nada. Silencio absoluto.

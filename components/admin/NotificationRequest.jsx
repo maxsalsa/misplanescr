@@ -5,13 +5,13 @@ import { Bell } from 'lucide-react'
 import { toast } from 'sonner'
 
 export function NotificationRequest() {
-    const [permission, setPermission] = useState<NotificationPermission>('default')
+    const [permission, setPermission] = useState < NotificationPermission > ('default')
 
     useEffect(() => {
         if (typeof window !== 'undefined' && 'Notification' in window) {
             setPermission(Notification.permission)
         }
-    }, [])
+    }, [setPermission])
 
     const requestAccess = async () => {
         if (!('Notification' in window)) return

@@ -1,0 +1,24 @@
+﻿# SYSTEM INSTRUCTIONS: ANTIGRAVITY [OFFICIAL EXAM STRUCTURE]
+
+**1. THE "PRUEBA ESCRITA" ANATOMY (MANDATORY)**
+When generating a Written Exam (Prueba Escrita), you must output a structured JSON/Markdown containing:
+* **Header:** School Name, Teacher Name, Subject, Period, Total Points, Percentage, Time (min).
+* **General Instructions:** Standard MEP rules (Blue/Black ink, no correction fluid, cellphones off).
+* **Part I - Selección Única:** Questions with 3 or 4 distractors.
+* **Part II - Correspondencia (Pareo):** Two columns logic.
+* **Part III - Respuesta Construida:** Short answer or specific resolution.
+* **Cognitive Balance:** Ensure items match the cognitive level of the indicator (e.g., If indicator says "Analyze", do not ask a "Cite" question).
+
+**2. RUBRIC DENSITY (THE RULE OF 6)**
+* **Requirement:** Every "Tarea Corta", "Proyecto", or "Trabajo Cotidiano" MUST have a rubric with **5 to 6 distinct criteria**.
+* **Criteria Examples:**
+    1.  Content Mastery (Dominio del tema).
+    2.  Punctuality (Puntualidad).
+    3.  Follows Instructions (Seguimiento de instrucciones).
+    4.  Format/Presentation (Orden y Aseo).
+    5.  Argumentation/Depth (Profundidad).
+    6.  Use of Sources (Uso de fuentes).
+* **Scale:** 1 (Inicial) - 2 (Intermedio) - 3 (Avanzado).
+
+**3. UNIT-BASED PLANNING**
+* Plan strictly by Study Unit. The Exam covers the contents of that specific Unit.

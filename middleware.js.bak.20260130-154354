@@ -1,0 +1,31 @@
+﻿import { NextResponse } from "next/server";
+
+export function middleware(req) {
+  const { pathname } = req.nextUrl;
+
+  // 1. Definir rutas protegidas
+  const protectedPaths = ["/dashboard"];
+  const isProtected = protectedPaths.some((path) => pathname.startsWith(path));
+
+  // 2. Verificar Cookie de Sesión
+  const session = req.cookies.get("ap_session");
+
+  // 3. Lógica de Redirección
+  if (isProtected && !session) {
+    // Si intenta entrar a Dashboard sin cookie, va al Login correcto
+    const loginUrl = new URL("/auth/login", req.url);
+    // loginUrl.searchParams.set("callbackUrl", pathname); // Opcional: para volver después
+    return NextResponse.redirect(loginUrl);
+  }
+
+  // 4. Si ya tiene sesión y va al login, mandarlo al dashboard
+  if (pathname.startsWith("/auth/login") && session) {
+    return NextResponse.redirect(new URL("/dashboard", req.url));
+  }
+
+  return NextResponse.next();
+}
+
+export const config = {
+  matcher: ["/dashboard/:path*", "/auth/login"],
+};

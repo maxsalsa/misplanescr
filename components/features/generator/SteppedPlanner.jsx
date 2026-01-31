@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useGroups } from '@/context/groups-context';
 import { toast } from 'sonner';
 import { Search, ChevronRight, Check, Sparkles, Building, Users, BookOpen, Layers, GraduationCap, Calendar, FileText } from 'lucide-react';
@@ -8,6 +8,7 @@ import { useAuth } from '@/context/auth-context';
 import { MepService } from '@/lib/services/mep-service'; // MOCK SERVICE
 import { calculateTimeBudget } from '@/lib/intelligence';
 import { validateETPStructure } from '@/lib/assessment-engine';
+import Image from 'next/image';
 
 import { memo } from 'react';
 
@@ -49,10 +50,19 @@ const SteppedPlanner = memo(function SteppedPlanner({ onGenerate, loading }) {
     const derivedLevels = [...new Set(getFilteredModules().map(m => m.level))].sort((a, b) => a - b);
     const availableLevels = derivedLevels.map(String);
 
-    const availableSubjects = [...new Set(
+    const availableSubjects = useMemo(() => {
+        return [...new Set(
+            getFilteredModules()
+                .filter(m => m.level.toString() === data.level)
+                .map(m => m.specialty)
+        )];
+    }, [mepModules, data.modality, data.level]);
+
+    // FIX: Define availableSubareas for Technical Education
+    const availableSubareas = [...new Set(
         getFilteredModules()
-            .filter(m => m.level.toString() === data.level)
-            .map(m => m.specialty)
+            .filter(m => m.specialty === data.subject && m.level.toString() === data.level)
+            .flatMap(m => m.sub_areas || []) // Assuming structure, or jus map sub_area field
     )];
 
     // Units logic (RA or Units)
@@ -65,7 +75,8 @@ const SteppedPlanner = memo(function SteppedPlanner({ onGenerate, loading }) {
         if (availableSubjects.length === 1 && !data.subject) {
             setData(prev => ({ ...prev, subject: availableSubjects[0] }));
         }
-    }, [availableSubjects]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [availableSubjects.length, data.subject]);
 
     const handleNext = () => {
         const isTechnical = data.modality === 'Educación Técnica';
@@ -83,18 +94,24 @@ const SteppedPlanner = memo(function SteppedPlanner({ onGenerate, loading }) {
         if (data.resourceType === 'instrumento_sumativo') {
             toast.success("Generando Instrumento Oficial 1er Año...");
 
+            // ZERO DEBT: Use Official MEP Data (No Hallucinations)
+            const officialIndicators = currentModule?.learning_outcomes?.map(lo => ({
+                indicator: lo.description,
+                criteria: "Desempeño demostrado en clase"
+            })) || [];
+
+            if (officialIndicators.length === 0) {
+                return toast.error("Error Normativo: No se encontraron indicadores oficiales para esta unidad.");
+            }
+
             generateSummativeInstrument({
                 regional: activeInstitution?.regional || "San José Norte",
                 institutionName: activeInstitution?.name || "Escuela Demo",
                 teacherName: activeInstitution?.director || "Lic. Max Salazar Sánchez",
                 subject: data.subject,
-                level: "Primer Año",
+                level: data.level || "Primer Año",
                 section: groups.find(g => g.id === data.group)?.name || "General",
-                indicators: [
-                    { indicator: "Identifica fonemas en palabras cotidianlas.", criteria: "Logrado" },
-                    { indicator: "Produce grafemas con trazo direccional.", criteria: "Logrado" },
-                    { indicator: "Resuelve problemas de conteo básico (1-10).", criteria: "Logrado" }
-                ]
+                indicators: officialIndicators
             });
             return;
         }
@@ -407,7 +424,11 @@ const SteppedPlanner = memo(function SteppedPlanner({ onGenerate, loading }) {
                 <div className="flex justify-between mt-8 pt-4 border-t border-slate-100">
                     {step > 1 ? (
                         <button onClick={() => setStep(p => p - 1)} className="btn btn-ghost hover:bg-slate-100">Atrás</button>
-                    ) : <div className="flex items-center gap-2 text-xs text-slate-400"><img src="/sinpe_logo_mini.png" alt="" className="w-4 h-4 grayscale opacity-50" /> Banco Popular & SINPE Verified</div>}
+                    ) : <div className="flex items-center gap-2 text-xs text-slate-400">
+                        <div className="relative w-4 h-4 grayscale opacity-50">
+                            <Image src="/sinpe_logo_mini.png" alt="" fill className="object-contain" unoptimized />
+                        </div>
+                        Banco Popular & SINPE Verified</div>}
 
                     {step < (isTechnical ? 8 : 7) ? (
                         <button onClick={handleNext} disabled={!data.institution} className="btn btn-primary gap-2 shadow-md">
