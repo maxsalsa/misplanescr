@@ -1,27 +1,23 @@
-﻿import { Loader2 } from "lucide-react";
-
-export default function Loading() {
+﻿export default function DashboardLoading() {
   return (
-    <div className="min-h-screen bg-slate-50 p-8">
-      {/* Skeleton Header */}
-      <div className="h-8 w-1/3 bg-slate-200 rounded animate-pulse mb-8"></div>
-      
-      {/* Skeleton Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        {[1, 2, 3].map((i) => (
-          <div key={i} className="h-32 bg-slate-200 rounded-xl animate-pulse"></div>
+    <div className="w-full h-full p-4 space-y-6 animate-pulse">
+      {/* Header Skeleton */}
+      <div className="flex justify-between items-center">
+        <div className="h-8 bg-slate-200 rounded w-1/3"></div>
+        <div className="h-8 bg-slate-200 rounded w-24"></div>
+      </div>
+
+      {/* Stats Cards Skeleton */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        {[...Array(4)].map((_, i) => (
+          <div key={i} className="h-32 bg-slate-200 rounded-xl"></div>
         ))}
       </div>
 
-      {/* Skeleton Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {[1, 2, 3, 4, 5, 6].map((i) => (
-          <div key={i} className="h-48 bg-slate-200 rounded-xl animate-pulse"></div>
-        ))}
-      </div>
-      
-      <div className="fixed bottom-4 right-4 flex items-center gap-2 text-slate-400 text-sm">
-        <Loader2 className="animate-spin" /> Sincronizando Multiverso...
+      {/* Main Content Area Skeleton */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-2 h-96 bg-slate-200 rounded-xl"></div>
+        <div className="h-96 bg-slate-200 rounded-xl"></div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 "use client";
-import { useState, useEffect } from 'react';
-import LegalTermsModal from '@/components/auth/LegalTermsModal';
-import { logSecurityEvent } from '@/core/security/security-audit';
+import { useState, useEffect } from "react";
+import LegalTermsModal from "@/components/auth/LegalTermsModal";
+import { logSecurityEvent } from "@/core/security/security-audit";
 
 /**
  * 🛡️ LEGAL GUARD WRAPPER
@@ -9,35 +9,37 @@ import { logSecurityEvent } from '@/core/security/security-audit';
  */
 
 export default function LegalGuard({ children }) {
-    const [accepted, setAccepted] = useState(false);
-    const [loading, setLoading] = useState(true);
+  const [accepted, setAccepted] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        // En producción: chequear session.user.termsAccepted en DB
-        const checkStatus = async () => {
-            // Simulation
-            const hasSigned = localStorage.getItem('MEP_LEGAL_SIGNED') === 'true';
-            setAccepted(hasSigned);
-            setLoading(false);
-        };
-        checkStatus();
-    }, []);
-
-    const handleAccept = async () => {
-        // Call backend to update User record
-        await logSecurityEvent('USR-CURRENT', 'TERMS_ACCEPTED', { ip: 'Client-Side' });
-        localStorage.setItem('MEP_LEGAL_SIGNED', 'true');
-        setAccepted(true);
+  useEffect(() => {
+    // En producción: chequear session.user.termsAccepted en DB
+    const checkStatus = async () => {
+      // Simulation
+      const hasSigned = localStorage.getItem("MEP_LEGAL_SIGNED") === "true";
+      setAccepted(hasSigned);
+      setLoading(false);
     };
+    checkStatus();
+  }, []);
 
-    if (loading) return null;
+  const handleAccept = async () => {
+    // Call backend to update User record
+    await logSecurityEvent("USR-CURRENT", "TERMS_ACCEPTED", {
+      ip: "Client-Side",
+    });
+    localStorage.setItem("MEP_LEGAL_SIGNED", "true");
+    setAccepted(true);
+  };
 
-    return (
-        <>
-            {!accepted && <LegalTermsModal onAccept={handleAccept} />}
-            <div className={!accepted ? 'blur-sm pointer-events-none' : ''}>
-                {children}
-            </div>
-        </>
-    );
+  if (loading) return null;
+
+  return (
+    <>
+      {!accepted && <LegalTermsModal onAccept={handleAccept} />}
+      <div className={!accepted ? "blur-sm pointer-events-none" : ""}>
+        {children}
+      </div>
+    </>
+  );
 }

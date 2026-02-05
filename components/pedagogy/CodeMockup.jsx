@@ -14,18 +14,24 @@ export default function CodeMockup({ code, language = "sql" }) {
           <Terminal size={12} /> main.{language}
         </div>
         <div className="flex gap-3">
-            <Play size={14} className="text-emerald-500 cursor-pointer hover:text-emerald-400"/>
-            <Copy size={14} className="text-slate-400 cursor-pointer hover:text-white"/>
+          <Play
+            size={14}
+            className="text-emerald-500 cursor-pointer hover:text-emerald-400"
+          />
+          <Copy
+            size={14}
+            className="text-slate-400 cursor-pointer hover:text-white"
+          />
         </div>
       </div>
-      
+
       {/* CODE BODY */}
       <div className="p-4 text-emerald-400 overflow-x-auto">
         <pre>
           <code>{code || "-- Esperando input del estudiante..."}</code>
         </pre>
       </div>
-      
+
       {/* TERMINAL FOOTER */}
       <div className="bg-[#252526] px-4 py-2 border-t border-slate-700 text-xs text-slate-500 flex gap-4">
         <span>Ln 12, Col 45</span>

@@ -8,7 +8,11 @@ function SubmitBtn() {
   const { pending } = useFormStatus();
   return (
     <button disabled={pending} className="btn btn-primary w-full">
-      {pending ? <span className="loading loading-spinner"></span> : "Guardar Sección"}
+      {pending ? (
+        <span className="loading loading-spinner"></span>
+      ) : (
+        "Guardar Sección"
+      )}
     </button>
   );
 }
@@ -34,7 +38,12 @@ export default function CreateSectionClient() {
           <form action={clientAction} className="space-y-4">
             <div className="form-control">
               <label className="label">Nombre (Ej: 10-1)</label>
-              <input name="name" className="input input-bordered" placeholder="10-1" required />
+              <input
+                name="name"
+                className="input input-bordered"
+                placeholder="10-1"
+                required
+              />
             </div>
             <div className="form-control">
               <label className="label">Nivel Académico</label>
@@ -49,7 +58,13 @@ export default function CreateSectionClient() {
             </div>
             <div className="modal-action">
               <SubmitBtn />
-              <button type="button" className="btn" onClick={() => modalRef.current.close()}>Cancelar</button>
+              <button
+                type="button"
+                className="btn"
+                onClick={() => modalRef.current.close()}
+              >
+                Cancelar
+              </button>
             </div>
           </form>
         </div>

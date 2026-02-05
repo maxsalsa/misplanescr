@@ -12,7 +12,7 @@ export async function GET(req) {
     date: new Date().toISOString(),
     plans: await prisma.lessonPlan.findMany(),
     groups: await prisma.group.findMany({ include: { students: true } }),
-    grades: await prisma.grade.findMany()
+    grades: await prisma.grade.findMany(),
   };
 
   return NextResponse.json(backup);

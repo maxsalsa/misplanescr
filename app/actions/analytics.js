@@ -7,7 +7,7 @@ export async function getDashboardStats() {
     const [totalStudents, totalPlans, pendingRequests] = await Promise.all([
       prisma.student.count(),
       prisma.pedagogicalPlan.count(),
-      prisma.administrativeRequest.count({ where: { status: "PENDIENTE" } })
+      prisma.administrativeRequest.count({ where: { status: "PENDIENTE" } }),
     ]);
 
     // 2. CÁLCULO DE ALERTA TEMPRANA (MEP)
@@ -17,17 +17,17 @@ export async function getDashboardStats() {
       by: ["studentId"],
       where: { status: "A" },
       _count: { status: true },
-      having: { status: { _count: { gt: 3 } } }
+      having: { status: { _count: { gt: 3 } } },
     });
     const alerts = criticalAttendance.length;
 
     // 3. DATOS DE RENDIMIENTO (PARA GRÁFICOS)
     // Si no hay datos, enviamos estructura vacía para que no rompa el gráfico
     const performanceData = [
-      { name: "I Sem", nota: 0 }, 
+      { name: "I Sem", nota: 0 },
       { name: "II Sem", nota: 0 },
-      { name: "Cotidiano", nota: 0 }, 
-      { name: "Proyectos", nota: 0 }
+      { name: "Cotidiano", nota: 0 },
+      { name: "Proyectos", nota: 0 },
     ];
 
     return {
@@ -35,7 +35,7 @@ export async function getDashboardStats() {
         students: totalStudents,
         plans: totalPlans,
         requests: pendingRequests,
-        alerts: alerts
+        alerts: alerts,
       },
       charts: {
         performance: performanceData,
@@ -46,16 +46,15 @@ export async function getDashboardStats() {
           { day: "M", presentes: 0, ausentes: 0 },
           { day: "J", presentes: 0, ausentes: 0 },
           { day: "V", presentes: 0, ausentes: 0 },
-        ]
-      }
+        ],
+      },
     };
-
   } catch (error) {
     console.error("Error en Analítica:", error);
     // Retorno seguro en caso de fallo DB
-    return { 
-      kpi: { students: 0, plans: 0, requests: 0, alerts: 0 }, 
-      charts: { performance: [], attendance: [] } 
+    return {
+      kpi: { students: 0, plans: 0, requests: 0, alerts: 0 },
+      charts: { performance: [], attendance: [] },
     };
   }
 }

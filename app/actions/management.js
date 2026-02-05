@@ -25,7 +25,10 @@ const RequestSchema = z.object({
   type: z.string().min(1, "Seleccione un tipo"),
   description: z.string().min(5, "Justifique la solicitud"),
   dateStart: z.string().transform((str) => new Date(str)),
-  dateEnd: z.string().optional().transform((str) => str ? new Date(str) : null),
+  dateEnd: z
+    .string()
+    .optional()
+    .transform((str) => (str ? new Date(str) : null)),
 });
 
 // --- ACTIONS: SECTIONS ---
@@ -54,7 +57,8 @@ export async function createSection(prevState, formData) {
     return { success: true, message: "Sección creada exitosamente." };
   } catch (e) {
     if (e instanceof z.ZodError) return { error: e.errors[0].message };
-    if (e.code === 'P2002') return { error: "Ya existe una sección con ese nombre." };
+    if (e.code === "P2002")
+      return { error: "Ya existe una sección con ese nombre." };
     return { error: "Error al crear sección." };
   }
 }
@@ -65,7 +69,8 @@ export async function deleteSection(id) {
 
   // Verificar propiedad
   const section = await prisma.section.findUnique({ where: { id } });
-  if (section.teacherId !== session.user.id) return { error: "Acceso denegado" };
+  if (section.teacherId !== session.user.id)
+    return { error: "Acceso denegado" };
 
   await prisma.section.delete({ where: { id } });
   revalidatePath("/dashboard/groups");
@@ -106,7 +111,7 @@ export async function toggleStudentFlag(studentId, field, value) {
 
     await prisma.student.update({
       where: { id: studentId },
-      data: { [field]: value }
+      data: { [field]: value },
     });
 
     // Soft Revalidate via action return is handled by client or implicit
@@ -122,7 +127,9 @@ export async function deleteStudent(studentId, sectionId) {
     await prisma.student.delete({ where: { id: studentId } });
     revalidatePath(`/dashboard/groups/${sectionId}`);
     return { success: true };
-  } catch (e) { return { error: "Error deleting" }; }
+  } catch (e) {
+    return { error: "Error deleting" };
+  }
 }
 
 // --- ACTIONS: HR ---
@@ -144,8 +151,8 @@ export async function createHRRequest(prevState, formData) {
     await prisma.administrativeRequest.create({
       data: {
         ...validated,
-        userId: session.user.id
-      }
+        userId: session.user.id,
+      },
     });
 
     revalidatePath("/dashboard/hr");

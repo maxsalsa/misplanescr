@@ -1,0 +1,210 @@
+"use client";
+import { generateMEPDocument } from "@/utils/pdfGenerator";
+import { useState, useEffect } from "react";
+import { useSession } from "next-auth/react";
+import { FileText, Save, RefreshCw, CheckCircle, BookOpen, Layers, Clock, Activity, Heart, Download, Cloud, AlertTriangle } from "lucide-react";
+
+export default function PlanningPage() {
+  const { data: session } = useSession();
+  
+  // ESTADOS
+  const [loading, setLoading] = useState(false);
+  const [fetching, setFetching] = useState(false); // Cargando materias
+  const [materias, setMaterias] = useState([]);
+  
+  // FORMULARIO
+  const [nivel, setNivel] = useState("Décimo");
+  const [materiaSelec, setMateriaSelec] = useState("");
+  const [tipo, setTipo] = useState("Planeamiento Didáctico");
+
+  // RESULTADO
+  const [resultado, setResultado] = useState(null);
+
+  // 1. CARGAR MATERIAS REALES DE LA BASE DE DATOS
+  useEffect(() => {
+    async function cargarMaterias() {
+        setFetching(true);
+        setMateriaSelec(""); // Reset
+        try {
+            const res = await fetch(`/api/mep/subjects?nivel=${nivel}`);
+            const data = await res.json();
+            setMaterias(data);
+        } catch (e) {
+            console.error(e);
+        } finally {
+            setFetching(false);
+        }
+    }
+    cargarMaterias();
+  }, [nivel]); // Se recarga cada vez que cambia el nivel
+
+  const handleGenerate = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setResultado(null);
+    
+    try {
+        const res = await fetch("/api/planeamiento/generate", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ nivel, materia: materiaSelec, tipo })
+        });
+        const json = await res.json();
+        if(json.success) setResultado(json.data);
+        else alert("Error: " + json.error);
+    } catch (err) {
+        alert("Error de conexión.");
+    } finally {
+        setLoading(false);
+    }
+  };
+
+  return (
+    <div className="p-6 max-w-7xl mx-auto space-y-8 animate-in fade-in duration-500">
+      <div className="flex justify-between items-center">
+        <div>
+            <h1 className="text-3xl font-bold text-slate-800 flex items-center gap-2">
+                <Layers className="text-blue-600" /> Nuevo Planeamiento Oficial
+            </h1>
+            <p className="text-slate-500">Base de Datos: {materias.length > 0 ? "Conectada" : "Verificando..."}</p>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* PANEL DE CONTROL */}
+        <div className="lg:col-span-1 space-y-6">
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <h3 className="font-bold text-slate-700 mb-4 flex items-center gap-2">
+                    <BookOpen size={18} /> Parámetros
+                </h3>
+                
+                <div className="space-y-4">
+                    <div>
+                        <label className="text-xs font-bold text-slate-500 uppercase">1. Nivel Educativo</label>
+                        <select value={nivel} onChange={e=>setNivel(e.target.value)} className="w-full mt-1 p-3 border rounded-xl bg-slate-50 font-medium">
+                            <option>Sétimo</option><option>Octavo</option><option>Noveno</option>
+                            <option>Décimo</option><option>Undécimo</option><option>Duodécimo</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label className="text-xs font-bold text-slate-500 uppercase flex justify-between">
+                            2. Asignatura / Especialidad
+                            {fetching && <span className="text-blue-600 animate-pulse">Cargando...</span>}
+                        </label>
+                        
+                        {materias.length > 0 ? (
+                            <select 
+                                value={materiaSelec} 
+                                onChange={e=>setMateriaSelec(e.target.value)} 
+                                className="w-full mt-1 p-3 border rounded-xl bg-slate-50 h-40 font-medium text-sm" 
+                                size={10}
+                            >
+                                {materias.map((m,i)=>(
+                                    <option key={i} value={m.subject} className="py-1 px-2 hover:bg-blue-100 cursor-pointer rounded">
+                                        {m.subject}
+                                    </option>
+                                ))}
+                            </select>
+                        ) : (
+                            <div className="p-4 bg-amber-50 text-amber-800 text-sm rounded-xl border border-amber-100 flex items-center gap-2 mt-2">
+                                <AlertTriangle size={16}/>
+                                No hay datos para este nivel. Intente otro.
+                            </div>
+                        )}
+                        <p className="text-xs text-slate-400 mt-1">
+                            Mostrando {materias.length} programas oficiales extraídos.
+                        </p>
+                    </div>
+
+                    <button onClick={handleGenerate} disabled={loading || !materiaSelec}
+                        className="w-full py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-500/20 disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center gap-2">
+                        {loading ? <RefreshCw className="animate-spin"/> : <Save size={20} />}
+                        {loading ? "Cargando Estructura..." : "Generar Planeamiento"}
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        {/* PANEL DE RESULTADO */}
+        <div className="lg:col-span-2">
+            {resultado ? (
+                <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                    {/* ENCABEZADO */}
+                    <div className="bg-slate-50 p-6 border-b border-slate-100 flex justify-between">
+                        <div>
+                            <h2 className="text-xl font-bold text-slate-800">{resultado.encabezado.asignatura}</h2>
+                            <div className="flex gap-2 mt-2">
+                                <span className="text-xs font-bold bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                                    {resultado.encabezado.tiempo_total}
+                                </span>
+                                <span className="text-xs font-bold bg-green-100 text-green-700 px-2 py-1 rounded">
+                                    Oficial 2026
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="p-6 space-y-6">
+                        {/* EVIDENCIA Y SOFT SKILLS */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="p-4 bg-indigo-50 border border-indigo-100 rounded-xl">
+                                <h4 className="text-xs font-bold text-indigo-800 uppercase mb-1">Evidencia de Desempeño</h4>
+                                <p className="font-bold text-indigo-900">{resultado.competencias.evidencia_final}</p>
+                            </div>
+                            <div className="p-4 bg-amber-50 border border-amber-100 rounded-xl">
+                                <h4 className="text-xs font-bold text-amber-800 uppercase mb-1">Habilidades Blandas</h4>
+                                <p className="text-sm text-amber-900">{resultado.competencias.blanda}</p>
+                            </div>
+                        </div>
+
+                        {/* CRONOGRAMA */}
+                        <div className="space-y-4">
+                            <h3 className="font-bold text-slate-700 border-b pb-2">Mediación Pedagógica</h3>
+                            
+                            {/* FASES 1 y 2 */}
+                            {[resultado.mediacion.focalizacion, resultado.mediacion.exploracion].map((f, i) => (
+                                <div key={i} className="flex gap-4">
+                                    <div className="min-w-[50px] pt-1 font-bold text-slate-400 text-xs">{f.tiempo}</div>
+                                    <div>
+                                        <h5 className="font-bold text-slate-800 text-sm">{f.fase}</h5>
+                                        <p className="text-sm text-slate-600">{f.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+
+                            {/* PAUSA ACTIVA */}
+                            <div className="bg-green-50 p-3 rounded-lg border border-green-100 flex gap-4">
+                                <div className="min-w-[50px] pt-1 font-bold text-green-600 text-xs text-center">{resultado.mediacion.pausa_activa.tiempo}</div>
+                                <div>
+                                    <h5 className="font-bold text-green-800 text-sm flex items-center gap-2">
+                                        <Activity size={14}/> {resultado.mediacion.pausa_activa.tipo}
+                                    </h5>
+                                    <p className="text-sm text-green-700">{resultado.mediacion.pausa_activa.desc}</p>
+                                </div>
+                            </div>
+
+                            {/* FASES 3 y 4 */}
+                            {[resultado.mediacion.contrastacion, resultado.mediacion.aplicacion].map((f, i) => (
+                                <div key={i} className="flex gap-4">
+                                    <div className="min-w-[50px] pt-1 font-bold text-slate-400 text-xs">{f.tiempo}</div>
+                                    <div>
+                                        <h5 className="font-bold text-slate-800 text-sm">{f.fase}</h5>
+                                        <p className="text-sm text-slate-600">{f.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            ) : (
+                <div className="h-full flex flex-col items-center justify-center text-slate-300 border-2 border-dashed border-slate-200 rounded-2xl min-h-[400px]">
+                    <Layers size={48} className="mb-4 text-slate-200" />
+                    <p>Seleccione una materia para cargar el plan oficial</p>
+                </div>
+            )}
+        </div>
+      </div>
+    </div>
+  );
+}

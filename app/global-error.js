@@ -11,9 +11,12 @@ export default function GlobalError({ reset }) {
               <AlertTriangle className="text-amber-600 w-8 h-8" />
             </div>
 
-            <h2 className="text-2xl font-black text-slate-800 mb-2">Sistemas en Recalibración</h2>
+            <h2 className="text-2xl font-black text-slate-800 mb-2">
+              Sistemas en Recalibración
+            </h2>
             <p className="text-slate-500 mb-8">
-              Antigravity ha detectado una anomalía temporal. Los núcleos se están auto-reparando.
+              Antigravity ha detectado una anomalía temporal. Los núcleos se
+              están auto-reparando.
             </p>
 
             <div className="space-y-3">
@@ -25,7 +28,7 @@ export default function GlobalError({ reset }) {
               </button>
 
               <button
-                onClick={() => window.location.href = "/"}
+                onClick={() => (window.location.href = "/")}
                 className="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2"
               >
                 <Power size={18} /> Reiniciar Sistema
@@ -33,7 +36,9 @@ export default function GlobalError({ reset }) {
             </div>
 
             <div className="mt-6 pt-6 border-t border-slate-100">
-              <span className="text-xs font-mono text-slate-400">ERROR_CODE: OMEGA_RESILIENCE_01</span>
+              <span className="text-xs font-mono text-slate-400">
+                ERROR_CODE: OMEGA_RESILIENCE_01
+              </span>
             </div>
           </div>
         </div>

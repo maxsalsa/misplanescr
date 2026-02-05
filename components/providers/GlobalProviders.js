@@ -11,18 +11,18 @@ import { Toaster } from "sonner";
  * GlobalProviders - Restored with all context providers
  */
 export function GlobalProviders({ children, session }) {
-    return (
-        <SessionProvider session={session}>
-            <OfflineProvider>
-                <AuthProvider>
-                    <SaaSProvider>
-                        <GroupsProvider>
-                            {children}
-                            <Toaster position="top-center" richColors />
-                        </GroupsProvider>
-                    </SaaSProvider>
-                </AuthProvider>
-            </OfflineProvider>
-        </SessionProvider>
-    );
+  return (
+    <SessionProvider session={session}>
+      <OfflineProvider>
+        <AuthProvider>
+          <SaaSProvider>
+            <GroupsProvider>
+              {children}
+              <Toaster position="top-center" richColors />
+            </GroupsProvider>
+          </SaaSProvider>
+        </AuthProvider>
+      </OfflineProvider>
+    </SessionProvider>
+  );
 }

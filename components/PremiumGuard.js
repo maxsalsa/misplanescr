@@ -14,11 +14,11 @@ export default function PremiumGuard({ children, isPremium, type = "text" }) {
       <div className="blur-sm select-none opacity-50 grayscale p-4 pointer-events-none">
         {children}
         {type === "text" && (
-           <p className="mt-4 text-justify">
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...
-             (Contenido Exclusivo Oculto)
-           </p>
+          <p className="mt-4 text-justify">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam... (Contenido Exclusivo Oculto)
+          </p>
         )}
       </div>
 
@@ -35,10 +35,12 @@ export default function PremiumGuard({ children, isPremium, type = "text" }) {
           Desbloquear Ahora
         </button>
       </div>
-      
+
       {/* Marca de Agua Sutil de Fondo */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5 -rotate-12">
-        <span className="text-6xl font-black text-slate-900">AULAPLAN DEMO</span>
+        <span className="text-6xl font-black text-slate-900">
+          AULAPLAN DEMO
+        </span>
       </div>
     </div>
   );

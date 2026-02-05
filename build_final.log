@@ -1,0 +1,132 @@
+
+> aulaplan-golden@1.0.0 build
+> prisma generate && next build
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma\schema.prisma
+
+Ô£ö Generated Prisma Client (v5.22.0) to .\node_modules\@prisma\client in 557ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Want real-time updates to your database without manual polling? Discover how with Pulse: https://pris.ly/tip-0-pulse
+
+  Ôû▓ Next.js 14.2.3
+  - Environments: .env.production, .env
+
+   Creating an optimized production build ...
+ Ô£ô Compiled successfully
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/85) ...
+   Generating static pages (21/85) 
+   Generating static pages (42/85) 
+   Generating static pages (63/85) 
+ Ô£ô Generating static pages (85/85)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+Ôöî Ôùï /                                    188 B          99.6 kB
+Ôö£ Ôùï /_not-found                          197 B          87.7 kB
+Ôö£ Ôùï /admin/audit                         200 B          87.7 kB
+Ôö£ Ôùï /admin/auditoria                     197 B          87.7 kB
+Ôö£ Ôùï /admin/programs                      1.91 kB        98.7 kB
+Ôö£ ãÆ /api/admin/create-user               0 B                0 B
+Ôö£ ãÆ /api/ai/generate                     0 B                0 B
+Ôö£ ãÆ /api/attendance                      0 B                0 B
+Ôö£ ãÆ /api/auth/[...nextauth]              0 B                0 B
+Ôö£ ãÆ /api/auth/change-password            0 B                0 B
+Ôö£ ãÆ /api/auth/login                      0 B                0 B
+Ôö£ ãÆ /api/backup                          0 B                0 B
+Ôö£ ãÆ /api/conduct                         0 B                0 B
+Ôö£ ãÆ /api/copilot                         0 B                0 B
+Ôö£ ãÆ /api/curriculum                      0 B                0 B
+Ôö£ ãÆ /api/director/export                 0 B                0 B
+Ôö£ ãÆ /api/exam/generate-cumulative        0 B                0 B
+Ôö£ ãÆ /api/family                          0 B                0 B
+Ôö£ ãÆ /api/generate                        0 B                0 B
+Ôö£ ãÆ /api/generate-plan                   0 B                0 B
+Ôö£ ãÆ /api/grades                          0 B                0 B
+Ôö£ ãÆ /api/groups                          0 B                0 B
+Ôö£ ãÆ /api/groups/import                   0 B                0 B
+Ôö£ Ôùï /api/groups/list                     0 B                0 B
+Ôö£ ãÆ /api/planning/generate               0 B                0 B
+Ôö£ ãÆ /api/plans/search                    0 B                0 B
+Ôö£ ãÆ /api/programs/ingest                 0 B                0 B
+Ôö£ ãÆ /api/programs/list                   0 B                0 B
+Ôö£ ãÆ /api/unit                            0 B                0 B
+Ôö£ Ôùï /auth/login                          2.98 kB        90.5 kB
+Ôö£ Ôùï /auth/signin                         2.54 kB         105 kB
+Ôö£ Ôùï /dashboard                           2.71 kB         107 kB
+Ôö£ ãÆ /dashboard/admin                     200 B          87.7 kB
+Ôö£ Ôùï /dashboard/admin/licenses            2.55 kB        99.3 kB
+Ôö£ Ôùï /dashboard/admin/status              2.25 kB        89.7 kB
+Ôö£ Ôùï /dashboard/admin/users               2.6 kB         90.1 kB
+Ôö£ Ôùï /dashboard/annual-planner            2.83 kB        99.6 kB
+Ôö£ ãÆ /dashboard/architect                 6.6 kB         94.1 kB
+Ôö£ Ôùï /dashboard/asistencia                195 B          87.7 kB
+Ôö£ Ôùï /dashboard/assessment                2.87 kB        99.7 kB
+Ôö£ Ôùï /dashboard/assessment/create         2.72 kB        99.5 kB
+Ôö£ Ôùï /dashboard/assessments               197 B          87.7 kB
+Ôö£ Ôùï /dashboard/attendance                2.42 kB         109 kB
+Ôö£ ãÆ /dashboard/classroom/[id]            2.32 kB        99.1 kB
+Ôö£ Ôùï /dashboard/control                   1.42 kB        88.9 kB
+Ôö£ Ôùï /dashboard/create                    4.65 kB         101 kB
+Ôö£ Ôùï /dashboard/create/wizard             199 B          87.7 kB
+Ôö£ Ôùï /dashboard/diagnostico               199 B          87.7 kB
+Ôö£ ãÆ /dashboard/director                  185 B          94.5 kB
+Ôö£ Ôùï /dashboard/evaluacion                200 B          87.7 kB
+Ôö£ ãÆ /dashboard/evaluation                2.93 kB        90.4 kB
+Ôö£ Ôùï /dashboard/exam-builder              3.63 kB         110 kB
+Ôö£ ãÆ /dashboard/exam/[id]                 1.92 kB        99.3 kB
+Ôö£ ãÆ /dashboard/family                    200 B          87.7 kB
+Ôö£ Ôùï /dashboard/games                     200 B          87.7 kB
+Ôö£ Ôùï /dashboard/generator                 2.52 kB        99.9 kB
+Ôö£ Ôùï /dashboard/grades                    114 kB          201 kB
+Ôö£ Ôùï /dashboard/grading                   684 B          88.2 kB
+Ôö£ ãÆ /dashboard/groups                    184 B          94.5 kB
+Ôö£ ãÆ /dashboard/groups/[id]               2.42 kB        99.2 kB
+Ôö£ Ôùï /dashboard/grupos                    3.33 kB         111 kB
+Ôö£ Ôùï /dashboard/guia                      143 kB          240 kB
+Ôö£ Ôùï /dashboard/help                      201 B          87.7 kB
+Ôö£ Ôùï /dashboard/hr                        1.68 kB        89.2 kB
+Ôö£ ãÆ /dashboard/instruments               3.58 kB        91.1 kB
+Ôö£ ãÆ /dashboard/library                   2.14 kB        96.4 kB
+Ôö£ ãÆ /dashboard/library/[id]              5.54 kB         530 kB
+Ôö£ Ôùï /dashboard/life                      3.24 kB         111 kB
+Ôö£ Ôùï /dashboard/planeamiento              200 B          87.7 kB
+Ôö£ ãÆ /dashboard/planning/[id]             47.1 kB         151 kB
+Ôö£ Ôùï /dashboard/planning/new              3.56 kB         110 kB
+Ôö£ Ôùï /dashboard/plans                     2.26 kB        96.6 kB
+Ôö£ ãÆ /dashboard/plans/[id]                3.72 kB         531 kB
+Ôö£ Ôùï /dashboard/plans/create              197 B          87.7 kB
+Ôö£ Ôùï /dashboard/profile                   2.98 kB        99.8 kB
+Ôö£ Ôùï /dashboard/requests                  2.96 kB        99.7 kB
+Ôö£ Ôùï /dashboard/settings/institution      2.87 kB        95.5 kB
+Ôö£ Ôùï /dashboard/student                   2.25 kB        96.5 kB
+Ôö£ Ôùï /dashboard/students                  1.77 kB        96.1 kB
+Ôö£ Ôùï /dashboard/subscription              2.64 kB        90.1 kB
+Ôö£ Ôùï /dashboard/superadmin/auditor        200 B          87.7 kB
+Ôö£ Ôùï /dashboard/superadmin/subscriptions  1.01 kB        97.8 kB
+Ôö£ Ôùï /dashboard/tools                     3.9 kB          117 kB
+Ôö£ Ôùï /dashboard/tools/family              2.14 kB        89.6 kB
+Ôö£ Ôùï /dashboard/tools/importer            2.32 kB        89.8 kB
+Ôö£ Ôùï /dashboard/training                  2.57 kB        90.1 kB
+Ôö£ Ôùï /dashboard/training-2026             2.65 kB        99.4 kB
+Ôö£ Ôùï /legal                               194 B          87.7 kB
+Ôö£ Ôùï /login                               2.83 kB         100 kB
+Ôö£ Ôùï /manifest.webmanifest                0 B                0 B
+Ôöö Ôùï /robots.txt                          0 B                0 B
++ First Load JS shared by all            87.5 kB
+  Ôö£ chunks/7023-f7d6e9b01750894f.js      31.6 kB
+  Ôö£ chunks/fd9d1056-b371a5166f1a0320.js  53.7 kB
+  Ôöö other shared chunks (total)          2.23 kB
+
+
+ãÆ Middleware                             50.1 kB
+
+Ôùï  (Static)   prerendered as static content
+ãÆ  (Dynamic)  server-rendered on demand
+

@@ -1,10 +1,10 @@
 ﻿export default function robots() {
   return {
     rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: '/dashboard/',
+      userAgent: "*",
+      allow: "/",
+      disallow: "/dashboard/",
     },
-    sitemap: 'https://aulaplan.cr/sitemap.xml',
-  }
+    sitemap: "https://aulaplan.cr/sitemap.xml",
+  };
 }

@@ -1,16 +1,15 @@
-﻿/** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  poweredByHeader: false, // Seguridad: Oculta que usamos Next.js
-  experimental: {
-    serverActions: {
-      bodySizeLimit: '10mb', // Permitir subida de PDF/Adjuntos grandes
+  reactStrictMode: false, // Desactivar modo estricto acelera dev y evita doble render
+  swcMinify: true,        // Compilación rápida
+  logging: {
+    fetches: {
+      fullUrl: true,
     },
   },
-  images: {
-    remotePatterns: [
-      { protocol: 'https', hostname: 'lh3.googleusercontent.com' }, // Avatares de Google
-    ],
+  // Evitar chequear ESLint durante el build de desarrollo para ir mas rapido
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 };
 

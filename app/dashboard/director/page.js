@@ -1,6 +1,10 @@
+export const dynamic = "force-dynamic";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
-import { getDirectorStats, getComplianceReport } from "@/actions/director-actions";
+import {
+    getDirectorStats,
+    getComplianceReport,
+} from "@/actions/director-actions";
 import Link from "next/link";
 import {
     BarChart3,
@@ -9,7 +13,7 @@ import {
     AlertTriangle,
     Download,
     Search,
-    Filter
+    Filter,
 } from "lucide-react";
 
 export const metadata = {
@@ -21,7 +25,10 @@ export default async function DirectorPage({ searchParams }) {
     const session = await auth();
 
     // 1. Security Gate
-    if (!session?.user || (session.user.role !== "DIRECTOR" && session.user.role !== "GOD_TIER")) {
+    if (
+        !session?.user ||
+        (session.user.role !== "DIRECTOR" && session.user.role !== "GOD_TIER")
+    ) {
         redirect("/dashboard");
     }
 
@@ -38,11 +45,13 @@ export default async function DirectorPage({ searchParams }) {
     // 3. UI Helpers
     const { totalPlans, activeTeachersCount, subjectStats } = stats;
     // Simple "Compliance Score" mockup (planes / 10 * docentes)
-    const complianceScore = Math.min(100, Math.round((totalPlans / (activeTeachersCount * 5 || 1)) * 100));
+    const complianceScore = Math.min(
+        100,
+        Math.round((totalPlans / (activeTeachersCount * 5 || 1)) * 100),
+    );
 
     return (
         <div className="p-6 space-y-8 bg-slate-50 min-h-screen text-slate-900">
-
             {/* HEADER */}
             <header className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
@@ -50,15 +59,21 @@ export default async function DirectorPage({ searchParams }) {
                         <span className="text-4xl">👁️</span> El Ojo del Director
                     </h1>
                     <p className="text-slate-500 mt-1">
-                        Resumen operativo: {session.user.schoolId ? `Institución ${session.user.schoolId}` : "Vista Global (God Tier)"}
+                        Resumen operativo:{" "}
+                        {session.user.schoolId
+                            ? `Institución ${session.user.schoolId}`
+                            : "Vista Global (God Tier)"}
                     </p>
                 </div>
                 <div className="flex items-center gap-3">
-                    {/* Este botón podría ser un Client Component que invoque la acción de descarga */}
                     <form action="/api/director/export" method="POST">
-                        <button type="submit" disabled className="btn btn-neutral btn-sm opacity-50 cursor-not-allowed" title="Próximamente">
+                        <button
+                            type="submit"
+                            className="btn btn-neutral btn-sm hover:btn-primary transition-colors"
+                            title="Descargar respaldo completo"
+                        >
                             <Download className="w-4 h-4 mr-2" />
-                            Exportar Todo (ZIP)
+                            Exportar Respaldo (JSON)
                         </button>
                     </form>
                 </div>
@@ -86,27 +101,42 @@ export default async function DirectorPage({ searchParams }) {
                 />
                 <KpiCard
                     title="Alertas Críticas"
-                    value="0"
+                    value={stats.alertsCount || 0}
                     icon={<AlertTriangle className="w-8 h-8 text-rose-600" />}
-                    sub="Acción requerida"
-                    alert
+                    sub="Planes estancados (>15 días)"
+                    alert={stats.alertsCount > 0}
                 />
             </div>
 
             {/* MAIN CONTENT SPLIT */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
                 {/* LEFT: COMPLIANCE TABLE (2/3 width) */}
                 <div className="lg:col-span-2 space-y-4">
                     <div className="flex items-center justify-between">
                         <h2 className="text-xl font-semibold flex items-center gap-2">
-                            <Filter className="w-5 h-5 text-slate-400" /> Auditoría de Entregas
+                            <Filter className="w-5 h-5 text-slate-400" /> Auditoría de
+                            Entregas
                         </h2>
                         {/* Simple filters link generator mockup */}
                         <div className="join">
-                            <Link href="/dashboard/director" className={`join-item btn btn-xs ${!subjectFilter ? 'btn-active' : ''}`}>Todos</Link>
-                            <Link href="/dashboard/director?subject=Matemáticas" className={`join-item btn btn-xs ${subjectFilter === 'Matemáticas' ? 'btn-active' : ''}`}>Mate</Link>
-                            <Link href="/dashboard/director?subject=Español" className={`join-item btn btn-xs ${subjectFilter === 'Español' ? 'btn-active' : ''}`}>Español</Link>
+                            <Link
+                                href="/dashboard/director"
+                                className={`join-item btn btn-xs ${!subjectFilter ? "btn-active" : ""}`}
+                            >
+                                Todos
+                            </Link>
+                            <Link
+                                href="/dashboard/director?subject=Matemáticas"
+                                className={`join-item btn btn-xs ${subjectFilter === "Matemáticas" ? "btn-active" : ""}`}
+                            >
+                                Mate
+                            </Link>
+                            <Link
+                                href="/dashboard/director?subject=Español"
+                                className={`join-item btn btn-xs ${subjectFilter === "Español" ? "btn-active" : ""}`}
+                            >
+                                Español
+                            </Link>
                         </div>
                     </div>
 
@@ -127,14 +157,20 @@ export default async function DirectorPage({ searchParams }) {
                                         report.map((plan) => (
                                             <tr key={plan.id} className="hover:bg-slate-50">
                                                 <td>
-                                                    <div className={`badge badge-xs ${plan.status === 'PUBLISHED' ? 'badge-success' : 'badge-warning'}`}>
-                                                        {plan.status === 'PUBLISHED' ? 'ENTREGADO' : plan.status}
+                                                    <div
+                                                        className={`badge badge-xs ${plan.status === "PUBLISHED" ? "badge-success" : "badge-warning"}`}
+                                                    >
+                                                        {plan.status === "PUBLISHED"
+                                                            ? "ENTREGADO"
+                                                            : plan.status}
                                                     </div>
                                                 </td>
                                                 <td className="font-medium">
                                                     <div className="flex flex-col">
                                                         <span>{plan.teacherName}</span>
-                                                        <span className="text-[10px] text-slate-400">{plan.teacherEmail}</span>
+                                                        <span className="text-[10px] text-slate-400">
+                                                            {plan.teacherEmail}
+                                                        </span>
                                                     </div>
                                                 </td>
                                                 <td>{plan.subject}</td>
@@ -146,7 +182,10 @@ export default async function DirectorPage({ searchParams }) {
                                         ))
                                     ) : (
                                         <tr>
-                                            <td colSpan="5" className="text-center py-8 text-slate-400">
+                                            <td
+                                                colSpan="5"
+                                                className="text-center py-8 text-slate-400"
+                                            >
                                                 No se encontraron registros con los filtros actuales.
                                             </td>
                                         </tr>
@@ -175,7 +214,9 @@ export default async function DirectorPage({ searchParams }) {
                             </div>
                         ))}
                         {subjectStats.length === 0 && (
-                            <p className="text-sm text-slate-400 text-center">Sin datos registrados.</p>
+                            <p className="text-sm text-slate-400 text-center">
+                                Sin datos registrados.
+                            </p>
                         )}
                     </div>
                 </div>
@@ -186,14 +227,20 @@ export default async function DirectorPage({ searchParams }) {
 
 function KpiCard({ title, value, icon, sub, trend, alert }) {
     return (
-        <div className={`p-4 rounded-xl border bg-white shadow-sm flex items-start justify-between ${alert ? 'border-rose-100 bg-rose-50/30' : 'border-slate-100'}`}>
+        <div
+            className={`p-4 rounded-xl border bg-white shadow-sm flex items-start justify-between ${alert ? "border-rose-100 bg-rose-50/30" : "border-slate-100"}`}
+        >
             <div>
                 <p className="text-slate-500 text-sm font-medium">{title}</p>
                 <h3 className="text-3xl font-bold mt-1 text-slate-800">{value}</h3>
                 {sub && <p className="text-xs text-slate-400 mt-1">{sub}</p>}
-                {trend && <p className="text-xs text-emerald-600 font-medium mt-1">{trend}</p>}
+                {trend && (
+                    <p className="text-xs text-emerald-600 font-medium mt-1">{trend}</p>
+                )}
             </div>
-            <div className={`p-2 rounded-lg ${alert ? 'bg-rose-100' : 'bg-slate-100'} bg-opacity-50`}>
+            <div
+                className={`p-2 rounded-lg ${alert ? "bg-rose-100" : "bg-slate-100"} bg-opacity-50`}
+            >
                 {icon}
             </div>
         </div>

@@ -14,10 +14,13 @@ export async function GET() {
         structure_json: true,
         last_deep_scan: true,
         // No traemos raw_text para no saturar la red, solo si es necesario
-      }
+      },
     });
     return NextResponse.json({ success: true, data: programs });
   } catch (error) {
-    return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+    return NextResponse.json(
+      { success: false, error: error.message },
+      { status: 500 },
+    );
   }
 }

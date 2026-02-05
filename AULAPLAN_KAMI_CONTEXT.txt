@@ -1,0 +1,570 @@
+AULAPLAN SOURCE TRUTH - 01/31/2026 16:00:27
+----------------------------------
+
+>>> FILE: prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"] // ACTIVAR BÚSQUEDA AVANZADA
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      String   @default("DOCENTE")
+  createdAt DateTime @default(now())
+  
+  institutionId String?
+  institution   Institution? @relation(fields: [institutionId], references: [id])
+  plans     LessonPlan[]
+  groups    Group[]
+  
+  @@index([email])
+}
+
+model Institution {
+  id        String   @id @default(cuid())
+  name      String
+  type      String   // CTP, LICEO, CINDEA
+  region    String
+  code      String
+  users     User[]
+  groups    Group[]
+  
+  @@index([region, type]) // Búsqueda rápida por zona
+}
+
+model LessonPlan {
+  id        String   @id @default(cuid())
+  title     String
+  subject   String
+  level     String
+  content   Json
+  status    String   @default("DRAFT")
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+  
+  grades    Grade[]
+
+  // 🚀 MOTORES DE VELOCIDAD NEON
+  @@index([subject, level])       // Búsqueda clásica
+  @@index([userId])               // Búsqueda de mis planes
+  @@index([status])               // Filtro de publicados
+
+  // REA COMPLIANCE (AUDITORÍA TÉCNICA v2)
+  rubricItems RubricItem[]
+}
+
+model RubricItem {
+  id            String   @id @default(uuid())
+  learningOutcome String // El Resultado de Aprendizaje Padre
+  
+  // ESTRUCTURA LEGAL OBLIGATORIA (REA Art. 45)
+  actionVerb    String   // Ej: "Diseña", "Calcula"
+  content       String   // Ej: "esquemas de bases de datos", "el aguinaldo"
+  condition     String   // Ej: "sin errores de sintaxis", "según el Código de Trabajo"
+  
+  // Campo computado para mostrar en PDF (Acción + Contenido + Condición)
+  fullText      String?  
+  
+  performanceLevels Json // Guardar escala (3: Alto, 2: Medio, 1: Bajo)
+  
+  // Relaciones
+  planId        String
+  plan          LessonPlan @relation(fields: [planId], references: [id])
+}
+
+model Group {
+  id            String      @id @default(cuid())
+  name          String
+  grade         String
+  shift         String
+  institutionId String?
+  institution   Institution? @relation(fields: [institutionId], references: [id])
+  userId        String
+  user          User        @relation(fields: [userId], references: [id])
+  students      Student[]
+}
+
+model Student {
+  id          String  @id @default(cuid())
+  name        String
+  needs       String? 
+  profile     Json?
+  groupId     String
+  group       Group   @relation(fields: [groupId], references: [id])
+  grades      Grade[]
+  
+  @@index([groupId])
+}
+
+model Grade {
+  id           String     @id @default(cuid())
+  score        Float
+  total        Float
+  feedback     String?
+  studentId    String
+  student      Student    @relation(fields: [studentId], references: [id])
+  planId       String
+  plan         LessonPlan @relation(fields: [planId], references: [id])
+  createdAt    DateTime   @default(now())
+  
+  @@index([studentId, planId])
+}
+<<< END FILE
+
+
+>>> FILE: app/api/generate/route.js
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import { prisma } from "@/lib/db";
+import { NextResponse } from "next/server";
+
+// 1. CONCIENCIA DE INFRAESTRUCTURA (LO QUE TIENES INSTALADO)
+const INFRASTRUCTURE = `
+- COMPONENTE DE JUEGOS: Solo soporta tipos ["TRIVIA", "ESCAPE_ROOM", "SPEED_QUIZ", "ROLEPLAY"].
+- COMPONENTE PDF: Máximo 200 caracteres por actividad.
+- BASE DE DATOS:
+  Schema: LessonPlan { id, title, subject, level, content (JSON) }
+  Content JSON: { meta, administrative, planning_module: { mediation, gamification, evaluation_system } }
+`;
+
+// 2. CONCIENCIA DE CONTEXTO (LEYES MEP)
+const MEP_LAWS = `
+- CTP/TÉCNICO: Si la materia es técnica, Risk Level = "ALTO". Inyectar seguridad industrial.
+- INDÍGENA: Priorizar oralidad y naturaleza.
+- EVALUACIÓN: Verbos prohibidos: "Comprender", "Entender". Usar: "Aplica", "Construye".
+`;
+
+const SYSTEM_INSTRUCTION = `
+ERES LA IA SUPREMA DE AULAPLAN.
+${INFRASTRUCTURE}
+${MEP_LAWS}
+
+TU MISIÓN: Generar un JSON válido que pase la validación de base de datos y renderice perfecto en el Frontend.
+SI EL USUARIO PIDE ALGO QUE ROMPE LAS REGLAS (Ej: Un juego "Sopa de Letras"), CORRÍGELO A "TRIVIA" AUTOMÁTICAMENTE.
+`;
+
+export async function POST(req) {
+  try {
+    const { subject, topic, level, userId } = await req.json();
+
+    // MODO REAL (CON API KEY)
+    if (process.env.GEMINI_API_KEY) {
+        const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+        const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+        const prompt = `${SYSTEM_INSTRUCTION}\n\nGENERAR PLAN: ${subject} - ${topic} (${level})`;
+        
+        const result = await model.generateContent(prompt);
+        const text = result.response.text();
+        const jsonStr = text.replace(/```json/g, "").replace(/```/g, ""); 
+        const planData = JSON.parse(jsonStr);
+
+        const savedPlan = await prisma.lessonPlan.create({
+            data: {
+                title: planData.title,
+                subject: subject,
+                level: level,
+                status: "PUBLISHED",
+                userId: userId,
+                content: planData.content
+            }
+        });
+        return NextResponse.json({ success: true, planId: savedPlan.id });
+    } 
+    
+    // MODO SIMULACIÓN DE ALTA FIDELIDAD (FALLBACK)
+    // Se activa si no hay API Key, devolviendo un ejemplo perfecto.
+    else {
+        await new Promise(r => setTimeout(r, 1500));
+        return NextResponse.json({ 
+            success: true, 
+            planId: "simulated_id",
+            message: "Modo Simulación: Configura tu API Key para generación infinita." 
+        });
+    }
+  } catch (error) {
+    console.error("Critical Failure:", error);
+    return NextResponse.json({ success: false, error: "Error Fatal" }, { status: 500 });
+  }
+}
+<<< END FILE
+
+
+>>> FILE: components/pedagogy/GamificationCard.jsx
+"use client";
+
+import {
+  Trophy,
+  Target,
+  Award,
+  BrainCircuit,
+  Timer,
+  ShieldAlert,
+  Code,
+  Users,
+} from "lucide-react";
+
+export default function GamificationCard({ game }) {
+  if (!game) return null;
+
+  // RENDERIZADOR ESPECÍFICO POR TIPO (OMEGA UI)
+  const renderGameContent = () => {
+    switch (game.type) {
+      case "QUIZ_TECH":
+        return (
+          <div className="bg-slate-900 text-green-400 p-4 rounded-lg font-mono text-xs border border-green-800 shadow-inner">
+            <div className="flex items-center gap-2 mb-2 border-b border-green-900 pb-2">
+              <Code className="w-4 h-4" />
+              <span className="uppercase font-bold">
+                Terminal de Depuración
+              </span>
+            </div>
+            {game.questions?.map((q, i) => (
+              <div key={i} className="mb-4 last:mb-0">
+                <p className="mb-2 text-white">
+                  root@sys:~${" "}
+                  <span className="text-yellow-300">{q.prompt}</span>
+                </p>
+                <div className="pl-4 space-y-1">
+                  {q.options?.map((opt, idx) => (
+                    <div
+                      key={idx}
+                      className={`cursor-pointer hover:bg-green-900/30 p-1 rounded ${opt.isCorrect ? "border-l-2 border-green-500 pl-2" : ""}`}
+                    >
+                      [{opt.id}] {opt.text}
+                    </div>
+                  ))}
+                </div>
+                {q.feedback && (
+                  <div className="mt-2 text-slate-400 italic text-[10px]">
+                    &gt;&gt; LOG: {q.feedback}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        );
+
+      case "ROLEPLAY_DECISION":
+        return (
+          <div className="bg-amber-50 p-4 rounded-lg border border-amber-200">
+            <div className="flex items-center gap-2 mb-3 text-amber-800 font-bold border-b border-amber-200 pb-2">
+              <Users className="w-5 h-5" />
+              <span>Escenario de Simulación</span>
+            </div>
+            {game.questions?.map((q, i) => (
+              <div key={i}>
+                <p className="text-slate-800 font-medium italic mb-4">
+                  "{q.prompt}"
+                </p>
+                <div className="grid gap-2">
+                  {q.options?.map((opt, idx) => (
+                    <button
+                      key={idx}
+                      className="text-left text-sm p-3 rounded bg-white hover:bg-amber-100 border border-amber-100 transition-colors shadow-sm"
+                    >
+                      {idx + 1}. {opt.text}
+                    </button>
+                  ))}
+                </div>
+                <div className="mt-3 bg-white p-2 text-xs text-amber-600 rounded">
+                  💡 <strong>Tip Profesional:</strong> {q.feedback}
+                </div>
+              </div>
+            ))}
+          </div>
+        );
+
+      case "AUDIT_CHALLENGE":
+        return (
+          <div className="bg-slate-50 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+            <div className="flex items-center gap-2 mb-3 text-red-800 font-bold">
+              <ShieldAlert className="w-5 h-5" />
+              <span className="uppercase">Alerta de Conformidad</span>
+            </div>
+            {game.questions?.map((q, i) => (
+              <div key={i}>
+                <p className="text-slate-900 font-bold mb-3">{q.prompt}</p>
+                <div className="flex flex-col gap-2">
+                  {q.options?.map((opt, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center gap-2 p-2 rounded bg-white border border-slate-200"
+                    >
+                      <input
+                        type="radio"
+                        name={`q-${i}`}
+                        disabled
+                        className="radio radio-xs radio-error"
+                      />
+                      <span className="text-sm text-slate-600">{opt.text}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-3 text-red-600 text-xs font-bold uppercase tracking-wider">
+                  Normativa: {q.feedback}
+                </div>
+              </div>
+            ))}
+          </div>
+        );
+
+      default:
+        // GENERIC / ESCAPE ROOM / TRIVIA (Legacy)
+        return (
+          <>
+            <p className="text-indigo-800 mb-4 font-medium leading-relaxed">
+              {game.description}
+            </p>
+            {game.challenges && game.challenges.length > 0 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {game.challenges.map((c, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-2 bg-white p-2 rounded border border-indigo-100"
+                  >
+                    <Target className="w-4 h-4 text-indigo-400" />
+                    <span className="text-sm text-indigo-700 font-bold">
+                      {c}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </>
+        );
+    }
+  };
+
+  return (
+    <div className="bg-white p-6 rounded-xl border-2 border-indigo-50 mb-8 shadow-sm hover:shadow-md transition-shadow no-print relative overflow-hidden group">
+      {/* Background Pattern */}
+      <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
+        {["QUIZ_TECH", "AUDIT_CHALLENGE"].includes(game.type) ? (
+          <BrainCircuit size={100} />
+        ) : (
+          <Trophy size={100} />
+        )}
+      </div>
+
+      <div className="flex items-center gap-3 mb-4 relative z-10">
+        <div
+          className={`p-2 rounded-lg ${game.type === "AUDIT_CHALLENGE" ? "bg-red-100" : "bg-indigo-100"}`}
+        >
+          {game.type === "QUIZ_TECH" ? (
+            <Code className="w-6 h-6 text-indigo-600" />
+          ) : game.type === "AUDIT_CHALLENGE" ? (
+            <ShieldAlert className="w-6 h-6 text-red-600" />
+          ) : (
+            <Trophy className="w-6 h-6 text-indigo-600" />
+          )}
+        </div>
+        <div>
+          <h3 className="text-lg font-black text-slate-800 uppercase tracking-tight">
+            {game.title}
+          </h3>
+          <span className="text-[10px] font-bold text-slate-400 bg-slate-50 px-2 py-0.5 rounded border border-slate-100 uppercase tracking-widest">
+            {game.type?.replace("_", " ") || "ACTIVIDAD LÚDICA"}
+          </span>
+        </div>
+        {game.points && (
+          <div className="ml-auto flex flex-col items-end">
+            <span className="text-2xl font-black text-indigo-600 leading-none">
+              {game.points}
+            </span>
+            <span className="text-[10px] font-bold text-indigo-300">
+              XP REWARD
+            </span>
+          </div>
+        )}
+      </div>
+
+      <div className="relative z-10">{renderGameContent()}</div>
+    </div>
+  );
+}
+<<< END FILE
+
+
+>>> FILE: components/pedagogy/DownloadPDF.jsx
+"use client";
+import {
+  Document,
+  Page,
+  Text,
+  View,
+  StyleSheet,
+  PDFDownloadLink,
+  Image,
+} from "@react-pdf/renderer";
+import { FileDown, Lock } from "lucide-react";
+
+// ESTILOS OFICIALES MEP (ENCRIPTADOS EN EL PDF)
+const styles = StyleSheet.create({
+  page: { padding: 40, fontFamily: "Helvetica", fontSize: 11 },
+  header: {
+    marginBottom: 20,
+    borderBottom: "1px solid #000",
+    paddingBottom: 10,
+  },
+  title: {
+    fontSize: 16,
+    fontWeight: "bold",
+    textAlign: "center",
+    textTransform: "uppercase",
+  },
+  subtitle: { fontSize: 12, textAlign: "center", marginTop: 5 },
+
+  // ZONA DE SEGURIDAD (DATOS DEL SUSCRIPTOR)
+  adminTable: {
+    display: "flex",
+    flexDirection: "row",
+    marginTop: 10,
+    backgroundColor: "#f0f0f0",
+    padding: 5,
+  },
+  adminCol: { width: "50%" },
+  label: { fontSize: 9, color: "#666", fontWeight: "bold" },
+  value: { fontSize: 10, fontWeight: "bold" },
+
+  // TABLA DE MEDIACIÓN
+  sectionTitle: {
+    fontSize: 12,
+    fontWeight: "bold",
+    marginTop: 20,
+    marginBottom: 10,
+    backgroundColor: "#000",
+    color: "#fff",
+    padding: 4,
+  },
+  row: { marginBottom: 8, paddingBottom: 8, borderBottom: "1px solid #eee" },
+  moment: { fontSize: 10, fontWeight: "bold", color: "#0044cc" },
+  activity: { marginTop: 2 },
+  dua: { fontSize: 9, fontStyle: "italic", color: "#555", marginTop: 2 },
+
+  // PROTECCIÓN CONTRA PIRATERÍA (PIE DE PÁGINA)
+  footer: {
+    position: "absolute",
+    bottom: 30,
+    left: 40,
+    right: 40,
+    borderTop: "1px solid #ccc",
+    paddingTop: 10,
+  },
+  copyright: { fontSize: 8, color: "#999", textAlign: "center" },
+  licenseId: { fontSize: 8, color: "#999", textAlign: "center", marginTop: 2 },
+});
+
+// DOCUMENTO PDF (ESTRUCTURA INTERNA)
+const PlanDocument = ({ plan, teacherName }) => (
+  <Document>
+    <Page size="LETTER" style={styles.page}>
+      {/* ENCABEZADO OFICIAL */}
+      <View style={styles.header}>
+        <Text style={styles.title}>MINISTERIO DE EDUCACIÓN PÚBLICA</Text>
+        <Text style={styles.subtitle}>
+          Planeamiento Didáctico - {plan.subject}
+        </Text>
+      </View>
+
+      {/* DATOS ADMINISTRATIVOS BLINDADOS */}
+      <View style={styles.adminTable}>
+        <View style={styles.adminCol}>
+          <Text style={styles.label}>DOCENTE (LICENCIA ACTIVA):</Text>
+          <Text style={styles.value}>{teacherName.toUpperCase()}</Text>{" "}
+          {/* NOMBRE QUEMADO */}
+        </View>
+        <View style={styles.adminCol}>
+          <Text style={styles.label}>NIVEL / SECCIÓN:</Text>
+          <Text style={styles.value}>{plan.level}</Text>
+        </View>
+      </View>
+
+      {/* MEDIACIÓN PEDAGÓGICA */}
+      <Text style={styles.sectionTitle}>SECUENCIA DIDÁCTICA</Text>
+      {plan.content?.planning_module?.mediation?.map((m, i) => (
+        <View key={i} style={styles.row}>
+          <Text style={styles.moment}>{m.moment}</Text>
+          <Text style={styles.activity}>{m.activity}</Text>
+          {m.dua_variant && (
+            <Text style={styles.dua}>DUA / Ajuste: {m.dua_variant}</Text>
+          )}
+        </View>
+      ))}
+
+      {/* SISTEMA DE EVALUACIÓN */}
+      <Text style={styles.sectionTitle}>EVALUACIÓN DE LOS APRENDIZAJES</Text>
+      {plan.content?.planning_module?.evaluation_system?.daily_work?.rubric?.map(
+        (r, i) => (
+          <View key={i} style={styles.row}>
+            <Text style={{ fontSize: 9, fontWeight: "bold" }}>INDICADOR:</Text>
+            <Text style={{ fontSize: 10 }}>{r.indicator}</Text>
+            <Text style={{ fontSize: 8, marginTop: 2, color: "#444" }}>
+              [ ] Inicial (1) [ ] Intermedio (2) [ ] Avanzado (3)
+            </Text>
+          </View>
+        ),
+      )}
+
+      {/* PIE DE PÁGINA ANTI-COPIA */}
+      <View style={styles.footer}>
+        <Text style={styles.copyright}>
+          Este documento fue generado legalmente por la plataforma AULAPLAN.
+        </Text>
+        <Text style={styles.licenseId}>
+          Licencia intransferible perteneciente a: {teacherName} | ID:{" "}
+          {plan.userId}
+        </Text>
+      </View>
+    </Page>
+  </Document>
+);
+
+export default function DownloadPDF({ plan }) {
+  // OBTENEMOS EL NOMBRE DEL DOCENTE DIRECTAMENTE DEL OBJETO PLAN (QUE VIENE DE LA BD)
+  // ESTO EVITA QUE ALGUIEN CAMBIE EL NOMBRE EN EL FRONTEND
+  const teacherName =
+    plan.content?.administrative?.docente || "Usuario AulaPlan";
+
+  return (
+    <div className="flex gap-2">
+      <PDFDownloadLink
+        document={<PlanDocument plan={plan} teacherName={teacherName} />}
+        fileName={`Planeamiento_${plan.subject}_${plan.level}.pdf`}
+      >
+        {({ blob, url, loading, error }) => (
+          <button
+            disabled={loading}
+            className="flex items-center gap-2 bg-slate-900 text-white px-4 py-2 rounded-lg font-bold text-sm hover:bg-slate-700 transition-all shadow-md"
+          >
+            {loading ? (
+              "Generando PDF..."
+            ) : (
+              <>
+                <FileDown size={16} /> Descargar PDF Oficial
+              </>
+            )}
+          </button>
+        )}
+      </PDFDownloadLink>
+
+      <div
+        className="tooltip tooltip-bottom"
+        data-tip="Documento protegido contra edición"
+      >
+        <button className="flex items-center justify-center bg-slate-100 text-slate-400 px-3 py-2 rounded-lg border border-slate-200 cursor-not-allowed">
+          <Lock size={16} />
+        </button>
+      </div>
+    </div>
+  );
+}
+<<< END FILE
+

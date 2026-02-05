@@ -1,0 +1,204 @@
+{
+    "SPED_SUPPORT_2025": {
+        "source_norm": "Ley 7600 / Lineamientos DDC-MEP",
+        "profiles": [
+            {
+                "condition": "Discapacidad Visual",
+                "subtypes": [
+                    {
+                        "type": "Baja Visión",
+                        "tech_supports": [
+                            "Lupas electrónicas",
+                            "Software magnificador (ZoomText)",
+                            "Tipografía Arial/Verdana 14pt+",
+                            "Contraste Alto (Amarillo/Negro)"
+                        ],
+                        "concrete_materials": [
+                            "Atril de lectura",
+                            "Cuadernos con renglón resaltado (macrotipo)",
+                            "Iluminación focalizada"
+                        ]
+                    },
+                    {
+                        "type": "Ceguera Total",
+                        "tech_supports": [
+                            "Lectores de pantalla (JAWS/NVDA)",
+                            "Línea Braille",
+                            "Audiodescripción de videos"
+                        ],
+                        "concrete_materials": [
+                            "Material en relieve (Thermoform)",
+                            "Regleta y punzón",
+                            "Mapas hápticos",
+                            "Técnica Hoover (Bastón)"
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": "Trastorno del Espectro Autista (TEA)",
+                "subtypes": [
+                    {
+                        "type": "Nivel 1 (Requiere Apoyo)",
+                        "tech_supports": [
+                            "Apps de gestión de tiempo (Time Timer)",
+                            "Organizadores gráficos digitales"
+                        ],
+                        "concrete_materials": [
+                            "Agenda visual diaria",
+                            "Audífonos de cancelación de ruido (si hay hipersensibilidad)",
+                            "Fidget toys discretos"
+                        ]
+                    },
+                    {
+                        "type": "Nivel 3 (Requiere Apoyo Muy Notable)",
+                        "tech_supports": [
+                            "Sistemas Aumentativos de Comunicación (SAAC en Tablet)",
+                            "Videos de modelado conductual"
+                        ],
+                        "concrete_materials": [
+                            "Tableros de comunicación (Pictogramas ARASAAC)",
+                            "Rincón de la calma (Sensorial)",
+                            "Historias sociales impresas"
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": "Sordera / Hipoacusia",
+                "subtypes": [
+                    {
+                        "type": "Usuario LESCO",
+                        "tech_supports": [
+                            "Videollamadas con Intérprete",
+                            "Diccionarios digitales LESCO",
+                            "Avatar de señas"
+                        ],
+                        "concrete_materials": [
+                            "Señalética visual en el aula",
+                            "Timbre de luz",
+                            "Intérprete presencial"
+                        ]
+                    },
+                    {
+                        "type": "Oralizado / Implante Coclear",
+                        "tech_supports": [
+                            "Sistema de Frecuencia Modulada (FM)",
+                            "Subtitulado automático (Live Caption)",
+                            "Apps de transcripción voz-texto"
+                        ],
+                        "concrete_materials": [
+                            "Ubicación preferencial (frente al docente)",
+                            "Paneles de absorción acústica"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "CTP_SAFETY_PROTOCOLS": {
+        "source_norm": "Reglamento de Seguridad e Higiene Industrial / MTSS",
+        "workshops": [
+            {
+                "specialty": "Mecánica de Precisión",
+                "risk_level": "Alto (Atrapamiento/Cortes)",
+                "mandatory_ppe": [
+                    "Gafas de seguridad de alto impacto (ANSI Z87)",
+                    "Botas de seguridad con puntera de acero",
+                    "Ropa ajustada (sin mangas sueltas por riesgo de torno)",
+                    "Protección auditiva (Tapones/Orejeras)"
+                ]
+            },
+            {
+                "specialty": "Electrotecnia",
+                "risk_level": "Alto (Riesgo Eléctrico/Arco)",
+                "mandatory_ppe": [
+                    "Casco dieléctrico",
+                    "Guantes aislantes (Clase 00 a 4 según voltaje)",
+                    "Botas dieléctricas (sin metal)",
+                    "Ropa de algodón (Ignífuga para arco eléctrico)"
+                ]
+            },
+            {
+                "specialty": "Maderas (Ebanistería)",
+                "risk_level": "Medio-Alto (Partículas/Cortes/Respiratorio)",
+                "mandatory_ppe": [
+                    "Mascarilla para polvos (N95 o superior)",
+                    "Gafas de seguridad panorámicas",
+                    "Delantal de cuero",
+                    "Protector auditivo"
+                ]
+            },
+            {
+                "specialty": "Agroindustria",
+                "risk_level": "Químico/Biológico",
+                "mandatory_ppe": [
+                    "Guantes de nitrilo/neopreno (Manejo de químicos)",
+                    "Mascarilla con filtros para vapores orgánicos",
+                    "Gabacha blanca impermeable",
+                    "Cofia o redecilla para cabello"
+                ]
+            },
+            {
+                "specialty": "Automotriz",
+                "risk_level": "Mecánico/Químico",
+                "mandatory_ppe": [
+                    "Overol mecánico resistente a grasas",
+                    "Guantes de nitrilo (químicos) y cuero (mecánica)",
+                    "Gafas de seguridad (fluidos a presión)",
+                    "Botas antideslizantes e impermeables al aceite"
+                ]
+            }
+        ]
+    },
+    "INDIGENOUS_CONTEXT_SCIENCES": {
+        "culture_focus": "Bribri / Cabécar",
+        "pedagogical_mediation": [
+            {
+                "official_topic": "Fotosíntesis y Flujo de Energía",
+                "ancestral_concept": "Namaitami (El origen de la creación)",
+                "mediation_strategy": {
+                    "title": "La energía de Sibö y el Maíz",
+                    "description": "Explicar la fotosíntesis no solo como proceso químico, sino paralelamente al relato del origen de las semillas. El sol no es solo fotones, es la energía dispuesta por Sibö para transformar el maíz (ditsö) en vida.",
+                    "activity": "Comparar el ciclo de crecimiento del maíz en la finca (Teitö) con el diagrama de Calvin, identificando el sol como el dador de fuerza vital espiritual y física."
+                }
+            },
+            {
+                "official_topic": "Ciclo del Agua",
+                "ancestral_concept": "Espíritus Dueños del Agua (Dì-wö)",
+                "mediation_strategy": {
+                    "title": "El camino de Dì (Agua)",
+                    "description": "Abordar la evaporación y precipitación integrando el respeto a los 'Dueños del Agua'. El agua no es un recurso inerte; tiene guardianes. La contaminación rompe el pacto con estos guardianes.",
+                    "activity": "Mapeo de las fuentes de agua de la comunidad y narración oral de los mayores sobre el cuidado de las nacientes, vinculado a la conservación de cuencas hidrográficas."
+                }
+            },
+            {
+                "official_topic": "Ecosistemas y Biodiversidad",
+                "ancestral_concept": "La Casa Cónica (U-suré)",
+                "mediation_strategy": {
+                    "title": "El Universo es una Casa",
+                    "description": "Usar la estructura del U-suré como metáfora del ecosistema global. Cada nivel de la casa representa un nivel trófico y espiritual interconectado. Si se quita un poste, la casa cae (pérdida de biodiversidad).",
+                    "activity": "Construcción de una maqueta del U-suré relacionando sus niveles con los estratos del bosque lluvioso tropical."
+                }
+            },
+            {
+                "official_topic": "Uso de plantas medicinales",
+                "ancestral_concept": "El Awá (Médico tradicional)",
+                "mediation_strategy": {
+                    "title": "Botánica y Espiritualidad",
+                    "description": "Clasificar plantas no solo por taxonomía Linneana, sino por su uso sagrado y curativo según la tradición del Awá.",
+                    "activity": "Herbario dual: Etiqueta científica (Nombre en latín) y Etiqueta cultural (Uso tradicional y nombre en lengua materna)."
+                }
+            },
+            {
+                "official_topic": "Cambio Climático",
+                "ancestral_concept": "Equilibrio y Reciprocidad",
+                "mediation_strategy": {
+                    "title": "Cuando la naturaleza habla",
+                    "description": "Analizar el cambio climático como una ruptura de la reciprocidad entre el ser humano y la naturaleza. Interpretación de señales naturales (comportamiento de animales) que indican cambios en el clima.",
+                    "activity": "Círculo de diálogo con mayores de la comunidad para registrar cambios observados en las estaciones y compararlos con datos meteorológicos científicos."
+                }
+            }
+        ]
+    }
+}

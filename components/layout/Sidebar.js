@@ -8,7 +8,7 @@ import {
   Users,
   Settings,
   LogOut,
-  ShieldCheck
+  ShieldCheck,
 } from "lucide-react";
 import UpgradeCard from "../business/UpgradeCard";
 
@@ -24,7 +24,6 @@ export default function Sidebar() {
 
   return (
     <div className="w-64 bg-slate-900 h-screen fixed left-0 top-0 flex flex-col text-white shadow-2xl z-50">
-
       {/* LOGO DE LA PLATAFORMA */}
       <div className="p-6 border-b border-slate-800 flex items-center gap-3">
         <div className="bg-blue-600 p-2 rounded-lg">
@@ -32,13 +31,17 @@ export default function Sidebar() {
         </div>
         <div>
           <h1 className="font-black text-xl tracking-tighter">AulaPlan</h1>
-          <p className="text-[10px] text-slate-400 tracking-widest uppercase">Sistema V85</p>
+          <p className="text-[10px] text-slate-400 tracking-widest uppercase">
+            Sistema V85
+          </p>
         </div>
       </div>
 
       {/* MENÚ DE NAVEGACIÓN */}
       <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
-        <p className="px-4 text-[10px] font-bold text-slate-500 uppercase mb-2">Módulos Académicos</p>
+        <p className="px-4 text-[10px] font-bold text-slate-500 uppercase mb-2">
+          Módulos Académicos
+        </p>
 
         {menuItems.map((item) => {
           const isActive = pathname === item.href;
@@ -46,12 +49,20 @@ export default function Sidebar() {
             <Link
               key={item.href}
               href={item.href}
-              className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 group ${isActive
+              className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 group ${
+                isActive
                   ? "bg-blue-600 text-white shadow-lg shadow-blue-900/50 translate-x-1"
                   : "text-slate-400 hover:bg-slate-800 hover:text-white"
-                }`}
+              }`}
             >
-              <item.icon size={20} className={isActive ? "animate-pulse" : "group-hover:scale-110 transition-transform"} />
+              <item.icon
+                size={20}
+                className={
+                  isActive
+                    ? "animate-pulse"
+                    : "group-hover:scale-110 transition-transform"
+                }
+              />
               <span className="font-medium text-sm">{item.name}</span>
             </Link>
           );

@@ -1,24 +1,14 @@
-﻿const { PrismaClient } = require("@prisma/client");
+const { PrismaClient } = require("@prisma/client");
+const { hash } = require("bcryptjs");
 const prisma = new PrismaClient();
-const bcrypt = require("bcryptjs");
-
 async function main() {
-  const hashedPassword = await bcrypt.hash("123", 10);
-  
+  const email = "max@aulaplan.com";
+  const pass = await hash("admin", 10);
   const user = await prisma.user.upsert({
-    where: { email: "max@misplanescr.com" },
-    // CORRECCIÓN CRÍTICA: SI EXISTE, FORZAMOS EL ROL GOD_TIER
-    update: { 
-        role: "GOD_TIER",
-        password: hashedPassword 
-    }, 
-    create: {
-      email: "max@misplanescr.com",
-      name: "Max Salazar (God Tier)",
-      password: hashedPassword,
-      role: "GOD_TIER"
-    }
+    where: { email },
+    update: { role: "ADMIN", subscriptionStatus: "VIP" },
+    create: { email, name: "Lic. Max Salazar (CEO)", password: pass, role: "ADMIN", subscriptionStatus: "VIP" }
   });
-  console.log("✅ RANGO ACTUALIZADO A GOD_TIER: " + user.email);
+  await prisma.license.create({ data: { userId: user.id, subject: "TODAS", expiresAt: new Date("2099-12-31"), isActive: true } });
 }
 main().finally(() => prisma.$disconnect());

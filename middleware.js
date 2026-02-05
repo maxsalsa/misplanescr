@@ -1,8 +1,7 @@
-﻿export { default } from "next-auth/middleware";
+export { default } from "next-auth/middleware";
 
-// CONFIGURACIÓN DEL GUARDA
 export const config = {
-  // Solo protegemos las rutas del Dashboard.
-  // La página de Login y la API pública quedan fuera.
+  // Protegemos TODO lo que esté bajo /dashboard
+  // Esto incluye: Planeamiento, Admin, Boletas, Estudiantes, etc.
   matcher: ["/dashboard/:path*"]
 };

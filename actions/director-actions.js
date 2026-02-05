@@ -67,10 +67,23 @@ export async function getDirectorStats() {
             },
         });
 
+        // 4. Alertas Críticas (Kaizen)
+        const fifteenDaysAgo = new Date();
+        fifteenDaysAgo.setDate(fifteenDaysAgo.getDate() - 15);
+
+        const alertsCount = await db.lessonPlan.count({
+            where: {
+                ...whereClause,
+                status: "DRAFT",
+                updatedAt: { lt: fifteenDaysAgo },
+            },
+        });
+
         return {
             totalPlans,
             activeTeachersCount,
             subjectStats,
+            alertsCount,
         };
     } catch (error) {
         console.error("Error fetching director stats:", error);

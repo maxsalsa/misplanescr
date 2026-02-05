@@ -6,10 +6,16 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "grid-pattern": "url('/grid.svg')",
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["light"], // Forzamos un solo tema para evitar errores de compilación
+    themes: ["corporate", "business"], // CORPORATE = CLARO, BUSINESS = OSCURO
+    darkTheme: "business", 
+    logs: false,
   },
 };

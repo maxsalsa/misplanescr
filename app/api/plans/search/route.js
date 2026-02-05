@@ -1,0 +1,1 @@
+import { prisma } from "@/lib/db"; import { NextResponse } from "next/server"; export async function GET(req) { const id = new URL(req.url).searchParams.get("id"); return NextResponse.json(await prisma.lessonPlan.findMany({where:id?{id}:{},orderBy:{createdAt:"desc"}})); }

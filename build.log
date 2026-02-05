@@ -1,0 +1,47 @@
+
+> aulaplan-golden@1.0.0 build
+> prisma generate && next build
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma\schema.prisma
+
+Ô£ö Generated Prisma Client (v5.22.0) to .\node_modules\@prisma\client in 364ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Easily identify and fix slow SQL queries in your app. Optimize helps you enhance your visibility: https://pris.ly/--optimize
+
+  Ôû▓ Next.js 14.2.3
+  - Environments: .env.production, .env
+
+   Creating an optimized production build ...
+ Ô£ô Compiled successfully
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/85) ...
+   Generating static pages (21/85) 
+
+Error occurred prerendering page "/api/groups/list". Read more: https://nextjs.org/docs/messages/prerender-error
+
+PrismaClientKnownRequestError: 
+Invalid `prisma.group.findMany()` invocation:
+
+
+The column `Group.isGuide` does not exist in the current database.
+    at $n.handleRequestError (C:\Users\Usuario\Downloads\autoplanea-mep\node_modules\@prisma\client\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\Usuario\Downloads\autoplanea-mep\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\Usuario\Downloads\autoplanea-mep\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\Usuario\Downloads\autoplanea-mep\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async p (C:\Users\Usuario\Downloads\autoplanea-mep\.next\server\app\api\groups\list\route.js:1:586)
+    at async C:\Users\Usuario\Downloads\autoplanea-mep\node_modules\next\dist\compiled\next-server\app-route.runtime.prod.js:6:34666
+    at async eS.execute (C:\Users\Usuario\Downloads\autoplanea-mep\node_modules\next\dist\compiled\next-server\app-route.runtime.prod.js:6:25813)
+    at async eS.handle (C:\Users\Usuario\Downloads\autoplanea-mep\node_modules\next\dist\compiled\next-server\app-route.runtime.prod.js:6:35920)
+    at async exportAppRoute (C:\Users\Usuario\Downloads\autoplanea-mep\node_modules\next\dist\export\routes\app-route.js:77:26)
+    at async exportPageImpl (C:\Users\Usuario\Downloads\autoplanea-mep\node_modules\next\dist\export\worker.js:175:20)
+   Generating static pages (42/85) 
+   Generating static pages (63/85) 
+ Ô£ô Generating static pages (85/85)
+
+> Export encountered errors on following paths:
+	/api/groups/list/route: /api/groups/list

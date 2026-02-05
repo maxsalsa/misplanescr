@@ -22,7 +22,9 @@ export async function createHRRequest(formData) {
 
     // 2. Guardar en DB (Simulamos usuario Max Salazar por ahora)
     // En producción se usa: const session = await auth();
-    const user = await prisma.user.findUnique({ where: { email: "max.salazar@mep.go.cr" } });
+    const user = await prisma.user.findUnique({
+      where: { email: "max.salazar@mep.go.cr" },
+    });
     if (!user) return { success: false, error: "Usuario no autorizado" };
 
     await prisma.administrativeRequest.create({
@@ -31,14 +33,13 @@ export async function createHRRequest(formData) {
         dateStart: new Date(validated.date), // Convertir String a Date
         description: validated.reason,
         userId: user.id,
-        status: "PENDIENTE"
-      }
+        status: "PENDIENTE",
+      },
     });
 
     // 3. Actualizar Cache (Para que la tabla se refresque sola)
     revalidatePath("/dashboard/hr");
     return { success: true };
-
   } catch (error) {
     console.error("Error RRHH:", error);
     return { success: false, error: "Error de conexión. Intente nuevamente." };

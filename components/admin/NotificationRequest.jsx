@@ -1,53 +1,34 @@
-"use client"
+"use client";
+import { Copy } from "lucide-react";
+import { toast } from "sonner";
 
-import { useEffect, useState } from 'react'
-import { Bell } from 'lucide-react'
-import { toast } from 'sonner'
+export default function NotificationRequest() {
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText("64503722");
+    toast.success("Número SINPE copiado");
+  };
 
-export function NotificationRequest() {
-    const [permission, setPermission] = useState < NotificationPermission > ('default')
-
-    useEffect(() => {
-        if (typeof window !== 'undefined' && 'Notification' in window) {
-            setPermission(Notification.permission)
-        }
-    }, [setPermission])
-
-    const requestAccess = async () => {
-        if (!('Notification' in window)) return
-
-        const result = await Notification.requestPermission()
-        setPermission(result)
-
-        if (result === 'granted') {
-            toast.success('Notificaciones Activas', {
-                description: 'Recibirás alertas de pagos SINPE en tiempo real.',
-                icon: <Bell className="w-5 h-5 text-green-500" />
-            })
-            new Notification('Antigravity Conectado', {
-                body: 'Sistema listo para recibir alertas de pago.',
-                icon: '/favicon.ico'
-            })
-        }
-    }
-
-    if (permission === 'granted' || permission === 'denied') return null
-
-    return (
-        <div className="fixed bottom-4 right-4 z-50 bg-white p-4 rounded-xl shadow-2xl border border-indigo-100 flex items-center gap-4 animate-in slide-in-from-bottom-5">
-            <div className="bg-indigo-100 p-2 rounded-full">
-                <Bell className="w-6 h-6 text-indigo-600" />
-            </div>
-            <div>
-                <h4 className="font-bold text-sm text-slate-800">Alertas de Pagos</h4>
-                <p className="text-xs text-slate-500">¿Deseas saber cuándo pagan en tiempo real?</p>
-            </div>
-            <button
-                onClick={requestAccess}
-                className="bg-indigo-600 hover:bg-indigo-700 text-white text-xs px-3 py-2 rounded-lg font-bold transition-colors"
-            >
-                Activar
-            </button>
+  return (
+    <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl">
+      <h4 className="font-bold text-blue-900 mb-2">Instrucciones de Activación</h4>
+      <p className="text-sm text-blue-800 mb-4">
+        Para activar su licencia, realice el pago vía SINPE Móvil y envíe el comprobante.
+      </p>
+      
+      <div className="bg-white p-3 rounded-lg border border-blue-100 flex items-center justify-between mb-4">
+        <div>
+            <p className="text-xs text-slate-500 uppercase font-bold">SINPE Móvil (Banco Popular)</p>
+            <p className="text-xl font-mono font-black text-slate-800">6450-3722</p>
+            <p className="text-xs text-slate-600">Max Salazar Sánchez</p>
         </div>
-    )
+        <button onClick={copyToClipboard} className="btn btn-sm btn-ghost text-blue-600">
+            <Copy className="w-4 h-4"/>
+        </button>
+      </div>
+
+      <div className="text-xs text-center text-slate-500">
+        Una vez realizado, haga clic en el botón de WhatsApp para enviar el comprobante.
+      </div>
+    </div>
+  );
 }

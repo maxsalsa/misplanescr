@@ -17,10 +17,8 @@ export const authConfig = {
 
             // REDIRECCIÓN INTELIGENTE EN RAÍZ
             if (isOnRoot) {
-                if (isLoggedIn) {
-                    return Response.redirect(new URL('/dashboard', nextUrl));
-                }
-                return false; // Redirigir a login
+                // Permitir acceso a la landing page pública
+                return true;
             }
 
             return true;
